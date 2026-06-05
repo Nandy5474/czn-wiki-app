@@ -1,0 +1,1304 @@
+[
+  {
+    "id": 1,
+    "characterId": 1,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 2,
+    "characterId": 1,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 3,
+    "characterId": 1,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 4,
+    "characterId": 1,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 5,
+    "characterId": 1,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 6,
+    "characterId": 1,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 7,
+    "characterId": 2,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 8,
+    "characterId": 2,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 9,
+    "characterId": 2,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 10,
+    "characterId": 2,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 11,
+    "characterId": 2,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 12,
+    "characterId": 2,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 13,
+    "characterId": 3,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "安息触发次数达到3次时，生成1张「心形弹药」。"
+  },
+  {
+    "id": 14,
+    "characterId": 3,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": "心形弹药的伤害+30%。"
+  },
+  {
+    "id": 15,
+    "characterId": 3,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": "每弃掉1张牌，获得1层「共鸣」。"
+  },
+  {
+    "id": 16,
+    "characterId": 3,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": "共鸣最大层数+5。"
+  },
+  {
+    "id": 17,
+    "characterId": 3,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 18,
+    "characterId": 3,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 19,
+    "characterId": 4,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "消灭敌方卡牌时，自身攻击力+10%(最多5层)。"
+  },
+  {
+    "id": 20,
+    "characterId": 4,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": "消灭卡牌的触发条件降低1张。"
+  },
+  {
+    "id": 21,
+    "characterId": 4,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": "消灭后，35%概率返还消耗的AP。"
+  },
+  {
+    "id": 22,
+    "characterId": 4,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 23,
+    "characterId": 4,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 24,
+    "characterId": 4,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 25,
+    "characterId": 5,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 26,
+    "characterId": 5,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 27,
+    "characterId": 5,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 28,
+    "characterId": 5,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 29,
+    "characterId": 5,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 30,
+    "characterId": 5,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 31,
+    "characterId": 6,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 32,
+    "characterId": 6,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 33,
+    "characterId": 6,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 34,
+    "characterId": 6,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 35,
+    "characterId": 6,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 36,
+    "characterId": 6,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 37,
+    "characterId": 7,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 38,
+    "characterId": 7,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 39,
+    "characterId": 7,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 40,
+    "characterId": 7,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 41,
+    "characterId": 7,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 42,
+    "characterId": 7,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 43,
+    "characterId": 8,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "定位镭射L使用时，若目标已被击破，立即返还1AP。"
+  },
+  {
+    "id": 44,
+    "characterId": 8,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": "定位镭射L的击破效率+20%。"
+  },
+  {
+    "id": 45,
+    "characterId": 8,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 46,
+    "characterId": 8,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 47,
+    "characterId": 8,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 48,
+    "characterId": 8,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 49,
+    "characterId": 9,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 50,
+    "characterId": 9,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 51,
+    "characterId": 9,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 52,
+    "characterId": 9,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 53,
+    "characterId": 9,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 54,
+    "characterId": 9,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 55,
+    "characterId": 10,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 56,
+    "characterId": 10,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 57,
+    "characterId": 10,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 58,
+    "characterId": 10,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 59,
+    "characterId": 10,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 60,
+    "characterId": 10,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 61,
+    "characterId": 11,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 62,
+    "characterId": 11,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 63,
+    "characterId": 11,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 64,
+    "characterId": 11,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 65,
+    "characterId": 11,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 66,
+    "characterId": 11,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 67,
+    "characterId": 12,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 68,
+    "characterId": 12,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 69,
+    "characterId": 12,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 70,
+    "characterId": 12,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 71,
+    "characterId": 12,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 72,
+    "characterId": 12,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 73,
+    "characterId": 13,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "每回合生成的投射机数量+1。"
+  },
+  {
+    "id": 74,
+    "characterId": 13,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": "投射机造成的额外伤害+50%。"
+  },
+  {
+    "id": 75,
+    "characterId": 13,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 76,
+    "characterId": 13,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 77,
+    "characterId": 13,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 78,
+    "characterId": 13,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 79,
+    "characterId": 14,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 80,
+    "characterId": 14,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 81,
+    "characterId": 14,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 82,
+    "characterId": 14,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 83,
+    "characterId": 14,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 84,
+    "characterId": 14,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 85,
+    "characterId": 15,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 86,
+    "characterId": 15,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 87,
+    "characterId": 15,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 88,
+    "characterId": 15,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 89,
+    "characterId": 15,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 90,
+    "characterId": 15,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 91,
+    "characterId": 16,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 92,
+    "characterId": 16,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 93,
+    "characterId": 16,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 94,
+    "characterId": 16,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 95,
+    "characterId": 16,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 96,
+    "characterId": 16,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 97,
+    "characterId": 17,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "开始战斗时，生成1张精灵(2星)加入手牌。"
+  },
+  {
+    "id": 98,
+    "characterId": 17,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": "使用精灵时，35%概率不消耗AP。"
+  },
+  {
+    "id": 99,
+    "characterId": 17,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": "「神圣香槟」生成的精灵等级+1。"
+  },
+  {
+    "id": 100,
+    "characterId": 17,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": "每回合结束时，若手牌中有精灵，获得5%最大HP的护盾。"
+  },
+  {
+    "id": 101,
+    "characterId": 17,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": "战斗中精灵的最大持有数量+1。"
+  },
+  {
+    "id": 102,
+    "characterId": 17,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": "召唤精灵时，额外生成1张1星精灵。"
+  },
+  {
+    "id": 103,
+    "characterId": 18,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "吞噬命运之花生成镇魂子弹时，额外生成1发。"
+  },
+  {
+    "id": 104,
+    "characterId": 18,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": "决意一击：每发子弹额外+25%伤害。"
+  },
+  {
+    "id": 105,
+    "characterId": 18,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 106,
+    "characterId": 18,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 107,
+    "characterId": 18,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 108,
+    "characterId": 18,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 109,
+    "characterId": 19,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "「同花顺」使用时额外提供1层士气。"
+  },
+  {
+    "id": 110,
+    "characterId": 19,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": "士气每层增伤效果+5%。"
+  },
+  {
+    "id": 111,
+    "characterId": 19,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 112,
+    "characterId": 19,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 113,
+    "characterId": 19,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 114,
+    "characterId": 19,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 115,
+    "characterId": 20,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 116,
+    "characterId": 20,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 117,
+    "characterId": 20,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 118,
+    "characterId": 20,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 119,
+    "characterId": 20,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 120,
+    "characterId": 20,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 121,
+    "characterId": 21,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 122,
+    "characterId": 21,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 123,
+    "characterId": 21,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 124,
+    "characterId": 21,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 125,
+    "characterId": 21,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 126,
+    "characterId": 21,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 127,
+    "characterId": 22,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 128,
+    "characterId": 22,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 129,
+    "characterId": 22,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 130,
+    "characterId": 22,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 131,
+    "characterId": 22,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 132,
+    "characterId": 22,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 133,
+    "characterId": 23,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 134,
+    "characterId": 23,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 135,
+    "characterId": 23,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 136,
+    "characterId": 23,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 137,
+    "characterId": 23,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 138,
+    "characterId": 23,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 139,
+    "characterId": 24,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 140,
+    "characterId": 24,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 141,
+    "characterId": 24,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 142,
+    "characterId": 24,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 143,
+    "characterId": 24,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 144,
+    "characterId": 24,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 145,
+    "characterId": 25,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 146,
+    "characterId": 25,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 147,
+    "characterId": 25,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 148,
+    "characterId": 25,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 149,
+    "characterId": 25,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 150,
+    "characterId": 25,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 151,
+    "characterId": 26,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 152,
+    "characterId": 26,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 153,
+    "characterId": 26,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 154,
+    "characterId": 26,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 155,
+    "characterId": 26,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 156,
+    "characterId": 26,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 157,
+    "characterId": 27,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 158,
+    "characterId": 27,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 159,
+    "characterId": 27,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 160,
+    "characterId": 27,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 161,
+    "characterId": 27,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 162,
+    "characterId": 27,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 163,
+    "characterId": 28,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 164,
+    "characterId": 28,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 165,
+    "characterId": 28,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 166,
+    "characterId": 28,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 167,
+    "characterId": 28,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 168,
+    "characterId": 28,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 169,
+    "characterId": 29,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 170,
+    "characterId": 29,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 171,
+    "characterId": 29,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 172,
+    "characterId": 29,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 173,
+    "characterId": 29,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 174,
+    "characterId": 29,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 175,
+    "characterId": 30,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 176,
+    "characterId": 30,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 177,
+    "characterId": 30,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 178,
+    "characterId": 30,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 179,
+    "characterId": 30,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 180,
+    "characterId": 30,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  },
+  {
+    "id": 181,
+    "characterId": 31,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": ""
+  },
+  {
+    "id": 182,
+    "characterId": 31,
+    "stage": 2,
+    "name": "鲜明的记忆",
+    "effect": ""
+  },
+  {
+    "id": 183,
+    "characterId": 31,
+    "stage": 3,
+    "name": "内在的记忆",
+    "effect": ""
+  },
+  {
+    "id": 184,
+    "characterId": 31,
+    "stage": 4,
+    "name": "完整的记忆",
+    "effect": ""
+  },
+  {
+    "id": 185,
+    "characterId": 31,
+    "stage": 5,
+    "name": "释放的记忆",
+    "effect": ""
+  },
+  {
+    "id": 186,
+    "characterId": 31,
+    "stage": 6,
+    "name": "觉醒的记忆",
+    "effect": ""
+  }
+]

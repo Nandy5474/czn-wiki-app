@@ -1,0 +1,5 @@
+# Add project specific ProGuard rules here.
+-keepattributes *Annotation*
+-keepattributes SourceFile,LineNumberTable
+-keep class com.cznwiki.app.data.entity.** { *; }
+-keep class com.google.gson.** { *; }
