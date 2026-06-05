@@ -4,11 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.animation.*
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavType
 import androidx.navigation.compose.*
@@ -16,13 +20,16 @@ import androidx.navigation.navArgument
 import com.cznwiki.app.ui.navigation.Screen
 import com.cznwiki.app.ui.navigation.bottomNavItems
 import com.cznwiki.app.ui.screens.*
+import com.cznwiki.app.ui.theme.CznWikiTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CznWikiApp()
+            CznWikiTheme {
+                CznWikiApp()
+            }
         }
     }
 }
@@ -33,9 +40,15 @@ fun CznWikiApp() {
     val navController = rememberNavController()
 
     Scaffold(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background),
+        containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
-            NavigationBar {
+            NavigationBar(
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface,
+            ) {
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route
 
@@ -58,10 +71,21 @@ fun CznWikiApp() {
             }
         }
     ) { innerPadding ->
+        val enterTr: AnimatedContentTransitionScope<NavBackStackEntry>.() -> EnterTransition = {
+            fadeIn(animationSpec = tween(300)) +
+                slideInHorizontally(animationSpec = tween(300)) { it / 4 }
+        }
+        val exitTr: AnimatedContentTransitionScope<NavBackStackEntry>.() -> ExitTransition = {
+            fadeOut(animationSpec = tween(300)) +
+                slideOutHorizontally(animationSpec = tween(300)) { -it / 4 }
+        }
+
         NavHost(
             navController = navController,
             startDestination = Screen.Home.route,
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier.padding(innerPadding),
+            enterTransition = enterTr,
+            exitTransition = exitTr,
         ) {
             composable(Screen.Home.route) {
                 HomeScreen(onNavigateToCharacter = { id ->

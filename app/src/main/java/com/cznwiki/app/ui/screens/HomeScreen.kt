@@ -1,15 +1,23 @@
 package com.cznwiki.app.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -31,153 +39,190 @@ fun HomeScreen(onNavigateToCharacter: (Int) -> Unit) {
     var dataVersion by remember { mutableIntStateOf(updateManager.getLocalVersion()) }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        // Header
-        Row(
+        // === Hero Area ===
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+                .height(220.dp)
+                .background(
+                    Brush.verticalGradient(
+                        colors = listOf(
+                            MaterialTheme.colorScheme.primary.copy(alpha = 0.7f),
+                            MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f),
+                            MaterialTheme.colorScheme.background
+                        )
+                    )
+                )
         ) {
-            Text(
-                text = "卡厄思梦境 Wiki",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold
-            )
-            IconButton(
-                onClick = {
-                    if (!isChecking) {
-                        isChecking = true
-                        scope.launch {
-                            val result = updateManager.checkForUpdate()
-                            updateMessage = result.message + if (result.charsUpdated > 0 || result.cardsUpdated > 0 || result.saUpdated > 0 || result.userCollUpdated > 0) {
-                                "\n更新: ${result.charsUpdated}角色, ${result.cardsUpdated}卡牌, ${result.saUpdated}命座, ${result.userCollUpdated}收藏"
-                            } else ""
-                            dataVersion = result.version
-                            isChecking = false
-                            showUpdateDialog = true
-                        }
-                    }
-                },
-                enabled = !isChecking
-            ) {
-                if (isChecking) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
-                } else {
-                    Icon(Icons.Default.Refresh, contentDescription = "检查更新")
-                }
-            }
-        }
-
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(horizontal = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            // Quick navigation cards
-            item {
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onNavigateToCharacter(1) },
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer
-                    )
-                ) {
-                    Column(modifier = Modifier.padding(20.dp)) {
-                        Text("角色图鉴", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text("浏览全部战斗员资料、卡牌、灵光一闪",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f))
-                    }
-                }
-            }
-
-            item {
-                Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.secondaryContainer
-                    )
-                ) {
-                    Column(modifier = Modifier.padding(20.dp)) {
-                        Text("当期活动", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text("查看全力战 BOSS、赛季奖励、大龟裂进度",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.7f))
-                    }
-                }
-            }
-
-            item {
-                Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.tertiaryContainer
-                    )
-                ) {
-                    Column(modifier = Modifier.padding(20.dp)) {
-                        Text("阵容推荐", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text("卡厄思探索、全力战、螺旋塔配队参考",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.7f))
-                    }
-                }
-            }
-
-            // Data version info
-            item {
-                Text(
-                    "数据版本: v$dataVersion",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
-                    modifier = Modifier.padding(top = 4.dp)
+            // Decorative geometric lines
+            androidx.compose.foundation.Canvas(modifier = Modifier.fillMaxSize()) {
+                val w = size.width
+                val h = size.height
+                // Line 1
+                drawLine(
+                    color = Color.White.copy(alpha = 0.08f),
+                    start = Offset(0f, h * 0.3f),
+                    end = Offset(w * 0.4f, h * 0.9f),
+                    strokeWidth = 2f
+                )
+                // Line 2
+                drawLine(
+                    color = Color.White.copy(alpha = 0.05f),
+                    start = Offset(w * 0.6f, h * 0.2f),
+                    end = Offset(w, h * 0.7f),
+                    strokeWidth = 1.5f
+                )
+                // Circle
+                drawCircle(
+                    color = Color.White.copy(alpha = 0.04f),
+                    radius = w * 0.15f,
+                    center = Offset(w * 0.85f, h * 0.25f)
                 )
             }
 
-            // T0 characters
-            item {
-                Text("T0 推荐角色", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(top = 4.dp))
-            }
-
-            val t0Chars = listOf(
-                17 to "奥尔莱雅" to "全能辅助",
-                13 to "维诺妮卡" to "副C/辅助",
-                3 to "戴安娜" to "弃牌主C",
-                5 to "蒂菲拉" to "辅助",
-                19 to "凯西乌斯" to "士气发动机",
-            )
-
-            items(t0Chars) { (idName, role) ->
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onNavigateToCharacter(idName.first) }
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(24.dp),
+                verticalArrangement = Arrangement.Center
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.Top
                 ) {
-                    Row(
-                        modifier = Modifier.padding(16.dp).fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = "卡厄思梦境 Wiki",
+                            style = MaterialTheme.typography.headlineLarge,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.White
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "战斗员图鉴 · 卡牌查询 · 阵容推荐",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color.White.copy(alpha = 0.7f)
+                        )
+                    }
+                    IconButton(
+                        onClick = {
+                            if (!isChecking) {
+                                isChecking = true
+                                scope.launch {
+                                    val result = updateManager.checkForUpdate()
+                                    updateMessage = result.message +
+                                        if (result.charsUpdated > 0 || result.cardsUpdated > 0 ||
+                                            result.saUpdated > 0 || result.userCollUpdated > 0) {
+                                            "\n更新: ${result.charsUpdated}角色, ${result.cardsUpdated}卡牌, " +
+                                                "${result.saUpdated}命座, ${result.userCollUpdated}收藏"
+                                        } else ""
+                                    dataVersion = result.version
+                                    isChecking = false
+                                    showUpdateDialog = true
+                                }
+                            }
+                        },
+                        enabled = !isChecking
                     ) {
-                        Column {
-                            Text(idName.second, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
-                            Text(role, style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f))
+                        if (isChecking) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(20.dp),
+                                strokeWidth = 2.dp,
+                                color = Color.White
+                            )
+                        } else {
+                            Icon(
+                                Icons.Default.Refresh,
+                                contentDescription = "检查更新",
+                                tint = Color.White
+                            )
                         }
-                        Text("T0", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
                     }
                 }
             }
-
-            item { Spacer(modifier = Modifier.height(16.dp)) }
         }
+
+        // === Quick Entry Cards ===
+        Text(
+            text = "快速入口",
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+        )
+
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            item {
+                QuickEntryCard(
+                    title = "角色图鉴",
+                    description = "浏览全部战斗员资料",
+                    onClick = { onNavigateToCharacter(1) },
+                    tint = MaterialTheme.colorScheme.primary
+                )
+            }
+            item {
+                QuickEntryCard(
+                    title = "当期活动",
+                    description = "全力战 BOSS · 赛季奖励",
+                    tint = MaterialTheme.colorScheme.secondary
+                )
+            }
+            item {
+                QuickEntryCard(
+                    title = "阵容推荐",
+                    description = "探索 · 全力战 · 螺旋塔",
+                    tint = MaterialTheme.colorScheme.tertiary
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        // === T0 Recommended Characters ===
+        Text(
+            text = "T0 推荐角色",
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+        )
+
+        val t0Chars = listOf(
+            Triple(17, "奥尔莱亚", "全能辅助"),
+            Triple(19, "维若妮卡", "副C/辅助"),
+            Triple(4, "黛安娜", "弃牌主C"),
+            Triple(6, "蒂菲拉", "辅助"),
+            Triple(31, "凯西乌斯", "士气发动机"),
+        )
+
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            items(t0Chars) { (id, name, role) ->
+                T0CharacterCard(
+                    name = name,
+                    role = role,
+                    onClick = { onNavigateToCharacter(id) }
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        // === Data version at bottom ===
+        Text(
+            text = "数据版本: v$dataVersion",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(bottom = 8.dp)
+        )
     }
 
-    // Update result dialog
     if (showUpdateDialog) {
         AlertDialog(
             onDismissRequest = { showUpdateDialog = false },
@@ -189,5 +234,109 @@ fun HomeScreen(onNavigateToCharacter: (Int) -> Unit) {
                 }
             }
         )
+    }
+}
+
+@Composable
+fun QuickEntryCard(
+    title: String,
+    description: String,
+    onClick: () -> Unit = {},
+    tint: Color
+) {
+    Card(
+        modifier = Modifier
+            .width(180.dp)
+            .clickable(onClick = onClick),
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = tint.copy(alpha = 0.12f)
+        )
+    ) {
+        Column(modifier = Modifier.padding(20.dp)) {
+            Text(
+                title,
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = tint
+            )
+            Spacer(modifier = Modifier.height(6.dp))
+            Text(
+                description,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+            )
+        }
+    }
+}
+
+@Composable
+fun T0CharacterCard(
+    name: String,
+    role: String,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .width(130.dp)
+            .clickable(onClick = onClick),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f)
+        )
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Avatar circle with gradient
+            Box(
+                modifier = Modifier
+                    .size(56.dp)
+                    .clip(CircleShape)
+                    .background(
+                        Brush.linearGradient(
+                            colors = listOf(
+                                MaterialTheme.colorScheme.primary,
+                                MaterialTheme.colorScheme.secondary
+                            )
+                        )
+                    ),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    name.take(1),
+                    style = MaterialTheme.typography.titleLarge,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White
+                )
+            }
+            Spacer(modifier = Modifier.height(10.dp))
+            Text(
+                name,
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.Bold,
+                maxLines = 1,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+            Spacer(modifier = Modifier.height(2.dp))
+            Text(
+                role,
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.primary
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Surface(
+                shape = RoundedCornerShape(4.dp),
+                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.2f)
+            ) {
+                Text(
+                    "T0",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                )
+            }
+        }
     }
 }

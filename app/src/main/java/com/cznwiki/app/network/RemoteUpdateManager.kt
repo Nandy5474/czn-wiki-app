@@ -57,7 +57,7 @@ class RemoteUpdateManager(
     private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
     data class RemoteVersion(
-        val version: Int = 0,
+        val version: String = "0",
         val characters_url: String = CHARACTERS_URL,
         val cards_url: String = CARDS_URL,
         val self_awareness_url: String = SELF_AWARENESS_URL,
@@ -94,7 +94,9 @@ class RemoteUpdateManager(
             val remoteVersion: RemoteVersion = gson.fromJson(versionJson, RemoteVersion::class.java)
             val localVersion = getLocalVersion()
 
-            if (remoteVersion.version <= localVersion) {
+            // Compare version strings (strip leading 'v' if present)
+            val remoteVerNum = remoteVersion.version.removePrefix("v").toIntOrNull() ?: 0
+            if (remoteVerNum <= localVersion) {
                 prefs.edit().putLong(KEY_LAST_CHECK, System.currentTimeMillis()).apply()
                 return@withContext UpdateResult(true, "数据已是最新", localVersion)
             }
@@ -161,13 +163,13 @@ class RemoteUpdateManager(
                 Log.w(TAG, "Failed to update user collection", e)
             }
 
-            setLocalVersion(remoteVersion.version)
+            setLocalVersion(remoteVerNum)
             prefs.edit().putLong(KEY_LAST_CHECK, System.currentTimeMillis()).apply()
 
             UpdateResult(
                 success = true,
                 message = remoteVersion.changelog.ifBlank { "数据已更新到 v${remoteVersion.version}" },
-                version = remoteVersion.version,
+                version = remoteVerNum,
                 charsUpdated = charsUpdated,
                 cardsUpdated = cardsUpdated,
                 saUpdated = saUpdated,

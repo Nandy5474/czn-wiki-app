@@ -54,7 +54,12 @@ fun CharacterListScreen(
                 IconButton(onClick = { showFilterSheet = true }) {
                     Text("筛选", style = MaterialTheme.typography.labelLarge)
                 }
-            }
+            },
+            colors = TopAppBarDefaults.topAppBarColors(
+                containerColor = MaterialTheme.colorScheme.surface,
+                titleContentColor = MaterialTheme.colorScheme.onSurface,
+                actionIconContentColor = MaterialTheme.colorScheme.onSurface,
+            )
         )
 
         // Search bar
@@ -63,6 +68,17 @@ fun CharacterListScreen(
             onValueChange = { viewModel.updateSearch(it) },
             placeholder = { Text("搜索角色名称...") },
             singleLine = true,
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = MaterialTheme.colorScheme.primary,
+                unfocusedBorderColor = MaterialTheme.colorScheme.outline,
+                focusedTextColor = MaterialTheme.colorScheme.onSurface,
+                unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+                cursorColor = MaterialTheme.colorScheme.primary,
+                focusedContainerColor = MaterialTheme.colorScheme.surface,
+                unfocusedContainerColor = MaterialTheme.colorScheme.surface,
+                focusedPlaceholderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
+                unfocusedPlaceholderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
+            ),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp, vertical = 8.dp)
@@ -134,13 +150,15 @@ fun CharacterGridItem(char: CharacterEntity, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
+            .clickable(onClick = onClick),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surface
+        )
     ) {
         Column(
             modifier = Modifier.padding(8.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Character portrait
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(char.thumbUrl.ifBlank { char.imageUrl })
@@ -161,7 +179,8 @@ fun CharacterGridItem(char: CharacterEntity, onClick: () -> Unit) {
                 char.name,
                 style = MaterialTheme.typography.bodySmall,
                 fontWeight = FontWeight.Bold,
-                maxLines = 1
+                maxLines = 1,
+                color = MaterialTheme.colorScheme.onSurface
             )
             if (char.tier.isNotBlank()) {
                 Text(
@@ -179,7 +198,10 @@ fun CharacterListItem(char: CharacterEntity, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
+            .clickable(onClick = onClick),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surface
+        )
     ) {
         Row(
             modifier = Modifier
@@ -187,7 +209,6 @@ fun CharacterListItem(char: CharacterEntity, onClick: () -> Unit) {
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Character portrait
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(char.thumbUrl.ifBlank { char.imageUrl })
@@ -238,7 +259,10 @@ fun FilterSheet(
     onStarsSelected: (Int?) -> Unit,
     onDismiss: () -> Unit
 ) {
-    ModalBottomSheet(onDismissRequest = onDismiss) {
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        containerColor = MaterialTheme.colorScheme.surface,
+    ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text("按属性", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 8.dp)) {
