@@ -1,0 +1,9 @@
+{
+  "version": "v6",
+  "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/characters.json",
+  "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/cards.json",
+  "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/self_awareness.json",
+  "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/user_collection.json",
+  "update_date": "2026-06-05",
+  "changelog": "v6: 全量卡牌数据同步，310张卡牌（155基础+124灵光一闪+31独特），修复5个角色URL映射错误"
+}
