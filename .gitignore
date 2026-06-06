@@ -6,3 +6,5 @@ local.properties
 **/*.iml
 **/.idea/
 **/gradle.properties
+*.hprof
+gradle.properties

@@ -18,8 +18,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_1.webp",
-    "thumbUrl": "file:///android_asset/data/char_1.webp",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png"
   },
   {
@@ -41,8 +41,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_2.webp",
-    "thumbUrl": "file:///android_asset/data/char_2.webp",
+    "imageUrl": "file:///android_asset/data/char_26.webp",
+    "thumbUrl": "file:///android_asset/data/char_26.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/27/1779864515887_1779863927962_h224rirbl9_9f24w63bdy.png"
   },
   {
@@ -64,8 +64,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_3.webp",
-    "thumbUrl": "file:///android_asset/data/char_3.webp",
+    "imageUrl": "file:///android_asset/data/char_2.webp",
+    "thumbUrl": "file:///android_asset/data/char_2.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/29/73357.png"
   },
   {
@@ -87,8 +87,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_4.webp",
-    "thumbUrl": "file:///android_asset/data/char_4.webp",
+    "imageUrl": "file:///android_asset/data/char_3.webp",
+    "thumbUrl": "file:///android_asset/data/char_3.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/8/853159.png"
   },
   {
@@ -110,8 +110,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_5.webp",
-    "thumbUrl": "file:///android_asset/data/char_5.webp",
+    "imageUrl": "file:///android_asset/data/char_4.webp",
+    "thumbUrl": "file:///android_asset/data/char_4.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/2/18/332392.png"
   },
   {
@@ -133,8 +133,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_6.webp",
-    "thumbUrl": "file:///android_asset/data/char_6.webp",
+    "imageUrl": "file:///android_asset/data/char_5.webp",
+    "thumbUrl": "file:///android_asset/data/char_5.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/391271/2026/1/25/934647.png"
   },
   {
@@ -156,8 +156,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_7.webp",
-    "thumbUrl": "file:///android_asset/data/char_7.webp",
+    "imageUrl": "file:///android_asset/data/char_6.webp",
+    "thumbUrl": "file:///android_asset/data/char_6.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/1/4/365649.png"
   },
   {
@@ -179,8 +179,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_8.webp",
-    "thumbUrl": "file:///android_asset/data/char_8.webp",
+    "imageUrl": "file:///android_asset/data/char_7.webp",
+    "thumbUrl": "file:///android_asset/data/char_7.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/0/14/437119.png"
   },
   {
@@ -202,8 +202,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_9.webp",
-    "thumbUrl": "file:///android_asset/data/char_9.webp",
+    "imageUrl": "file:///android_asset/data/char_8.webp",
+    "thumbUrl": "file:///android_asset/data/char_8.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/800636/2025/11/24/275645.png"
   },
   {
@@ -225,8 +225,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_10.webp",
-    "thumbUrl": "file:///android_asset/data/char_10.webp",
+    "imageUrl": "file:///android_asset/data/char_9.webp",
+    "thumbUrl": "file:///android_asset/data/char_9.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/4408/2025/11/3/486560.png"
   },
   {
@@ -248,8 +248,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_11.webp",
-    "thumbUrl": "file:///android_asset/data/char_11.webp",
+    "imageUrl": "file:///android_asset/data/char_10.webp",
+    "thumbUrl": "file:///android_asset/data/char_10.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/319144.png"
   },
   {
@@ -271,8 +271,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_12.webp",
-    "thumbUrl": "file:///android_asset/data/char_12.webp",
+    "imageUrl": "file:///android_asset/data/char_11.webp",
+    "thumbUrl": "file:///android_asset/data/char_11.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/235682.png"
   },
   {
@@ -294,8 +294,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_13.webp",
-    "thumbUrl": "file:///android_asset/data/char_13.webp",
+    "imageUrl": "file:///android_asset/data/char_12.webp",
+    "thumbUrl": "file:///android_asset/data/char_12.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/632844.png"
   },
   {
@@ -317,8 +317,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_14.webp",
-    "thumbUrl": "file:///android_asset/data/char_14.webp",
+    "imageUrl": "file:///android_asset/data/char_31.webp",
+    "thumbUrl": "file:///android_asset/data/char_31.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/496049.png"
   },
   {
@@ -363,8 +363,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_16.webp",
-    "thumbUrl": "file:///android_asset/data/char_16.webp",
+    "imageUrl": "file:///android_asset/data/char_14.webp",
+    "thumbUrl": "file:///android_asset/data/char_14.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/952926.png"
   },
   {
@@ -409,8 +409,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_18.webp",
-    "thumbUrl": "file:///android_asset/data/char_18.webp",
+    "imageUrl": "file:///android_asset/data/char_16.webp",
+    "thumbUrl": "file:///android_asset/data/char_16.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/77013.png"
   },
   {
@@ -432,8 +432,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_19.webp",
-    "thumbUrl": "file:///android_asset/data/char_19.webp",
+    "imageUrl": "file:///android_asset/data/char_13.webp",
+    "thumbUrl": "file:///android_asset/data/char_13.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/857704.png"
   },
   {
@@ -455,8 +455,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_20.webp",
-    "thumbUrl": "file:///android_asset/data/char_20.webp",
+    "imageUrl": "file:///android_asset/data/char_18.webp",
+    "thumbUrl": "file:///android_asset/data/char_18.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/743697.png"
   },
   {
@@ -478,8 +478,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_21.webp",
-    "thumbUrl": "file:///android_asset/data/char_21.webp",
+    "imageUrl": "file:///android_asset/data/char_1.webp",
+    "thumbUrl": "file:///android_asset/data/char_1.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/908529.png"
   },
   {
@@ -501,8 +501,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_22.webp",
-    "thumbUrl": "file:///android_asset/data/char_22.webp",
+    "imageUrl": "file:///android_asset/data/char_32.webp",
+    "thumbUrl": "file:///android_asset/data/char_32.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/30138.png"
   },
   {
@@ -524,8 +524,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_23.webp",
-    "thumbUrl": "file:///android_asset/data/char_23.webp",
+    "imageUrl": "file:///android_asset/data/char_20.webp",
+    "thumbUrl": "file:///android_asset/data/char_20.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/16/646570.png"
   },
   {
@@ -547,8 +547,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_24.webp",
-    "thumbUrl": "file:///android_asset/data/char_24.webp",
+    "imageUrl": "file:///android_asset/data/char_28.webp",
+    "thumbUrl": "file:///android_asset/data/char_28.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/927959.png"
   },
   {
@@ -570,8 +570,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_25.webp",
-    "thumbUrl": "file:///android_asset/data/char_25.webp",
+    "imageUrl": "file:///android_asset/data/char_23.webp",
+    "thumbUrl": "file:///android_asset/data/char_23.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/940877.png"
   },
   {
@@ -593,8 +593,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_26.webp",
-    "thumbUrl": "file:///android_asset/data/char_26.webp",
+    "imageUrl": "file:///android_asset/data/char_27.webp",
+    "thumbUrl": "file:///android_asset/data/char_27.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/264028.png"
   },
   {
@@ -616,8 +616,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_27.webp",
-    "thumbUrl": "file:///android_asset/data/char_27.webp",
+    "imageUrl": "file:///android_asset/data/char_21.webp",
+    "thumbUrl": "file:///android_asset/data/char_21.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/417114.png"
   },
   {
@@ -639,8 +639,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_28.webp",
-    "thumbUrl": "file:///android_asset/data/char_28.webp",
+    "imageUrl": "file:///android_asset/data/char_29.webp",
+    "thumbUrl": "file:///android_asset/data/char_29.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/503629.png"
   },
   {
@@ -662,8 +662,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_29.webp",
-    "thumbUrl": "file:///android_asset/data/char_29.webp",
+    "imageUrl": "file:///android_asset/data/char_25.webp",
+    "thumbUrl": "file:///android_asset/data/char_25.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/491873.png"
   },
   {
@@ -685,8 +685,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_30.webp",
-    "thumbUrl": "file:///android_asset/data/char_30.webp",
+    "imageUrl": "file:///android_asset/data/char_22.webp",
+    "thumbUrl": "file:///android_asset/data/char_22.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/973076.png"
   },
   {
@@ -708,8 +708,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_31.webp",
-    "thumbUrl": "file:///android_asset/data/char_31.webp",
+    "imageUrl": "file:///android_asset/data/char_19.webp",
+    "thumbUrl": "file:///android_asset/data/char_19.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/240349.png"
   },
   {
@@ -731,8 +731,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_32.webp",
-    "thumbUrl": "file:///android_asset/data/char_32.webp",
+    "imageUrl": "file:///android_asset/data/char_30.webp",
+    "thumbUrl": "file:///android_asset/data/char_30.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/744551.png"
   },
   {
@@ -754,8 +754,8 @@
     "baseAtk": 0,
     "baseDef": 0,
     "baseHp": 0,
-    "imageUrl": "file:///android_asset/data/char_33.webp",
-    "thumbUrl": "file:///android_asset/data/char_33.webp",
+    "imageUrl": "file:///android_asset/data/char_24.webp",
+    "thumbUrl": "file:///android_asset/data/char_24.webp",
     "gamekeePortraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/826708.png"
   }
 ]
