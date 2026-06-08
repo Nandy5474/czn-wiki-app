@@ -9,12 +9,22 @@ import com.cznwiki.app.data.entity.*
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
+data class CharacterDisplayItem(
+    val entity: CharacterEntity,
+    val effectiveTier: String
+)
+
 class CharacterListViewModel(application: Application) : AndroidViewModel(application) {
     private val db = (application as CznApplication).database
 
     val characters: StateFlow<List<CharacterEntity>> = db.characterDao()
         .getAllCharacters()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    private val userCollections: StateFlow<Map<Int, String>> = db.userCollectionDao()
+        .getOwnedCharacters()
+        .map { list -> list.associate { it.characterId to it.customTier } }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyMap())
 
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
@@ -29,20 +39,40 @@ class CharacterListViewModel(application: Application) : AndroidViewModel(applic
     val filterStars: StateFlow<Int?> = _filterStars.asStateFlow()
 
     val filteredCharacters = combine(
-        characters, searchQuery, filterElement, filterJob, filterStars
-    ) { chars, query, element, job, stars ->
+        characters, userCollections, searchQuery, filterElement, filterJob, filterStars
+    ) { chars, customTiers, query, element, job, stars ->
         chars.filter { c ->
             (query.isBlank() || c.name.contains(query, ignoreCase = true) || c.nameEn.contains(query, ignoreCase = true)) &&
             (element == null || c.element == element) &&
             (job == null || c.job == job) &&
             (stars == null || c.stars == stars)
-        }
+        }.map { c ->
+            val customTier = customTiers[c.id] ?: ""
+            CharacterDisplayItem(
+                entity = c,
+                effectiveTier = customTier.ifBlank { c.tier }
+            )
+        }.sortedWith(
+            compareBy<CharacterDisplayItem> { tierPriority(it.effectiveTier) }
+                .thenByDescending { it.entity.stars }
+                .thenBy { it.entity.name }
+        )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     fun updateSearch(query: String) { _searchQuery.value = query }
     fun updateElementFilter(element: String?) { _filterElement.value = element }
     fun updateJobFilter(job: String?) { _filterJob.value = job }
     fun updateStarsFilter(stars: Int?) { _filterStars.value = stars }
+
+    private fun tierPriority(tier: String): Int = when {
+        tier.startsWith("T0") -> 0
+        tier.startsWith("T1") -> 1
+        tier.startsWith("T2") -> 2
+        tier.startsWith("T3") -> 3
+        tier.startsWith("T4") -> 4
+        tier.isNotBlank() -> 5
+        else -> 6
+    }
 
     val elements = listOf("热情", "虚无", "本能", "秩序", "正义")
     val jobs = listOf("决斗家", "先锋", "游侠", "猎人", "心灵术士", "控制师", "奥义师", "守卫")

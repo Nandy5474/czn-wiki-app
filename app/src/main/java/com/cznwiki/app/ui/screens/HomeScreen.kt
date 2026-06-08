@@ -217,10 +217,10 @@ fun HomeScreen(onNavigateToCharacter: (Int) -> Unit) {
 
         val t0Chars = listOf(
             Triple(17, "奥尔莱亚", "全能辅助"),
-            Triple(19, "维若妮卡", "副C/辅助"),
-            Triple(4, "黛安娜", "弃牌主C"),
-            Triple(6, "蒂菲拉", "辅助"),
-            Triple(31, "凯西乌斯", "士气发动机"),
+            Triple(13, "维若妮卡", "副C/辅助"),
+            Triple(3, "黛安娜", "弃牌主C"),
+            Triple(5, "蒂菲拉", "辅助"),
+            Triple(19, "凯西乌斯", "士气发动机"),
         )
 
         LazyRow(

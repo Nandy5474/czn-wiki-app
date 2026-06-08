@@ -23,7 +23,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import androidx.compose.ui.platform.LocalContext
 import com.cznwiki.app.R
-import com.cznwiki.app.data.entity.CharacterEntity
+import com.cznwiki.app.ui.viewmodel.CharacterDisplayItem
 import com.cznwiki.app.ui.viewmodel.CharacterListViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -111,8 +111,8 @@ fun CharacterListScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                items(characters, key = { it.id }) { char ->
-                    CharacterGridItem(char = char, onClick = { onNavigateToDetail(char.id) })
+                items(characters, key = { it.entity.id }) { item ->
+                    CharacterGridItem(item = item, onClick = { onNavigateToDetail(item.entity.id) })
                 }
             }
         } else {
@@ -121,8 +121,8 @@ fun CharacterListScreen(
                 contentPadding = PaddingValues(8.dp),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-                items(characters, key = { it.id }) { char ->
-                    CharacterListItem(char = char, onClick = { onNavigateToDetail(char.id) })
+                items(characters, key = { it.entity.id }) { item ->
+                    CharacterListItem(item = item, onClick = { onNavigateToDetail(item.entity.id) })
                 }
             }
         }
@@ -146,7 +146,7 @@ fun CharacterListScreen(
 }
 
 @Composable
-fun CharacterGridItem(char: CharacterEntity, onClick: () -> Unit) {
+fun CharacterGridItem(item: CharacterDisplayItem, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -161,13 +161,13 @@ fun CharacterGridItem(char: CharacterEntity, onClick: () -> Unit) {
         ) {
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
-                    .data(char.thumbUrl.ifBlank { char.imageUrl })
+                    .data(item.entity.thumbUrl.ifBlank { item.entity.imageUrl })
                     .placeholder(R.drawable.placeholder_portrait)
                     .error(R.drawable.placeholder_portrait)
                     .crossfade(300)
                     .allowHardware(false)
                     .build(),
-                contentDescription = char.name,
+                contentDescription = item.entity.name,
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(300f / 462f)
@@ -176,15 +176,15 @@ fun CharacterGridItem(char: CharacterEntity, onClick: () -> Unit) {
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                char.name,
+                item.entity.name,
                 style = MaterialTheme.typography.bodySmall,
                 fontWeight = FontWeight.Bold,
                 maxLines = 1,
                 color = MaterialTheme.colorScheme.onSurface
             )
-            if (char.tier.isNotBlank()) {
+            if (item.effectiveTier.isNotBlank()) {
                 Text(
-                    char.tier,
+                    item.effectiveTier,
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.primary
                 )
@@ -194,7 +194,7 @@ fun CharacterGridItem(char: CharacterEntity, onClick: () -> Unit) {
 }
 
 @Composable
-fun CharacterListItem(char: CharacterEntity, onClick: () -> Unit) {
+fun CharacterListItem(item: CharacterDisplayItem, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -211,13 +211,13 @@ fun CharacterListItem(char: CharacterEntity, onClick: () -> Unit) {
         ) {
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
-                    .data(char.thumbUrl.ifBlank { char.imageUrl })
+                    .data(item.entity.thumbUrl.ifBlank { item.entity.imageUrl })
                     .placeholder(R.drawable.placeholder_portrait)
                     .error(R.drawable.placeholder_portrait)
                     .crossfade(300)
                     .allowHardware(false)
                     .build(),
-                contentDescription = char.name,
+                contentDescription = item.entity.name,
                 modifier = Modifier
                     .height(72.dp)
                     .aspectRatio(300f / 462f)
@@ -226,19 +226,19 @@ fun CharacterListItem(char: CharacterEntity, onClick: () -> Unit) {
             )
             Spacer(modifier = Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
-                Text(char.name, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
-                if (char.element.isNotBlank() || char.job.isNotBlank()) {
+                Text(item.entity.name, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                if (item.entity.element.isNotBlank() || item.entity.job.isNotBlank()) {
                     Text(
-                        "${char.element} ${char.job}".trim(),
+                        "${item.entity.element} ${item.entity.job}".trim(),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
                     )
                 }
             }
-            if (char.tier.isNotBlank()) {
+            if (item.effectiveTier.isNotBlank()) {
                 AssistChip(
                     onClick = {},
-                    label = { Text(char.tier, style = MaterialTheme.typography.labelSmall) }
+                    label = { Text(item.effectiveTier, style = MaterialTheme.typography.labelSmall) }
                 )
             }
         }

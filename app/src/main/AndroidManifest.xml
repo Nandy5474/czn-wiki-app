@@ -9,7 +9,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
-        android:label="CZN Wiki"
+        android:label="卡厄思wiki"
         android:supportsRtl="true"
         android:theme="@style/Theme.CznWiki">
 
