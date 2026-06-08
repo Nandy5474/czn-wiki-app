@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.platform.LocalContext
+import android.content.Context
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.cznwiki.app.CznApplication
@@ -36,7 +37,13 @@ fun HomeScreen(onNavigateToCharacter: (Int) -> Unit) {
     var showUpdateDialog by remember { mutableStateOf(false) }
     var updateMessage by remember { mutableStateOf("") }
     var isChecking by remember { mutableStateOf(false) }
+    var updateStatusText by remember { mutableStateOf("") }
     var dataVersion by remember { mutableIntStateOf(updateManager.getLocalVersion()) }
+    val prefs = context.getSharedPreferences("czn_remote_update", Context.MODE_PRIVATE)
+    val lastCheckTime = prefs.getLong("last_check_time", 0L)
+    val lastCheckDays = if (lastCheckTime > 0) {
+        ((System.currentTimeMillis() - lastCheckTime) / (1000 * 60 * 60 * 24)).toInt()
+    } else -1
 
     Column(modifier = Modifier.fillMaxSize()) {
         // === Hero Area ===
@@ -109,14 +116,24 @@ fun HomeScreen(onNavigateToCharacter: (Int) -> Unit) {
                         onClick = {
                             if (!isChecking) {
                                 isChecking = true
+                                updateStatusText = "正在检查版本..."
                                 scope.launch {
-                                    val result = updateManager.checkForUpdate()
-                                    updateMessage = result.message +
+                                    val result = updateManager.checkForUpdate { status ->
+                                        updateStatusText = when (status) {
+                                            is RemoteUpdateManager.UpdateStatus.Checking -> "正在检查版本..."
+                                            is RemoteUpdateManager.UpdateStatus.Downloading -> "正在下载${status.step}..."
+                                            is RemoteUpdateManager.UpdateStatus.Done -> "更新完成"
+                                            is RemoteUpdateManager.UpdateStatus.Error -> "更新失败: ${status.message}"
+                                        }
+                                    }
+                                    updateMessage = buildString {
+                                        append(result.message)
                                         if (result.charsUpdated > 0 || result.cardsUpdated > 0 ||
                                             result.saUpdated > 0 || result.userCollUpdated > 0) {
-                                            "\n更新: ${result.charsUpdated}角色, ${result.cardsUpdated}卡牌, " +
-                                                "${result.saUpdated}命座, ${result.userCollUpdated}收藏"
-                                        } else ""
+                                            append("\n更新: ${result.charsUpdated}角色, ${result.cardsUpdated}卡牌, " +
+                                                "${result.saUpdated}命座, ${result.userCollUpdated}收藏")
+                                        }
+                                    }
                                     dataVersion = result.version
                                     isChecking = false
                                     showUpdateDialog = true
@@ -126,11 +143,20 @@ fun HomeScreen(onNavigateToCharacter: (Int) -> Unit) {
                         enabled = !isChecking
                     ) {
                         if (isChecking) {
-                            CircularProgressIndicator(
-                                modifier = Modifier.size(20.dp),
-                                strokeWidth = 2.dp,
-                                color = Color.White
-                            )
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                CircularProgressIndicator(
+                                    modifier = Modifier.size(20.dp),
+                                    strokeWidth = 2.dp,
+                                    color = Color.White
+                                )
+                                if (updateStatusText.isNotEmpty()) {
+                                    Text(
+                                        updateStatusText,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = Color.White.copy(alpha = 0.8f)
+                                    )
+                                }
+                            }
                         } else {
                             Icon(
                                 Icons.Default.Refresh,

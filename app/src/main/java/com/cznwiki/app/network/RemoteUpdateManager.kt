@@ -58,6 +58,7 @@ class RemoteUpdateManager(
 
     data class RemoteVersion(
         val version: String = "0",
+        val version_code: Int = 0,
         val characters_url: String = CHARACTERS_URL,
         val cards_url: String = CARDS_URL,
         val self_awareness_url: String = SELF_AWARENESS_URL,
@@ -70,6 +71,7 @@ class RemoteUpdateManager(
         val success: Boolean,
         val message: String,
         val version: Int = 0,
+        val update_date: String = "",
         val charsUpdated: Int = 0,
         val cardsUpdated: Int = 0,
         val saUpdated: Int = 0,
@@ -84,9 +86,17 @@ class RemoteUpdateManager(
         prefs.edit().putInt(KEY_DATA_VERSION, version).apply()
     }
 
+    sealed class UpdateStatus {
+        data object Checking : UpdateStatus()
+        data class Downloading(val step: String) : UpdateStatus()
+        data class Done(val result: UpdateResult) : UpdateStatus()
+        data class Error(val message: String) : UpdateStatus()
+    }
+
     /** Check if update is available (non-blocking, returns via callback) */
-    suspend fun checkForUpdate(): UpdateResult = withContext(Dispatchers.IO) {
+    suspend fun checkForUpdate(onStatus: (UpdateStatus) -> Unit = {}): UpdateResult = withContext(Dispatchers.IO) {
         try {
+            onStatus(UpdateStatus.Checking)
             val versionJson = fetchUrl(VERSION_URL) ?: return@withContext UpdateResult(
                 false, "无法连接到更新服务器"
             )
@@ -94,8 +104,8 @@ class RemoteUpdateManager(
             val remoteVersion: RemoteVersion = gson.fromJson(versionJson, RemoteVersion::class.java)
             val localVersion = getLocalVersion()
 
-            // Compare version strings (strip leading 'v' if present)
-            val remoteVerNum = remoteVersion.version.removePrefix("v").toIntOrNull() ?: 0
+            // Compare using version_code (integer)
+            val remoteVerNum = remoteVersion.version_code
             if (remoteVerNum <= localVersion) {
                 prefs.edit().putLong(KEY_LAST_CHECK, System.currentTimeMillis()).apply()
                 return@withContext UpdateResult(true, "数据已是最新", localVersion)
@@ -108,6 +118,7 @@ class RemoteUpdateManager(
 
             // Download characters
             try {
+                onStatus(UpdateStatus.Downloading("角色数据"))
                 val charsJson = fetchUrl(remoteVersion.characters_url)
                 if (charsJson != null) {
                     val chars: List<CharacterEntity> = gson.fromJson(
@@ -122,6 +133,7 @@ class RemoteUpdateManager(
 
             // Download cards
             try {
+                onStatus(UpdateStatus.Downloading("卡牌数据"))
                 val cardsJson = fetchUrl(remoteVersion.cards_url)
                 if (cardsJson != null) {
                     val cards: List<CardEntity> = gson.fromJson(
@@ -136,6 +148,7 @@ class RemoteUpdateManager(
 
             // Download self-awareness
             try {
+                onStatus(UpdateStatus.Downloading("命座数据"))
                 val saJson = fetchUrl(remoteVersion.self_awareness_url)
                 if (saJson != null) {
                     val saList: List<SelfAwarenessEntity> = gson.fromJson(
@@ -173,7 +186,8 @@ class RemoteUpdateManager(
                 charsUpdated = charsUpdated,
                 cardsUpdated = cardsUpdated,
                 saUpdated = saUpdated,
-                userCollUpdated = userCollUpdated
+                userCollUpdated = userCollUpdated,
+                update_date = remoteVersion.update_date
             )
         } catch (e: Exception) {
             Log.e(TAG, "Update check failed", e)
