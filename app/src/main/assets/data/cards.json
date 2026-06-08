@@ -1,10 +1,10 @@
 [
   {
-    "characterId": 1,
-    "name": "投掷匕首",
+    "characterId": 2,
+    "name": "全员集合",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成100%伤害",
+    "effect": "造成100%基于防御的伤害",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -13,11 +13,11 @@
     "sortOrder": 1
   },
   {
-    "characterId": 1,
-    "name": "投掷匕首",
+    "characterId": 2,
+    "name": "妖精的庇佑",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成100%伤害",
+    "effect": "获得100%的护盾",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -26,11 +26,11 @@
     "sortOrder": 2
   },
   {
-    "characterId": 1,
-    "name": "防御系统",
+    "characterId": 2,
+    "name": "妖精的庇护",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "获得100%护盾",
+    "effect": "获得100%的护盾",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -39,11 +39,11 @@
     "sortOrder": 3
   },
   {
-    "characterId": 1,
-    "name": "狩猎本能",
+    "characterId": 2,
+    "name": "很久很久以前",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "[开战] 使用其他战斗员的强化或技能卡牌时，开始狩猎1",
+    "effect": "[消灭2] 赋予抽牌堆中随机2张卡祝福，从中抽取1张卡牌",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -52,8 +52,8 @@
     "sortOrder": 4
   },
   {
-    "characterId": 1,
-    "name": "冲动",
+    "characterId": 2,
+    "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "使用时有低级概率发生意料之外的结果",
@@ -65,50 +65,50 @@
     "sortOrder": 5
   },
   {
-    "characterId": 1,
-    "name": "短剑散射",
+    "characterId": 2,
+    "name": "保护我们",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "[快速] 对随机敌人造成60%×3伤害 按照攻击的目标数量开始狩猎",
+    "effect": "[祝福] 接下来发动2张祝福卡牌时，抽取1张祝福卡牌",
     "isUnique": false,
     "isRetain": false,
-    "isQuick": true,
-    "isBless": false,
+    "isQuick": false,
+    "isBless": true,
     "hasEpiphany": false,
     "sortOrder": 1
   },
   {
-    "characterId": 1,
-    "name": "快速解决法",
+    "characterId": 2,
+    "name": "童话中的朋友们",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "[快速] 造成80%×2伤害 若处于开始狩猎状态，抽取1张攻击卡牌",
-    "isUnique": false,
+    "effect": "[唯一] 选择生成1张狗狗或小熊",
+    "isUnique": true,
     "isRetain": false,
-    "isQuick": true,
+    "isQuick": false,
     "isBless": false,
     "hasEpiphany": false,
     "sortOrder": 2
   },
   {
-    "characterId": 1,
-    "name": "丁戈嚎叫",
+    "characterId": 2,
+    "name": "故事中的真相",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "获得100%护盾 开始狩猎2",
+    "effect": "[快速] 造成200%基于防御的伤害 持续1回合，目标受到的伤害量+100%",
     "isUnique": false,
     "isRetain": false,
-    "isQuick": false,
+    "isQuick": true,
     "isBless": false,
     "hasEpiphany": false,
     "sortOrder": 3
   },
   {
-    "characterId": 1,
-    "name": "解决师之道",
+    "characterId": 2,
+    "name": "秘密花园",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "[唯一] 开始狩猎的额外攻击伤害量增加40%",
+    "effect": "[唯一] 获得200%护盾 护盾保留25%",
     "isUnique": true,
     "isRetain": false,
     "isQuick": false,
@@ -117,11 +117,11 @@
     "sortOrder": 4
   },
   {
-    "characterId": 1,
-    "name": "最后的解决手段",
+    "characterId": 2,
+    "name": "快乐结局",
     "type": "独特卡牌",
     "cost": 6,
-    "effect": "所有敌人伤害250% 开始狩猎伤害增加30%",
+    "effect": "获得300%护盾 依持有的护盾获得固定治愈 （不超过最大HP的30%）",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -130,7 +130,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "剑光",
     "type": "基础卡牌",
     "cost": 0,
@@ -143,7 +143,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "剑光",
     "type": "基础卡牌",
     "cost": 0,
@@ -156,7 +156,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "剑幕",
     "type": "基础卡牌",
     "cost": 0,
@@ -169,7 +169,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "剑之雨",
     "type": "基础卡牌",
     "cost": 0,
@@ -182,7 +182,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "自责",
     "type": "基础卡牌",
     "cost": 0,
@@ -195,7 +195,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "万人的英雄",
     "type": "灵光一闪",
     "cost": 0,
@@ -208,7 +208,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "一缕光芒",
     "type": "灵光一闪",
     "cost": 0,
@@ -221,7 +221,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "展开极光",
     "type": "灵光一闪",
     "cost": 0,
@@ -234,7 +234,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "凝聚极光",
     "type": "灵光一闪",
     "cost": 0,
@@ -247,7 +247,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 2,
+    "characterId": 3,
     "name": "剑之乐园",
     "type": "独特卡牌",
     "cost": 5,
@@ -260,7 +260,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "扰乱射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -273,7 +273,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "扰乱射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -286,7 +286,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "保护我",
     "type": "基础卡牌",
     "cost": 0,
@@ -299,7 +299,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "倾注真心！",
     "type": "基础卡牌",
     "cost": 0,
@@ -312,7 +312,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "阴沉",
     "type": "基础卡牌",
     "cost": 0,
@@ -325,7 +325,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "来吧，牛奶蓬蓬",
     "type": "灵光一闪",
     "cost": 0,
@@ -338,7 +338,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "净化单膛室手枪",
     "type": "灵光一闪",
     "cost": 0,
@@ -351,7 +351,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "绽放的爱",
     "type": "灵光一闪",
     "cost": 0,
@@ -364,7 +364,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "解放的心",
     "type": "灵光一闪",
     "cost": 0,
@@ -377,7 +377,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 3,
+    "characterId": 4,
     "name": "光辉微笑",
     "type": "独特卡牌",
     "cost": 5,
@@ -390,7 +390,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "时间加速",
     "type": "基础卡牌",
     "cost": 0,
@@ -403,7 +403,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "时间加速",
     "type": "基础卡牌",
     "cost": 0,
@@ -416,7 +416,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "倒带",
     "type": "基础卡牌",
     "cost": 0,
@@ -429,7 +429,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "记录者",
     "type": "基础卡牌",
     "cost": 0,
@@ -442,7 +442,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "混乱",
     "type": "基础卡牌",
     "cost": 0,
@@ -455,7 +455,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "破坏时间轴",
     "type": "灵光一闪",
     "cost": 0,
@@ -468,7 +468,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "确定的未来",
     "type": "灵光一闪",
     "cost": 0,
@@ -481,7 +481,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "时间圆环",
     "type": "灵光一闪",
     "cost": 0,
@@ -494,7 +494,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "时间悖论",
     "type": "灵光一闪",
     "cost": 0,
@@ -507,7 +507,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 4,
+    "characterId": 5,
     "name": "荣耀时刻",
     "type": "独特卡牌",
     "cost": 5,
@@ -520,7 +520,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "物质分解",
     "type": "基础卡牌",
     "cost": 0,
@@ -533,7 +533,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "展开屏障",
     "type": "基础卡牌",
     "cost": 0,
@@ -546,7 +546,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "展开屏障",
     "type": "基础卡牌",
     "cost": 0,
@@ -559,7 +559,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "量子种子",
     "type": "基础卡牌",
     "cost": 0,
@@ -572,7 +572,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "阴沉",
     "type": "基础卡牌",
     "cost": 0,
@@ -585,7 +585,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "形象凝聚",
     "type": "灵光一闪",
     "cost": 0,
@@ -598,7 +598,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "创造与破坏",
     "type": "灵光一闪",
     "cost": 0,
@@ -611,7 +611,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "成对产生",
     "type": "灵光一闪",
     "cost": 0,
@@ -624,7 +624,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "事件视界",
     "type": "灵光一闪",
     "cost": 0,
@@ -637,7 +637,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 5,
+    "characterId": 6,
     "name": "创造共鸣",
     "type": "独特卡牌",
     "cost": 5,
@@ -650,7 +650,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -663,7 +663,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -676,7 +676,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "刀背格挡",
     "type": "基础卡牌",
     "cost": 0,
@@ -689,7 +689,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "破碎",
     "type": "基础卡牌",
     "cost": 0,
@@ -702,7 +702,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
@@ -715,7 +715,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "老练的一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -728,7 +728,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "致命一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -741,7 +741,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "逆转之刃",
     "type": "灵光一闪",
     "cost": 0,
@@ -754,7 +754,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "斗志",
     "type": "灵光一闪",
     "cost": 0,
@@ -767,7 +767,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 6,
+    "characterId": 7,
     "name": "反射：零",
     "type": "独特卡牌",
     "cost": 6,
@@ -780,7 +780,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "NA：攻击反应",
     "type": "基础卡牌",
     "cost": 0,
@@ -793,7 +793,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "NA：保护反应",
     "type": "基础卡牌",
     "cost": 0,
@@ -806,7 +806,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "NA：保护反应",
     "type": "基础卡牌",
     "cost": 0,
@@ -819,7 +819,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "饥饿的枷锁",
     "type": "基础卡牌",
     "cost": 0,
@@ -832,7 +832,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "阴沉",
     "type": "基础卡牌",
     "cost": 0,
@@ -845,7 +845,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "无尽饥饿",
     "type": "灵光一闪",
     "cost": 0,
@@ -858,7 +858,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "主动控制",
     "type": "灵光一闪",
     "cost": 0,
@@ -871,7 +871,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "贪食领域",
     "type": "灵光一闪",
     "cost": 0,
@@ -884,7 +884,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "完全饱餐",
     "type": "灵光一闪",
     "cost": 0,
@@ -897,7 +897,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 7,
+    "characterId": 8,
     "name": "掠食者的狩猎法",
     "type": "独特卡牌",
     "cost": 5,
@@ -910,7 +910,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "脉冲打击",
     "type": "基础卡牌",
     "cost": 0,
@@ -923,7 +923,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "脉冲打击",
     "type": "基础卡牌",
     "cost": 0,
@@ -936,7 +936,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "磁场",
     "type": "基础卡牌",
     "cost": 0,
@@ -949,7 +949,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "定位雷射",
     "type": "基础卡牌",
     "cost": 0,
@@ -962,7 +962,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "自责",
     "type": "基础卡牌",
     "cost": 0,
@@ -975,7 +975,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "电浆飞弹",
     "type": "灵光一闪",
     "cost": 0,
@@ -988,7 +988,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "闪耀核心",
     "type": "灵光一闪",
     "cost": 0,
@@ -1001,7 +1001,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "钴蓝之光",
     "type": "灵光一闪",
     "cost": 0,
@@ -1014,7 +1014,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "苍白流星",
     "type": "灵光一闪",
     "cost": 0,
@@ -1027,7 +1027,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 8,
+    "characterId": 9,
     "name": "死亡光环",
     "type": "独特卡牌",
     "cost": 6,
@@ -1040,7 +1040,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "斩月",
     "type": "基础卡牌",
     "cost": 0,
@@ -1053,7 +1053,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "斩月",
     "type": "基础卡牌",
     "cost": 0,
@@ -1066,7 +1066,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "魂火的保护",
     "type": "基础卡牌",
     "cost": 0,
@@ -1079,7 +1079,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "业火",
     "type": "基础卡牌",
     "cost": 0,
@@ -1092,7 +1092,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -1105,7 +1105,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "月读",
     "type": "灵光一闪",
     "cost": 0,
@@ -1118,7 +1118,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "黄昏的羁绊",
     "type": "灵光一闪",
     "cost": 0,
@@ -1131,7 +1131,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "鬼怪狩猎",
     "type": "灵光一闪",
     "cost": 0,
@@ -1144,7 +1144,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "月影",
     "type": "灵光一闪",
     "cost": 0,
@@ -1157,7 +1157,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 9,
+    "characterId": 10,
     "name": "满潮之月光",
     "type": "独特卡牌",
     "cost": 5,
@@ -1170,7 +1170,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "长剑斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -1183,7 +1183,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "高速斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -1196,7 +1196,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "逆流斩",
     "type": "基础卡牌",
     "cost": 0,
@@ -1209,7 +1209,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "压制准备",
     "type": "基础卡牌",
     "cost": 0,
@@ -1222,7 +1222,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
@@ -1235,7 +1235,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "偷袭斩",
     "type": "灵光一闪",
     "cost": 0,
@@ -1248,7 +1248,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "迷惑一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -1261,7 +1261,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "冰点之刃",
     "type": "灵光一闪",
     "cost": 0,
@@ -1274,7 +1274,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "破冰斩",
     "type": "灵光一闪",
     "cost": 0,
@@ -1287,7 +1287,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 10,
+    "characterId": 11,
     "name": "天际斩击",
     "type": "独特卡牌",
     "cost": 5,
@@ -1300,7 +1300,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "锚",
     "type": "基础卡牌",
     "cost": 0,
@@ -1313,7 +1313,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "力量之锚",
     "type": "基础卡牌",
     "cost": 0,
@@ -1326,7 +1326,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "落锚",
     "type": "基础卡牌",
     "cost": 0,
@@ -1339,7 +1339,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "锚炮",
     "type": "基础卡牌",
     "cost": 0,
@@ -1352,7 +1352,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -1365,7 +1365,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "锚点",
     "type": "灵光一闪",
     "cost": 0,
@@ -1378,7 +1378,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "力量蓄积",
     "type": "灵光一闪",
     "cost": 0,
@@ -1391,7 +1391,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "补充能量",
     "type": "灵光一闪",
     "cost": 0,
@@ -1404,7 +1404,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "提升",
     "type": "灵光一闪",
     "cost": 0,
@@ -1417,7 +1417,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 11,
+    "characterId": 12,
     "name": "强力打击",
     "type": "独特卡牌",
     "cost": 6,
@@ -1430,7 +1430,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "黑云剑一式",
     "type": "基础卡牌",
     "cost": 0,
@@ -1443,7 +1443,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "黑云剑三式",
     "type": "基础卡牌",
     "cost": 0,
@@ -1456,7 +1456,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "守护",
     "type": "基础卡牌",
     "cost": 0,
@@ -1469,7 +1469,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "拔刀",
     "type": "基础卡牌",
     "cost": 0,
@@ -1482,7 +1482,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "迷惑",
     "type": "基础卡牌",
     "cost": 0,
@@ -1495,7 +1495,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "黑云奥义：残",
     "type": "灵光一闪",
     "cost": 0,
@@ -1508,7 +1508,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "黑云奥义：灭",
     "type": "灵光一闪",
     "cost": 0,
@@ -1521,7 +1521,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "黑云心法",
     "type": "灵光一闪",
     "cost": 0,
@@ -1534,7 +1534,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "黑云奥义：黑雾",
     "type": "灵光一闪",
     "cost": 0,
@@ -1547,7 +1547,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 12,
+    "characterId": 13,
     "name": "黑云奥义·斩",
     "type": "独特卡牌",
     "cost": 6,
@@ -1560,8 +1560,8 @@
     "sortOrder": 1
   },
   {
-    "characterId": 13,
-    "name": "速射弹",
+    "characterId": 14,
+    "name": "单发射击",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "造成100%伤害",
@@ -1573,8 +1573,8 @@
     "sortOrder": 1
   },
   {
-    "characterId": 13,
-    "name": "速射弹",
+    "characterId": 14,
+    "name": "单发射击",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "造成100%伤害",
@@ -1586,8 +1586,8 @@
     "sortOrder": 2
   },
   {
-    "characterId": 13,
-    "name": "山茶花幻象",
+    "characterId": 14,
+    "name": "暗影隐身",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "获得100%护盾",
@@ -1599,11 +1599,11 @@
     "sortOrder": 3
   },
   {
-    "characterId": 13,
-    "name": "准备发射",
+    "characterId": 14,
+    "name": "连续击发",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "[唯一/开战] 生成1张投射机 回合开始时，生成1张投射机",
+    "effect": "造成50%×2伤害 按照暴击次数生成手枪弹药",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -1612,7 +1612,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 13,
+    "characterId": 14,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -1625,11 +1625,11 @@
     "sortOrder": 5
   },
   {
-    "characterId": 13,
-    "name": "喘气",
+    "characterId": 14,
+    "name": "隐密上膛",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "获得100%护盾 其他战斗员的卡牌抽取2",
+    "effect": "生成2张手枪弹药",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -1638,11 +1638,11 @@
     "sortOrder": 1
   },
   {
-    "characterId": 13,
-    "name": "决心坠饰",
+    "characterId": 14,
+    "name": "逮到机会",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "使用其他战斗员的技能卡牌时 上膛1",
+    "effect": "[主导] 获得100%护盾 接下来使用的弹药卡牌伤害量+120%",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -1651,11 +1651,11 @@
     "sortOrder": 2
   },
   {
-    "characterId": 13,
-    "name": "科沃斯基爵士",
+    "characterId": 14,
+    "name": "魔眼乱舞",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "选择1张手牌的投射机，在使用前伤害量+100% 抽取1",
+    "effect": "造成50%伤害 按照本回合使用的弹药卡牌数量，额外打击1次",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -1664,12 +1664,12 @@
     "sortOrder": 3
   },
   {
-    "characterId": 13,
-    "name": "准备轰炸",
+    "characterId": 14,
+    "name": "必杀弹",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "[唯一] 上膛叠加上限增加1 上膛2",
-    "isUnique": true,
+    "effect": "[唯一/弹药] 造成300%伤害 使用5张手枪弹药卡牌时，移除无法使用。",
+    "isUnique": false,
     "isRetain": false,
     "isQuick": false,
     "isBless": false,
@@ -1677,141 +1677,11 @@
     "sortOrder": 4
   },
   {
-    "characterId": 13,
-    "name": "狩猎时间",
+    "characterId": 14,
+    "name": "杀伤策划",
     "type": "独特卡牌",
     "cost": 5,
-    "effect": "对所有敌人造成250%穿透伤害 获得上膛上限值",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 14,
-    "name": "冻结之拳",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成基于防御的伤害100%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 14,
-    "name": "寒霜盾牌",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 14,
-    "name": "寒霜盾牌",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 14,
-    "name": "冰霜碎片",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "[主导] 结晶化3 回合开始时，反击1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 14,
-    "name": "冲动",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 14,
-    "name": "冰河铁拳",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "造成基于防御的伤害300% 获得相当于造成伤害量50%的固定护盾（无法超过HP上限的20%）",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 14,
-    "name": "冰壁",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "获得200%护盾 反击2 1回合内反击目标变更为所有敌人",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 14,
-    "name": "补充寒气",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "获得140%护盾 所有敌人脆弱3",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 14,
-    "name": "严寒风暴",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[主导] 结晶化2 使用能力获得护盾时，反击1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 14,
-    "name": "绝对零度",
-    "type": "独特卡牌",
-    "cost": 6,
-    "effect": "造成基于防御的伤害300% 按照自己的反击数量，伤害量增加20%",
+    "effect": "造成300%伤害 按照手牌中的卡牌数量，伤害量+15%",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -1951,10 +1821,10 @@
   },
   {
     "characterId": 16,
-    "name": "一击",
+    "name": "冻结之拳",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成100%的伤害",
+    "effect": "造成基于防御的伤害100%",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -1964,10 +1834,10 @@
   },
   {
     "characterId": 16,
-    "name": "一击",
+    "name": "寒霜盾牌",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成100%的伤害",
+    "effect": "获得100%护盾",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -1977,7 +1847,7 @@
   },
   {
     "characterId": 16,
-    "name": "火龙护身",
+    "name": "寒霜盾牌",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "获得100%护盾",
@@ -1990,10 +1860,10 @@
   },
   {
     "characterId": 16,
-    "name": "火龙宝石",
+    "name": "冰霜碎片",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "[唯一/开战] 攻击卡牌的伤害量增加20% 使用攻击卡牌时，对目标热情弱点1",
+    "effect": "[主导] 结晶化3 回合开始时，反击1",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2003,7 +1873,7 @@
   },
   {
     "characterId": 16,
-    "name": "呆滞",
+    "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "使用时有低级概率发生意料之外的结果",
@@ -2016,10 +1886,10 @@
   },
   {
     "characterId": 16,
-    "name": "升龙脚",
+    "name": "冰河铁拳",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "造成100%伤害 余烬2 连续：额外攻击1次",
+    "effect": "造成基于防御的伤害300% 获得相当于造成伤害量50%的固定护盾（无法超过HP上限的20%）",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2029,10 +1899,10 @@
   },
   {
     "characterId": 16,
-    "name": "攻防一体",
+    "name": "冰壁",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "自己的基本卡牌抽取2，1回合内该卡牌费用减少1",
+    "effect": "获得200%护盾 反击2 1回合内反击目标变更为所有敌人",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2042,12 +1912,12 @@
   },
   {
     "characterId": 16,
-    "name": "香族的精神",
+    "name": "补充寒气",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "[保留] 1回合内使用自己的卡牌时，自己的伤害量＋20%",
+    "effect": "获得140%护盾 所有敌人脆弱3",
     "isUnique": false,
-    "isRetain": true,
+    "isRetain": false,
     "isQuick": false,
     "isBless": false,
     "hasEpiphany": false,
@@ -2055,10 +1925,10 @@
   },
   {
     "characterId": 16,
-    "name": "火龙惊天",
+    "name": "严寒风暴",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "[弱点攻击] 造成300%伤害 破坏：保留余烬",
+    "effect": "[主导] 结晶化2 使用能力获得护盾时，反击1",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2068,10 +1938,10 @@
   },
   {
     "characterId": 16,
-    "name": "火龙升天",
+    "name": "绝对零度",
     "type": "独特卡牌",
     "cost": 6,
-    "effect": "接下来使用 4 张自己的基本攻击卡牌会追加 1 次打击",
+    "effect": "造成基于防御的伤害300% 按照自己的反击数量，伤害量增加20%",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2211,6 +2081,266 @@
   },
   {
     "characterId": 18,
+    "name": "一击",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%的伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 18,
+    "name": "一击",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%的伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 18,
+    "name": "火龙护身",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%护盾",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 18,
+    "name": "火龙宝石",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "[唯一/开战] 攻击卡牌的伤害量增加20% 使用攻击卡牌时，对目标热情弱点1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 18,
+    "name": "呆滞",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 18,
+    "name": "升龙脚",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "造成100%伤害 余烬2 连续：额外攻击1次",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 18,
+    "name": "攻防一体",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "自己的基本卡牌抽取2，1回合内该卡牌费用减少1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 18,
+    "name": "香族的精神",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[保留] 1回合内使用自己的卡牌时，自己的伤害量＋20%",
+    "isUnique": false,
+    "isRetain": true,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 18,
+    "name": "火龙惊天",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[弱点攻击] 造成300%伤害 破坏：保留余烬",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 18,
+    "name": "火龙升天",
+    "type": "独特卡牌",
+    "cost": 6,
+    "effect": "接下来使用 4 张自己的基本攻击卡牌会追加 1 次打击",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 19,
+    "name": "速射弹",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 19,
+    "name": "速射弹",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 19,
+    "name": "山茶花幻象",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%护盾",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 19,
+    "name": "准备发射",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "[唯一/开战] 生成1张投射机 回合开始时，生成1张投射机",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 19,
+    "name": "恐惧",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 19,
+    "name": "喘气",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "获得100%护盾 其他战斗员的卡牌抽取2",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 19,
+    "name": "决心坠饰",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "使用其他战斗员的技能卡牌时 上膛1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 19,
+    "name": "科沃斯基爵士",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "选择1张手牌的投射机，在使用前伤害量+100% 抽取1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 19,
+    "name": "准备轰炸",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[唯一] 上膛叠加上限增加1 上膛2",
+    "isUnique": true,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 19,
+    "name": "狩猎时间",
+    "type": "独特卡牌",
+    "cost": 5,
+    "effect": "对所有敌人造成250%穿透伤害 获得上膛上限值",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 20,
     "name": "歼灭射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -2223,7 +2353,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "歼灭射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -2236,7 +2366,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "暗黑之幕",
     "type": "基础卡牌",
     "cost": 0,
@@ -2249,7 +2379,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "悲鸣回声",
     "type": "基础卡牌",
     "cost": 0,
@@ -2262,7 +2392,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
@@ -2275,7 +2405,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "即刻审判",
     "type": "灵光一闪",
     "cost": 0,
@@ -2288,7 +2418,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "漆黑颂诗",
     "type": "灵光一闪",
     "cost": 0,
@@ -2301,7 +2431,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "吞噬命运之花",
     "type": "灵光一闪",
     "cost": 0,
@@ -2314,7 +2444,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "誓死一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -2327,7 +2457,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 18,
+    "characterId": 20,
     "name": "黑色荆棘",
     "type": "独特卡牌",
     "cost": 4,
@@ -2340,8 +2470,8 @@
     "sortOrder": 1
   },
   {
-    "characterId": 19,
-    "name": "卡牌",
+    "characterId": 21,
+    "name": "投掷匕首",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "造成100%伤害",
@@ -2353,11 +2483,11 @@
     "sortOrder": 1
   },
   {
-    "characterId": 19,
-    "name": "万用卡牌",
+    "characterId": 21,
+    "name": "投掷匕首",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成220%伤害",
+    "effect": "造成100%伤害",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2366,11 +2496,11 @@
     "sortOrder": 2
   },
   {
-    "characterId": 19,
-    "name": "魔力场",
+    "characterId": 21,
+    "name": "防御系统",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "获得100%治愈",
+    "effect": "获得100%护盾",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2379,11 +2509,11 @@
     "sortOrder": 3
   },
   {
-    "characterId": 19,
-    "name": "心灵魔术",
+    "characterId": 21,
+    "name": "狩猎本能",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "从4个任务中随机开始1个",
+    "effect": "[开战] 使用其他战斗员的强化或技能卡牌时，开始狩猎1",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2392,8 +2522,8 @@
     "sortOrder": 4
   },
   {
-    "characterId": 19,
-    "name": "精神控制",
+    "characterId": 21,
+    "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "使用时有低级概率发生意料之外的结果",
@@ -2405,37 +2535,37 @@
     "sortOrder": 5
   },
   {
-    "characterId": 19,
-    "name": "恶魔骰子",
+    "characterId": 21,
+    "name": "短剑散射",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "造成160%伤害 抽取1",
+    "effect": "[快速] 对随机敌人造成60%×3伤害 按照攻击的目标数量开始狩猎",
     "isUnique": false,
     "isRetain": false,
-    "isQuick": false,
+    "isQuick": true,
     "isBless": false,
     "hasEpiphany": false,
     "sortOrder": 1
   },
   {
-    "characterId": 19,
-    "name": "洗牌",
+    "characterId": 21,
+    "name": "快速解决法",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "[消灭] 丢弃手牌中所有的卡牌 并抽取相同数量的卡牌",
+    "effect": "[快速] 造成80%×2伤害 若处于开始狩猎状态，抽取1张攻击卡牌",
     "isUnique": false,
     "isRetain": false,
-    "isQuick": false,
+    "isQuick": true,
     "isBless": false,
     "hasEpiphany": false,
     "sortOrder": 2
   },
   {
-    "characterId": 19,
-    "name": "骰子诡计",
+    "characterId": 21,
+    "name": "丁戈嚎叫",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "造成240%伤害，持续1回合士气减少1，按照完成的任务数量使费用减少",
+    "effect": "获得100%护盾 开始狩猎2",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2444,12 +2574,12 @@
     "sortOrder": 3
   },
   {
-    "characterId": 19,
-    "name": "小丑",
+    "characterId": 21,
+    "name": "解决师之道",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "从抽取卡牌中选择1张，该卡牌移动至手牌",
-    "isUnique": false,
+    "effect": "[唯一] 开始狩猎的额外攻击伤害量增加40%",
+    "isUnique": true,
     "isRetain": false,
     "isQuick": false,
     "isBless": false,
@@ -2457,11 +2587,11 @@
     "sortOrder": 4
   },
   {
-    "characterId": 19,
-    "name": "死亡诡计",
+    "characterId": 21,
+    "name": "最后的解决手段",
     "type": "独特卡牌",
-    "cost": 4,
-    "effect": "生成2张任务奖励卡牌 1回合内所有敌人士气减少5",
+    "cost": 6,
+    "effect": "所有敌人伤害250% 开始狩猎伤害增加30%",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -2470,7 +2600,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "扫弦",
     "type": "基础卡牌",
     "cost": 0,
@@ -2483,7 +2613,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "增幅治疗",
     "type": "基础卡牌",
     "cost": 0,
@@ -2496,7 +2626,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "增幅治疗",
     "type": "基础卡牌",
     "cost": 0,
@@ -2509,7 +2639,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "G和弦",
     "type": "基础卡牌",
     "cost": 0,
@@ -2522,7 +2652,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "迷惑",
     "type": "基础卡牌",
     "cost": 0,
@@ -2535,7 +2665,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "重音闷音",
     "type": "灵光一闪",
     "cost": 0,
@@ -2548,7 +2678,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "灵魂飞跃",
     "type": "灵光一闪",
     "cost": 0,
@@ -2561,7 +2691,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "慢板",
     "type": "灵光一闪",
     "cost": 0,
@@ -2574,7 +2704,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "妮雅的好奇心",
     "type": "灵光一闪",
     "cost": 0,
@@ -2587,7 +2717,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 20,
+    "characterId": 23,
     "name": "ROCK AND ROLL",
     "type": "独特卡牌",
     "cost": 5,
@@ -2600,917 +2730,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 21,
-    "name": "机枪",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%的伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 21,
-    "name": "机枪",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%的伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 21,
-    "name": "防护燃烧弹",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 21,
-    "name": "扩容弹夹",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "[主导] 回合开始时，生成1张发射器弹药",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 21,
-    "name": "恐惧",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 21,
-    "name": "S.S.S",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "造成100%伤害 1回合内弹药卡牌的伤害量+40%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 21,
-    "name": "火焰斩击",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "对所有敌人造成180%伤害 抽取1 丢弃1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 21,
-    "name": "闪光弹",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "对所有敌人造成120%伤害 削弱2 若目标持有护盾，伤害量+50%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 21,
-    "name": "R.P.G-7",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "消灭弹药卡牌时，使所有敌人固定伤害40%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 21,
-    "name": "全弹发射",
-    "type": "独特卡牌",
-    "cost": 5,
-    "effect": "抽取2 对所有敌人造成250%伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 22,
-    "name": "发射器",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 22,
-    "name": "充能发射器",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成220%伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 22,
-    "name": "护盾",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 22,
-    "name": "破绽识破",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "[保留] 伤害140% 保留：1回合内额外攻击1次",
-    "isUnique": false,
-    "isRetain": true,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 22,
-    "name": "恐惧",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 22,
-    "name": "充能弹",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[保留] 造成240%伤害 保留：伤害量+120%",
-    "isUnique": false,
-    "isRetain": true,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 22,
-    "name": "隐藏的巧克力棒",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[消灭] 抽取3",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 22,
-    "name": "无限火力",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "获得100%护盾 接下来使用的自身攻击卡牌伤害量+80%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 22,
-    "name": "重型武器专家",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "生成1张破绽识破或充能弹，赋予该卡牌消灭，使用前费用减少1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 22,
-    "name": "最大输出充能弹",
-    "type": "独特卡牌",
-    "cost": 5,
-    "effect": "对所有敌人造成400%伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 23,
-    "name": "投掷匕首",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 23,
-    "name": "投掷匕首",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 23,
-    "name": "黑暗之手",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%治愈",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 23,
-    "name": "拔出匕首",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "生成2张暗影匕首",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 23,
-    "name": "逃避现实",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 23,
-    "name": "附加诅咒",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "持续1回合，使用攻击卡牌时，赋予目标痛苦1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 23,
-    "name": "暗影上膛",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "获得100%治愈 生成1张高阶暗影匕首",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 23,
-    "name": "攻击要害",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "造成80%x3伤害 目标若处于痛苦状态，使伤害量+50%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 23,
-    "name": "切除诅咒",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "发动目标持有自身的痛苦",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 23,
-    "name": "黑暗之波",
-    "type": "独特卡牌",
-    "cost": 5,
-    "effect": "生成2张暗影匕首 痛苦2x2",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
     "characterId": 24,
-    "name": "暗黑之刃",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%的伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 24,
-    "name": "暗黑之刃",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%的伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 24,
-    "name": "物质再生",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%治愈",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 24,
-    "name": "黑暗斩击",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "[主导] 造成100%的伤害 1回合内基本攻击卡牌的伤害量增加100%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 24,
-    "name": "混乱",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 24,
-    "name": "共鸣之暗",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[唯一] 费用1的卡牌伤害量+40% 回合结束时治愈60%",
-    "isUnique": true,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 24,
-    "name": "点心时间",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[消灭] 选择并消灭1张手牌，获得200%治愈 抽取1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 24,
-    "name": "暗黑凝聚",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "从手牌中选择1张攻击卡牌，持续1回合，伤害量+100%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 24,
-    "name": "掠食者之刃",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "造成250%的伤害 1回合内士气2",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 24,
-    "name": "最后的暗影",
-    "type": "独特卡牌",
-    "cost": 4,
-    "effect": "获得300%伤害 基于伤害的恢复15% 获得1点AP",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 25,
-    "name": "水箭",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 25,
-    "name": "水护盾",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%治愈",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 25,
-    "name": "水护盾",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%治愈",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 25,
-    "name": "水之根源",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%治愈 获得1点AP",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 25,
-    "name": "逃避现实",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 25,
-    "name": "海浪的庇佑",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[保留] 获得100%治愈 按照AP数量，治愈量增加30%",
-    "isUnique": false,
-    "isRetain": true,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 25,
-    "name": "作战分析",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "水波1 1回合内治愈量+50%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 25,
-    "name": "漩涡",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "对所有敌人造成200%伤害 按照攻击的目标数量治愈50%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 25,
-    "name": "泛滥",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "【唯一】 水波1 每回合开始时，水波1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 25,
-    "name": "激流",
-    "type": "独特卡牌",
-    "cost": 6,
-    "effect": "生成2张水之根源，赋予此卡牌消灭",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 26,
-    "name": "全员集合",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "造成100%基于防御的伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 26,
-    "name": "妖精的庇佑",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%的护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 26,
-    "name": "妖精的庇护",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%的护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 26,
-    "name": "很久很久以前",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "[消灭2] 赋予抽牌堆中随机2张卡祝福，从中抽取1张卡牌",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 26,
-    "name": "恐惧",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 26,
-    "name": "保护我们",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[祝福] 接下来发动2张祝福卡牌时，抽取1张祝福卡牌",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": true,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 26,
-    "name": "童话中的朋友们",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[唯一] 选择生成1张狗狗或小熊",
-    "isUnique": true,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 26,
-    "name": "故事中的真相",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[快速] 造成200%基于防御的伤害 持续1回合，目标受到的伤害量+100%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": true,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 26,
-    "name": "秘密花园",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[唯一] 获得200%护盾 护盾保留25%",
-    "isUnique": true,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 26,
-    "name": "快乐结局",
-    "type": "独特卡牌",
-    "cost": 6,
-    "effect": "获得300%护盾 依持有的护盾获得固定治愈 （不超过最大HP的30%）",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 27,
-    "name": "刺剑",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "基于防御的伤害100%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 27,
-    "name": "刺剑",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "基于防御的伤害100%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 27,
-    "name": "钢铁护盾",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 27,
-    "name": "悬浮金属",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "伤害减少3 金属化2",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 27,
-    "name": "恐惧",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 27,
-    "name": "金属刺穿",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "基于防御的伤害90%×2 若为金属化状态，金属化减少1、脆弱2",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 27,
-    "name": "提炼金属",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "金属化2 1回合内决心2",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 27,
-    "name": "全金属飓风",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "所有敌人基于防御的伤害200% 持续1回合，金属化的目标套用至所有敌人，伤害量+20%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 27,
-    "name": "铁皮",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[消灭/终极] 持续1回合，所受伤害量减少20% 金属化最多减少4 按照相应数量，所受伤害量额外减少20%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 27,
-    "name": "钢铁信念",
-    "type": "独特卡牌",
-    "cost": 4,
-    "effect": "按照金属化的数量获得护盾120% 移除#金属化# 下一回合开始时，金属化3",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 28,
     "name": "交战射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -3523,7 +2743,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "交战射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -3536,7 +2756,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "紧急遮蔽",
     "type": "基础卡牌",
     "cost": 0,
@@ -3549,7 +2769,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "高倍率瞄准镜",
     "type": "基础卡牌",
     "cost": 0,
@@ -3562,7 +2782,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -3575,7 +2795,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "捕捉目标",
     "type": "灵光一闪",
     "cost": 0,
@@ -3588,7 +2808,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "无人机出击",
     "type": "灵光一闪",
     "cost": 0,
@@ -3601,7 +2821,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "启动战术",
     "type": "灵光一闪",
     "cost": 0,
@@ -3614,7 +2834,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "狙击手的领域",
     "type": "灵光一闪",
     "cost": 0,
@@ -3627,7 +2847,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 28,
+    "characterId": 24,
     "name": "最后一击",
     "type": "独特卡牌",
     "cost": 5,
@@ -3640,138 +2860,8 @@
     "sortOrder": 1
   },
   {
-    "characterId": 29,
-    "name": "庇护飞踢",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "基于防御的伤害100%",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 29,
-    "name": "庇护防御",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得100%护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 29,
-    "name": "庇护坚守",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "获得220%护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 29,
-    "name": "意志的冲刺",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "[粉碎] 基于防御的伤害140% 20%的基于伤害的护盾 反击1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 29,
-    "name": "恐惧",
-    "type": "基础卡牌",
-    "cost": 0,
-    "effect": "使用时有低级概率发生意料之外的结果",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 5
-  },
-  {
-    "characterId": 29,
-    "name": "玛莉贝尔的庇护MK.II",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[粉碎] 基于防御的伤害120% 获得相当于造成伤害量的固定护盾（无法超过HP上限的20%）",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 29,
-    "name": "狼之巢穴",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "反击2 结晶化2 回合开始时反击1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 2
-  },
-  {
-    "characterId": 29,
-    "name": "啊~原來如此",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "获得100%护盾 反击1 所有敌人削弱1",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 3
-  },
-  {
-    "characterId": 29,
-    "name": "庇护打击",
-    "type": "灵光一闪",
-    "cost": 0,
-    "effect": "[粉碎] 按照拥有的护盾造成固定伤害",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 4
-  },
-  {
-    "characterId": 29,
-    "name": "坚不可摧",
-    "type": "独特卡牌",
-    "cost": 4,
-    "effect": "获得350%护盾",
-    "isUnique": false,
-    "isRetain": false,
-    "isQuick": false,
-    "isBless": false,
-    "hasEpiphany": false,
-    "sortOrder": 1
-  },
-  {
-    "characterId": 30,
-    "name": "下砍",
+    "characterId": 25,
+    "name": "投掷匕首",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "造成100%伤害",
@@ -3783,8 +2873,8 @@
     "sortOrder": 1
   },
   {
-    "characterId": 30,
-    "name": "下砍",
+    "characterId": 25,
+    "name": "投掷匕首",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "造成100%伤害",
@@ -3796,11 +2886,11 @@
     "sortOrder": 2
   },
   {
-    "characterId": 30,
-    "name": "武器格挡",
+    "characterId": 25,
+    "name": "黑暗之手",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "获得100%护盾",
+    "effect": "获得100%治愈",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3809,11 +2899,11 @@
     "sortOrder": 3
   },
   {
-    "characterId": 30,
-    "name": "风能充电",
+    "characterId": 25,
+    "name": "拔出匕首",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "接下来使用的自身攻击卡牌额外打击1次",
+    "effect": "生成2张暗影匕首",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3822,7 +2912,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 30,
+    "characterId": 25,
     "name": "逃避现实",
     "type": "基础卡牌",
     "cost": 0,
@@ -3835,11 +2925,11 @@
     "sortOrder": 5
   },
   {
-    "characterId": 30,
-    "name": "斩风",
+    "characterId": 25,
+    "name": "附加诅咒",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "对所有敌人造成280%伤害",
+    "effect": "持续1回合，使用攻击卡牌时，赋予目标痛苦1",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3848,11 +2938,11 @@
     "sortOrder": 1
   },
   {
-    "characterId": 30,
-    "name": "破防打击",
+    "characterId": 25,
+    "name": "暗影上膛",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "造成140% 伤害 脆弱2",
+    "effect": "获得100%治愈 生成1张高阶暗影匕首",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3861,11 +2951,11 @@
     "sortOrder": 2
   },
   {
-    "characterId": 30,
-    "name": "乘风",
+    "characterId": 25,
+    "name": "攻击要害",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "获得150%护盾 将丢弃卡牌的风能充电移动至手牌",
+    "effect": "造成80%x3伤害 目标若处于痛苦状态，使伤害量+50%",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3874,11 +2964,11 @@
     "sortOrder": 3
   },
   {
-    "characterId": 30,
-    "name": "疾风一击",
+    "characterId": 25,
+    "name": "切除诅咒",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "造成300%伤害 护盾130%",
+    "effect": "发动目标持有自身的痛苦",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3887,11 +2977,11 @@
     "sortOrder": 4
   },
   {
-    "characterId": 30,
-    "name": "狂风暴击",
+    "characterId": 25,
+    "name": "黑暗之波",
     "type": "独特卡牌",
     "cost": 5,
-    "effect": "伤害250% 护盾250%",
+    "effect": "生成2张暗影匕首 痛苦2x2",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3900,11 +2990,11 @@
     "sortOrder": 1
   },
   {
-    "characterId": 31,
-    "name": "单发射击",
+    "characterId": 26,
+    "name": "刺剑",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成100%伤害",
+    "effect": "基于防御的伤害100%",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3913,11 +3003,11 @@
     "sortOrder": 1
   },
   {
-    "characterId": 31,
-    "name": "单发射击",
+    "characterId": 26,
+    "name": "刺剑",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成100%伤害",
+    "effect": "基于防御的伤害100%",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3926,8 +3016,8 @@
     "sortOrder": 2
   },
   {
-    "characterId": 31,
-    "name": "暗影隐身",
+    "characterId": 26,
+    "name": "钢铁护盾",
     "type": "基础卡牌",
     "cost": 0,
     "effect": "获得100%护盾",
@@ -3939,11 +3029,11 @@
     "sortOrder": 3
   },
   {
-    "characterId": 31,
-    "name": "连续击发",
+    "characterId": 26,
+    "name": "悬浮金属",
     "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成50%×2伤害 按照暴击次数生成手枪弹药",
+    "effect": "伤害减少3 金属化2",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3952,7 +3042,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 31,
+    "characterId": 26,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -3965,11 +3055,583 @@
     "sortOrder": 5
   },
   {
-    "characterId": 31,
-    "name": "隐密上膛",
+    "characterId": 26,
+    "name": "金属刺穿",
     "type": "灵光一闪",
     "cost": 0,
-    "effect": "生成2张手枪弹药",
+    "effect": "基于防御的伤害90%×2 若为金属化状态，金属化减少1、脆弱2",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 26,
+    "name": "提炼金属",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "金属化2 1回合内决心2",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 26,
+    "name": "全金属飓风",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "所有敌人基于防御的伤害200% 持续1回合，金属化的目标套用至所有敌人，伤害量+20%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 26,
+    "name": "铁皮",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[消灭/终极] 持续1回合，所受伤害量减少20% 金属化最多减少4 按照相应数量，所受伤害量额外减少20%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 26,
+    "name": "钢铁信念",
+    "type": "独特卡牌",
+    "cost": 4,
+    "effect": "按照金属化的数量获得护盾120% 移除#金属化# 下一回合开始时，金属化3",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 27,
+    "name": "机枪",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%的伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 27,
+    "name": "机枪",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%的伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 27,
+    "name": "防护燃烧弹",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%护盾",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 27,
+    "name": "扩容弹夹",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "[主导] 回合开始时，生成1张发射器弹药",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 27,
+    "name": "恐惧",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 27,
+    "name": "S.S.S",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "造成100%伤害 1回合内弹药卡牌的伤害量+40%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 27,
+    "name": "火焰斩击",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "对所有敌人造成180%伤害 抽取1 丢弃1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 27,
+    "name": "闪光弹",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "对所有敌人造成120%伤害 削弱2 若目标持有护盾，伤害量+50%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 27,
+    "name": "R.P.G-7",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "消灭弹药卡牌时，使所有敌人固定伤害40%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 27,
+    "name": "全弹发射",
+    "type": "独特卡牌",
+    "cost": 5,
+    "effect": "抽取2 对所有敌人造成250%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 28,
+    "name": "庇护飞踢",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "基于防御的伤害100%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 28,
+    "name": "庇护防御",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%护盾",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 28,
+    "name": "庇护坚守",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得220%护盾",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 28,
+    "name": "意志的冲刺",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "[粉碎] 基于防御的伤害140% 20%的基于伤害的护盾 反击1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 28,
+    "name": "恐惧",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 28,
+    "name": "玛莉贝尔的庇护MK.II",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[粉碎] 基于防御的伤害120% 获得相当于造成伤害量的固定护盾（无法超过HP上限的20%）",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 28,
+    "name": "狼之巢穴",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "反击2 结晶化2 回合开始时反击1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 28,
+    "name": "啊~原來如此",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "获得100%护盾 反击1 所有敌人削弱1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 28,
+    "name": "庇护打击",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[粉碎] 按照拥有的护盾造成固定伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 28,
+    "name": "坚不可摧",
+    "type": "独特卡牌",
+    "cost": 4,
+    "effect": "获得350%护盾",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 29,
+    "name": "水箭",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 29,
+    "name": "水护盾",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%治愈",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 29,
+    "name": "水护盾",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%治愈",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 29,
+    "name": "水之根源",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%治愈 获得1点AP",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 29,
+    "name": "逃避现实",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 29,
+    "name": "海浪的庇佑",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[保留] 获得100%治愈 按照AP数量，治愈量增加30%",
+    "isUnique": false,
+    "isRetain": true,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 29,
+    "name": "作战分析",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "水波1 1回合内治愈量+50%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 29,
+    "name": "漩涡",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "对所有敌人造成200%伤害 按照攻击的目标数量治愈50%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 29,
+    "name": "泛滥",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "【唯一】 水波1 每回合开始时，水波1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 29,
+    "name": "激流",
+    "type": "独特卡牌",
+    "cost": 6,
+    "effect": "生成2张水之根源，赋予此卡牌消灭",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 30,
+    "name": "发射器",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 30,
+    "name": "充能发射器",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成220%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 30,
+    "name": "护盾",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%护盾",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 30,
+    "name": "破绽识破",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "[保留] 伤害140% 保留：1回合内额外攻击1次",
+    "isUnique": false,
+    "isRetain": true,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 30,
+    "name": "恐惧",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 30,
+    "name": "充能弹",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[保留] 造成240%伤害 保留：伤害量+120%",
+    "isUnique": false,
+    "isRetain": true,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 30,
+    "name": "隐藏的巧克力棒",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[消灭] 抽取3",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 30,
+    "name": "无限火力",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "获得100%护盾 接下来使用的自身攻击卡牌伤害量+80%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 30,
+    "name": "重型武器专家",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "生成1张破绽识破或充能弹，赋予该卡牌消灭，使用前费用减少1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 30,
+    "name": "最大输出充能弹",
+    "type": "独特卡牌",
+    "cost": 5,
+    "effect": "对所有敌人造成400%伤害",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3979,10 +3641,23 @@
   },
   {
     "characterId": 31,
-    "name": "逮到机会",
-    "type": "灵光一闪",
+    "name": "卡牌",
+    "type": "基础卡牌",
     "cost": 0,
-    "effect": "[主导] 获得100%护盾 接下来使用的弹药卡牌伤害量+120%",
+    "effect": "造成100%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 31,
+    "name": "万用卡牌",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成220%伤害",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -3992,10 +3667,10 @@
   },
   {
     "characterId": 31,
-    "name": "魔眼乱舞",
-    "type": "灵光一闪",
+    "name": "魔力场",
+    "type": "基础卡牌",
     "cost": 0,
-    "effect": "造成50%伤害 按照本回合使用的弹药卡牌数量，额外打击1次",
+    "effect": "获得100%治愈",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -4005,10 +3680,10 @@
   },
   {
     "characterId": 31,
-    "name": "必杀弹",
-    "type": "灵光一闪",
+    "name": "心灵魔术",
+    "type": "基础卡牌",
     "cost": 0,
-    "effect": "[唯一/弹药] 造成300%伤害 使用5张手枪弹药卡牌时，移除无法使用。",
+    "effect": "从4个任务中随机开始1个",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
@@ -4018,10 +3693,582 @@
   },
   {
     "characterId": 31,
-    "name": "杀伤策划",
+    "name": "精神控制",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 31,
+    "name": "恶魔骰子",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "造成160%伤害 抽取1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 31,
+    "name": "洗牌",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[消灭] 丢弃手牌中所有的卡牌 并抽取相同数量的卡牌",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 31,
+    "name": "骰子诡计",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "造成240%伤害，持续1回合士气减少1，按照完成的任务数量使费用减少",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 31,
+    "name": "小丑",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "从抽取卡牌中选择1张，该卡牌移动至手牌",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 31,
+    "name": "死亡诡计",
+    "type": "独特卡牌",
+    "cost": 4,
+    "effect": "生成2张任务奖励卡牌 1回合内所有敌人士气减少5",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 32,
+    "name": "下砍",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 32,
+    "name": "下砍",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 32,
+    "name": "武器格挡",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%护盾",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 32,
+    "name": "风能充电",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "接下来使用的自身攻击卡牌额外打击1次",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 32,
+    "name": "逃避现实",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 32,
+    "name": "斩风",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "对所有敌人造成280%伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 32,
+    "name": "破防打击",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "造成140% 伤害 脆弱2",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 32,
+    "name": "乘风",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "获得150%护盾 将丢弃卡牌的风能充电移动至手牌",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 32,
+    "name": "疾风一击",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "造成300%伤害 护盾130%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 32,
+    "name": "狂风暴击",
     "type": "独特卡牌",
     "cost": 5,
-    "effect": "造成300%伤害 按照手牌中的卡牌数量，伤害量+15%",
+    "effect": "伤害250% 护盾250%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 33,
+    "name": "暗黑之刃",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%的伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 33,
+    "name": "暗黑之刃",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "造成100%的伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 33,
+    "name": "物质再生",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得100%治愈",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 33,
+    "name": "黑暗斩击",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "[主导] 造成100%的伤害 1回合内基本攻击卡牌的伤害量增加100%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 33,
+    "name": "混乱",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 33,
+    "name": "共鸣之暗",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[唯一] 费用1的卡牌伤害量+40% 回合结束时治愈60%",
+    "isUnique": true,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 33,
+    "name": "点心时间",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[消灭] 选择并消灭1张手牌，获得200%治愈 抽取1",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 33,
+    "name": "暗黑凝聚",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "从手牌中选择1张攻击卡牌，持续1回合，伤害量+100%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 33,
+    "name": "掠食者之刃",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "造成250%的伤害 1回合内士气2",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 33,
+    "name": "最后的暗影",
+    "type": "独特卡牌",
+    "cost": 4,
+    "effect": "获得300%伤害 基于伤害的恢复15% 获得1点AP",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 1,
+    "name": "焰击",
+    "type": "基础卡牌",
+    "cost": 1,
+    "effect": "造成100%的伤害，抽1张牌",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 1,
+    "name": "焰击",
+    "type": "基础卡牌",
+    "cost": 1,
+    "effect": "造成100%的伤害，抽1张牌",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 1,
+    "name": "余温",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "获得焰甲1层（抵消1次伤害，抵消后附加1层灼烧给攻击者），抽1张牌",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 1,
+    "name": "火种",
+    "type": "基础卡牌",
+    "cost": 1,
+    "effect": "给敌方单体附加2层灼烧，若目标已有灼烧，回复自身10%生命值",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 1,
+    "name": "混乱",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 1,
+    "name": "燎原火",
+    "type": "灵光一闪",
+    "cost": 2,
+    "effect": "对敌方全体造成120%的伤害，给所有命中目标附加2层灼烧",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 1,
+    "name": "燃血斩",
+    "type": "灵光一闪",
+    "cost": 3,
+    "effect": "牺牲自身20%当前生命值，对敌方单体造成300%的伤害，驱散目标所有增益效果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 1,
+    "name": "业火焚天",
+    "type": "灵光一闪",
+    "cost": 5,
+    "effect": "引爆敌方全体所有灼烧效果，每层灼烧造成80%的伤害，引爆后灼烧层数清空",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 1,
+    "name": "余烬之拥",
+    "type": "灵光一闪",
+    "cost": 0,
+    "effect": "[被动] 自身每损失10%生命，灼烧伤害提升5%（最高50%）。击杀处于灼烧状态的敌人时，回复自身15%最大生命值",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 1,
+    "name": "赤焰印记",
+    "type": "独特卡牌",
+    "cost": 2,
+    "effect": "自身下3次攻击必定暴击，暴击伤害提升50%，攻击后额外附加1层灼烧",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 22,
+    "name": "灭",
+    "type": "基础卡牌",
+    "cost": 1,
+    "effect": "造成100%的伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 22,
+    "name": "灭",
+    "type": "基础卡牌",
+    "cost": 1,
+    "effect": "造成100%的伤害",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 22,
+    "name": "球",
+    "type": "基础卡牌",
+    "cost": 1,
+    "effect": "获得100%治愈 生成1张虚无卡牌",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 22,
+    "name": "虚无残影",
+    "type": "基础卡牌",
+    "cost": 1,
+    "effect": "造成240%的伤害 生成2张虚无",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 4
+  },
+  {
+    "characterId": 22,
+    "name": "恐惧",
+    "type": "基础卡牌",
+    "cost": 0,
+    "effect": "使用时有低级概率发生意料之外的结果",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 5
+  },
+  {
+    "characterId": 22,
+    "name": "黑洞",
+    "type": "灵光一闪",
+    "cost": 2,
+    "effect": "造成240%的伤害 按照消灭的虚无数量，伤害量+40%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 1
+  },
+  {
+    "characterId": 22,
+    "name": "虚妄的誓约",
+    "type": "灵光一闪",
+    "cost": 1,
+    "effect": "[唯一] 生成虚无时，变更为具备伤害、治愈100%效果且费用为1的攻击卡牌",
+    "isUnique": true,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 2
+  },
+  {
+    "characterId": 22,
+    "name": "无忧的回声",
+    "type": "灵光一闪",
+    "cost": 2,
+    "effect": "造成240%的伤害 生成3张虚无 按照相应数量伤害量+40%",
+    "isUnique": false,
+    "isRetain": false,
+    "isQuick": false,
+    "isBless": false,
+    "hasEpiphany": false,
+    "sortOrder": 3
+  },
+  {
+    "characterId": 22,
+    "name": "消灭烙印",
+    "type": "独特卡牌",
+    "cost": 3,
+    "effect": "对所有敌人造成300%的伤害 消灭卡牌时，此卡牌1回合内费用减少1",
     "isUnique": false,
     "isRetain": false,
     "isQuick": false,
