@@ -38,9 +38,16 @@ class CharacterListViewModel(application: Application) : AndroidViewModel(applic
     private val _filterStars = MutableStateFlow<Int?>(null)
     val filterStars: StateFlow<Int?> = _filterStars.asStateFlow()
 
+    @Suppress("UNCHECKED_CAST")
     val filteredCharacters = combine(
         characters, userCollections, searchQuery, filterElement, filterJob, filterStars
-    ) { chars, customTiers, query, element, job, stars ->
+    ) { values: Array<Any?> ->
+        val chars = values[0] as List<CharacterEntity>
+        val customTiers = values[1] as Map<Int, String>
+        val query = values[2] as String
+        val element = values[3] as String?
+        val job = values[4] as String?
+        val stars = values[5] as Int?
         chars.filter { c ->
             (query.isBlank() || c.name.contains(query, ignoreCase = true) || c.nameEn.contains(query, ignoreCase = true)) &&
             (element == null || c.element == element) &&

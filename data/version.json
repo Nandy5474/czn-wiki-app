@@ -1,10 +1,10 @@
 {
-  "version": "2.0.15",
+  "version": "2.0.16",
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
   "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
   "update_date": "2026-06-08",
   "changelog": "v2.0.15: 31→33角色ID映射修复 & 新增绯&凯隆卡牌数据 & 自我意识阶段命名统一",
-  "version_code": 17
+  "version_code": 18
 }
