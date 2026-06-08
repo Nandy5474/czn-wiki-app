@@ -109,7 +109,7 @@ fun CharacterDetailScreen(
                             },
                             contentDescription = char.name,
                             modifier = Modifier.fillMaxSize(),
-                            contentScale = ContentScale.Crop
+                            contentScale = ContentScale.Fit
                         )
 
                         // Gradient overlay (transparent -> background)

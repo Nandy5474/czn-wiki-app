@@ -1,9 +1,10 @@
 {
-  "version": "v7",
+  "version": "2.0.11",
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
   "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
   "update_date": "2026-06-08",
-  "changelog": "v7: 修复更新服务器连接失败，数据源迁移至 czn-wiki-app 仓库 data/ 目录；App v2.0.9 对应数据版本"
+  "changelog": "v7: 修复更新服务器连接失败，数据源迁移至 czn-wiki-app 仓库 data/ 目录；App v2.0.9 对应数据版本",
+  "version_code": 13
 }

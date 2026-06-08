@@ -166,13 +166,13 @@ fun CharacterGridItem(char: CharacterEntity, onClick: () -> Unit) {
                     .error(R.drawable.placeholder_portrait)
                     .crossfade(300)
                     .allowHardware(false)
-                    .size(144)
                     .build(),
                 contentDescription = char.name,
                 modifier = Modifier
-                    .size(72.dp)
+                    .fillMaxWidth()
+                    .aspectRatio(300f / 462f)
                     .clip(MaterialTheme.shapes.medium),
-                contentScale = ContentScale.Crop
+                contentScale = ContentScale.Fit
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
@@ -216,13 +216,13 @@ fun CharacterListItem(char: CharacterEntity, onClick: () -> Unit) {
                     .error(R.drawable.placeholder_portrait)
                     .crossfade(300)
                     .allowHardware(false)
-                    .size(96)
                     .build(),
                 contentDescription = char.name,
                 modifier = Modifier
-                    .size(48.dp)
+                    .height(72.dp)
+                    .aspectRatio(300f / 462f)
                     .clip(MaterialTheme.shapes.small),
-                contentScale = ContentScale.Crop
+                contentScale = ContentScale.Fit
             )
             Spacer(modifier = Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {

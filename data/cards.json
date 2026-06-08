@@ -1,6 +1,6 @@
 [
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "投掷匕首",
     "type": "基础卡牌",
     "cost": 0,
@@ -13,7 +13,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "投掷匕首",
     "type": "基础卡牌",
     "cost": 0,
@@ -26,7 +26,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "防御系统",
     "type": "基础卡牌",
     "cost": 0,
@@ -39,7 +39,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "狩猎本能",
     "type": "基础卡牌",
     "cost": 0,
@@ -52,7 +52,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
@@ -65,7 +65,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "短剑散射",
     "type": "灵光一闪",
     "cost": 0,
@@ -78,7 +78,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "快速解决法",
     "type": "灵光一闪",
     "cost": 0,
@@ -91,7 +91,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "丁戈嚎叫",
     "type": "灵光一闪",
     "cost": 0,
@@ -104,7 +104,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "解决师之道",
     "type": "灵光一闪",
     "cost": 0,
@@ -117,7 +117,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 1,
+    "characterId": 33,
     "name": "最后的解决手段",
     "type": "独特卡牌",
     "cost": 6,
@@ -130,7 +130,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "剑光",
     "type": "基础卡牌",
     "cost": 0,
@@ -143,7 +143,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "剑光",
     "type": "基础卡牌",
     "cost": 0,
@@ -156,7 +156,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "剑幕",
     "type": "基础卡牌",
     "cost": 0,
@@ -169,7 +169,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "剑之雨",
     "type": "基础卡牌",
     "cost": 0,
@@ -182,7 +182,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "自责",
     "type": "基础卡牌",
     "cost": 0,
@@ -195,7 +195,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "万人的英雄",
     "type": "灵光一闪",
     "cost": 0,
@@ -208,7 +208,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "一缕光芒",
     "type": "灵光一闪",
     "cost": 0,
@@ -221,7 +221,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "展开极光",
     "type": "灵光一闪",
     "cost": 0,
@@ -234,7 +234,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "凝聚极光",
     "type": "灵光一闪",
     "cost": 0,
@@ -247,7 +247,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 2,
+    "characterId": 26,
     "name": "剑之乐园",
     "type": "独特卡牌",
     "cost": 5,
@@ -260,7 +260,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "扰乱射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -273,7 +273,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "扰乱射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -286,7 +286,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "保护我",
     "type": "基础卡牌",
     "cost": 0,
@@ -299,7 +299,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "倾注真心！",
     "type": "基础卡牌",
     "cost": 0,
@@ -312,7 +312,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "阴沉",
     "type": "基础卡牌",
     "cost": 0,
@@ -325,7 +325,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "来吧，牛奶蓬蓬",
     "type": "灵光一闪",
     "cost": 0,
@@ -338,7 +338,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "净化单膛室手枪",
     "type": "灵光一闪",
     "cost": 0,
@@ -351,7 +351,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "绽放的爱",
     "type": "灵光一闪",
     "cost": 0,
@@ -364,7 +364,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "解放的心",
     "type": "灵光一闪",
     "cost": 0,
@@ -377,7 +377,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 3,
+    "characterId": 2,
     "name": "光辉微笑",
     "type": "独特卡牌",
     "cost": 5,
@@ -390,7 +390,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "时间加速",
     "type": "基础卡牌",
     "cost": 0,
@@ -403,7 +403,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "时间加速",
     "type": "基础卡牌",
     "cost": 0,
@@ -416,7 +416,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "倒带",
     "type": "基础卡牌",
     "cost": 0,
@@ -429,7 +429,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "记录者",
     "type": "基础卡牌",
     "cost": 0,
@@ -442,7 +442,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "混乱",
     "type": "基础卡牌",
     "cost": 0,
@@ -455,7 +455,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "破坏时间轴",
     "type": "灵光一闪",
     "cost": 0,
@@ -468,7 +468,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "确定的未来",
     "type": "灵光一闪",
     "cost": 0,
@@ -481,7 +481,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "时间圆环",
     "type": "灵光一闪",
     "cost": 0,
@@ -494,7 +494,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "时间悖论",
     "type": "灵光一闪",
     "cost": 0,
@@ -507,7 +507,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 4,
+    "characterId": 3,
     "name": "荣耀时刻",
     "type": "独特卡牌",
     "cost": 5,
@@ -520,7 +520,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "物质分解",
     "type": "基础卡牌",
     "cost": 0,
@@ -533,7 +533,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "展开屏障",
     "type": "基础卡牌",
     "cost": 0,
@@ -546,7 +546,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "展开屏障",
     "type": "基础卡牌",
     "cost": 0,
@@ -559,7 +559,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "量子种子",
     "type": "基础卡牌",
     "cost": 0,
@@ -572,7 +572,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "阴沉",
     "type": "基础卡牌",
     "cost": 0,
@@ -585,7 +585,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "形象凝聚",
     "type": "灵光一闪",
     "cost": 0,
@@ -598,7 +598,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "创造与破坏",
     "type": "灵光一闪",
     "cost": 0,
@@ -611,7 +611,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "成对产生",
     "type": "灵光一闪",
     "cost": 0,
@@ -624,7 +624,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "事件视界",
     "type": "灵光一闪",
     "cost": 0,
@@ -637,7 +637,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 5,
+    "characterId": 4,
     "name": "创造共鸣",
     "type": "独特卡牌",
     "cost": 5,
@@ -650,7 +650,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -663,7 +663,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -676,7 +676,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "刀背格挡",
     "type": "基础卡牌",
     "cost": 0,
@@ -689,7 +689,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "破碎",
     "type": "基础卡牌",
     "cost": 0,
@@ -702,7 +702,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
@@ -715,7 +715,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "老练的一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -728,7 +728,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "致命一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -741,7 +741,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "逆转之刃",
     "type": "灵光一闪",
     "cost": 0,
@@ -754,7 +754,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "斗志",
     "type": "灵光一闪",
     "cost": 0,
@@ -767,7 +767,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 6,
+    "characterId": 5,
     "name": "反射：零",
     "type": "独特卡牌",
     "cost": 6,
@@ -780,7 +780,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "NA：攻击反应",
     "type": "基础卡牌",
     "cost": 0,
@@ -793,7 +793,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "NA：保护反应",
     "type": "基础卡牌",
     "cost": 0,
@@ -806,7 +806,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "NA：保护反应",
     "type": "基础卡牌",
     "cost": 0,
@@ -819,7 +819,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "饥饿的枷锁",
     "type": "基础卡牌",
     "cost": 0,
@@ -832,7 +832,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "阴沉",
     "type": "基础卡牌",
     "cost": 0,
@@ -845,7 +845,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "无尽饥饿",
     "type": "灵光一闪",
     "cost": 0,
@@ -858,7 +858,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "主动控制",
     "type": "灵光一闪",
     "cost": 0,
@@ -871,7 +871,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "贪食领域",
     "type": "灵光一闪",
     "cost": 0,
@@ -884,7 +884,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "完全饱餐",
     "type": "灵光一闪",
     "cost": 0,
@@ -897,7 +897,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 7,
+    "characterId": 6,
     "name": "掠食者的狩猎法",
     "type": "独特卡牌",
     "cost": 5,
@@ -910,7 +910,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "脉冲打击",
     "type": "基础卡牌",
     "cost": 0,
@@ -923,7 +923,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "脉冲打击",
     "type": "基础卡牌",
     "cost": 0,
@@ -936,7 +936,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "磁场",
     "type": "基础卡牌",
     "cost": 0,
@@ -949,7 +949,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "定位雷射",
     "type": "基础卡牌",
     "cost": 0,
@@ -962,7 +962,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "自责",
     "type": "基础卡牌",
     "cost": 0,
@@ -975,7 +975,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "电浆飞弹",
     "type": "灵光一闪",
     "cost": 0,
@@ -988,7 +988,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "闪耀核心",
     "type": "灵光一闪",
     "cost": 0,
@@ -1001,7 +1001,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "钴蓝之光",
     "type": "灵光一闪",
     "cost": 0,
@@ -1014,7 +1014,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "苍白流星",
     "type": "灵光一闪",
     "cost": 0,
@@ -1027,7 +1027,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 8,
+    "characterId": 7,
     "name": "死亡光环",
     "type": "独特卡牌",
     "cost": 6,
@@ -1040,7 +1040,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "斩月",
     "type": "基础卡牌",
     "cost": 0,
@@ -1053,7 +1053,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "斩月",
     "type": "基础卡牌",
     "cost": 0,
@@ -1066,7 +1066,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "魂火的保护",
     "type": "基础卡牌",
     "cost": 0,
@@ -1079,7 +1079,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "业火",
     "type": "基础卡牌",
     "cost": 0,
@@ -1092,7 +1092,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -1105,7 +1105,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "月读",
     "type": "灵光一闪",
     "cost": 0,
@@ -1118,7 +1118,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "黄昏的羁绊",
     "type": "灵光一闪",
     "cost": 0,
@@ -1131,7 +1131,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "鬼怪狩猎",
     "type": "灵光一闪",
     "cost": 0,
@@ -1144,7 +1144,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "月影",
     "type": "灵光一闪",
     "cost": 0,
@@ -1157,7 +1157,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 9,
+    "characterId": 8,
     "name": "满潮之月光",
     "type": "独特卡牌",
     "cost": 5,
@@ -1170,7 +1170,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "长剑斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -1183,7 +1183,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "高速斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -1196,7 +1196,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "逆流斩",
     "type": "基础卡牌",
     "cost": 0,
@@ -1209,7 +1209,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "压制准备",
     "type": "基础卡牌",
     "cost": 0,
@@ -1222,7 +1222,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
@@ -1235,7 +1235,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "偷袭斩",
     "type": "灵光一闪",
     "cost": 0,
@@ -1248,7 +1248,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "迷惑一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -1261,7 +1261,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "冰点之刃",
     "type": "灵光一闪",
     "cost": 0,
@@ -1274,7 +1274,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "破冰斩",
     "type": "灵光一闪",
     "cost": 0,
@@ -1287,7 +1287,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 10,
+    "characterId": 9,
     "name": "天际斩击",
     "type": "独特卡牌",
     "cost": 5,
@@ -1300,7 +1300,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "锚",
     "type": "基础卡牌",
     "cost": 0,
@@ -1313,7 +1313,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "力量之锚",
     "type": "基础卡牌",
     "cost": 0,
@@ -1326,7 +1326,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "落锚",
     "type": "基础卡牌",
     "cost": 0,
@@ -1339,7 +1339,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "锚炮",
     "type": "基础卡牌",
     "cost": 0,
@@ -1352,7 +1352,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -1365,7 +1365,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "锚点",
     "type": "灵光一闪",
     "cost": 0,
@@ -1378,7 +1378,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "力量蓄积",
     "type": "灵光一闪",
     "cost": 0,
@@ -1391,7 +1391,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "补充能量",
     "type": "灵光一闪",
     "cost": 0,
@@ -1404,7 +1404,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "提升",
     "type": "灵光一闪",
     "cost": 0,
@@ -1417,7 +1417,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 11,
+    "characterId": 10,
     "name": "强力打击",
     "type": "独特卡牌",
     "cost": 6,
@@ -1430,7 +1430,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "黑云剑一式",
     "type": "基础卡牌",
     "cost": 0,
@@ -1443,7 +1443,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "黑云剑三式",
     "type": "基础卡牌",
     "cost": 0,
@@ -1456,7 +1456,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "守护",
     "type": "基础卡牌",
     "cost": 0,
@@ -1469,7 +1469,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "拔刀",
     "type": "基础卡牌",
     "cost": 0,
@@ -1482,7 +1482,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "迷惑",
     "type": "基础卡牌",
     "cost": 0,
@@ -1495,7 +1495,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "黑云奥义：残",
     "type": "灵光一闪",
     "cost": 0,
@@ -1508,7 +1508,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "黑云奥义：灭",
     "type": "灵光一闪",
     "cost": 0,
@@ -1521,7 +1521,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "黑云心法",
     "type": "灵光一闪",
     "cost": 0,
@@ -1534,7 +1534,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "黑云奥义：黑雾",
     "type": "灵光一闪",
     "cost": 0,
@@ -1547,7 +1547,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 12,
+    "characterId": 11,
     "name": "黑云奥义·斩",
     "type": "独特卡牌",
     "cost": 6,
@@ -1560,7 +1560,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "速射弹",
     "type": "基础卡牌",
     "cost": 0,
@@ -1573,7 +1573,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "速射弹",
     "type": "基础卡牌",
     "cost": 0,
@@ -1586,7 +1586,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "山茶花幻象",
     "type": "基础卡牌",
     "cost": 0,
@@ -1599,7 +1599,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "准备发射",
     "type": "基础卡牌",
     "cost": 0,
@@ -1612,7 +1612,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -1625,7 +1625,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "喘气",
     "type": "灵光一闪",
     "cost": 0,
@@ -1638,7 +1638,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "决心坠饰",
     "type": "灵光一闪",
     "cost": 0,
@@ -1651,7 +1651,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "科沃斯基爵士",
     "type": "灵光一闪",
     "cost": 0,
@@ -1664,7 +1664,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "准备轰炸",
     "type": "灵光一闪",
     "cost": 0,
@@ -1677,7 +1677,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 13,
+    "characterId": 12,
     "name": "狩猎时间",
     "type": "独特卡牌",
     "cost": 5,
@@ -1690,7 +1690,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "冻结之拳",
     "type": "基础卡牌",
     "cost": 0,
@@ -1703,7 +1703,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "寒霜盾牌",
     "type": "基础卡牌",
     "cost": 0,
@@ -1716,7 +1716,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "寒霜盾牌",
     "type": "基础卡牌",
     "cost": 0,
@@ -1729,7 +1729,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "冰霜碎片",
     "type": "基础卡牌",
     "cost": 0,
@@ -1742,7 +1742,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
@@ -1755,7 +1755,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "冰河铁拳",
     "type": "灵光一闪",
     "cost": 0,
@@ -1768,7 +1768,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "冰壁",
     "type": "灵光一闪",
     "cost": 0,
@@ -1781,7 +1781,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "补充寒气",
     "type": "灵光一闪",
     "cost": 0,
@@ -1794,7 +1794,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "严寒风暴",
     "type": "灵光一闪",
     "cost": 0,
@@ -1807,7 +1807,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 14,
+    "characterId": 31,
     "name": "绝对零度",
     "type": "独特卡牌",
     "cost": 6,
@@ -1950,7 +1950,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "一击",
     "type": "基础卡牌",
     "cost": 0,
@@ -1963,7 +1963,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "一击",
     "type": "基础卡牌",
     "cost": 0,
@@ -1976,7 +1976,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "火龙护身",
     "type": "基础卡牌",
     "cost": 0,
@@ -1989,7 +1989,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "火龙宝石",
     "type": "基础卡牌",
     "cost": 0,
@@ -2002,7 +2002,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "呆滞",
     "type": "基础卡牌",
     "cost": 0,
@@ -2015,7 +2015,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "升龙脚",
     "type": "灵光一闪",
     "cost": 0,
@@ -2028,7 +2028,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "攻防一体",
     "type": "灵光一闪",
     "cost": 0,
@@ -2041,7 +2041,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "香族的精神",
     "type": "灵光一闪",
     "cost": 0,
@@ -2054,7 +2054,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "火龙惊天",
     "type": "灵光一闪",
     "cost": 0,
@@ -2067,7 +2067,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 16,
+    "characterId": 14,
     "name": "火龙升天",
     "type": "独特卡牌",
     "cost": 6,
@@ -2210,7 +2210,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "歼灭射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -2223,7 +2223,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "歼灭射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -2236,7 +2236,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "暗黑之幕",
     "type": "基础卡牌",
     "cost": 0,
@@ -2249,7 +2249,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "悲鸣回声",
     "type": "基础卡牌",
     "cost": 0,
@@ -2262,7 +2262,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "冲动",
     "type": "基础卡牌",
     "cost": 0,
@@ -2275,7 +2275,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "即刻审判",
     "type": "灵光一闪",
     "cost": 0,
@@ -2288,7 +2288,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "漆黑颂诗",
     "type": "灵光一闪",
     "cost": 0,
@@ -2301,7 +2301,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "吞噬命运之花",
     "type": "灵光一闪",
     "cost": 0,
@@ -2314,7 +2314,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "誓死一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -2327,7 +2327,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 18,
+    "characterId": 16,
     "name": "黑色荆棘",
     "type": "独特卡牌",
     "cost": 4,
@@ -2340,7 +2340,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "卡牌",
     "type": "基础卡牌",
     "cost": 0,
@@ -2353,7 +2353,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "万用卡牌",
     "type": "基础卡牌",
     "cost": 0,
@@ -2366,7 +2366,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "魔力场",
     "type": "基础卡牌",
     "cost": 0,
@@ -2379,7 +2379,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "心灵魔术",
     "type": "基础卡牌",
     "cost": 0,
@@ -2392,7 +2392,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "精神控制",
     "type": "基础卡牌",
     "cost": 0,
@@ -2405,7 +2405,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "恶魔骰子",
     "type": "灵光一闪",
     "cost": 0,
@@ -2418,7 +2418,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "洗牌",
     "type": "灵光一闪",
     "cost": 0,
@@ -2431,7 +2431,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "骰子诡计",
     "type": "灵光一闪",
     "cost": 0,
@@ -2444,7 +2444,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "小丑",
     "type": "灵光一闪",
     "cost": 0,
@@ -2457,7 +2457,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 19,
+    "characterId": 13,
     "name": "死亡诡计",
     "type": "独特卡牌",
     "cost": 4,
@@ -2470,7 +2470,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "扫弦",
     "type": "基础卡牌",
     "cost": 0,
@@ -2483,7 +2483,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "增幅治疗",
     "type": "基础卡牌",
     "cost": 0,
@@ -2496,7 +2496,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "增幅治疗",
     "type": "基础卡牌",
     "cost": 0,
@@ -2509,7 +2509,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "G和弦",
     "type": "基础卡牌",
     "cost": 0,
@@ -2522,7 +2522,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "迷惑",
     "type": "基础卡牌",
     "cost": 0,
@@ -2535,7 +2535,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "重音闷音",
     "type": "灵光一闪",
     "cost": 0,
@@ -2548,7 +2548,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "灵魂飞跃",
     "type": "灵光一闪",
     "cost": 0,
@@ -2561,7 +2561,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "慢板",
     "type": "灵光一闪",
     "cost": 0,
@@ -2574,7 +2574,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "妮雅的好奇心",
     "type": "灵光一闪",
     "cost": 0,
@@ -2587,7 +2587,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 20,
+    "characterId": 18,
     "name": "ROCK AND ROLL",
     "type": "独特卡牌",
     "cost": 5,
@@ -2600,7 +2600,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "机枪",
     "type": "基础卡牌",
     "cost": 0,
@@ -2613,7 +2613,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "机枪",
     "type": "基础卡牌",
     "cost": 0,
@@ -2626,7 +2626,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "防护燃烧弹",
     "type": "基础卡牌",
     "cost": 0,
@@ -2639,7 +2639,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "扩容弹夹",
     "type": "基础卡牌",
     "cost": 0,
@@ -2652,7 +2652,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -2665,7 +2665,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "S.S.S",
     "type": "灵光一闪",
     "cost": 0,
@@ -2678,7 +2678,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "火焰斩击",
     "type": "灵光一闪",
     "cost": 0,
@@ -2691,7 +2691,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "闪光弹",
     "type": "灵光一闪",
     "cost": 0,
@@ -2704,7 +2704,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "R.P.G-7",
     "type": "灵光一闪",
     "cost": 0,
@@ -2717,7 +2717,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 21,
+    "characterId": 1,
     "name": "全弹发射",
     "type": "独特卡牌",
     "cost": 5,
@@ -2730,7 +2730,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "发射器",
     "type": "基础卡牌",
     "cost": 0,
@@ -2743,7 +2743,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "充能发射器",
     "type": "基础卡牌",
     "cost": 0,
@@ -2756,7 +2756,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "护盾",
     "type": "基础卡牌",
     "cost": 0,
@@ -2769,7 +2769,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "破绽识破",
     "type": "基础卡牌",
     "cost": 0,
@@ -2782,7 +2782,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -2795,7 +2795,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "充能弹",
     "type": "灵光一闪",
     "cost": 0,
@@ -2808,7 +2808,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "隐藏的巧克力棒",
     "type": "灵光一闪",
     "cost": 0,
@@ -2821,7 +2821,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "无限火力",
     "type": "灵光一闪",
     "cost": 0,
@@ -2834,7 +2834,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "重型武器专家",
     "type": "灵光一闪",
     "cost": 0,
@@ -2847,7 +2847,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 22,
+    "characterId": 32,
     "name": "最大输出充能弹",
     "type": "独特卡牌",
     "cost": 5,
@@ -2860,7 +2860,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "投掷匕首",
     "type": "基础卡牌",
     "cost": 0,
@@ -2873,7 +2873,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "投掷匕首",
     "type": "基础卡牌",
     "cost": 0,
@@ -2886,7 +2886,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "黑暗之手",
     "type": "基础卡牌",
     "cost": 0,
@@ -2899,7 +2899,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "拔出匕首",
     "type": "基础卡牌",
     "cost": 0,
@@ -2912,7 +2912,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "逃避现实",
     "type": "基础卡牌",
     "cost": 0,
@@ -2925,7 +2925,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "附加诅咒",
     "type": "灵光一闪",
     "cost": 0,
@@ -2938,7 +2938,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "暗影上膛",
     "type": "灵光一闪",
     "cost": 0,
@@ -2951,7 +2951,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "攻击要害",
     "type": "灵光一闪",
     "cost": 0,
@@ -2964,7 +2964,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "切除诅咒",
     "type": "灵光一闪",
     "cost": 0,
@@ -2977,7 +2977,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 23,
+    "characterId": 20,
     "name": "黑暗之波",
     "type": "独特卡牌",
     "cost": 5,
@@ -2990,7 +2990,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "暗黑之刃",
     "type": "基础卡牌",
     "cost": 0,
@@ -3003,7 +3003,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "暗黑之刃",
     "type": "基础卡牌",
     "cost": 0,
@@ -3016,7 +3016,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "物质再生",
     "type": "基础卡牌",
     "cost": 0,
@@ -3029,7 +3029,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "黑暗斩击",
     "type": "基础卡牌",
     "cost": 0,
@@ -3042,7 +3042,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "混乱",
     "type": "基础卡牌",
     "cost": 0,
@@ -3055,7 +3055,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "共鸣之暗",
     "type": "灵光一闪",
     "cost": 0,
@@ -3068,7 +3068,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "点心时间",
     "type": "灵光一闪",
     "cost": 0,
@@ -3081,7 +3081,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "暗黑凝聚",
     "type": "灵光一闪",
     "cost": 0,
@@ -3094,7 +3094,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "掠食者之刃",
     "type": "灵光一闪",
     "cost": 0,
@@ -3107,7 +3107,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 24,
+    "characterId": 28,
     "name": "最后的暗影",
     "type": "独特卡牌",
     "cost": 4,
@@ -3120,7 +3120,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "水箭",
     "type": "基础卡牌",
     "cost": 0,
@@ -3133,7 +3133,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "水护盾",
     "type": "基础卡牌",
     "cost": 0,
@@ -3146,7 +3146,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "水护盾",
     "type": "基础卡牌",
     "cost": 0,
@@ -3159,7 +3159,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "水之根源",
     "type": "基础卡牌",
     "cost": 0,
@@ -3172,7 +3172,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "逃避现实",
     "type": "基础卡牌",
     "cost": 0,
@@ -3185,7 +3185,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "海浪的庇佑",
     "type": "灵光一闪",
     "cost": 0,
@@ -3198,7 +3198,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "作战分析",
     "type": "灵光一闪",
     "cost": 0,
@@ -3211,7 +3211,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "漩涡",
     "type": "灵光一闪",
     "cost": 0,
@@ -3224,7 +3224,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "泛滥",
     "type": "灵光一闪",
     "cost": 0,
@@ -3237,7 +3237,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 25,
+    "characterId": 23,
     "name": "激流",
     "type": "独特卡牌",
     "cost": 6,
@@ -3250,7 +3250,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "全员集合",
     "type": "基础卡牌",
     "cost": 0,
@@ -3263,7 +3263,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "妖精的庇佑",
     "type": "基础卡牌",
     "cost": 0,
@@ -3276,7 +3276,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "妖精的庇护",
     "type": "基础卡牌",
     "cost": 0,
@@ -3289,7 +3289,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "很久很久以前",
     "type": "基础卡牌",
     "cost": 0,
@@ -3302,7 +3302,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -3315,7 +3315,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "保护我们",
     "type": "灵光一闪",
     "cost": 0,
@@ -3328,7 +3328,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "童话中的朋友们",
     "type": "灵光一闪",
     "cost": 0,
@@ -3341,7 +3341,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "故事中的真相",
     "type": "灵光一闪",
     "cost": 0,
@@ -3354,7 +3354,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "秘密花园",
     "type": "灵光一闪",
     "cost": 0,
@@ -3367,7 +3367,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 26,
+    "characterId": 27,
     "name": "快乐结局",
     "type": "独特卡牌",
     "cost": 6,
@@ -3380,7 +3380,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "刺剑",
     "type": "基础卡牌",
     "cost": 0,
@@ -3393,7 +3393,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "刺剑",
     "type": "基础卡牌",
     "cost": 0,
@@ -3406,7 +3406,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "钢铁护盾",
     "type": "基础卡牌",
     "cost": 0,
@@ -3419,7 +3419,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "悬浮金属",
     "type": "基础卡牌",
     "cost": 0,
@@ -3432,7 +3432,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -3445,7 +3445,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "金属刺穿",
     "type": "灵光一闪",
     "cost": 0,
@@ -3458,7 +3458,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "提炼金属",
     "type": "灵光一闪",
     "cost": 0,
@@ -3471,7 +3471,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "全金属飓风",
     "type": "灵光一闪",
     "cost": 0,
@@ -3484,7 +3484,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "铁皮",
     "type": "灵光一闪",
     "cost": 0,
@@ -3497,7 +3497,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 27,
+    "characterId": 21,
     "name": "钢铁信念",
     "type": "独特卡牌",
     "cost": 4,
@@ -3510,7 +3510,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "交战射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -3523,7 +3523,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "交战射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -3536,7 +3536,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "紧急遮蔽",
     "type": "基础卡牌",
     "cost": 0,
@@ -3549,7 +3549,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "高倍率瞄准镜",
     "type": "基础卡牌",
     "cost": 0,
@@ -3562,7 +3562,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -3575,7 +3575,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "捕捉目标",
     "type": "灵光一闪",
     "cost": 0,
@@ -3588,7 +3588,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "无人机出击",
     "type": "灵光一闪",
     "cost": 0,
@@ -3601,7 +3601,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "启动战术",
     "type": "灵光一闪",
     "cost": 0,
@@ -3614,7 +3614,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "狙击手的领域",
     "type": "灵光一闪",
     "cost": 0,
@@ -3627,7 +3627,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 28,
+    "characterId": 29,
     "name": "最后一击",
     "type": "独特卡牌",
     "cost": 5,
@@ -3640,7 +3640,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "庇护飞踢",
     "type": "基础卡牌",
     "cost": 0,
@@ -3653,7 +3653,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "庇护防御",
     "type": "基础卡牌",
     "cost": 0,
@@ -3666,7 +3666,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "庇护坚守",
     "type": "基础卡牌",
     "cost": 0,
@@ -3679,7 +3679,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "意志的冲刺",
     "type": "基础卡牌",
     "cost": 0,
@@ -3692,7 +3692,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -3705,7 +3705,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "玛莉贝尔的庇护MK.II",
     "type": "灵光一闪",
     "cost": 0,
@@ -3718,7 +3718,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "狼之巢穴",
     "type": "灵光一闪",
     "cost": 0,
@@ -3731,7 +3731,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "啊~原來如此",
     "type": "灵光一闪",
     "cost": 0,
@@ -3744,7 +3744,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "庇护打击",
     "type": "灵光一闪",
     "cost": 0,
@@ -3757,7 +3757,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 29,
+    "characterId": 25,
     "name": "坚不可摧",
     "type": "独特卡牌",
     "cost": 4,
@@ -3770,7 +3770,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "下砍",
     "type": "基础卡牌",
     "cost": 0,
@@ -3783,7 +3783,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "下砍",
     "type": "基础卡牌",
     "cost": 0,
@@ -3796,7 +3796,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "武器格挡",
     "type": "基础卡牌",
     "cost": 0,
@@ -3809,7 +3809,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "风能充电",
     "type": "基础卡牌",
     "cost": 0,
@@ -3822,7 +3822,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "逃避现实",
     "type": "基础卡牌",
     "cost": 0,
@@ -3835,7 +3835,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "斩风",
     "type": "灵光一闪",
     "cost": 0,
@@ -3848,7 +3848,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "破防打击",
     "type": "灵光一闪",
     "cost": 0,
@@ -3861,7 +3861,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "乘风",
     "type": "灵光一闪",
     "cost": 0,
@@ -3874,7 +3874,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "疾风一击",
     "type": "灵光一闪",
     "cost": 0,
@@ -3887,7 +3887,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 30,
+    "characterId": 22,
     "name": "狂风暴击",
     "type": "独特卡牌",
     "cost": 5,
@@ -3900,7 +3900,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "单发射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -3913,7 +3913,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "单发射击",
     "type": "基础卡牌",
     "cost": 0,
@@ -3926,7 +3926,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "暗影隐身",
     "type": "基础卡牌",
     "cost": 0,
@@ -3939,7 +3939,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "连续击发",
     "type": "基础卡牌",
     "cost": 0,
@@ -3952,7 +3952,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "恐惧",
     "type": "基础卡牌",
     "cost": 0,
@@ -3965,7 +3965,7 @@
     "sortOrder": 5
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "隐密上膛",
     "type": "灵光一闪",
     "cost": 0,
@@ -3978,7 +3978,7 @@
     "sortOrder": 1
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "逮到机会",
     "type": "灵光一闪",
     "cost": 0,
@@ -3991,7 +3991,7 @@
     "sortOrder": 2
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "魔眼乱舞",
     "type": "灵光一闪",
     "cost": 0,
@@ -4004,7 +4004,7 @@
     "sortOrder": 3
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "必杀弹",
     "type": "灵光一闪",
     "cost": 0,
@@ -4017,7 +4017,7 @@
     "sortOrder": 4
   },
   {
-    "characterId": 31,
+    "characterId": 19,
     "name": "杀伤策划",
     "type": "独特卡牌",
     "cost": 5,

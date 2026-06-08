@@ -112,13 +112,13 @@ fun CollectionCharacterCard(
                         .error(R.drawable.placeholder_portrait)
                         .crossfade(300)
                         .allowHardware(false)
-                        .size(72)
                         .build(),
                     contentDescription = data.name,
                     modifier = Modifier
-                        .size(48.dp)
+                        .height(72.dp)
+                        .aspectRatio(300f / 462f)
                         .clip(MaterialTheme.shapes.small),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Fit
                 )
                 Spacer(modifier = Modifier.width(12.dp))
                 Column(modifier = Modifier.weight(1f)) {
