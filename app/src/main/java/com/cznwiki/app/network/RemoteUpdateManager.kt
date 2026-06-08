@@ -31,7 +31,7 @@ class RemoteUpdateManager(
         private const val KEY_LAST_CHECK = "last_check_time"
 
         // Base URL for remote data repo
-        private const val BASE_URL = "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/"
+        private const val BASE_URL = "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/"
         private const val VERSION_URL = "${BASE_URL}version.json"
         private const val CHARACTERS_URL = "${BASE_URL}characters.json"
         private const val CARDS_URL = "${BASE_URL}cards.json"
