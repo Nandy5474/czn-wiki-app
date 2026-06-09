@@ -14,6 +14,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.*
@@ -43,7 +45,8 @@ import kotlin.math.sin
 @Composable
 fun CharacterDetailScreen(
     characterId: Int,
-    onNavigateBack: () -> Unit
+    onNavigateBack: () -> Unit,
+    onNavigateToCharacter: (Int) -> Unit
 ) {
     val viewModel: CharacterDetailViewModel = viewModel()
     LaunchedEffect(characterId) {
@@ -54,6 +57,12 @@ fun CharacterDetailScreen(
     val cards by viewModel.allCards.collectAsState()
     val selfAwareness by viewModel.selfAwareness.collectAsState()
     val collectionStatus by viewModel.collectionStatus.collectAsState()
+    val allIds by viewModel.allCharacterIds.collectAsState()
+
+    val currentIndex = allIds.indexOf(characterId)
+    val totalCount = allIds.size
+    val hasPrev = currentIndex > 0
+    val hasNext = currentIndex >= 0 && currentIndex < totalCount - 1
 
     var visible by remember { mutableStateOf(false) }
     LaunchedEffect(character) {
@@ -63,10 +72,48 @@ fun CharacterDetailScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("") },
+                title = {
+                    if (totalCount > 0) {
+                        Text(
+                            "${currentIndex + 1} / $totalCount",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+                        )
+                    }
+                },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "返回")
+                    }
+                },
+                actions = {
+                    if (totalCount > 0) {
+                        IconButton(
+                            onClick = {
+                                if (hasPrev) {
+                                    onNavigateToCharacter(allIds[currentIndex - 1])
+                                }
+                            },
+                            enabled = hasPrev
+                        ) {
+                            Icon(
+                                Icons.AutoMirrored.Filled.KeyboardArrowLeft,
+                                contentDescription = "上一个角色"
+                            )
+                        }
+                        IconButton(
+                            onClick = {
+                                if (hasNext) {
+                                    onNavigateToCharacter(allIds[currentIndex + 1])
+                                }
+                            },
+                            enabled = hasNext
+                        ) {
+                            Icon(
+                                Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                                contentDescription = "下一个角色"
+                            )
+                        }
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(

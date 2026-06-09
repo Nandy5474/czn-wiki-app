@@ -1,16 +1,19 @@
 {
-  "version": "2.0.20",
+  "version": "2.0.21",
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
   "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
   "update_date": "2026-06-09 18:56:40",
   "changelog": "v2.0.17: 蒂菲拉(安洁莉卡)自我意识数据全量修复,从黛安娜交叉数据修正为创造卡牌体系",
-  "version_code": 22,
+  "version_code": 23,
   "update_notes": "卡莉佩数据修正：秃鹰发射归为灵光一闪，绯的落九天效果更新",
-  "update_time": "2026-06-09",
+  "update_time": "2026-06-10",
   "changes": [
-    "characters.json: 全33角色基础信息补齐(阵营/种族/CV/生日/基础属性/描述)",
-    "self_awareness.json: 修复角色串位问题,22角色完整6条+11角色缺stage3(Wiki待更新)"
+    "首页角色图鉴入口改为跳转角色列表",
+    "角色详情页新增左右切换按钮,可直接切换上/下一个角色",
+    "TopAppBar显示当前序号/总数",
+    "新增CharacterDao.getAllCharacterIdsSync()",
+    "CharacterDetailViewModel新增allCharacterIds状态"
   ]
 }

@@ -21,6 +21,9 @@ interface CharacterDao {
     @Query("SELECT COUNT(*) FROM characters")
     suspend fun getCount(): Int
 
+    @Query("SELECT id FROM characters ORDER BY id ASC")
+    suspend fun getAllCharacterIdsSync(): List<Int>
+
     @Query("DELETE FROM characters")
     suspend fun deleteAll()
 }

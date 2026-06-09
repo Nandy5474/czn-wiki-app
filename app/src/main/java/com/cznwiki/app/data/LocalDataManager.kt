@@ -13,7 +13,7 @@ import kotlinx.coroutines.*
  * 数据分层架构管理器
  *
  * 三层架构：
- * 1. 基础数据层：assets/data/*.json（随 APK 发布，只读）
+ * 1. 基础数据层：assets/data/ 下的 *.json 文件（随 APK 发布，只读）
  * 2. 用户修改层：SharedPreferences，以 characterId 为 key 存储用户编辑
  * 3. 运行时数据层：Room 数据库中的合并后数据
  *
@@ -22,7 +22,7 @@ import kotlinx.coroutines.*
  * - 数据更新：保存用户修改 → 清空旧基础数据 → 导入新基础数据 → 回灌用户修改
  * - 用户编辑：更新 Room + 记录到用户修改层
  */
-class LocalDataManager(context: Context) {
+class LocalDataManager(private val context: Context) {
     companion object {
         private const val TAG = "LocalDataManager"
         private const val PREFS_NAME = "czn_local_data"

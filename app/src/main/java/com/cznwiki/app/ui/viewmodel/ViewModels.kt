@@ -96,6 +96,7 @@ class CharacterDetailViewModel(application: Application) : AndroidViewModel(appl
     val allCards: StateFlow<List<CardEntity>> = MutableStateFlow(emptyList())
     val selfAwareness: StateFlow<List<SelfAwarenessEntity>> = MutableStateFlow(emptyList())
     val collectionStatus: StateFlow<UserCollectionEntity?> = MutableStateFlow(null)
+    val allCharacterIds: StateFlow<List<Int>> = MutableStateFlow(emptyList())
 
     fun loadCharacter(id: Int) {
         characterId = id
@@ -104,6 +105,7 @@ class CharacterDetailViewModel(application: Application) : AndroidViewModel(appl
             (allCards as MutableStateFlow).value = db.cardDao().getAllCardsSync(id)
             (selfAwareness as MutableStateFlow).value = db.selfAwarenessDao().getByCharacterSync(id)
             (collectionStatus as MutableStateFlow).value = db.userCollectionDao().getByCharacterId(id)
+            (allCharacterIds as MutableStateFlow).value = db.characterDao().getAllCharacterIdsSync()
         }
     }
 

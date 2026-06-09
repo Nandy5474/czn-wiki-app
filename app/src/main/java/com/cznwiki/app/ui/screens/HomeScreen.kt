@@ -28,7 +28,10 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(onNavigateToCharacter: (Int) -> Unit) {
+fun HomeScreen(
+    onNavigateToCharacter: (Int) -> Unit,
+    onNavigateToCharacterList: () -> Unit
+) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     val db = (context.applicationContext as CznApplication).database
@@ -185,7 +188,7 @@ fun HomeScreen(onNavigateToCharacter: (Int) -> Unit) {
                 QuickEntryCard(
                     title = "角色图鉴",
                     description = "浏览全部战斗员资料",
-                    onClick = { onNavigateToCharacter(1) },
+                    onClick = onNavigateToCharacterList,
                     tint = MaterialTheme.colorScheme.primary
                 )
             }

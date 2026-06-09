@@ -88,9 +88,20 @@ fun CznWikiApp() {
             exitTransition = exitTr,
         ) {
             composable(Screen.Home.route) {
-                HomeScreen(onNavigateToCharacter = { id ->
-                    navController.navigate(Screen.CharacterDetail.createRoute(id))
-                })
+                HomeScreen(
+                    onNavigateToCharacter = { id ->
+                        navController.navigate(Screen.CharacterDetail.createRoute(id))
+                    },
+                    onNavigateToCharacterList = {
+                        navController.navigate(Screen.CharacterList.route) {
+                            popUpTo(navController.graph.findStartDestination().id) {
+                                saveState = true
+                            }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    }
+                )
             }
             composable(Screen.CharacterList.route) {
                 CharacterListScreen(onNavigateToDetail = { id ->
@@ -109,7 +120,12 @@ fun CznWikiApp() {
                 val characterId = backStackEntry.arguments?.getInt("characterId") ?: 1
                 CharacterDetailScreen(
                     characterId = characterId,
-                    onNavigateBack = { navController.popBackStack() }
+                    onNavigateBack = { navController.popBackStack() },
+                    onNavigateToCharacter = { id ->
+                        navController.navigate(Screen.CharacterDetail.createRoute(id)) {
+                            popUpTo(Screen.Home.route)
+                        }
+                    }
                 )
             }
         }
