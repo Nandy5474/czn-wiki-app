@@ -1,136 +1,564 @@
 [
   {
-    "id": 1,
-    "characterId": 33,
+    "id": 1001,
+    "characterId": 1,
+    "name": "沉睡的记忆",
+    "effect": "焰击命中时，35%概率额外附加1层灼烧"
+  },
+  {
+    "id": 1002,
+    "characterId": 1,
+    "name": "苏醒的记忆",
+    "effect": "余温的焰甲抵消伤害时，回复5%最大生命值"
+  },
+  {
+    "id": 1003,
+    "characterId": 1,
+    "name": "鲜明的记忆",
+    "effect": "燎原火命中已处于灼烧状态的目标时，伤害量+50%"
+  },
+  {
+    "id": 1004,
+    "characterId": 1,
+    "name": "内在的记忆",
+    "effect": "业火焚天引爆灼烧时，每层额外造成20%攻击力的火焰伤害"
+  },
+  {
+    "id": 1005,
+    "characterId": 1,
+    "name": "完整的记忆",
+    "effect": "余烬之拥的叠加上限提升至80%，击杀回复提升至20%最大生命值"
+  },
+  {
+    "id": 1006,
+    "characterId": 1,
+    "name": "释放的记忆",
+    "effect": "赤焰印记持续期间，每次攻击额外附加1层灼烧给全体敌人"
+  },
+  {
+    "id": 153,
+    "characterId": 2,
+    "name": "沉睡的记忆",
+    "effect": "秘密花园卡牌的费用减少1，护盾获得量+100%。",
+    "stage": 1
+  },
+  {
+    "id": 154,
+    "characterId": 2,
+    "name": "苏醒的记忆",
+    "effect": "依阿黛海特赋予或生成的祝福数量，获得梦的幸福效果；战斗开始时，依持有的祝福卡牌数量，获得梦的幸福效果：友军的伤害量增加3%（最多叠加10）。",
+    "stage": 2
+  },
+  {
+    "id": 155,
+    "characterId": 2,
+    "name": "鲜明的记忆",
+    "effect": "快乐结局的护盾获得量+200%。变更为相当于持有护盾数量的固定治愈效果（不超过最大HP的50%）。",
+    "stage": 3
+  },
+  {
+    "id": 156,
+    "characterId": 2,
+    "name": "内在的记忆",
+    "effect": "战斗开始时，为手牌中的卡牌赋予所需数量的祝福。使用祝福强化卡牌时，赋予抽牌堆的随机1张卡牌祝福。",
+    "stage": 4
+  },
+  {
+    "id": 157,
+    "characterId": 2,
+    "name": "完整的记忆",
+    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化共用卡牌】的等级增加3。",
+    "stage": 5
+  },
+  {
+    "id": 158,
+    "characterId": 2,
+    "name": "释放的记忆",
+    "effect": "若梦的幸福的最大叠加层数减少5，伤害量增加效果变更为增加8%。回合开始时，若梦的幸福为5，则抽取1张祝福卡牌。",
+    "stage": 6
+  },
+  {
+    "id": 1007,
+    "characterId": 3,
     "stage": 1,
     "name": "沉睡的记忆",
-    "effect": "开始战斗时，生成1张精灵(2星)加入手牌。"
+    "effect": "「解放极光」卡牌的伤害量+200%，依坟墓中「极光剑」的数量，提升的伤害量增加至+120%。（最多+480%）"
   },
   {
-    "id": 2,
-    "characterId": 33,
+    "id": 1008,
+    "characterId": 3,
     "stage": 2,
     "name": "鲜明的记忆",
-    "effect": "使用精灵时，35%概率不消耗AP。"
+    "effect": "战斗开始时，将「凝聚极光」卡牌移至手牌。回合开始时，获得「赤光剑」×5。「赤光剑」：直接使用或丢弃连结卡牌时，对HP最高的敌人造成120%的额外攻击；发动时「赤光剑」减少1。（最多叠加8）"
   },
   {
-    "id": 3,
-    "characterId": 33,
+    "id": 1009,
+    "characterId": 3,
     "stage": 3,
     "name": "内在的记忆",
-    "effect": "「神圣香槟」生成的精灵等级+1。"
+    "effect": "「剑之乐园」的伤害量+200%。依据本次战斗中丢弃的卡牌数量，提升的伤害+100%。（最多30张）"
   },
   {
-    "id": 4,
-    "characterId": 33,
+    "id": 1010,
+    "characterId": 3,
     "stage": 4,
     "name": "完整的记忆",
-    "effect": "每回合结束时，若手牌中有精灵，获得5%最大HP的护盾。"
+    "effect": "直接使用或丢弃海德玛丽的连结卡牌时，「极光连锁」+1。「极光连锁」：海德玛丽的伤害量+5%。（最多叠加10）"
   },
   {
-    "id": 5,
-    "characterId": 33,
+    "id": 1011,
+    "characterId": 3,
     "stage": 5,
     "name": "释放的记忆",
-    "effect": "战斗中精灵的最大持有数量+1。"
+    "effect": "潜力的「基础卡牌强化」「独特卡牌强化」「中立卡牌强化」等级增加3级。"
   },
   {
-    "id": 6,
-    "characterId": 33,
+    "id": 1012,
+    "characterId": 3,
     "stage": 6,
     "name": "觉醒的记忆",
-    "effect": "召唤精灵时，额外生成1张1星精灵。"
-  },
-  {
-    "id": 7,
-    "characterId": 4,
-    "stage": 1,
-    "name": "沉睡的记忆",
-    "effect": "安息触发次数达到3次时，生成1张「心形弹药」。"
-  },
-  {
-    "id": 8,
-    "characterId": 4,
-    "stage": 2,
-    "name": "鲜明的记忆",
-    "effect": "心形弹药的伤害+30%。"
-  },
-  {
-    "id": 9,
-    "characterId": 4,
-    "stage": 3,
-    "name": "内在的记忆",
-    "effect": "每弃掉1张牌，获得1层「共鸣」。"
-  },
-  {
-    "id": 10,
-    "characterId": 4,
-    "stage": 4,
-    "name": "完整的记忆",
-    "effect": "共鸣最大层数+5。"
-  },
-  {
-    "id": 11,
-    "characterId": 22,
-    "stage": 1,
-    "name": "沉睡的记忆",
-    "effect": "「同花顺」使用时额外提供1层士气。"
-  },
-  {
-    "id": 12,
-    "characterId": 22,
-    "stage": 2,
-    "name": "鲜明的记忆",
-    "effect": "士气每层增伤效果+5%。"
+    "effect": "生成的「极光剑」卡牌变更为全属性卡牌。每次发动「赤光剑」时，「赤光剑」的伤害量+40%。（最多+480%）"
   },
   {
     "id": 13,
-    "characterId": 2,
+    "characterId": 4,
     "stage": 1,
     "name": "沉睡的记忆",
     "effect": "定位镭射L使用时，若目标已被击破，立即返还1AP。"
   },
   {
     "id": 14,
-    "characterId": 2,
+    "characterId": 4,
     "stage": 2,
-    "name": "鲜明的记忆",
+    "name": "苏醒的记忆",
     "effect": "定位镭射L的击破效率+20%。"
   },
   {
-    "id": 15,
-    "characterId": 26,
-    "stage": 1,
-    "name": "沉睡的记忆",
-    "effect": "每回合生成的投射机数量+1。"
+    "id": 26,
+    "characterId": 4,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
   },
   {
-    "id": 16,
-    "characterId": 26,
-    "stage": 2,
-    "name": "鲜明的记忆",
-    "effect": "投射机造成的额外伤害+50%。"
+    "id": 27,
+    "characterId": 4,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 28,
+    "characterId": 4,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 29,
+    "characterId": 4,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
     "id": 17,
-    "characterId": 3,
+    "characterId": 5,
     "stage": 1,
     "name": "沉睡的记忆",
     "effect": "消灭敌方卡牌时，自身攻击力+10%(最多5层)。"
   },
   {
     "id": 18,
-    "characterId": 3,
+    "characterId": 5,
     "stage": 2,
-    "name": "鲜明的记忆",
+    "name": "苏醒的记忆",
     "effect": "消灭卡牌的触发条件降低1张。"
   },
   {
     "id": 19,
-    "characterId": 3,
+    "characterId": 5,
     "stage": 3,
-    "name": "内在的记忆",
+    "name": "鲜明的记忆",
     "effect": "消灭后，35%概率返还消耗的AP。"
+  },
+  {
+    "id": 30,
+    "characterId": 5,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 31,
+    "characterId": 5,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 32,
+    "characterId": 5,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 7,
+    "characterId": 6,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "安息触发次数达到3次时，生成1张「心形弹药」。"
+  },
+  {
+    "id": 8,
+    "characterId": 6,
+    "stage": 2,
+    "name": "苏醒的记忆",
+    "effect": "心形弹药的伤害+30%。"
+  },
+  {
+    "id": 9,
+    "characterId": 6,
+    "stage": 3,
+    "name": "鲜明的记忆",
+    "effect": "每弃掉1张牌，获得1层「共鸣」。"
+  },
+  {
+    "id": 10,
+    "characterId": 6,
+    "stage": 4,
+    "name": "内在的记忆",
+    "effect": "共鸣最大层数+5。"
+  },
+  {
+    "id": 33,
+    "characterId": 6,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 34,
+    "characterId": 6,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 35,
+    "characterId": 7,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 36,
+    "characterId": 7,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 37,
+    "characterId": 7,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 38,
+    "characterId": 7,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 39,
+    "characterId": 7,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 40,
+    "characterId": 7,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 41,
+    "characterId": 8,
+    "name": "沉睡的记忆",
+    "effect": "完美饱餐卡牌的掠食增加2。",
+    "stage": 1
+  },
+  {
+    "id": 42,
+    "characterId": 8,
+    "name": "苏醒的记忆",
+    "effect": "贪食减少时，以25%的机率获得贪食1。",
+    "stage": 2
+  },
+  {
+    "id": 43,
+    "characterId": 8,
+    "name": "鲜明的记忆",
+    "effect": "若发动掠食者的狩猎法时完美饱餐卡牌在坟墓中，获得的掠食增加3。",
+    "stage": 3
+  },
+  {
+    "id": 44,
+    "characterId": 8,
+    "name": "内在的记忆",
+    "effect": "掠食的伤害量+30%。",
+    "stage": 4
+  },
+  {
+    "id": 45,
+    "characterId": 8,
+    "name": "完整的记忆",
+    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化共用卡牌】的等级增加3。",
+    "stage": 5
+  },
+  {
+    "id": 46,
+    "characterId": 8,
+    "name": "释放的记忆",
+    "effect": "回合结束时，依本回合减少的掠食数量，对随机敌人造成50%的基于防御的伤害，恢复HP1%。",
+    "stage": 6
+  },
+  {
+    "id": 47,
+    "characterId": 9,
+    "name": "沉睡的记忆",
+    "effect": "苍白流星卡牌的伤害量+50%，可发动的定位雷射卡牌数变更为5张。",
+    "stage": 1
+  },
+  {
+    "id": 48,
+    "characterId": 9,
+    "name": "苏醒的记忆",
+    "effect": "战斗开始时生成2张定位雷射L卡牌。回合开始时抽取时，若抽取的卡牌中包含定位雷射，抽取1张卡牌。",
+    "stage": 2
+  },
+  {
+    "id": 49,
+    "characterId": 9,
+    "name": "鲜明的记忆",
+    "effect": "死亡光环的伤害量+50%，并对透过死亡光环移动的定位雷射L附加快速效果。",
+    "stage": 3
+  },
+  {
+    "id": 50,
+    "characterId": 9,
+    "name": "内在的记忆",
+    "effect": "击破时，依据定位雷射移至手牌中的卡牌数量，赛雷妮尔获得强化火力效果。强化火力：持续1回合，赛雷妮尔的攻击卡牌伤害量+10%（最多叠加5）。",
+    "stage": 4
+  },
+  {
+    "id": 51,
+    "characterId": 9,
+    "name": "完整的记忆",
+    "effect": "潜力的【基础卡牌强化】、【独特卡牌强化】、【中立卡牌强化】等级增加3级。",
+    "stage": 5
+  },
+  {
+    "id": 52,
+    "characterId": 9,
+    "name": "释放的记忆",
+    "effect": "友军击破时，赛雷妮尔对该敌人造成等同于目标最大韧性数80%的伤害。",
+    "stage": 6
+  },
+  {
+    "id": 53,
+    "characterId": 10,
+    "name": "沉睡的记忆",
+    "effect": "月影+的伤害量+20%，最大HP恢复量+3%。",
+    "stage": 1
+  },
+  {
+    "id": 54,
+    "characterId": 10,
+    "name": "苏醒的记忆",
+    "effect": "使用月影+卡牌时，生成1张月影卡牌。",
+    "stage": 2
+  },
+  {
+    "id": 55,
+    "characterId": 10,
+    "name": "鲜明的记忆",
+    "effect": "满潮之月光伤害量+150%。",
+    "stage": 3
+  },
+  {
+    "id": 56,
+    "characterId": 10,
+    "name": "内在的记忆",
+    "effect": "生成月影时，获得月之碎片1。月之碎片：千鹤的攻击卡牌伤害量+10%（最多叠加3）。",
+    "stage": 4
+  },
+  {
+    "id": 57,
+    "characterId": 10,
+    "name": "完整的记忆",
+    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化共用卡牌】的等级增加3。",
+    "stage": 5
+  },
+  {
+    "id": 58,
+    "characterId": 10,
+    "name": "释放的记忆",
+    "effect": "月之碎片叠加3时，月影+卡牌的打击数增加1。",
+    "stage": 6
+  },
+  {
+    "id": 59,
+    "characterId": 11,
+    "name": "沉睡的记忆",
+    "effect": "破冰斩的伤害量减少20%的效果将被移除。",
+    "stage": 1
+  },
+  {
+    "id": 60,
+    "characterId": 11,
+    "name": "苏醒的记忆",
+    "effect": "战斗开始时，于2回合内的回合开始时抽到的自己的卡牌，其灵感效果将会启动。",
+    "stage": 2
+  },
+  {
+    "id": 61,
+    "characterId": 11,
+    "name": "鲜明的记忆",
+    "effect": "天际斩击依照移至抽排堆顶的卡牌数量提高伤害量+50%的效果，将改为+80%。",
+    "stage": 3
+  },
+  {
+    "id": 62,
+    "characterId": 11,
+    "name": "内在的记忆",
+    "effect": "每当自身卡牌透过能力被抽取时，获得剑舞1。剑舞：1回合内自身攻击卡牌伤害量增加10%（最多叠加2层）。",
+    "stage": 4
+  },
+  {
+    "id": 63,
+    "characterId": 11,
+    "name": "完整的记忆",
+    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化共用卡牌】的等级增加3。",
+    "stage": 5
+  },
+  {
+    "id": 64,
+    "characterId": 11,
+    "name": "释放的记忆",
+    "effect": "剑舞的最大叠加层数增加1，且伤害提升效果将改为增加15%。",
+    "stage": 6
+  },
+  {
+    "id": 65,
+    "characterId": 12,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 66,
+    "characterId": 12,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 67,
+    "characterId": 12,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 68,
+    "characterId": 12,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 69,
+    "characterId": 12,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 70,
+    "characterId": 12,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 71,
+    "characterId": 13,
+    "name": "沉睡的记忆",
+    "effect": "【黑云奥义：黑雾】卡牌的伤害量+20%。",
+    "stage": 1
+  },
+  {
+    "id": 72,
+    "characterId": 13,
+    "name": "苏醒的记忆",
+    "effect": "若琳进入黑云姿态状态，生成1张入鞘卡牌。",
+    "stage": 2
+  },
+  {
+    "id": 73,
+    "characterId": 13,
+    "name": "鲜明的记忆",
+    "effect": "【黑雾奥义：斩】卡牌的伤害量+50%，脆弱增加1。",
+    "stage": 3
+  },
+  {
+    "id": 74,
+    "characterId": 13,
+    "name": "内在的记忆",
+    "effect": "琳使用卡牌时若不处于黑云态势状态，则获得黑云态势。",
+    "stage": 4
+  },
+  {
+    "id": 75,
+    "characterId": 13,
+    "name": "完整的记忆",
+    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化中立卡牌】的等级增加3。",
+    "stage": 5
+  },
+  {
+    "id": 76,
+    "characterId": 13,
+    "name": "释放的记忆",
+    "effect": "战斗开始时获得黑云姿态。回合开始时，若处于黑云态势状态，1回合期间获得2的士气。",
+    "stage": 6
+  },
+  {
+    "id": 181,
+    "characterId": 14,
+    "name": "沉睡的记忆",
+    "effect": "致命子弹的伤害量+50%，需求的手枪弹药卡牌使用条件由5张变为4张。",
+    "stage": 1
+  },
+  {
+    "id": 182,
+    "characterId": 14,
+    "name": "苏醒的记忆",
+    "effect": "卢克使用3张弹药卡牌后，生成2张手枪弹药卡牌加入手牌。因该效果生成的卡牌伤害总量减少50%。该效果每回合发动1次。",
+    "stage": 2
+  },
+  {
+    "id": 183,
+    "characterId": 14,
+    "name": "鲜明的记忆",
+    "effect": "战斗法则的伤害量+50%，根据手牌中的卡牌数量，造成伤害量+15%的效果变为+25%。",
+    "stage": 3
+  },
+  {
+    "id": 184,
+    "characterId": 14,
+    "name": "内在的记忆",
+    "effect": "卢克每次使用弹药卡牌时，获得目标分析效果。目标分析：1回合内卢克的弹药卡牌伤害量+10%（最多叠加4）。",
+    "stage": 4
+  },
+  {
+    "id": 185,
+    "characterId": 14,
+    "name": "完整的记忆",
+    "effect": "潜力的【基础卡牌强化】、【独特卡牌强化】、【中立卡牌强化】等级增加3级。",
+    "stage": 5
+  },
+  {
+    "id": 186,
+    "characterId": 14,
+    "name": "释放的记忆",
+    "effect": "目标分析的伤害量增加效果变更为+15%，每使用12张手枪弹药卡牌时，手牌中生成1张高速穿甲弹。",
+    "stage": 6
   },
   {
     "id": 20,
@@ -143,1162 +571,711 @@
     "id": 21,
     "characterId": 15,
     "stage": 2,
-    "name": "鲜明的记忆",
+    "name": "苏醒的记忆",
     "effect": "决意一击：每发子弹额外+25%伤害。"
-  },
-  {
-    "id": 22,
-    "characterId": 26,
-    "name": "内在的记忆",
-    "characterName": "维罗妮卡",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 23,
-    "characterId": 26,
-    "name": "完整的记忆",
-    "characterName": "维罗妮卡",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 24,
-    "characterId": 26,
-    "name": "释放的记忆",
-    "characterName": "维罗妮卡",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 25,
-    "characterId": 26,
-    "name": "觉醒的记忆",
-    "characterName": "维罗妮卡",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 26,
-    "characterId": 2,
-    "name": "内在的记忆",
-    "characterName": "赛雷妮尔",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 27,
-    "characterId": 2,
-    "name": "完整的记忆",
-    "characterName": "赛雷妮尔",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 28,
-    "characterId": 2,
-    "name": "释放的记忆",
-    "characterName": "赛雷妮尔",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 29,
-    "characterId": 2,
-    "name": "觉醒的记忆",
-    "characterName": "赛雷妮尔",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 30,
-    "characterId": 3,
-    "name": "完整的记忆",
-    "characterName": "凯隆",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 31,
-    "characterId": 3,
-    "name": "释放的记忆",
-    "characterName": "凯隆",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 32,
-    "characterId": 3,
-    "name": "觉醒的记忆",
-    "characterName": "凯隆",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 33,
-    "characterId": 4,
-    "name": "释放的记忆",
-    "characterName": "黛安娜",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 34,
-    "characterId": 4,
-    "name": "觉醒的记忆",
-    "characterName": "黛安娜",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 35,
-    "characterId": 5,
-    "name": "沉睡的记忆",
-    "characterName": "DVL",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 36,
-    "characterId": 5,
-    "name": "鲜明的记忆",
-    "characterName": "DVL",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 37,
-    "characterId": 5,
-    "name": "内在的记忆",
-    "characterName": "DVL",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 38,
-    "characterId": 5,
-    "name": "完整的记忆",
-    "characterName": "DVL",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 39,
-    "characterId": 5,
-    "name": "释放的记忆",
-    "characterName": "DVL",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 40,
-    "characterId": 5,
-    "name": "觉醒的记忆",
-    "characterName": "DVL",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 41,
-    "characterId": 6,
-    "name": "沉睡的记忆",
-    "characterName": "蒂菲拉",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 42,
-    "characterId": 6,
-    "name": "鲜明的记忆",
-    "characterName": "蒂菲拉",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 43,
-    "characterId": 6,
-    "name": "内在的记忆",
-    "characterName": "蒂菲拉",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 44,
-    "characterId": 6,
-    "name": "完整的记忆",
-    "characterName": "蒂菲拉",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 45,
-    "characterId": 6,
-    "name": "释放的记忆",
-    "characterName": "蒂菲拉",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 46,
-    "characterId": 6,
-    "name": "觉醒的记忆",
-    "characterName": "蒂菲拉",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 47,
-    "characterId": 7,
-    "name": "沉睡的记忆",
-    "characterName": "千鹤",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 48,
-    "characterId": 7,
-    "name": "鲜明的记忆",
-    "characterName": "千鹤",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 49,
-    "characterId": 7,
-    "name": "内在的记忆",
-    "characterName": "千鹤",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 50,
-    "characterId": 7,
-    "name": "完整的记忆",
-    "characterName": "千鹤",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 51,
-    "characterId": 7,
-    "name": "释放的记忆",
-    "characterName": "千鹤",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 52,
-    "characterId": 7,
-    "name": "觉醒的记忆",
-    "characterName": "千鹤",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 53,
-    "characterId": 8,
-    "name": "沉睡的记忆",
-    "characterName": "小春",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 54,
-    "characterId": 8,
-    "name": "鲜明的记忆",
-    "characterName": "小春",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 55,
-    "characterId": 8,
-    "name": "内在的记忆",
-    "characterName": "小春",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 56,
-    "characterId": 8,
-    "name": "完整的记忆",
-    "characterName": "小春",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 57,
-    "characterId": 8,
-    "name": "释放的记忆",
-    "characterName": "小春",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 58,
-    "characterId": 8,
-    "name": "觉醒的记忆",
-    "characterName": "小春",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 59,
-    "characterId": 9,
-    "name": "沉睡的记忆",
-    "characterName": "凛",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 60,
-    "characterId": 9,
-    "name": "鲜明的记忆",
-    "characterName": "凛",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 61,
-    "characterId": 9,
-    "name": "内在的记忆",
-    "characterName": "凛",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 62,
-    "characterId": 9,
-    "name": "完整的记忆",
-    "characterName": "凛",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 63,
-    "characterId": 9,
-    "name": "释放的记忆",
-    "characterName": "凛",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 64,
-    "characterId": 9,
-    "name": "觉醒的记忆",
-    "characterName": "凛",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 65,
-    "characterId": 10,
-    "name": "沉睡的记忆",
-    "characterName": "卡莉佩",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 66,
-    "characterId": 10,
-    "name": "鲜明的记忆",
-    "characterName": "卡莉佩",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 67,
-    "characterId": 10,
-    "name": "内在的记忆",
-    "characterName": "卡莉佩",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 68,
-    "characterId": 10,
-    "name": "完整的记忆",
-    "characterName": "卡莉佩",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 69,
-    "characterId": 10,
-    "name": "释放的记忆",
-    "characterName": "卡莉佩",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 70,
-    "characterId": 10,
-    "name": "觉醒的记忆",
-    "characterName": "卡莉佩",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 71,
-    "characterId": 11,
-    "name": "沉睡的记忆",
-    "characterName": "梅铃",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 72,
-    "characterId": 11,
-    "name": "鲜明的记忆",
-    "characterName": "梅铃",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 73,
-    "characterId": 11,
-    "name": "内在的记忆",
-    "characterName": "梅铃",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 74,
-    "characterId": 11,
-    "name": "完整的记忆",
-    "characterName": "梅铃",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 75,
-    "characterId": 11,
-    "name": "释放的记忆",
-    "characterName": "梅铃",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 76,
-    "characterId": 11,
-    "name": "觉醒的记忆",
-    "characterName": "梅铃",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 77,
-    "characterId": 12,
-    "name": "沉睡的记忆",
-    "characterName": "百丽儿",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 78,
-    "characterId": 12,
-    "name": "鲜明的记忆",
-    "characterName": "百丽儿",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 79,
-    "characterId": 12,
-    "name": "内在的记忆",
-    "characterName": "百丽儿",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 80,
-    "characterId": 12,
-    "name": "完整的记忆",
-    "characterName": "百丽儿",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 81,
-    "characterId": 12,
-    "name": "释放的记忆",
-    "characterName": "百丽儿",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 82,
-    "characterId": 12,
-    "name": "觉醒的记忆",
-    "characterName": "百丽儿",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 83,
-    "characterId": 31,
-    "name": "沉睡的记忆",
-    "characterName": "九",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 84,
-    "characterId": 31,
-    "name": "鲜明的记忆",
-    "characterName": "九",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 85,
-    "characterId": 31,
-    "name": "内在的记忆",
-    "characterName": "九",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 86,
-    "characterId": 31,
-    "name": "完整的记忆",
-    "characterName": "九",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 87,
-    "characterId": 31,
-    "name": "释放的记忆",
-    "characterName": "九",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 88,
-    "characterId": 31,
-    "name": "觉醒的记忆",
-    "characterName": "九",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
     "id": 89,
     "characterId": 15,
-    "name": "内在的记忆",
-    "characterName": "蕾欧娜",
+    "name": "鲜明的记忆",
     "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
   },
   {
     "id": 90,
     "characterId": 15,
-    "name": "完整的记忆",
-    "characterName": "蕾欧娜",
+    "name": "内在的记忆",
     "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
   },
   {
     "id": 91,
     "characterId": 15,
-    "name": "释放的记忆",
-    "characterName": "蕾欧娜",
+    "name": "完整的记忆",
     "effect": "觉醒技解锁前置，全属性+20%"
   },
   {
     "id": 92,
     "characterId": 15,
-    "name": "觉醒的记忆",
-    "characterName": "蕾欧娜",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 93,
-    "characterId": 14,
-    "name": "沉睡的记忆",
-    "characterName": "雨果",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 94,
-    "characterId": 14,
-    "name": "鲜明的记忆",
-    "characterName": "雨果",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 95,
-    "characterId": 14,
-    "name": "内在的记忆",
-    "characterName": "雨果",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 96,
-    "characterId": 14,
-    "name": "完整的记忆",
-    "characterName": "雨果",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 97,
-    "characterId": 14,
     "name": "释放的记忆",
-    "characterName": "雨果",
-    "effect": "觉醒技解锁前置，全属性+20%"
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
-    "id": 98,
-    "characterId": 14,
-    "name": "觉醒的记忆",
-    "characterName": "雨果",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+    "id": 83,
+    "characterId": 16,
+    "name": "沉睡的记忆",
+    "effect": "严寒风暴卡牌附加开战。",
+    "stage": 1
+  },
+  {
+    "id": 84,
+    "characterId": 16,
+    "name": "苏醒的记忆",
+    "effect": "麦格纳的反击会对目标造成冰冻1。冰冻：受到麦格纳的攻击卡牌伤害时，对雨侧的怪物造成50%基于防御的伤害，发动效果时，移除冰冻。",
+    "stage": 2
+  },
+  {
+    "id": 85,
+    "characterId": 16,
+    "name": "鲜明的记忆",
+    "effect": "按照绝对零度的反击数量，伤害量增加的效果变更为30%。",
+    "stage": 3
+  },
+  {
+    "id": 86,
+    "characterId": 16,
+    "name": "内在的记忆",
+    "effect": "麦格纳的反击变更为不再减少脆弱。",
+    "stage": 4
+  },
+  {
+    "id": 87,
+    "characterId": 16,
+    "name": "完整的记忆",
+    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化中立卡牌】的等级增加3。",
+    "stage": 5
+  },
+  {
+    "id": 88,
+    "characterId": 16,
+    "name": "释放的记忆",
+    "effect": "回合开始时，反击强化获得1。反击强化：反击伤害量增加50%，发动效果时，移除反击强化（最多叠加2层）。",
+    "stage": 6
   },
   {
     "id": 99,
     "characterId": 17,
     "name": "沉睡的记忆",
-    "characterName": "绯雨",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
+    "effect": "光之意志卡牌上附加保留。",
+    "stage": 1
   },
   {
     "id": 100,
     "characterId": 17,
-    "name": "鲜明的记忆",
-    "characterName": "绯雨",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+    "name": "苏醒的记忆",
+    "effect": "创造物卡牌进化为创造物★★★卡牌时发动保留效果。",
+    "stage": 2
   },
   {
     "id": 101,
     "characterId": 17,
-    "name": "内在的记忆",
-    "characterName": "绯雨",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+    "name": "鲜明的记忆",
+    "effect": "救赎附加生成的创造物进化效果。",
+    "stage": 3
   },
   {
     "id": 102,
     "characterId": 17,
-    "name": "完整的记忆",
-    "characterName": "绯雨",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+    "name": "内在的记忆",
+    "effect": "手牌中若有创造物卡牌，友军的伤害量增加10%。",
+    "stage": 4
   },
   {
     "id": 103,
     "characterId": 17,
-    "name": "释放的记忆",
-    "characterName": "绯雨",
-    "effect": "觉醒技解锁前置，全属性+20%"
+    "name": "完整的记忆",
+    "effect": "潜质的【强化基本卡牌】、【强化独特卡牌】、【强化中立卡牌】的等级增加3。",
+    "stage": 5
   },
   {
     "id": 104,
     "characterId": 17,
-    "name": "觉醒的记忆",
-    "characterName": "绯雨",
+    "name": "释放的记忆",
+    "effect": "奥尔莱亚使用创造物卡牌时，对所有敌人造成★x50%的固定伤害。",
+    "stage": 6
+  },
+  {
+    "id": 93,
+    "characterId": 18,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 94,
+    "characterId": 18,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 95,
+    "characterId": 18,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 96,
+    "characterId": 18,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 97,
+    "characterId": 18,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 98,
+    "characterId": 18,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 77,
+    "characterId": 19,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 78,
+    "characterId": 19,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 79,
+    "characterId": 19,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 80,
+    "characterId": 19,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 81,
+    "characterId": 19,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 82,
+    "characterId": 19,
+    "name": "释放的记忆",
     "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
     "id": 105,
-    "characterId": 16,
+    "characterId": 20,
     "name": "沉睡的记忆",
-    "characterName": "蕾诺娅",
     "effect": "基础属性提升：攻击力+5%，HP+5%"
   },
   {
     "id": 106,
-    "characterId": 16,
-    "name": "鲜明的记忆",
-    "characterName": "蕾诺娅",
+    "characterId": 20,
+    "name": "苏醒的记忆",
     "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
   },
   {
     "id": 107,
-    "characterId": 16,
-    "name": "内在的记忆",
-    "characterName": "蕾诺娅",
+    "characterId": 20,
+    "name": "鲜明的记忆",
     "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
   },
   {
     "id": 108,
-    "characterId": 16,
-    "name": "完整的记忆",
-    "characterName": "蕾诺娅",
+    "characterId": 20,
+    "name": "内在的记忆",
     "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
   },
   {
     "id": 109,
-    "characterId": 16,
-    "name": "释放的记忆",
-    "characterName": "蕾诺娅",
+    "characterId": 20,
+    "name": "完整的记忆",
     "effect": "觉醒技解锁前置，全属性+20%"
   },
   {
     "id": 110,
-    "characterId": 16,
-    "name": "觉醒的记忆",
-    "characterName": "蕾诺娅",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 111,
-    "characterId": 13,
-    "name": "沉睡的记忆",
-    "characterName": "美菱",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 112,
-    "characterId": 13,
-    "name": "鲜明的记忆",
-    "characterName": "美菱",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 113,
-    "characterId": 13,
-    "name": "内在的记忆",
-    "characterName": "美菱",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 114,
-    "characterId": 13,
-    "name": "完整的记忆",
-    "characterName": "美菱",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 115,
-    "characterId": 13,
+    "characterId": 20,
     "name": "释放的记忆",
-    "characterName": "美菱",
-    "effect": "觉醒技解锁前置，全属性+20%"
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
-    "id": 116,
-    "characterId": 13,
-    "name": "觉醒的记忆",
-    "characterName": "美菱",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+    "id": 1,
+    "characterId": 21,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "开始战斗时，生成1张精灵(2星)加入手牌。"
+  },
+  {
+    "id": 2,
+    "characterId": 21,
+    "stage": 2,
+    "name": "苏醒的记忆",
+    "effect": "使用精灵时，35%概率不消耗AP。"
+  },
+  {
+    "id": 3,
+    "characterId": 21,
+    "stage": 3,
+    "name": "鲜明的记忆",
+    "effect": "「神圣香槟」生成的精灵等级+1。"
+  },
+  {
+    "id": 4,
+    "characterId": 21,
+    "stage": 4,
+    "name": "内在的记忆",
+    "effect": "每回合结束时，若手牌中有精灵，获得5%最大HP的护盾。"
+  },
+  {
+    "id": 5,
+    "characterId": 21,
+    "stage": 5,
+    "name": "完整的记忆",
+    "effect": "战斗中精灵的最大持有数量+1。"
+  },
+  {
+    "id": 6,
+    "characterId": 21,
+    "stage": 6,
+    "name": "释放的记忆",
+    "effect": "召唤精灵时，额外生成1张1星精灵。"
+  },
+  {
+    "id": 187,
+    "characterId": 22,
+    "name": "沉睡的记忆",
+    "effect": "使用无忧的回声卡牌时，额外生成2张虚无卡牌"
+  },
+  {
+    "id": 188,
+    "characterId": 22,
+    "name": "苏醒的记忆",
+    "effect": "每当消减2张虚无卡牌时，所有敌人伤害100%"
+  },
+  {
+    "id": 189,
+    "characterId": 22,
+    "name": "鲜明的记忆",
+    "effect": "将虚无龟裂卡牌所消减的虚无卡牌的目标范围中，新增坟墓"
+  },
+  {
+    "id": 190,
+    "characterId": 22,
+    "name": "内在的记忆",
+    "effect": "每当虚无卡牌消减时，会获得虚无悖论1。虚无悖论：1回合内凯隆的攻击卡牌伤害量+10%（最多叠加3层）"
+  },
+  {
+    "id": 191,
+    "characterId": 22,
+    "name": "完整的记忆",
+    "effect": "潜力的【强化基本卡牌】【强化独特卡牌】、【强化中立卡牌】的等级增加3"
+  },
+  {
+    "id": 192,
+    "characterId": 22,
+    "name": "释放的记忆",
+    "effect": "每当生成虚无卡牌时，有50%的机率对随机敌人造成脆弱1/削弱1/损坏1其中一种"
   },
   {
     "id": 117,
-    "characterId": 18,
+    "characterId": 23,
     "name": "沉睡的记忆",
-    "characterName": "莉妲",
     "effect": "基础属性提升：攻击力+5%，HP+5%"
   },
   {
     "id": 118,
-    "characterId": 18,
-    "name": "鲜明的记忆",
-    "characterName": "莉妲",
+    "characterId": 23,
+    "name": "苏醒的记忆",
     "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
   },
   {
     "id": 119,
-    "characterId": 18,
-    "name": "内在的记忆",
-    "characterName": "莉妲",
+    "characterId": 23,
+    "name": "鲜明的记忆",
     "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
   },
   {
     "id": 120,
-    "characterId": 18,
-    "name": "完整的记忆",
-    "characterName": "莉妲",
+    "characterId": 23,
+    "name": "内在的记忆",
     "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
   },
   {
     "id": 121,
-    "characterId": 18,
-    "name": "释放的记忆",
-    "characterName": "莉妲",
+    "characterId": 23,
+    "name": "完整的记忆",
     "effect": "觉醒技解锁前置，全属性+20%"
   },
   {
     "id": 122,
-    "characterId": 18,
-    "name": "觉醒的记忆",
-    "characterName": "莉妲",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 123,
-    "characterId": 1,
-    "name": "沉睡的记忆",
-    "characterName": "麦格纳",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 124,
-    "characterId": 1,
-    "name": "鲜明的记忆",
-    "characterName": "麦格纳",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 125,
-    "characterId": 1,
-    "name": "内在的记忆",
-    "characterName": "麦格纳",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 126,
-    "characterId": 1,
-    "name": "完整的记忆",
-    "characterName": "麦格纳",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 127,
-    "characterId": 1,
-    "name": "释放的记忆",
-    "characterName": "麦格纳",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 128,
-    "characterId": 1,
-    "name": "觉醒的记忆",
-    "characterName": "麦格纳",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 129,
-    "characterId": 32,
-    "name": "沉睡的记忆",
-    "characterName": "娜嘉",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 130,
-    "characterId": 32,
-    "name": "鲜明的记忆",
-    "characterName": "娜嘉",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 131,
-    "characterId": 32,
-    "name": "内在的记忆",
-    "characterName": "娜嘉",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 132,
-    "characterId": 32,
-    "name": "完整的记忆",
-    "characterName": "娜嘉",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 133,
-    "characterId": 32,
-    "name": "释放的记忆",
-    "characterName": "娜嘉",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 134,
-    "characterId": 32,
-    "name": "觉醒的记忆",
-    "characterName": "娜嘉",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 135,
-    "characterId": 20,
-    "name": "沉睡的记忆",
-    "characterName": "卢克",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 136,
-    "characterId": 20,
-    "name": "鲜明的记忆",
-    "characterName": "卢克",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 137,
-    "characterId": 20,
-    "name": "内在的记忆",
-    "characterName": "卢克",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 138,
-    "characterId": 20,
-    "name": "完整的记忆",
-    "characterName": "卢克",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 139,
-    "characterId": 20,
-    "name": "释放的记忆",
-    "characterName": "卢克",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 140,
-    "characterId": 20,
-    "name": "觉醒的记忆",
-    "characterName": "卢克",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 141,
-    "characterId": 28,
-    "name": "沉睡的记忆",
-    "characterName": "凯隆凶",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 142,
-    "characterId": 28,
-    "name": "鲜明的记忆",
-    "characterName": "凯隆凶",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 143,
-    "characterId": 28,
-    "name": "内在的记忆",
-    "characterName": "凯隆凶",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 144,
-    "characterId": 28,
-    "name": "完整的记忆",
-    "characterName": "凯隆凶",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 145,
-    "characterId": 28,
-    "name": "释放的记忆",
-    "characterName": "凯隆凶",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 146,
-    "characterId": 28,
-    "name": "觉醒的记忆",
-    "characterName": "凯隆凶",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 147,
-    "characterId": 23,
-    "name": "沉睡的记忆",
-    "characterName": "友纪",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 148,
-    "characterId": 23,
-    "name": "鲜明的记忆",
-    "characterName": "友纪",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 149,
-    "characterId": 23,
-    "name": "内在的记忆",
-    "characterName": "友纪",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 150,
-    "characterId": 23,
-    "name": "完整的记忆",
-    "characterName": "友纪",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 151,
     "characterId": 23,
     "name": "释放的记忆",
-    "characterName": "友纪",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 152,
-    "characterId": 23,
-    "name": "觉醒的记忆",
-    "characterName": "友纪",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 153,
-    "characterId": 27,
-    "name": "沉睡的记忆",
-    "characterName": "海德玛丽",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 154,
-    "characterId": 27,
-    "name": "鲜明的记忆",
-    "characterName": "海德玛丽",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 155,
-    "characterId": 27,
-    "name": "内在的记忆",
-    "characterName": "海德玛丽",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 156,
-    "characterId": 27,
-    "name": "完整的记忆",
-    "characterName": "海德玛丽",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 157,
-    "characterId": 27,
-    "name": "释放的记忆",
-    "characterName": "海德玛丽",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 158,
-    "characterId": 27,
-    "name": "觉醒的记忆",
-    "characterName": "海德玛丽",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 159,
-    "characterId": 21,
-    "name": "沉睡的记忆",
-    "characterName": "丽塔",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 160,
-    "characterId": 21,
-    "name": "鲜明的记忆",
-    "characterName": "丽塔",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 161,
-    "characterId": 21,
-    "name": "内在的记忆",
-    "characterName": "丽塔",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 162,
-    "characterId": 21,
-    "name": "完整的记忆",
-    "characterName": "丽塔",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 163,
-    "characterId": 21,
-    "name": "释放的记忆",
-    "characterName": "丽塔",
-    "effect": "觉醒技解锁前置，全属性+20%"
-  },
-  {
-    "id": 164,
-    "characterId": 21,
-    "name": "觉醒的记忆",
-    "characterName": "丽塔",
     "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
     "id": 165,
-    "characterId": 29,
+    "characterId": 24,
     "name": "沉睡的记忆",
-    "characterName": "米卡",
     "effect": "基础属性提升：攻击力+5%，HP+5%"
   },
   {
     "id": 166,
-    "characterId": 29,
-    "name": "鲜明的记忆",
-    "characterName": "米卡",
+    "characterId": 24,
+    "name": "苏醒的记忆",
     "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
   },
   {
     "id": 167,
-    "characterId": 29,
-    "name": "内在的记忆",
-    "characterName": "米卡",
+    "characterId": 24,
+    "name": "鲜明的记忆",
     "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
   },
   {
     "id": 168,
-    "characterId": 29,
-    "name": "完整的记忆",
-    "characterName": "米卡",
+    "characterId": 24,
+    "name": "内在的记忆",
     "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
   },
   {
     "id": 169,
-    "characterId": 29,
-    "name": "释放的记忆",
-    "characterName": "米卡",
+    "characterId": 24,
+    "name": "完整的记忆",
     "effect": "觉醒技解锁前置，全属性+20%"
   },
   {
     "id": 170,
-    "characterId": 29,
-    "name": "觉醒的记忆",
-    "characterName": "米卡",
+    "characterId": 24,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 135,
+    "characterId": 25,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 136,
+    "characterId": 25,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 137,
+    "characterId": 25,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 138,
+    "characterId": 25,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 139,
+    "characterId": 25,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 140,
+    "characterId": 25,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 159,
+    "characterId": 26,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 160,
+    "characterId": 26,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 161,
+    "characterId": 26,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 162,
+    "characterId": 26,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 163,
+    "characterId": 26,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 164,
+    "characterId": 26,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 123,
+    "characterId": 27,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 124,
+    "characterId": 27,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 125,
+    "characterId": 27,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 126,
+    "characterId": 27,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 127,
+    "characterId": 27,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 128,
+    "characterId": 27,
+    "name": "释放的记忆",
     "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
     "id": 171,
-    "characterId": 25,
+    "characterId": 28,
     "name": "沉睡的记忆",
-    "characterName": "席琳娜",
     "effect": "基础属性提升：攻击力+5%，HP+5%"
   },
   {
     "id": 172,
-    "characterId": 25,
-    "name": "鲜明的记忆",
-    "characterName": "席琳娜",
+    "characterId": 28,
+    "name": "苏醒的记忆",
     "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
   },
   {
     "id": 173,
-    "characterId": 25,
-    "name": "内在的记忆",
-    "characterName": "席琳娜",
+    "characterId": 28,
+    "name": "鲜明的记忆",
     "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
   },
   {
     "id": 174,
-    "characterId": 25,
-    "name": "完整的记忆",
-    "characterName": "席琳娜",
+    "characterId": 28,
+    "name": "内在的记忆",
     "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
   },
   {
     "id": 175,
-    "characterId": 25,
-    "name": "释放的记忆",
-    "characterName": "席琳娜",
+    "characterId": 28,
+    "name": "完整的记忆",
     "effect": "觉醒技解锁前置，全属性+20%"
   },
   {
     "id": 176,
-    "characterId": 25,
-    "name": "觉醒的记忆",
-    "characterName": "席琳娜",
+    "characterId": 28,
+    "name": "释放的记忆",
     "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
-    "id": 177,
-    "characterId": 22,
+    "id": 147,
+    "characterId": 29,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 148,
+    "characterId": 29,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 149,
+    "characterId": 29,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 150,
+    "characterId": 29,
     "name": "内在的记忆",
-    "characterName": "凯西乌斯",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 151,
+    "characterId": 29,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 152,
+    "characterId": 29,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 129,
+    "characterId": 30,
+    "name": "沉睡的记忆",
+    "effect": "基础属性提升：攻击力+5%，HP+5%"
+  },
+  {
+    "id": 130,
+    "characterId": 30,
+    "name": "苏醒的记忆",
+    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
+  },
+  {
+    "id": 131,
+    "characterId": 30,
+    "name": "鲜明的记忆",
+    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
+  },
+  {
+    "id": 132,
+    "characterId": 30,
+    "name": "内在的记忆",
+    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
+  },
+  {
+    "id": 133,
+    "characterId": 30,
+    "name": "完整的记忆",
+    "effect": "觉醒技解锁前置，全属性+20%"
+  },
+  {
+    "id": 134,
+    "characterId": 30,
+    "name": "释放的记忆",
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+  },
+  {
+    "id": 111,
+    "characterId": 31,
+    "name": "沉睡的记忆",
+    "effect": "小丑卡牌效果的目标范围中新增丢弃卡牌。",
+    "stage": 1
+  },
+  {
+    "id": 112,
+    "characterId": 31,
+    "name": "苏醒的记忆",
+    "effect": "凯西乌斯每次使用能力抽取时，受到40%的治愈。",
+    "stage": 2
+  },
+  {
+    "id": 113,
+    "characterId": 31,
+    "name": "鲜明的记忆",
+    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化中立卡牌】的等级增加3。",
+    "stage": 3
+  },
+  {
+    "id": 114,
+    "characterId": 31,
+    "name": "内在的记忆",
+    "effect": "死亡诡计的所有敌人士气减少增加2。",
+    "stage": 4
+  },
+  {
+    "id": 115,
+    "characterId": 31,
+    "name": "完整的记忆",
+    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化中立卡牌】的等级增加3。",
+    "stage": 5
+  },
+  {
+    "id": 116,
+    "characterId": 31,
+    "name": "释放的记忆",
+    "effect": "凯西乌斯每次完成任务时，在1回合内对所有敌人赋予士气减少1。",
+    "stage": 6
+  },
+  {
+    "id": 11,
+    "characterId": 32,
+    "stage": 1,
+    "name": "沉睡的记忆",
+    "effect": "「同花顺」使用时额外提供1层士气。"
+  },
+  {
+    "id": 12,
+    "characterId": 32,
+    "stage": 2,
+    "name": "苏醒的记忆",
+    "effect": "士气每层增伤效果+5%。"
+  },
+  {
+    "id": 177,
+    "characterId": 32,
+    "name": "鲜明的记忆",
     "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
   },
   {
     "id": 178,
-    "characterId": 22,
-    "name": "完整的记忆",
-    "characterName": "凯西乌斯",
+    "characterId": 32,
+    "name": "内在的记忆",
     "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
   },
   {
     "id": 179,
-    "characterId": 22,
-    "name": "释放的记忆",
-    "characterName": "凯西乌斯",
+    "characterId": 32,
+    "name": "完整的记忆",
     "effect": "觉醒技解锁前置，全属性+20%"
   },
   {
     "id": 180,
-    "characterId": 22,
-    "name": "觉醒的记忆",
-    "characterName": "凯西乌斯",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
-  },
-  {
-    "id": 181,
-    "characterId": 19,
-    "name": "沉睡的记忆",
-    "characterName": "妮娅",
-    "effect": "基础属性提升：攻击力+5%，HP+5%"
-  },
-  {
-    "id": 182,
-    "characterId": 19,
-    "name": "鲜明的记忆",
-    "characterName": "妮娅",
-    "effect": "基础属性提升：攻击力+10%，HP+10%，技能效果+5%"
-  },
-  {
-    "id": 183,
-    "characterId": 19,
-    "name": "内在的记忆",
-    "characterName": "妮娅",
-    "effect": "技能强化：独特卡牌效果+15%，AP消耗-1（最低1）"
-  },
-  {
-    "id": 184,
-    "characterId": 19,
-    "name": "完整的记忆",
-    "characterName": "妮娅",
-    "effect": "全属性提升：攻击力+15%，HP+15%，防御+10%"
-  },
-  {
-    "id": 185,
-    "characterId": 19,
+    "characterId": 32,
     "name": "释放的记忆",
-    "characterName": "妮娅",
-    "effect": "觉醒技解锁前置，全属性+20%"
+    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
   },
   {
-    "id": 186,
-    "characterId": 19,
-    "name": "觉醒的记忆",
-    "characterName": "妮娅",
-    "effect": "觉醒技解锁，全属性+25%，获得独特被动技能"
+    "id": 141,
+    "characterId": 33,
+    "name": "沉睡的记忆",
+    "effect": "掠食者之刃卡牌1回合内士气额外增加2。",
+    "stage": 1
+  },
+  {
+    "id": 142,
+    "characterId": 33,
+    "name": "苏醒的记忆",
+    "effect": "蕾伊使用攻击卡牌时，治愈120%。该效果每回合发动1次。",
+    "stage": 2
+  },
+  {
+    "id": 143,
+    "characterId": 33,
+    "name": "鲜明的记忆",
+    "effect": "潜力的【基础卡牌强化】、【独特卡牌强化】、【中立卡牌强化】等级增加3级。",
+    "stage": 3
+  },
+  {
+    "id": 144,
+    "characterId": 33,
+    "name": "内在的记忆",
+    "effect": "末影之刃的伤害量+100%。",
+    "stage": 4
+  },
+  {
+    "id": 145,
+    "characterId": 33,
+    "name": "完整的记忆",
+    "effect": "潜力的【基础卡牌强化】、【独特卡牌强化】、【中立卡牌强化】等级增加3级。",
+    "stage": 5
+  },
+  {
+    "id": 146,
+    "characterId": 33,
+    "name": "释放的记忆",
+    "effect": "己方攻击卡牌伤害量+20%。",
+    "stage": 6
   }
 ]
