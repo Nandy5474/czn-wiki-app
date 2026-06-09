@@ -6,11 +6,17 @@ import coil.ImageLoaderFactory
 import coil.memory.MemoryCache
 import coil.disk.DiskCache
 import com.cznwiki.app.coil.AssetUriFetcher
+import com.cznwiki.app.data.LocalDataManager
 import com.cznwiki.app.data.database.AppDatabase
 import com.cznwiki.app.data.database.seedDatabaseFromAssets
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 
 class CznApplication : Application(), ImageLoaderFactory {
     val database by lazy { AppDatabase.getInstance(this) }
+    val localDataManager by lazy { LocalDataManager.getInstance(this) }
+    private val appScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
     override fun newImageLoader(): ImageLoader {
         return ImageLoader.Builder(this)
@@ -35,7 +41,12 @@ class CznApplication : Application(), ImageLoaderFactory {
 
     override fun onCreate() {
         super.onCreate()
-        // Seed data on first launch
-        seedDatabaseFromAssets(this, database)
+        // 首次启动：从 assets 导入基础数据 + 初始 user_collection
+        if (localDataManager.getLocalVersion() == 0) {
+            seedDatabaseFromAssets(this, database)
+            localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
+        }
+        // 检查数据版本，版本变化时触发更新流程（保存用户修改 → 清空 → 导入 → 回灌）
+        localDataManager.checkAndUpdateData(database, appScope)
     }
 }

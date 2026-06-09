@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.cznwiki.app.CznApplication
+import com.cznwiki.app.data.LocalDataManager
 import com.cznwiki.app.data.database.AppDatabase
 import com.cznwiki.app.data.entity.*
 import kotlinx.coroutines.flow.*
@@ -88,6 +89,7 @@ class CharacterListViewModel(application: Application) : AndroidViewModel(applic
 
 class CharacterDetailViewModel(application: Application) : AndroidViewModel(application) {
     private val db = (application as CznApplication).database
+    private val localDataMgr = (application as CznApplication).localDataManager
     private var characterId: Int = 0
 
     val character: StateFlow<CharacterEntity?> = MutableStateFlow(null)
@@ -114,6 +116,8 @@ class CharacterDetailViewModel(application: Application) : AndroidViewModel(appl
                 UserCollectionEntity(characterId = characterId, owned = owned)
             }
             db.userCollectionDao().upsert(entity)
+            // 持久化到用户修改层
+            localDataMgr.saveUserModification(characterId, "owned", owned)
             (collectionStatus as MutableStateFlow).value = db.userCollectionDao().getByCharacterId(characterId)
         }
     }
@@ -121,6 +125,7 @@ class CharacterDetailViewModel(application: Application) : AndroidViewModel(appl
     fun updateConstellation(value: Int) {
         viewModelScope.launch {
             db.userCollectionDao().updateConstellation(characterId, value)
+            localDataMgr.saveUserModification(characterId, "constellation", value)
             (collectionStatus as MutableStateFlow).value = db.userCollectionDao().getByCharacterId(characterId)
         }
     }
@@ -128,6 +133,7 @@ class CharacterDetailViewModel(application: Application) : AndroidViewModel(appl
     fun updatePotential(value: Int) {
         viewModelScope.launch {
             db.userCollectionDao().updatePotential(characterId, value)
+            localDataMgr.saveUserModification(characterId, "potential", value)
             (collectionStatus as MutableStateFlow).value = db.userCollectionDao().getByCharacterId(characterId)
         }
     }
@@ -135,6 +141,7 @@ class CharacterDetailViewModel(application: Application) : AndroidViewModel(appl
     fun updateCustomTier(value: String) {
         viewModelScope.launch {
             db.userCollectionDao().updateTier(characterId, value)
+            localDataMgr.saveUserModification(characterId, "customTier", value)
             (collectionStatus as MutableStateFlow).value = db.userCollectionDao().getByCharacterId(characterId)
         }
     }
@@ -142,6 +149,7 @@ class CharacterDetailViewModel(application: Application) : AndroidViewModel(appl
 
 class CollectionViewModel(application: Application) : AndroidViewModel(application) {
     private val db = (application as CznApplication).database
+    private val localDataMgr = (application as CznApplication).localDataManager
 
     val ownedCharacters: StateFlow<List<UserCollectionEntity>> = db.userCollectionDao()
         .getOwnedCharacters()
@@ -176,30 +184,35 @@ class CollectionViewModel(application: Application) : AndroidViewModel(applicati
     fun updateOwnership(characterId: Int, owned: Boolean) {
         viewModelScope.launch {
             db.userCollectionDao().upsert(UserCollectionEntity(characterId = characterId, owned = owned))
+            localDataMgr.saveUserModification(characterId, "owned", owned)
         }
     }
 
     fun updateConstellation(characterId: Int, value: Int) {
         viewModelScope.launch {
             db.userCollectionDao().updateConstellation(characterId, value)
+            localDataMgr.saveUserModification(characterId, "constellation", value)
         }
     }
 
     fun updatePotential(characterId: Int, value: Int) {
         viewModelScope.launch {
             db.userCollectionDao().updatePotential(characterId, value)
+            localDataMgr.saveUserModification(characterId, "potential", value)
         }
     }
 
     fun updatePartner(characterId: Int, value: Int) {
         viewModelScope.launch {
             db.userCollectionDao().updatePartner(characterId, value)
+            localDataMgr.saveUserModification(characterId, "partnerId", value)
         }
     }
 
     fun updateTier(characterId: Int, value: String) {
         viewModelScope.launch {
             db.userCollectionDao().updateTier(characterId, value)
+            localDataMgr.saveUserModification(characterId, "customTier", value)
         }
     }
 }

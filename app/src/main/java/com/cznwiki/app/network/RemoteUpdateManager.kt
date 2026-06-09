@@ -2,6 +2,7 @@ package com.cznwiki.app.network
 
 import android.content.Context
 import android.util.Log
+import com.cznwiki.app.data.LocalDataManager
 import com.cznwiki.app.data.database.AppDatabase
 import com.cznwiki.app.data.entity.*
 import com.google.gson.Gson
@@ -111,6 +112,13 @@ class RemoteUpdateManager(
                 return@withContext UpdateResult(true, "数据已是最新", localVersion)
             }
 
+            // === 远程更新前：保存用户修改到 LocalDataManager ===
+            val localDataMgr = LocalDataManager.getInstance(context)
+            val savedCount = localDataMgr.snapshotUserModsBeforeRemoteUpdate(database)
+            if (savedCount > 0) {
+                Log.i(TAG, "Saved $savedCount user collection entries before remote update")
+            }
+
             // Download and import new data
             var charsUpdated = 0
             var cardsUpdated = 0
@@ -161,20 +169,9 @@ class RemoteUpdateManager(
                 Log.w(TAG, "Failed to update self-awareness", e)
             }
 
-            // Download user_collection (seed data, first-time sync only)
-            var userCollUpdated = 0
-            try {
-                val collectionJson = fetchUrl(remoteVersion.user_collection_url)
-                if (collectionJson != null) {
-                    val collections: List<UserCollectionEntity> = gson.fromJson(
-                        collectionJson, object : TypeToken<List<UserCollectionEntity>>() {}.type
-                    )
-                    database.userCollectionDao().insertAll(collections)
-                    userCollUpdated = collections.size
-                }
-            } catch (e: Exception) {
-                Log.w(TAG, "Failed to update user collection", e)
-            }
+            // === 远程更新后：回灌用户修改到 Room ===
+            // 注意：不再从远程下载 user_collection.json 覆盖用户数据
+            localDataMgr.reapplyUserModsAfterRemoteUpdate(database)
 
             setLocalVersion(remoteVerNum)
             prefs.edit().putLong(KEY_LAST_CHECK, System.currentTimeMillis()).apply()
@@ -186,7 +183,7 @@ class RemoteUpdateManager(
                 charsUpdated = charsUpdated,
                 cardsUpdated = cardsUpdated,
                 saUpdated = saUpdated,
-                userCollUpdated = userCollUpdated,
+                userCollUpdated = savedCount,
                 update_date = remoteVersion.update_date
             )
         } catch (e: Exception) {

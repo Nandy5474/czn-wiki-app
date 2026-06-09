@@ -1,0 +1,6 @@
+{
+  "version": "2.0.17",
+  "version_code": 17,
+  "update_date": "2026-06-08",
+  "changelog": "v2.0.17: 数据分层架构 - 用户修改持久化机制"
+}

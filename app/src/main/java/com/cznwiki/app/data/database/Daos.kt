@@ -20,6 +20,9 @@ interface CharacterDao {
 
     @Query("SELECT COUNT(*) FROM characters")
     suspend fun getCount(): Int
+
+    @Query("DELETE FROM characters")
+    suspend fun deleteAll()
 }
 
 @Dao
@@ -41,6 +44,9 @@ interface CardDao {
 
     @Query("DELETE FROM cards WHERE characterId = :characterId")
     suspend fun deleteByCharacter(characterId: Int)
+
+    @Query("DELETE FROM cards")
+    suspend fun deleteAll()
 }
 
 @Dao
@@ -56,6 +62,9 @@ interface SelfAwarenessDao {
 
     @Query("DELETE FROM self_awareness WHERE characterId = :characterId")
     suspend fun deleteByCharacter(characterId: Int)
+
+    @Query("DELETE FROM self_awareness")
+    suspend fun deleteAll()
 }
 
 @Dao
@@ -65,6 +74,9 @@ interface UserCollectionDao {
 
     @Query("SELECT * FROM user_collection WHERE characterId = :characterId")
     suspend fun getByCharacterId(characterId: Int): UserCollectionEntity?
+
+    @Query("SELECT * FROM user_collection")
+    suspend fun getAllSync(): List<UserCollectionEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(entity: UserCollectionEntity)
