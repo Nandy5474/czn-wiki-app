@@ -1,19 +1,17 @@
 {
-  "version": "2.0.21",
+  "version": "2.0.22",
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
   "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
   "update_date": "2026-06-09 18:56:40",
   "changelog": "v2.0.17: 蒂菲拉(安洁莉卡)自我意识数据全量修复,从黛安娜交叉数据修正为创造卡牌体系",
-  "version_code": 23,
+  "version_code": 24,
   "update_notes": "卡莉佩数据修正：秃鹰发射归为灵光一闪，绯的落九天效果更新",
   "update_time": "2026-06-10",
   "changes": [
-    "首页角色图鉴入口改为跳转角色列表",
-    "角色详情页新增左右切换按钮,可直接切换上/下一个角色",
-    "TopAppBar显示当前序号/总数",
-    "新增CharacterDao.getAllCharacterIdsSync()",
-    "CharacterDetailViewModel新增allCharacterIds状态"
+    "cards.json 全面修复: sortOrder 1-8标准排列, cardType正确标注",
+    "补全蕾伊+欧文缺失16张卡, 总计264张(33x8)",
+    "cardId格式统一为{characterId}_{sortOrder}"
   ]
 }
