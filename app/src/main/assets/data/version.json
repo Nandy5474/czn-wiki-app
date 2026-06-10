@@ -6,7 +6,7 @@
   "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
   "update_date": "2026-06-10 12:50:00",
   "changelog": "v2.0.23: 活动数据从GameKee全量刷新(36条), 修复抓取脚本日期解析和名称截断问题",
-  "version_code": 25,
+  "version_code": 26,
   "update_notes": "events.json 36条国际服活动, banners.json 6条卡池, 新增gamekee_scraper.py自动抓取脚本",
   "update_time": "2026-06-10",
   "changes": [

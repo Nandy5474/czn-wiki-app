@@ -83,7 +83,7 @@ class CharacterListViewModel(application: Application) : AndroidViewModel(applic
     }
 
     val elements = listOf("热情", "虚无", "本能", "秩序", "正义")
-    val jobs = listOf("决斗家", "先锋", "游侠", "猎人", "心灵术士", "控制师", "奥义师", "守卫")
+    val jobs = listOf("决斗家", "先锋", "前锋", "游侠", "猎人", "操控师", "心灵术士", "控制师", "奥义师", "守卫")
     val starOptions = listOf(0, 1, 2, 3, 4, 5, 6)
 }
 

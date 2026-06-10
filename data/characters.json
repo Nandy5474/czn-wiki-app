@@ -5,7 +5,6 @@
     "stars": 5,
     "element": "秩序",
     "class": "游侠",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/908529.png",
     "faction": "恒星家族",
     "cv": "韩:任逸舟 / 日:中村悠一",
     "race": "蓝牧",
@@ -15,7 +14,9 @@
     "baseHp": 78,
     "rarity": "SSR",
     "description": "怠惰的万事屋顾问. 他经营着一家接受一切委托的万事屋，工作时执着顽强，能解决任何难题，无所事事时，便一副无精打采的懒散模样。",
-    "ability": "闪电"
+    "ability": "闪电",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/908529.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/908529.png"
   },
   {
     "id": 2,
@@ -23,7 +24,6 @@
     "stars": 5,
     "element": "热情",
     "class": "游侠",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/29/73357.png",
     "faction": "希安联邦",
     "cv": "韩:崔夏莉（音译） / 日:瀬戸桃子",
     "race": "人类",
@@ -33,7 +33,9 @@
     "baseHp": 75,
     "rarity": "SSR",
     "description": "在「伊甸尼蒂号」的悲剧——「艾立纳德」事件中大显身手的英雄. 因伤自干员之位退下后，依然获得广大民众的热烈支持，并在「必须跨越悲剧、迈向未来」的声浪推动下，登上了市长之位。",
-    "ability": "生成光之长剑"
+    "ability": "生成光之长剑",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/29/73357.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/29/73357.png"
   },
   {
     "id": 3,
@@ -41,7 +43,6 @@
     "stars": 5,
     "element": "热情",
     "class": "猎人",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/8/853159.png",
     "faction": "晨曦会",
     "cv": "韩:任智妍 / 日:石见舞菜香",
     "race": "人类",
@@ -51,7 +52,9 @@
     "baseHp": 78,
     "rarity": "SSR",
     "description": "传播爱的偶像. 类似于不具备普通大司祭权威或力量的名誉大司祭。",
-    "ability": "和谐银河"
+    "ability": "和谐银河",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/8/853159.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/8/853159.png"
   },
   {
     "id": 4,
@@ -59,7 +62,6 @@
     "stars": 5,
     "element": "正义",
     "class": "奥义师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/2/18/332392.png",
     "faction": "流浪者",
     "cv": "韩:安秀贤 / 日:阿部里果",
     "race": "恒星家族",
@@ -69,7 +71,9 @@
     "baseHp": 85,
     "rarity": "SSR",
     "description": "游离于时间的缝隙之中的神秘少女. 她的目光始终冷静而公正地注视着世间一切。",
-    "ability": "掌控时空"
+    "ability": "掌控时空",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/2/18/332392.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/2/18/332392.png"
   },
   {
     "id": 5,
@@ -77,7 +81,6 @@
     "stars": 5,
     "element": "秩序",
     "class": "操控师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/391271/2026/1/25/934647.png",
     "faction": "流浪者",
     "cv": "韩:朱艺珍 / 日:大仓䌷",
     "race": "人类",
@@ -87,7 +90,9 @@
     "baseHp": 80,
     "rarity": "SSR",
     "description": "与妹妹相依为命，于绝望中顽强求生的孤女. 她身上既有军人般的果决与干练，又藏着一颗属于少女的柔软内心。",
-    "ability": "创造界"
+    "ability": "创造界",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/391271/2026/1/25/934647.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/391271/2026/1/25/934647.png"
   },
   {
     "id": 6,
@@ -95,7 +100,6 @@
     "stars": 5,
     "element": "秩序",
     "class": "守卫",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/1/4/365649.png",
     "faction": "流浪者",
     "cv": "韩:张熙拉 / 日:芝崎典子",
     "race": "人类",
@@ -105,7 +109,9 @@
     "baseHp": 90,
     "rarity": "SSR",
     "description": "向死而生的传奇佣兵. 她曾背负着整个故乡的债务。",
-    "ability": "无"
+    "ability": "无",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/1/4/365649.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/1/4/365649.png"
   },
   {
     "id": 7,
@@ -113,7 +119,6 @@
     "stars": 5,
     "element": "本能",
     "class": "操控师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/0/14/437119.png",
     "faction": "帕尔律社",
     "cv": "韩:李明熙 / 日:大地叶",
     "race": "复制体",
@@ -123,7 +128,9 @@
     "baseHp": 80,
     "rarity": "SSR",
     "description": "佩尔提翁的强化复制体. 香椎制药制造的人工生命体——复制体。",
-    "ability": "驭龙"
+    "ability": "驭龙",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/0/14/437119.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/0/14/437119.png"
   },
   {
     "id": 8,
@@ -131,7 +138,6 @@
     "stars": 5,
     "element": "本能",
     "class": "猎人",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/800636/2025/11/24/275645.png",
     "faction": "希安联邦",
     "cv": "韩:张彩延 / 日:伊藤さよ子",
     "race": "人类",
@@ -141,7 +147,9 @@
     "baseHp": 78,
     "rarity": "SSR",
     "description": "守护特拉西翁领空的方舟守护局局长. 身为方舟守护局的领导者，加上拥有美丽的翅膀翱翔天际，因此获得了守护天使的别名。",
-    "ability": "钴蓝之光"
+    "ability": "钴蓝之光",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/800636/2025/11/24/275645.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/800636/2025/11/24/275645.png"
   },
   {
     "id": 9,
@@ -149,7 +157,6 @@
     "stars": 5,
     "element": "虚无",
     "class": "奥义师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/4408/2025/11/3/486560.png",
     "faction": "帕尔律社",
     "cv": "韩:金彩琳 / 日:土屋理绪",
     "race": "人类",
@@ -159,7 +166,9 @@
     "baseHp": 85,
     "rarity": "SSR",
     "description": "来自海御代的月影剑继承者. 她以自身为棺、封印了卡厄思“黯影”。",
-    "ability": "月影剑"
+    "ability": "月影剑",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/4408/2025/11/3/486560.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/4408/2025/11/3/486560.png"
   },
   {
     "id": 10,
@@ -167,7 +176,6 @@
     "stars": 5,
     "element": "秩序",
     "class": "前锋",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/319144.png",
     "faction": "希安联邦",
     "cv": "韩:郑海恩 / 日:石上静香",
     "race": "人类",
@@ -177,7 +185,9 @@
     "baseHp": 90,
     "rarity": "SSR",
     "description": "玩世不恭的天才部长. 她是特殊案件调查部的部长，视日常为最大的游乐场，恶作剧和捉弄人是她呼吸的方式。",
-    "ability": "疾速"
+    "ability": "疾速",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/319144.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/319144.png"
   },
   {
     "id": 11,
@@ -185,7 +195,6 @@
     "stars": 5,
     "element": "正义",
     "class": "前锋",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/235682.png",
     "faction": "希安联邦",
     "cv": "韩:伊恩·金 / 日:羊宫妃那",
     "race": "人类",
@@ -195,7 +204,9 @@
     "baseHp": 90,
     "rarity": "SSR",
     "description": "春风和气的优等生. 就读于海军士官学院，是学生会的成员，因其温柔的性格备受学生的喜爱。",
-    "ability": "聚能"
+    "ability": "聚能",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/235682.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/235682.png"
   },
   {
     "id": 12,
@@ -203,7 +214,6 @@
     "stars": 5,
     "element": "虚无",
     "class": "前锋",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/632844.png",
     "faction": "流浪者",
     "cv": "韩:金夏露 / 日:大西沙织",
     "race": "人类",
@@ -213,7 +223,9 @@
     "baseHp": 90,
     "rarity": "SSR",
     "description": "一位生平大多笼罩在谜团中的天才剑客. 为了寻找“宇宙中独一无二的命运挚爱”而四处流浪。",
-    "ability": "迷雾"
+    "ability": "迷雾",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/632844.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/632844.png"
   },
   {
     "id": 13,
@@ -221,7 +233,6 @@
     "stars": 5,
     "element": "热情",
     "class": "游侠",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/857704.png",
     "faction": "恒星家族",
     "cv": "韩:金艺琳 / 日:冈咲美保",
     "race": "恒星家族",
@@ -231,7 +242,9 @@
     "baseHp": 75,
     "rarity": "SSR",
     "description": "在兔与鼠的身份间徘徊的兔子. 秉持着独特“反派美德”的神枪手。",
-    "ability": "绽放"
+    "ability": "绽放",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/857704.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/857704.png"
   },
   {
     "id": 14,
@@ -239,7 +252,6 @@
     "stars": 5,
     "element": "正义",
     "class": "守卫",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/952926.png",
     "faction": "恒星家族",
     "cv": "韩:权英智 / 日:小林优",
     "race": "恒星家族",
@@ -249,7 +261,9 @@
     "baseHp": 102,
     "rarity": "SSR",
     "description": "整日忙忙碌碌寻宝藏的快乐小狗. 一旦嗅到空气中任何一丝有趣的气味就冲出去。",
-    "ability": "寒冰"
+    "ability": "寒冰",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/952926.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/952926.png"
   },
   {
     "id": 15,
@@ -257,7 +271,6 @@
     "stars": 5,
     "element": "本能",
     "class": "守卫",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/734910.png",
     "faction": "恒星家族",
     "cv": "韩:李明浩 / 日:内田真礼",
     "race": "恒星家族",
@@ -267,7 +280,9 @@
     "baseHp": 102,
     "rarity": "SSR",
     "description": "白色阿尔泰尔的团长. 以务实的手腕统御着一群追求浪漫的理想家。",
-    "ability": "神谕"
+    "ability": "神谕",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/734910.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/734910.png"
   },
   {
     "id": 16,
@@ -275,7 +290,6 @@
     "stars": 5,
     "element": "热情",
     "class": "前锋",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/77013.png",
     "faction": "希安联邦",
     "cv": "韩:瑟琳娜·李 / 日:千本木彩花",
     "race": "人类",
@@ -285,7 +299,9 @@
     "baseHp": 90,
     "rarity": "SSR",
     "description": "蓝星香族仅存的末裔. 在痛失所有族人后，她依然恪守“仁爱众生”的族训，以勇敢开朗的姿态面对这个炼狱般的世界。",
-    "ability": "金刚不坏"
+    "ability": "金刚不坏",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/77013.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/77013.png"
   },
   {
     "id": 17,
@@ -293,7 +309,6 @@
     "stars": 5,
     "element": "本能",
     "class": "操控师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/365504.png",
     "faction": "晨曦会",
     "cv": "韩:张艺娜 / 日:巽悠衣子",
     "race": "人类",
@@ -303,7 +318,9 @@
     "baseHp": 80,
     "rarity": "SSR",
     "description": "晨曦会司祭. 总是一副懒散的从容模样，对他人的情绪反应抱有微妙的好奇。",
-    "ability": "光之幕"
+    "ability": "光之幕",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/365504.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/365504.png"
   },
   {
     "id": 18,
@@ -311,7 +328,6 @@
     "stars": 5,
     "element": "虚无",
     "class": "猎人",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/743697.png",
     "faction": "希安联邦",
     "cv": "韩:江西布 / 日:野村真悠华",
     "race": "人类",
@@ -321,7 +337,9 @@
     "baseHp": 78,
     "rarity": "SSR",
     "description": "出身正义号的精英战员. 她始终以冷静的姿态应对一切，却也藏匿着少女般的感性。",
-    "ability": "黑玫瑰"
+    "ability": "黑玫瑰",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/743697.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/743697.png"
   },
   {
     "id": 19,
@@ -329,7 +347,6 @@
     "stars": 4,
     "element": "本能",
     "class": "操控师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/240349.png",
     "faction": "帕尔律社",
     "cv": "韩:金柱浩 / 日:鸟海浩辅",
     "race": "半机械人",
@@ -339,7 +356,9 @@
     "baseHp": 74,
     "rarity": "SR",
     "description": "以死亡为终极戏法的魔术师. 他视万物为幻象，独将卡厄思中的那场死亡与苏醒奉为唯一的真实与永恒，并以此为谜题，在宇宙中上演着一场场诡谲而华丽的探寻。",
-    "ability": "空间移动"
+    "ability": "空间移动",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/240349.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/240349.png"
   },
   {
     "id": 20,
@@ -347,7 +366,6 @@
     "stars": 4,
     "element": "本能",
     "class": "操控师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/16/646570.png",
     "faction": "希安联邦",
     "cv": "韩:李伊罗 / 日:野口瑠璃子",
     "race": "人类",
@@ -357,15 +375,16 @@
     "baseHp": 74,
     "rarity": "SR",
     "description": "梦想成为宇宙摇滚明星的少女. 目前正在通过举办个人演唱会等活动，一点点积攒名气。",
-    "ability": "音波"
+    "ability": "音波",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/16/646570.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/16/646570.png"
   },
   {
     "id": 21,
     "name": "卢卡斯",
     "stars": 4,
-    "element": "热情",
+    "element": "本能",
     "class": "猎人",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/417114.png",
     "faction": "铁巷联盟",
     "cv": "韩:崔宇成 / 日:德留慎乃佑",
     "race": "人类",
@@ -375,7 +394,9 @@
     "baseHp": 72,
     "rarity": "SR",
     "description": "燃烧的终结者. 拥有与弟弟卢克相反的异色瞳和一头张扬的红发。",
-    "ability": "魔眼"
+    "ability": "魔眼",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/417114.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/417114.png"
   },
   {
     "id": 22,
@@ -383,7 +404,6 @@
     "stars": 4,
     "element": "正义",
     "class": "游侠",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/973076.png",
     "faction": "铁巷联盟",
     "cv": "韩:朴伊瑞 / 日:赤尾光",
     "race": "人类",
@@ -393,7 +413,9 @@
     "baseHp": 69,
     "rarity": "SR",
     "description": "想成为大人物的天才前锋. 她从传奇战士奶奶那里学到了顶尖的战略战术，年纪轻轻就成为了猎狼行进队的小队长。",
-    "ability": "怪力"
+    "ability": "怪力",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/973076.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/973076.png"
   },
   {
     "id": 23,
@@ -401,7 +423,6 @@
     "stars": 4,
     "element": "虚无",
     "class": "奥义师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/940877.png",
     "faction": "希安联邦",
     "cv": "韩:李恩祖 / 日:名冢佳织",
     "race": "人类",
@@ -411,7 +432,9 @@
     "baseHp": 79,
     "rarity": "SR",
     "description": "厄运缠身的少女. 特莱莎鲜少提及过去，只因每一段回忆都沾染着不幸的痕迹——那是一种近乎宿命的坏运气，总让接近她的人无端陷入麻烦，也让她在永久的愧疚与对未来的恐惧中畏缩不前。",
-    "ability": "暗"
+    "ability": "暗",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/940877.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/940877.png"
   },
   {
     "id": 24,
@@ -419,7 +442,6 @@
     "stars": 4,
     "element": "虚无",
     "class": "操控师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/826708.png",
     "faction": "希安联邦",
     "cv": "韩:金嘉翎 / 日:本渡枫",
     "race": "人类",
@@ -429,7 +451,9 @@
     "baseHp": 74,
     "rarity": "SR",
     "description": "朝气蓬勃的少女战员. 认真、温柔且充满热情的蕾伊，既是希安联邦的战员，同时也是乐园号的学生。",
-    "ability": "暗物质"
+    "ability": "暗物质",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/826708.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/826708.png"
   },
   {
     "id": 25,
@@ -437,7 +461,6 @@
     "stars": 4,
     "element": "正义",
     "class": "操控师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/491873.png",
     "faction": "希安联邦",
     "cv": "韩:金娜惠 / 日:关根瞳",
     "race": "人类",
@@ -447,7 +470,9 @@
     "baseHp": 79,
     "rarity": "SR",
     "description": "反对暴力的理性主义者. 米卡为守护他人梦想而握起武器。",
-    "ability": "水波"
+    "ability": "水波",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/491873.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/491873.png"
   },
   {
     "id": 26,
@@ -455,7 +480,6 @@
     "stars": 5,
     "element": "虚无",
     "class": "守卫",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/27/1779864515887_1779863927962_h224rirbl9_9f24w63bdy.png",
     "faction": "希安联邦",
     "cv": "韩:金顺美 / 日:久野美咲",
     "race": "人类",
@@ -465,7 +489,9 @@
     "baseHp": 102,
     "rarity": "SSR",
     "description": "特拉西翁特殊事件调查部的成员艾美从海盗船上救出的少女，拥有实现童话的天赋. 可以用光创造出童话中的角色来进行攻击。",
-    "ability": "实现童话"
+    "ability": "实现童话",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/27/1779864515887_1779863927962_h224rirbl9_9f24w63bdy.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/27/1779864515887_1779863927962_h224rirbl9_9f24w63bdy.png"
   },
   {
     "id": 27,
@@ -473,7 +499,6 @@
     "stars": 4,
     "element": "秩序",
     "class": "守卫",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/264028.png",
     "faction": "希安联邦",
     "cv": "韩:游泳 / 日:日笠阳子",
     "race": "人类",
@@ -483,7 +508,9 @@
     "baseHp": 94,
     "rarity": "SR",
     "description": "特殊案件搜查部的搜查官. 简称特搜部，负责调查和处理希安联邦内的各种案件。",
-    "ability": "钢铁化"
+    "ability": "钢铁化",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/264028.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/264028.png"
   },
   {
     "id": 28,
@@ -491,7 +518,6 @@
     "stars": 4,
     "element": "热情",
     "class": "游侠",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/927959.png",
     "faction": "恒星家族",
     "cv": "韩:辛纳里 / 日:稻垣好",
     "race": "恒星家族",
@@ -501,7 +527,9 @@
     "baseHp": 69,
     "rarity": "SR",
     "description": "如影般静默的狙击手. 赛琳娜虽有顶级狙击手的天赋，却有着天生“存在感薄弱”的不足。",
-    "ability": "千里眼"
+    "ability": "千里眼",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/927959.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/927959.png"
   },
   {
     "id": 29,
@@ -509,7 +537,6 @@
     "stars": 4,
     "element": "热情",
     "class": "守卫",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/503629.png",
     "faction": "铁巷联盟",
     "cv": "韩:吕允美 / 日:能登麻美子",
     "race": "人类",
@@ -519,7 +546,9 @@
     "baseHp": 94,
     "rarity": "SR",
     "description": "大智若愚的团队照料者. 平时总是发呆，仿佛永远慢世界半拍。",
-    "ability": "铜墙铁壁"
+    "ability": "铜墙铁壁",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/503629.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/503629.png"
   },
   {
     "id": 30,
@@ -527,7 +556,6 @@
     "stars": 4,
     "element": "热情",
     "class": "前锋",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/744551.png",
     "faction": "希安联邦",
     "cv": "韩:郑义泽 / 日:天崎滉平",
     "race": "人类",
@@ -537,7 +565,9 @@
     "baseHp": 83,
     "rarity": "SR",
     "description": "温柔的追风少年. 为了变强日复一日的努力练习，渴望有朝一日成为独当一面的合格战员。",
-    "ability": "风"
+    "ability": "风",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/744551.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/744551.png"
   },
   {
     "id": 31,
@@ -545,7 +575,6 @@
     "stars": 5,
     "element": "秩序",
     "class": "猎人",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/496049.png",
     "faction": "铁巷联盟",
     "cv": "韩:林彩彬 / 日:大冢刚央",
     "race": "人类",
@@ -555,7 +584,9 @@
     "baseHp": 78,
     "rarity": "SSR",
     "description": "异色瞳双子之一，卢卡斯的弟弟. 一个习惯于沉默的冷静观察者。",
-    "ability": "魔眼"
+    "ability": "魔眼",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/496049.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/496049.png"
   },
   {
     "id": 32,
@@ -563,7 +594,6 @@
     "stars": 5,
     "element": "虚无",
     "class": "奥义师",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/30138.png",
     "faction": "流浪者",
     "cv": "韩:郑宰宪 / 日:三木真一郎",
     "race": "人类",
@@ -573,7 +603,9 @@
     "baseHp": 85,
     "rarity": "SSR",
     "description": "追寻安息却失去记忆的觉醒者. 曾被奉为神明，却在清醒后亲手粉碎了信徒。",
-    "ability": "虚无"
+    "ability": "虚无",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/30138.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/30138.png"
   },
   {
     "id": 33,
@@ -581,7 +613,6 @@
     "stars": 5,
     "element": "虚无",
     "class": "游侠",
-    "portraitUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png",
     "faction": "流浪者",
     "cv": "韩:李瑟 / 日:金元寿子",
     "race": "人类",
@@ -591,6 +622,8 @@
     "baseHp": 75,
     "rarity": "SSR",
     "description": "宇宙史上悬赏金额最高的危险女性. 她以魅惑的美貌行走于暗影之中，行踪如烟，无人能捕捉。",
-    "ability": "方相神力"
+    "ability": "方相神力",
+    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png",
+    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png"
   }
 ]
