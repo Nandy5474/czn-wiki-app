@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "海德玛丽",
+    "stars": 5,
+    "element": "光",
+    "className": "剑士",
+    "type": "history",
+    "startDate": "2026-04-29",
+    "endDate": "2026-05-27",
+    "url": "https://gamekee.com/czn/703442.html",
+    "server": "国际服"
+  },
+  {
+    "id": 2,
+    "name": "阿黛海特",
+    "stars": 5,
+    "element": "暗",
+    "className": "法师",
+    "type": "current",
+    "startDate": "2026-05-27",
+    "endDate": "2026-06-16",
+    "url": "https://gamekee.com/czn/703442.html",
+    "server": "国际服"
+  },
+  {
+    "id": 3,
+    "name": "泰妮布里亚",
+    "stars": 5,
+    "element": "火",
+    "className": "射手",
+    "type": "upcoming",
+    "startDate": "2026-06-17",
+    "endDate": "2026-07-08",
+    "url": "https://gamekee.com/czn/703442.html",
+    "server": "国际服"
+  },
+  {
+    "id": 4,
+    "name": "绯",
+    "stars": 5,
+    "element": "火",
+    "className": "战士",
+    "type": "current",
+    "startDate": "2026-05-28",
+    "endDate": "2026-06-17",
+    "url": "https://www.taptap.cn/moment/809169947790935000",
+    "server": "国服"
+  },
+  {
+    "id": 5,
+    "name": "芮香",
+    "stars": 5,
+    "element": "水",
+    "className": "辅助",
+    "type": "current",
+    "startDate": "2026-05-28",
+    "endDate": "2026-06-17",
+    "url": "https://www.taptap.cn/moment/809169947790935000",
+    "server": "国服"
+  },
+  {
+    "id": 6,
+    "name": "黛安娜",
+    "stars": 5,
+    "element": "风",
+    "className": "刺客",
+    "type": "current",
+    "startDate": "2026-06-10",
+    "endDate": "2026-07-01",
+    "url": "https://www.taptap.cn/moment/813066213478369960",
+    "server": "国服"
+  }
+]

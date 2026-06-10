@@ -8,8 +8,12 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.*
 
 @Database(
-    entities = [CharacterEntity::class, CardEntity::class, SelfAwarenessEntity::class, UserCollectionEntity::class],
-    version = 2,
+    entities = [
+        CharacterEntity::class, CardEntity::class, SelfAwarenessEntity::class,
+        UserCollectionEntity::class, EventEntity::class, BannerEntity::class,
+        TeamEntity::class
+    ],
+    version = 4,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -17,6 +21,9 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun cardDao(): CardDao
     abstract fun selfAwarenessDao(): SelfAwarenessDao
     abstract fun userCollectionDao(): UserCollectionDao
+    abstract fun eventDao(): EventDao
+    abstract fun bannerDao(): BannerDao
+    abstract fun teamDao(): TeamDao
 
     companion object {
         @Volatile private var INSTANCE: AppDatabase? = null
@@ -73,6 +80,24 @@ fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
                 object : TypeToken<List<UserCollectionEntity>>() {}.type
             )
             if (ucList.isNotEmpty()) database.userCollectionDao().insertAll(ucList)
+        } catch (_: Exception) {}
+
+        try {
+            val eventsJson = context.assets.open("data/events.json").bufferedReader().use { it.readText() }
+            val eventList: List<EventEntity> = gson.fromJson(
+                eventsJson,
+                object : TypeToken<List<EventEntity>>() {}.type
+            )
+            if (eventList.isNotEmpty()) database.eventDao().insertAll(eventList)
+        } catch (_: Exception) {}
+
+        try {
+            val bannerJson = context.assets.open("data/banners.json").bufferedReader().use { it.readText() }
+            val bannerList: List<BannerEntity> = gson.fromJson(
+                bannerJson,
+                object : TypeToken<List<BannerEntity>>() {}.type
+            )
+            if (bannerList.isNotEmpty()) database.bannerDao().insertAll(bannerList)
         } catch (_: Exception) {}
     }
 }

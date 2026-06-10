@@ -54,7 +54,7 @@ fun CznWikiApp() {
 
                 bottomNavItems.forEach { screen ->
                     NavigationBarItem(
-                        icon = { Icon(screen.icon, contentDescription = screen.title) },
+                        icon = { Icon(screen.icon!!, contentDescription = screen.title) },
                         label = { Text(screen.title) },
                         selected = currentRoute == screen.route,
                         onClick = {
@@ -100,7 +100,11 @@ fun CznWikiApp() {
                             launchSingleTop = true
                             restoreState = true
                         }
-                    }
+                    },
+                    onNavigateToEvents = { navController.navigate(Screen.Events.route) },
+                    onNavigateToBanners = { navController.navigate(Screen.Banners.route) },
+                    onNavigateToTeams = { navController.navigate(Screen.Teams.route) },
+                    onNavigateToBackup = { navController.navigate(Screen.Backup.route) }
                 )
             }
             composable(Screen.CharacterList.route) {
@@ -127,6 +131,20 @@ fun CznWikiApp() {
                         }
                     }
                 )
+            }
+            composable(Screen.Events.route) {
+                EventsScreen()
+            }
+            composable(Screen.Banners.route) {
+                BannersScreen()
+            }
+            composable(Screen.Teams.route) {
+                TeamScreen(onNavigateToDetail = { id ->
+                    navController.navigate(Screen.CharacterDetail.createRoute(id))
+                })
+            }
+            composable(Screen.Backup.route) {
+                BackupScreen()
             }
         }
     }

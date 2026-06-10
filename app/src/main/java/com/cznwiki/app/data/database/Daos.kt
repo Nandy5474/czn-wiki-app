@@ -99,3 +99,60 @@ interface UserCollectionDao {
     @Query("UPDATE user_collection SET customTier = :value WHERE characterId = :characterId")
     suspend fun updateTier(characterId: Int, value: String)
 }
+
+@Dao
+interface EventDao {
+    @Query("SELECT * FROM events ORDER BY endDate ASC")
+    fun getAllEvents(): Flow<List<EventEntity>>
+
+    @Query("SELECT * FROM events ORDER BY endDate ASC")
+    suspend fun getAllEventsSync(): List<EventEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(events: List<EventEntity>)
+
+    @Query("DELETE FROM events")
+    suspend fun deleteAll()
+}
+
+@Dao
+interface BannerDao {
+    @Query("SELECT * FROM banners WHERE type = 'current' ORDER BY endDate ASC")
+    fun getCurrentBanners(): Flow<List<BannerEntity>>
+
+    @Query("SELECT * FROM banners WHERE type = 'history' ORDER BY endDate DESC")
+    fun getHistoryBanners(): Flow<List<BannerEntity>>
+
+    @Query("SELECT * FROM banners ORDER BY endDate DESC")
+    suspend fun getAllBannersSync(): List<BannerEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(banners: List<BannerEntity>)
+
+    @Query("DELETE FROM banners")
+    suspend fun deleteAll()
+}
+
+@Dao
+interface TeamDao {
+    @Query("SELECT * FROM teams ORDER BY createdAt DESC")
+    fun getAllTeams(): Flow<List<TeamEntity>>
+
+    @Query("SELECT * FROM teams ORDER BY createdAt DESC")
+    suspend fun getAllTeamsSync(): List<TeamEntity>
+
+    @Query("SELECT * FROM teams WHERE id = :id")
+    suspend fun getTeamById(id: Int): TeamEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(team: TeamEntity): Long
+
+    @Update
+    suspend fun update(team: TeamEntity)
+
+    @Query("DELETE FROM teams WHERE id = :id")
+    suspend fun deleteById(id: Int)
+
+    @Delete
+    suspend fun delete(team: TeamEntity)
+}

@@ -60,3 +60,38 @@ data class UserCollectionEntity(
     val partnerId: Int? = null,
     val customTier: String = ""
 )
+
+@Entity(tableName = "events")
+data class EventEntity(
+    @PrimaryKey val id: Int,
+    val name: String,
+    val description: String = "",
+    val endDate: String = "",
+    val url: String = "",
+    val server: String = ""
+)
+
+@Entity(tableName = "banners")
+data class BannerEntity(
+    @PrimaryKey val id: Int,
+    val name: String,
+    val stars: Int = 0,
+    val element: String = "",
+    val className: String = "",
+    val type: String = "",
+    val startDate: String = "",
+    val endDate: String = "",
+    val url: String = "",
+    val server: String = ""
+)
+
+@Entity(tableName = "teams")
+data class TeamEntity(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val name: String,
+    val description: String = "",
+    val member1Id: Int? = null,
+    val member2Id: Int? = null,
+    val member3Id: Int? = null,
+    val createdAt: Long = System.currentTimeMillis()
+)
