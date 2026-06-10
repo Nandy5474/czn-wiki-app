@@ -49,6 +49,14 @@ class CznApplication : Application(), ImageLoaderFactory {
             }
             localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
         }
+        // 安全网：如果数据库因 Destructive Migration 被清空，强制重新导入
+        runBlocking(Dispatchers.IO) {
+            val charCount = database.characterDao().getCount()
+            if (charCount == 0 && localDataManager.getLocalVersion() > 0) {
+                seedDatabaseFromAssets(this@CznApplication, database)
+                localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
+            }
+        }
         // 检查数据版本，版本变化时触发更新流程（保存用户修改 → 清空 → 导入 → 回灌）
         localDataManager.checkAndUpdateData(database, appScope)
     }

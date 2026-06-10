@@ -224,8 +224,8 @@ AIGC:
 - cards.json：264 张卡牌（99 基础 + 132 灵光一闪 + 33 独特，33×8 结构）
 - self_awareness.json：33×6=198 条自意识数据（部分 stage3 待补全）
 - user_collection.json：用户收藏种子数据
-- events.json：36 条活动数据（GameKee 源）
-- banners.json：6 条卡池数据（GameKee 源，纯国际服）
+- events.json：38 条活动数据（GameKee 源）
+- banners.json：7 条卡池数据（GameKee 源，纯国际服）
 
 ## 远程同步
 - 数据版本管理：version.json
@@ -240,4 +240,11 @@ AIGC:
 - [ ] 添加当期活动展示模块
 - [ ] 优化 UI/UX 体验
 - [ ] 抽卡记录云端同步
+
+## v2.0.26 (2026-06-10)
+- **卡池数据修正**：删除错误黛安娜复刻，补充凯隆、维罗妮卡等7条卡池数据
+- **活动数据刷新**：新增2个活动，共38条国际服活动数据
+- **职业筛选修复**：ViewModels.kt 新增"前锋"和"操控师"职业筛选，与UI兼容
+- **版本对齐**：所有 version.json 和 build.gradle.kts 版本号统一为26
+- **数据验证**：characters.json 33个角色数据完整，element/class字段正确
 *（内容由AI生成，仅供参考）*

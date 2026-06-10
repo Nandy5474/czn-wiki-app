@@ -58,11 +58,20 @@ fun HomeScreen(
     // Load events and banners
     var events by remember { mutableStateOf<List<EventEntity>>(emptyList()) }
     var currentBanners by remember { mutableStateOf<List<BannerEntity>>(emptyList()) }
+    val today = "2026-06-10"
 
     LaunchedEffect(Unit) {
         events = db.eventDao().getAllEventsSync()
         currentBanners = db.bannerDao().getAllBannersSync().filter { it.type == "current" }
     }
+
+    val activeEvents = remember(events) {
+        events.filter { it.endDate >= today }.sortedBy { it.endDate }
+    }
+    val allEvents = remember(events) {
+        events.sortedByDescending { it.endDate }
+    }
+    var showAllEvents by remember { mutableStateOf(false) }
 
     val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
 
@@ -171,13 +180,17 @@ fun HomeScreen(
         Spacer(Modifier.height(8.dp))
 
         // === Activity Countdown Section ===
-        if (events.isNotEmpty()) {
+        if (activeEvents.isNotEmpty()) {
             Text("最新活动", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
 
-            events.take(5).forEach { event ->
+            val displayEvents = if (showAllEvents) allEvents else activeEvents
+
+            displayEvents.forEach { event ->
                 val endDate = try { dateFormat.parse(event.endDate) } catch (_: Exception) { null }
                 val remainDays = if (endDate != null) ((endDate.time - System.currentTimeMillis()) / (1000 * 60 * 60 * 24) + 1).toInt() else -1
+                val isActive = event.endDate >= today
                 val urgencyColor = when {
+                    !isActive -> MaterialTheme.colorScheme.outline
                     remainDays <= 3 -> MaterialTheme.colorScheme.error
                     remainDays <= 7 -> Color(0xFFFF9800)
                     else -> MaterialTheme.colorScheme.primary
@@ -206,6 +219,18 @@ fun HomeScreen(
                     }
                 }
             }
+
+            if (!showAllEvents && allEvents.size > activeEvents.size) {
+                TextButton(onClick = { showAllEvents = true }, modifier = Modifier.padding(horizontal = 16.dp)) {
+                    Text("查看更多 (${allEvents.size}项活动)", color = MaterialTheme.colorScheme.primary)
+                }
+            }
+            if (showAllEvents) {
+                TextButton(onClick = { showAllEvents = false }, modifier = Modifier.padding(horizontal = 16.dp)) {
+                    Text("收起", color = MaterialTheme.colorScheme.primary)
+                }
+            }
+
             Spacer(Modifier.height(8.dp))
         }
 

@@ -536,7 +536,7 @@
     "name": "玛丽贝尔",
     "stars": 4,
     "element": "热情",
-    "class": "守卫",
+    "class": "先锋",
     "faction": "铁巷联盟",
     "cv": "韩:吕允美 / 日:能登麻美子",
     "race": "人类",
@@ -625,5 +625,24 @@
     "ability": "方相神力",
     "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png",
     "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png"
+  },
+  {
+    "id": 34,
+    "name": "泰妮布里亚",
+    "stars": 5,
+    "element": "热情",
+    "class": "奥义师",
+    "faction": "流浪者",
+    "cv": "韩:- / 日:-",
+    "race": "人类",
+    "birthday": "?",
+    "baseAtk": 150,
+    "baseDef": 50,
+    "baseHp": 85,
+    "rarity": "SSR",
+    "description": "S3新角色，详情待更新。",
+    "ability": "未知",
+    "imageUrl": "",
+    "thumbUrl": ""
   }
 ]

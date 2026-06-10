@@ -12,8 +12,8 @@ android {
         applicationId = "com.cznwiki.app"
         minSdk = 26
         targetSdk = 34
-        versionCode = 26
-        versionName = "2.0.25"
+        versionCode = 27
+        versionName = "2.0.27"
         vectorDrawables {
             useSupportLibrary = true
         }
