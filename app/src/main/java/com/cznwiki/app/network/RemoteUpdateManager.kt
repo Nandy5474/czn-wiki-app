@@ -230,7 +230,6 @@ class RemoteUpdateManager(
 }
 
 // Re-export seeding function
-private fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
-    // Call the existing function from AppDatabase.kt
+private suspend fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
     com.cznwiki.app.data.database.seedDatabaseFromAssets(context, database)
 }

@@ -1,6 +1,7 @@
 package com.cznwiki.app.data.entity
 
 import androidx.room.*
+import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "characters")
 data class CharacterEntity(
@@ -9,6 +10,7 @@ data class CharacterEntity(
     val nameEn: String = "",
     val stars: Int = 0,
     val element: String = "",
+    @SerializedName("class")
     val job: String = "",
     val faction: String = "",
     val rarity: String = "",

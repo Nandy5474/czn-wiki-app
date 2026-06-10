@@ -269,6 +269,32 @@ class LocalDataManager(private val context: Context) {
                 Log.e(TAG, "Failed to import user collection seed", e)
             }
         }
+
+        // Events
+        try {
+            val eventsJson = context.assets.open("data/events.json")
+                .bufferedReader().use { it.readText() }
+            val eventList: List<com.cznwiki.app.data.entity.EventEntity> = gson.fromJson(
+                eventsJson,
+                object : TypeToken<List<com.cznwiki.app.data.entity.EventEntity>>() {}.type
+            )
+            if (eventList.isNotEmpty()) database.eventDao().insertAll(eventList)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to import events", e)
+        }
+
+        // Banners
+        try {
+            val bannerJson = context.assets.open("data/banners.json")
+                .bufferedReader().use { it.readText() }
+            val bannerList: List<com.cznwiki.app.data.entity.BannerEntity> = gson.fromJson(
+                bannerJson,
+                object : TypeToken<List<com.cznwiki.app.data.entity.BannerEntity>>() {}.type
+            )
+            if (bannerList.isNotEmpty()) database.bannerDao().insertAll(bannerList)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to import banners", e)
+        }
     }
 
     /** 将用户修改回灌到 Room 数据库 */
