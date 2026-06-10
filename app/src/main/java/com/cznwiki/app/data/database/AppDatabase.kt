@@ -1,9 +1,11 @@
 package com.cznwiki.app.data.database
 
 import android.content.Context
+import android.util.Log
 import androidx.room.*
 import com.cznwiki.app.data.entity.*
 import com.google.gson.Gson
+import com.google.gson.JsonParseException
 import com.google.gson.reflect.TypeToken
 
 @Database(
@@ -43,13 +45,28 @@ suspend fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
 
     try {
         val charJson = context.assets.open("data/characters.json").bufferedReader().use { it.readText() }
-        val charList: List<CharacterEntity> = gson.fromJson(
-            charJson,
-            object : TypeToken<List<CharacterEntity>>() {}.type
-        )
-        if (charList.isNotEmpty()) database.characterDao().insertAll(charList)
+        val charList: List<CharacterEntity> = try {
+            gson.fromJson(charJson, object : TypeToken<List<CharacterEntity>>() {}.type)
+        } catch (e: JsonParseException) {
+            // Fallback: try warpped object format {"characters": [...]}
+            Log.w("AppDatabase", "characters.json is not a top-level array, trying wrapped object format", e)
+            try {
+                val wrapped = gson.fromJson(charJson, Map::class.java)
+                val innerList = wrapped["characters"]
+                gson.fromJson(gson.toJson(innerList), object : TypeToken<List<CharacterEntity>>() {}.type)
+            } catch (e2: Exception) {
+                Log.e("AppDatabase", "Failed to parse characters.json in both formats", e2)
+                throw e
+            }
+        }
+        if (charList.isNotEmpty()) {
+            database.characterDao().insertAll(charList)
+            Log.i("AppDatabase", "Seeded ${charList.size} characters from assets")
+        } else {
+            Log.w("AppDatabase", "characters.json parsed but returned empty list")
+        }
     } catch (e: Exception) {
-        e.printStackTrace()
+        Log.e("AppDatabase", "FATAL: Failed to seed characters from assets", e)
     }
 
     try {
@@ -59,7 +76,9 @@ suspend fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
             object : TypeToken<List<CardEntity>>() {}.type
         )
         if (cardList.isNotEmpty()) database.cardDao().insertAll(cardList)
-    } catch (_: Exception) {}
+    } catch (e: Exception) {
+        Log.e("AppDatabase", "Failed to seed cards from assets", e)
+    }
 
     try {
         val saJson = context.assets.open("data/self_awareness.json").bufferedReader().use { it.readText() }
@@ -68,7 +87,9 @@ suspend fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
             object : TypeToken<List<SelfAwarenessEntity>>() {}.type
         )
         if (saList.isNotEmpty()) database.selfAwarenessDao().insertAll(saList)
-    } catch (_: Exception) {}
+    } catch (e: Exception) {
+        Log.e("AppDatabase", "Failed to seed self_awareness from assets", e)
+    }
 
     try {
         val ucJson = context.assets.open("data/user_collection.json").bufferedReader().use { it.readText() }
@@ -77,7 +98,9 @@ suspend fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
             object : TypeToken<List<UserCollectionEntity>>() {}.type
         )
         if (ucList.isNotEmpty()) database.userCollectionDao().insertAll(ucList)
-    } catch (_: Exception) {}
+    } catch (e: Exception) {
+        Log.e("AppDatabase", "Failed to seed user_collection from assets", e)
+    }
 
     try {
         val eventsJson = context.assets.open("data/events.json").bufferedReader().use { it.readText() }
@@ -86,7 +109,9 @@ suspend fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
             object : TypeToken<List<EventEntity>>() {}.type
         )
         if (eventList.isNotEmpty()) database.eventDao().insertAll(eventList)
-    } catch (_: Exception) {}
+    } catch (e: Exception) {
+        Log.e("AppDatabase", "Failed to seed events from assets", e)
+    }
 
     try {
         val bannerJson = context.assets.open("data/banners.json").bufferedReader().use { it.readText() }
@@ -95,5 +120,7 @@ suspend fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
             object : TypeToken<List<BannerEntity>>() {}.type
         )
         if (bannerList.isNotEmpty()) database.bannerDao().insertAll(bannerList)
-    } catch (_: Exception) {}
+    } catch (e: Exception) {
+        Log.e("AppDatabase", "Failed to seed banners from assets", e)
+    }
 }

@@ -6,6 +6,7 @@ import android.util.Log
 import com.cznwiki.app.data.database.AppDatabase
 import com.cznwiki.app.data.entity.UserCollectionEntity
 import com.google.gson.Gson
+import com.google.gson.JsonParseException
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.*
 
@@ -220,13 +221,30 @@ class LocalDataManager(private val context: Context) {
         try {
             val charJson = context.assets.open("data/characters.json")
                 .bufferedReader().use { it.readText() }
-            val charList: List<com.cznwiki.app.data.entity.CharacterEntity> = gson.fromJson(
-                charJson,
-                object : TypeToken<List<com.cznwiki.app.data.entity.CharacterEntity>>() {}.type
-            )
-            if (charList.isNotEmpty()) database.characterDao().insertAll(charList)
+            val charList: List<com.cznwiki.app.data.entity.CharacterEntity> = try {
+                gson.fromJson(
+                    charJson,
+                    object : TypeToken<List<com.cznwiki.app.data.entity.CharacterEntity>>() {}.type
+                )
+            } catch (e: JsonParseException) {
+                Log.w(TAG, "characters.json is not a top-level array, trying wrapped object format", e)
+                try {
+                    val wrapped = gson.fromJson(charJson, Map::class.java)
+                    val innerList = wrapped["characters"]
+                    gson.fromJson(gson.toJson(innerList), object : TypeToken<List<com.cznwiki.app.data.entity.CharacterEntity>>() {}.type)
+                } catch (e2: Exception) {
+                    Log.e(TAG, "Failed to parse characters.json in both formats", e2)
+                    throw e
+                }
+            }
+            if (charList.isNotEmpty()) {
+                database.characterDao().insertAll(charList)
+                Log.i(TAG, "Seeded ${charList.size} characters from assets")
+            } else {
+                Log.w(TAG, "characters.json parsed but returned empty list")
+            }
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to import characters", e)
+            Log.e(TAG, "FATAL: Failed to import characters", e)
         }
 
         // Cards
