@@ -1,42 +1,290 @@
 [
   {
     "id": 1,
-    "name": "我们的青春喜剧",
-    "description": "S3第1章主线剧情，喧闹之星哈蒂主题活动",
-    "endDate": "2026-04-01",
-    "url": "https://game.ero-labs.info/cn/news.html?id=2887",
+    "name": "回荡在银河中的歌声",
+    "description": "",
+    "endDate": "2026-07-07",
+    "url": "https://www.gamekee.com/czn/huodong/104",
     "server": "国际服"
   },
   {
     "id": 2,
-    "name": "戴上兔耳的狼与酒",
-    "description": "愚人节限定活动，烈酒赤兔芭索萝主题活动",
-    "endDate": "2026-04-15",
-    "url": "https://mg.ero-labs.top/cn/news.html?id=2943",
+    "name": "遗失的童话书",
+    "description": "",
+    "endDate": "2026-06-16",
+    "url": "https://www.gamekee.com/czn/huodong/104",
     "server": "国际服"
   },
   {
     "id": 3,
-    "name": "超级英雄研究所",
-    "description": "重装助手翠丝特主题活动，可搜集代币兑换道具",
-    "endDate": "2026-04-29",
-    "url": "https://game.erolabsshare.net/cn/news.html?id=2990",
+    "name": "前往梦境的邀请",
+    "description": "",
+    "endDate": "2026-06-16",
+    "url": "https://www.gamekee.com/czn/huodong/104",
     "server": "国际服"
   },
   {
     "id": 4,
-    "name": "吸血鬼特派员重返异界",
-    "description": "Aoi Hinamori二次合作活动，2.5周年纪念",
-    "endDate": "2026-05-27",
-    "url": "https://mg.ero-labs.top/cn/news.html?id=3066",
+    "name": "伊甸尼蒂号巡逻作战",
+    "description": "",
+    "endDate": "2026-06-16",
+    "url": "https://www.gamekee.com/czn/huodong/104",
     "server": "国际服"
   },
   {
     "id": 5,
-    "name": "偷天换日的双胞风波",
-    "description": "芽路限定主题活动，2.5周年自选神秘招募进行中",
-    "endDate": "2026-06-11",
-    "url": "https://mg.ero-labs.top/cn/news.html?id=3114",
+    "name": "全力战第二期",
+    "description": "",
+    "endDate": "2026-07-07",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 6,
+    "name": "极速狂飙-模拟",
+    "description": "",
+    "endDate": "2026-06-03",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 7,
+    "name": "半周年庆典",
+    "description": "",
+    "endDate": "2026-05-27",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 8,
+    "name": "柳树下的阴影",
+    "description": "",
+    "endDate": "2026-05-27",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 9,
+    "name": "全力战",
+    "description": "",
+    "endDate": "2026-05-27",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 10,
+    "name": "常驻伙伴8折池",
+    "description": "",
+    "endDate": "2026-05-27",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 11,
+    "name": "回荡在银河中的歌声（预告）",
+    "description": "",
+    "endDate": "2026-04-29",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 12,
+    "name": "火线突破",
+    "description": "",
+    "endDate": "2026-04-29",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 13,
+    "name": "第3赛季季前赛",
+    "description": "",
+    "endDate": "2026-04-29",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 14,
+    "name": "第二赛季大龟裂下半",
+    "description": "",
+    "endDate": "2026-04-08",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 15,
+    "name": "宇宙万物的记录者",
+    "description": "",
+    "endDate": "2026-04-08",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 16,
+    "name": "怪物们的竞技场",
+    "description": "",
+    "endDate": "2026-04-08",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 17,
+    "name": "第二赛季-业火种子",
+    "description": "",
+    "endDate": "2026-04-08",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 18,
+    "name": "愚人节限定卡面",
+    "description": "",
+    "endDate": "2026-04-03",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 19,
+    "name": "记忆碎片获取翻倍",
+    "description": "",
+    "endDate": "2026-03-25",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 20,
+    "name": "斯普利兹的阴影",
+    "description": "",
+    "endDate": "2026-03-18",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 21,
+    "name": "第二赛季大龟裂上半",
+    "description": "",
+    "endDate": "2026-03-18",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 22,
+    "name": "9号街的佣兵事务所",
+    "description": "",
+    "endDate": "2026-02-25",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 23,
+    "name": "再次，前往法典",
+    "description": "",
+    "endDate": "2026-02-09",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 24,
+    "name": "「娜嘉」创伤单元码活动",
+    "description": "",
+    "endDate": "2026-02-04",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 25,
+    "name": "哀嚎螺旋塔（测试版）",
+    "description": "",
+    "endDate": "2026-02-04",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 26,
+    "name": "在优尼格拉姆中见吧",
+    "description": "",
+    "endDate": "2026-01-27",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 27,
+    "name": "特别探索奖励——第0研究所",
+    "description": "",
+    "endDate": "2026-01-14",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 28,
+    "name": "追随星之轨道",
+    "description": "",
+    "endDate": "2026-01-14",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 29,
+    "name": "银河系灾害——禁忌催化剂",
+    "description": "",
+    "endDate": "2026-01-14",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 30,
+    "name": "零号系统",
+    "description": "",
+    "endDate": "2026-01-13",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 31,
+    "name": "虚拟战术模拟",
+    "description": "",
+    "endDate": "2025-12-24",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 32,
+    "name": "方舟的守护者",
+    "description": "",
+    "endDate": "2025-12-02",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 33,
+    "name": "银河系灾害出动准备",
+    "description": "",
+    "endDate": "2025-11-26",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 34,
+    "name": "生锈锚上的闪耀光芒",
+    "description": "",
+    "endDate": "2025-11-12",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 35,
+    "name": "超时空的流域——次元黄昏",
+    "description": "",
+    "endDate": "2025-11-12",
+    "url": "https://www.gamekee.com/czn/huodong/104",
+    "server": "国际服"
+  },
+  {
+    "id": 36,
+    "name": "蕾伊的礼物",
+    "description": "",
+    "endDate": "2025-11-04",
+    "url": "https://www.gamekee.com/czn/huodong/104",
     "server": "国际服"
   }
 ]
