@@ -94,13 +94,21 @@ fun BannerDetailCard(banner: BannerEntity, isCurrent: Boolean) {
                     Text("${banner.stars}星", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp))
                 }
             }
-            if (banner.className.isNotBlank() || banner.element.isNotBlank()) {
+            val hasCharInfo = banner.character.isNotBlank() || banner.className.isNotBlank() || banner.element.isNotBlank()
+            if (hasCharInfo) {
                 Spacer(Modifier.height(6.dp))
-                val tags = listOfNotNull(
-                    banner.className.takeIf { it.isNotBlank() },
-                    banner.element.takeIf { it.isNotBlank() },
-                    binderIn(banner.type).takeIf { it.isNotBlank() }
-                )
+                val tags = if (banner.character.isNotBlank()) {
+                    listOfNotNull(
+                        banner.character,
+                        binderIn(banner.type).takeIf { it.isNotBlank() }
+                    )
+                } else {
+                    listOfNotNull(
+                        banner.className.takeIf { it.isNotBlank() },
+                        banner.element.takeIf { it.isNotBlank() },
+                        binderIn(banner.type).takeIf { it.isNotBlank() }
+                    )
+                }
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                     tags.forEach { tag ->
                         Surface(shape = RoundedCornerShape(4.dp), color = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.15f)) {

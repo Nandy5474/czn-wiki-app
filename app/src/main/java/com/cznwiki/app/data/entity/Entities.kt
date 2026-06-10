@@ -78,6 +78,7 @@ data class BannerEntity(
     @PrimaryKey val id: Int,
     val name: String,
     val stars: Int = 0,
+    val character: String = "",
     val element: String = "",
     val className: String = "",
     val type: String = "",
