@@ -16,9 +16,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.cznwiki.app.CznApplication
 import com.cznwiki.app.data.entity.CharacterEntity
 import com.cznwiki.app.data.entity.TeamEntity
@@ -64,6 +67,11 @@ fun TeamScreen(onNavigateToDetail: (Int) -> Unit) {
     fun getCharElement(id: Int?): String {
         if (id == null) return ""
         return allCharacters.find { it.id == id }?.element ?: ""
+    }
+
+    fun getCharThumbUrl(id: Int?): String {
+        if (id == null) return ""
+        return allCharacters.find { it.id == id }?.thumbUrl?.ifBlank { allCharacters.find { it.id == id }?.imageUrl } ?: ""
     }
 
     Column(Modifier.fillMaxSize()) {
@@ -131,15 +139,39 @@ fun TeamScreen(onNavigateToDetail: (Int) -> Unit) {
                             Spacer(Modifier.height(8.dp))
                             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
                                 listOf(team.member1Id to "主力", team.member2Id to "副手", team.member3Id to "支援").forEach { (id, label) ->
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Box(Modifier.size(48.dp).clip(CircleShape).background(
-                                            if (id != null) Brush.linearGradient(listOf(MaterialTheme.colorScheme.primary, MaterialTheme.colorScheme.secondary))
-                                            else Brush.linearGradient(listOf(Color.Gray, Color.LightGray))
-                                        ), contentAlignment = Alignment.Center) {
-                                            Text(
-                                                if (id != null) getCharName(id).take(1) else "?",
-                                                style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = Color.White
-                                            )
+                                    Column(
+                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                        modifier = if (id != null) Modifier.clickable { onNavigateToDetail(id) } else Modifier
+                                    ) {
+                                        val thumbUrl = getCharThumbUrl(id)
+                                        if (thumbUrl.isNotBlank()) {
+                                            Box(
+                                                Modifier
+                                                    .size(72.dp)
+                                                    .clip(CircleShape)
+                                                    .background(MaterialTheme.colorScheme.surface),
+                                                contentAlignment = Alignment.Center
+                                            ) {
+                                                AsyncImage(
+                                                    model = ImageRequest.Builder(LocalContext.current)
+                                                        .data(thumbUrl)
+                                                        .crossfade(true)
+                                                        .build(),
+                                                    contentDescription = getCharName(id),
+                                                    contentScale = ContentScale.Crop,
+                                                    modifier = Modifier.fillMaxSize().clip(CircleShape)
+                                                )
+                                            }
+                                        } else {
+                                            Box(Modifier.size(72.dp).clip(CircleShape).background(
+                                                if (id != null) Brush.linearGradient(listOf(MaterialTheme.colorScheme.primary, MaterialTheme.colorScheme.secondary))
+                                                else Brush.linearGradient(listOf(Color.Gray, Color.LightGray))
+                                            ), contentAlignment = Alignment.Center) {
+                                                Text(
+                                                    if (id != null) getCharName(id).take(1) else "?",
+                                                    style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = Color.White
+                                                )
+                                            }
                                         }
                                         Spacer(Modifier.height(4.dp))
                                         Text(getCharName(id), style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Medium)

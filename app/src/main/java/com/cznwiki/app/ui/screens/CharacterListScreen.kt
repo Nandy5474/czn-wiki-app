@@ -47,6 +47,7 @@ fun CharacterListScreen(
             actions = {
                 IconButton(onClick = { isGridView = !isGridView }) {
                     Icon(
+                        @Suppress("DEPRECATION")
                         if (isGridView) Icons.Default.List else Icons.Default.GridView,
                         contentDescription = "切换视图"
                     )
