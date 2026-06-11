@@ -18,3 +18,8 @@
 -keepclassmembers,allowobfuscation class * {
     @com.google.gson.annotations.SerializedName <fields>;
 }
+
+# Room - keep generated DAO/DB implementations to prevent null-check optimization removal
+-keep class * extends androidx.room.RoomDatabase { *; }
+-keep @androidx.room.Dao class * { *; }
+-dontwarn androidx.room.paging.**
