@@ -12,8 +12,8 @@ android {
         applicationId = "com.cznwiki.app"
         minSdk = 26
         targetSdk = 34
-        versionCode = 33
-        versionName = "2.0.33"
+        versionCode = 34
+        versionName = "2.0.34"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -21,7 +21,7 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("/tmp/czn-wiki-release.keystore")
+            storeFile = file("../czn-wiki-release.keystore")
             storePassword = "cznwiki123"
             keyAlias = "cznwiki"
             keyPassword = "cznwiki123"
