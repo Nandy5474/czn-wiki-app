@@ -15,8 +15,12 @@
     "rarity": "SSR",
     "description": "怠惰的万事屋顾问. 他经营着一家接受一切委托的万事屋，工作时执着顽强，能解决任何难题，无所事事时，便一副无精打采的懒散模样。",
     "ability": "闪电",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/908529.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/908529.png"
+    "imageUrl": "file:///android_asset/data/char_1.webp",
+    "thumbUrl": "file:///android_asset/data/char_1.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "狩猎开始：250%伤害。持续1回合，当其他战斗员使用卡牌时，触发1次狩猎开始攻击（最多3次）。[EP5]"
   },
   {
     "id": 2,
@@ -34,8 +38,12 @@
     "rarity": "SSR",
     "description": "在「伊甸尼蒂号」的悲剧——「艾立纳德」事件中大显身手的英雄. 因伤自干员之位退下后，依然获得广大民众的热烈支持，并在「必须跨越悲剧、迈向未来」的声浪推动下，登上了市长之位。",
     "ability": "生成光之长剑",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/29/73357.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/29/73357.png"
+    "imageUrl": "file:///android_asset/data/char_2.webp",
+    "thumbUrl": "file:///android_asset/data/char_2.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 3,
@@ -53,8 +61,12 @@
     "rarity": "SSR",
     "description": "传播爱的偶像. 类似于不具备普通大司祭权威或力量的名誉大司祭。",
     "ability": "和谐银河",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/8/853159.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/8/853159.png"
+    "imageUrl": "file:///android_asset/data/char_3.webp",
+    "thumbUrl": "file:///android_asset/data/char_3.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 4,
@@ -72,8 +84,12 @@
     "rarity": "SSR",
     "description": "游离于时间的缝隙之中的神秘少女. 她的目光始终冷静而公正地注视着世间一切。",
     "ability": "掌控时空",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/2/18/332392.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/2/18/332392.png"
+    "imageUrl": "file:///android_asset/data/char_4.webp",
+    "thumbUrl": "file:///android_asset/data/char_4.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 5,
@@ -91,8 +107,12 @@
     "rarity": "SSR",
     "description": "与妹妹相依为命，于绝望中顽强求生的孤女. 她身上既有军人般的果决与干练，又藏着一颗属于少女的柔软内心。",
     "ability": "创造界",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/391271/2026/1/25/934647.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/391271/2026/1/25/934647.png"
+    "imageUrl": "file:///android_asset/data/char_5.webp",
+    "thumbUrl": "file:///android_asset/data/char_5.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 6,
@@ -110,8 +130,12 @@
     "rarity": "SSR",
     "description": "向死而生的传奇佣兵. 她曾背负着整个故乡的债务。",
     "ability": "无",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/1/4/365649.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/1/4/365649.png"
+    "imageUrl": "file:///android_asset/data/char_6.webp",
+    "thumbUrl": "file:///android_asset/data/char_6.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 7,
@@ -129,8 +153,12 @@
     "rarity": "SSR",
     "description": "佩尔提翁的强化复制体. 香椎制药制造的人工生命体——复制体。",
     "ability": "驭龙",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/0/14/437119.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/0/14/437119.png"
+    "imageUrl": "file:///android_asset/data/char_7.webp",
+    "thumbUrl": "file:///android_asset/data/char_7.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 8,
@@ -148,8 +176,12 @@
     "rarity": "SSR",
     "description": "守护特拉西翁领空的方舟守护局局长. 身为方舟守护局的领导者，加上拥有美丽的翅膀翱翔天际，因此获得了守护天使的别名。",
     "ability": "钴蓝之光",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/800636/2025/11/24/275645.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/800636/2025/11/24/275645.png"
+    "imageUrl": "file:///android_asset/data/char_8.webp",
+    "thumbUrl": "file:///android_asset/data/char_8.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "守护天使：300%护盾，获得2层伤害减免持续1回合。[EP4]"
   },
   {
     "id": 9,
@@ -167,8 +199,12 @@
     "rarity": "SSR",
     "description": "来自海御代的月影剑继承者. 她以自身为棺、封印了卡厄思“黯影”。",
     "ability": "月影剑",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/4408/2025/11/3/486560.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/4408/2025/11/3/486560.png"
+    "imageUrl": "file:///android_asset/data/char_9.webp",
+    "thumbUrl": "file:///android_asset/data/char_9.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "樱吹雪：150% x 3伤害，施加1层热情弱点。[EP5]"
   },
   {
     "id": 10,
@@ -186,8 +222,12 @@
     "rarity": "SSR",
     "description": "玩世不恭的天才部长. 她是特殊案件调查部的部长，视日常为最大的游乐场，恶作剧和捉弄人是她呼吸的方式。",
     "ability": "疾速",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/319144.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/319144.png"
+    "imageUrl": "file:///android_asset/data/char_10.webp",
+    "thumbUrl": "file:///android_asset/data/char_10.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "冰霜女王的领域：250%护盾，获得2层坚韧持续1回合。[EP4]"
   },
   {
     "id": 11,
@@ -205,8 +245,12 @@
     "rarity": "SSR",
     "description": "春风和气的优等生. 就读于海军士官学院，是学生会的成员，因其温柔的性格备受学生的喜爱。",
     "ability": "聚能",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/235682.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/235682.png"
+    "imageUrl": "file:///android_asset/data/char_11.webp",
+    "thumbUrl": "file:///android_asset/data/char_11.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "雷神降临：对全体敌人造成300%伤害，对目标施加2层易伤，对其他敌人施加1层易伤。[EP5]"
   },
   {
     "id": 12,
@@ -224,8 +268,12 @@
     "rarity": "SSR",
     "description": "一位生平大多笼罩在谜团中的天才剑客. 为了寻找“宇宙中独一无二的命运挚爱”而四处流浪。",
     "ability": "迷雾",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/632844.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/632844.png"
+    "imageUrl": "file:///android_asset/data/char_12.webp",
+    "thumbUrl": "file:///android_asset/data/char_12.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "暗雾秘剑·灭：200% x 2伤害，获得1层暗雾剑术。[EP5]"
   },
   {
     "id": 13,
@@ -243,8 +291,12 @@
     "rarity": "SSR",
     "description": "在兔与鼠的身份间徘徊的兔子. 秉持着独特“反派美德”的神枪手。",
     "ability": "绽放",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/857704.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/857704.png"
+    "imageUrl": "file:///android_asset/data/char_13.webp",
+    "thumbUrl": "file:///android_asset/data/char_13.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "卡牌大师：抽3张卡牌。若队伍中有Rachel，额外抽2张。[EP4]"
   },
   {
     "id": 14,
@@ -262,8 +314,12 @@
     "rarity": "SSR",
     "description": "整日忙忙碌碌寻宝藏的快乐小狗. 一旦嗅到空气中任何一丝有趣的气味就冲出去。",
     "ability": "寒冰",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/952926.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/952926.png"
+    "imageUrl": "file:///android_asset/data/char_14.webp",
+    "thumbUrl": "file:///android_asset/data/char_14.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "铁壁要塞：300%护盾，获得1层坚韧。[EP4]"
   },
   {
     "id": 15,
@@ -281,8 +337,12 @@
     "rarity": "SSR",
     "description": "白色阿尔泰尔的团长. 以务实的手腕统御着一群追求浪漫的理想家。",
     "ability": "神谕",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/734910.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/734910.png"
+    "imageUrl": "file:///android_asset/data/char_15.webp",
+    "thumbUrl": "file:///android_asset/data/char_15.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "银纱：250%护盾，施加1层银纱，对全体敌人造成1层毅力伤害。[EP6]"
   },
   {
     "id": 16,
@@ -300,8 +360,12 @@
     "rarity": "SSR",
     "description": "蓝星香族仅存的末裔. 在痛失所有族人后，她依然恪守“仁爱众生”的族训，以勇敢开朗的姿态面对这个炼狱般的世界。",
     "ability": "金刚不坏",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/77013.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/77013.png"
+    "imageUrl": "file:///android_asset/data/char_16.webp",
+    "thumbUrl": "file:///android_asset/data/char_16.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "龙之怒：200% x 4伤害。[EP6]"
   },
   {
     "id": 17,
@@ -319,8 +383,12 @@
     "rarity": "SSR",
     "description": "晨曦会司祭. 总是一副懒散的从容模样，对他人的情绪反应抱有微妙的好奇。",
     "ability": "光之幕",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/365504.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/365504.png"
+    "imageUrl": "file:///android_asset/data/char_17.webp",
+    "thumbUrl": "file:///android_asset/data/char_17.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "天罚：200%伤害，目标每有1个减益效果，伤害+50%（最多+300%）。[EP5]"
   },
   {
     "id": 18,
@@ -338,8 +406,12 @@
     "rarity": "SSR",
     "description": "出身正义号的精英战员. 她始终以冷静的姿态应对一切，却也藏匿着少女般的感性。",
     "ability": "黑玫瑰",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/743697.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/743697.png"
+    "imageUrl": "file:///android_asset/data/char_18.webp",
+    "thumbUrl": "file:///android_asset/data/char_18.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "Renoa的舞台：选择手牌中1张卡牌消灭。每回合开始时，抽1张同名卡牌。在接下来的回合开始时，每当抽到该卡牌时，全体友军伤害+5%持续1回合。最多18层。[EP7]"
   },
   {
     "id": 19,
@@ -357,8 +429,12 @@
     "rarity": "SR",
     "description": "以死亡为终极戏法的魔术师. 他视万物为幻象，独将卡厄思中的那场死亡与苏醒奉为唯一的真实与永恒，并以此为谜题，在宇宙中上演着一场场诡谲而华丽的探寻。",
     "ability": "空间移动",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/240349.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/240349.png"
+    "imageUrl": "file:///android_asset/data/char_19.webp",
+    "thumbUrl": "file:///android_asset/data/char_19.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "弃掉最多3张卡牌，每弃1张多抽1张。[EP5]"
   },
   {
     "id": 20,
@@ -376,8 +452,12 @@
     "rarity": "SR",
     "description": "梦想成为宇宙摇滚明星的少女. 目前正在通过举办个人演唱会等活动，一点点积攒名气。",
     "ability": "音波",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/16/646570.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/157597/2026/3/16/646570.png"
+    "imageUrl": "file:///android_asset/data/char_20.webp",
+    "thumbUrl": "file:///android_asset/data/char_20.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "摇滚：对全体敌人造成200%伤害，获得3层分贝，弃掉抽牌堆中所有卡牌。[EP5]"
   },
   {
     "id": 21,
@@ -395,8 +475,12 @@
     "rarity": "SR",
     "description": "燃烧的终结者. 拥有与弟弟卢克相反的异色瞳和一头张扬的红发。",
     "ability": "魔眼",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/417114.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/417114.png"
+    "imageUrl": "file:///android_asset/data/char_21.webp",
+    "thumbUrl": "file:///android_asset/data/char_21.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "全弹发射：抽2张卡，对全体敌人造成250%伤害。[EP5]"
   },
   {
     "id": 22,
@@ -414,8 +498,12 @@
     "rarity": "SR",
     "description": "想成为大人物的天才前锋. 她从传奇战士奶奶那里学到了顶尖的战略战术，年纪轻轻就成为了猎狼行进队的小队长。",
     "ability": "怪力",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/973076.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/973076.png"
+    "imageUrl": "file:///android_asset/data/char_22.webp",
+    "thumbUrl": "file:///android_asset/data/char_22.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "最大输出充能射击：250%伤害，施加1层易伤。[EP5]"
   },
   {
     "id": 23,
@@ -433,8 +521,12 @@
     "rarity": "SR",
     "description": "厄运缠身的少女. 特莱莎鲜少提及过去，只因每一段回忆都沾染着不幸的痕迹——那是一种近乎宿命的坏运气，总让接近她的人无端陷入麻烦，也让她在永久的愧疚与对未来的恐惧中畏缩不前。",
     "ability": "暗",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/940877.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/940877.png"
+    "imageUrl": "file:///android_asset/data/char_23.webp",
+    "thumbUrl": "file:///android_asset/data/char_23.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "暗之波动：生成2张暗影匕首。[EP5]"
   },
   {
     "id": 24,
@@ -452,8 +544,12 @@
     "rarity": "SR",
     "description": "朝气蓬勃的少女战员. 认真、温柔且充满热情的蕾伊，既是希安联邦的战员，同时也是乐园号的学生。",
     "ability": "暗物质",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/826708.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/826708.png"
+    "imageUrl": "file:///android_asset/data/char_24.webp",
+    "thumbUrl": "file:///android_asset/data/char_24.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "终极暗影：300%伤害，获得1 AP。[EP4]"
   },
   {
     "id": 25,
@@ -471,8 +567,12 @@
     "rarity": "SR",
     "description": "反对暴力的理性主义者. 米卡为守护他人梦想而握起武器。",
     "ability": "水波",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/491873.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/491873.png"
+    "imageUrl": "file:///android_asset/data/char_25.webp",
+    "thumbUrl": "file:///android_asset/data/char_25.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "涌泉：治疗150%，+1 AP，获得1层波。[EP6]"
   },
   {
     "id": 26,
@@ -490,8 +590,12 @@
     "rarity": "SSR",
     "description": "特拉西翁特殊事件调查部的成员艾美从海盗船上救出的少女，拥有实现童话的天赋. 可以用光创造出童话中的角色来进行攻击。",
     "ability": "实现童话",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/27/1779864515887_1779863927962_h224rirbl9_9f24w63bdy.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/27/1779864515887_1779863927962_h224rirbl9_9f24w63bdy.png"
+    "imageUrl": "file:///android_asset/data/char_26.webp",
+    "thumbUrl": "file:///android_asset/data/char_26.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 27,
@@ -509,8 +613,12 @@
     "rarity": "SR",
     "description": "特殊案件搜查部的搜查官. 简称特搜部，负责调查和处理希安联邦内的各种案件。",
     "ability": "钢铁化",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/264028.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/264028.png"
+    "imageUrl": "file:///android_asset/data/char_27.webp",
+    "thumbUrl": "file:///android_asset/data/char_27.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "钢铁意志：每层金属化获得120%护盾。移除所有金属化。下回合开始时获得3层金属化。[EP4]"
   },
   {
     "id": 28,
@@ -528,8 +636,12 @@
     "rarity": "SR",
     "description": "如影般静默的狙击手. 赛琳娜虽有顶级狙击手的天赋，却有着天生“存在感薄弱”的不足。",
     "ability": "千里眼",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/927959.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/927959.png"
+    "imageUrl": "file:///android_asset/data/char_28.webp",
+    "thumbUrl": "file:///android_asset/data/char_28.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "最终一击：300%伤害，施加3层标记。[EP5]"
   },
   {
     "id": 29,
@@ -547,8 +659,12 @@
     "rarity": "SR",
     "description": "大智若愚的团队照料者. 平时总是发呆，仿佛永远慢世界半拍。",
     "ability": "铜墙铁壁",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/503629.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/503629.png"
+    "imageUrl": "file:///android_asset/data/char_29.webp",
+    "thumbUrl": "file:///android_asset/data/char_29.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "坚不可摧：350%护盾。[EP4]"
   },
   {
     "id": 30,
@@ -566,8 +682,12 @@
     "rarity": "SR",
     "description": "温柔的追风少年. 为了变强日复一日的努力练习，渴望有朝一日成为独当一面的合格战员。",
     "ability": "风",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/744551.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/744551.png"
+    "imageUrl": "file:///android_asset/data/char_30.webp",
+    "thumbUrl": "file:///android_asset/data/char_30.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "狂怒风暴：250%伤害，250%护盾。[EP5]"
   },
   {
     "id": 31,
@@ -585,8 +705,12 @@
     "rarity": "SSR",
     "description": "异色瞳双子之一，卢卡斯的弟弟. 一个习惯于沉默的冷静观察者。",
     "ability": "魔眼",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/496049.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/496049.png"
+    "imageUrl": "file:///android_asset/data/char_31.webp",
+    "thumbUrl": "file:///android_asset/data/char_31.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "满月斩：对全体敌人造成200%伤害，施加1层虚弱。[EP5]"
   },
   {
     "id": 32,
@@ -604,8 +728,12 @@
     "rarity": "SSR",
     "description": "追寻安息却失去记忆的觉醒者. 曾被奉为神明，却在清醒后亲手粉碎了信徒。",
     "ability": "虚无",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/30138.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/images/w_195/h_300/50388/236746/2025/11/2/30138.png"
+    "imageUrl": "file:///android_asset/data/char_32.webp",
+    "thumbUrl": "file:///android_asset/data/char_32.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "魔涌：250%伤害，获得2层士气持续1回合。[EP4]"
   },
   {
     "id": 33,
@@ -623,7 +751,34 @@
     "rarity": "SSR",
     "description": "宇宙史上悬赏金额最高的危险女性. 她以魅惑的美貌行走于暗影之中，行踪如烟，无人能捕捉。",
     "ability": "方相神力",
-    "imageUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png",
-    "thumbUrl": "https://cdnimg-v2.gamekee.com/wiki2.0/pro/50388/images/w_195/h_300/50388/157597/2026/4/28/1779937415321_1779937387241_8jq1aptpl8_955oue05pv.png"
+    "imageUrl": "file:///android_asset/data/char_33.webp",
+    "thumbUrl": "file:///android_asset/data/char_33.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": ""
+  },
+  {
+    "id": 34,
+    "name": "泰妮布尼雅",
+    "stars": 5,
+    "element": "热情",
+    "class": "心灵术士",
+    "faction": "",
+    "cv": "韩: / 日:",
+    "race": "",
+    "birthday": "",
+    "baseAtk": 0,
+    "baseDef": 0,
+    "baseHp": 0,
+    "rarity": "SSR",
+    "description": "",
+    "ability": "",
+    "imageUrl": "file:///android_asset/data/char_34.webp",
+    "thumbUrl": "file:///android_asset/data/char_34.webp",
+    "nameEn": "",
+    "role": "",
+    "tier": "",
+    "egoSkill": "全民偶像：接下来发动7张节奏卡牌时，节奏卡牌的伤害量增加7%；若已发动7次，接下来发动的7张节奏卡牌额外打击1次 [EP7]"
   }
 ]

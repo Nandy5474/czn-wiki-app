@@ -19,7 +19,8 @@
     "thumbUrl": "file:///android_asset/data/char_1.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "狩猎开始：250%伤害。持续1回合，当其他战斗员使用卡牌时，触发1次狩猎开始攻击（最多3次）。[EP5]"
   },
   {
     "id": 2,
@@ -41,7 +42,8 @@
     "thumbUrl": "file:///android_asset/data/char_2.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 3,
@@ -63,7 +65,8 @@
     "thumbUrl": "file:///android_asset/data/char_3.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 4,
@@ -85,7 +88,8 @@
     "thumbUrl": "file:///android_asset/data/char_4.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 5,
@@ -107,7 +111,8 @@
     "thumbUrl": "file:///android_asset/data/char_5.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 6,
@@ -129,7 +134,8 @@
     "thumbUrl": "file:///android_asset/data/char_6.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 7,
@@ -151,7 +157,8 @@
     "thumbUrl": "file:///android_asset/data/char_7.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 8,
@@ -173,7 +180,8 @@
     "thumbUrl": "file:///android_asset/data/char_8.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "守护天使：300%护盾，获得2层伤害减免持续1回合。[EP4]"
   },
   {
     "id": 9,
@@ -195,7 +203,8 @@
     "thumbUrl": "file:///android_asset/data/char_9.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "樱吹雪：150% x 3伤害，施加1层热情弱点。[EP5]"
   },
   {
     "id": 10,
@@ -217,7 +226,8 @@
     "thumbUrl": "file:///android_asset/data/char_10.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "冰霜女王的领域：250%护盾，获得2层坚韧持续1回合。[EP4]"
   },
   {
     "id": 11,
@@ -239,7 +249,8 @@
     "thumbUrl": "file:///android_asset/data/char_11.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "雷神降临：对全体敌人造成300%伤害，对目标施加2层易伤，对其他敌人施加1层易伤。[EP5]"
   },
   {
     "id": 12,
@@ -261,7 +272,8 @@
     "thumbUrl": "file:///android_asset/data/char_12.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "暗雾秘剑·灭：200% x 2伤害，获得1层暗雾剑术。[EP5]"
   },
   {
     "id": 13,
@@ -283,7 +295,8 @@
     "thumbUrl": "file:///android_asset/data/char_13.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "卡牌大师：抽3张卡牌。若队伍中有Rachel，额外抽2张。[EP4]"
   },
   {
     "id": 14,
@@ -305,7 +318,8 @@
     "thumbUrl": "file:///android_asset/data/char_14.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "铁壁要塞：300%护盾，获得1层坚韧。[EP4]"
   },
   {
     "id": 15,
@@ -327,7 +341,8 @@
     "thumbUrl": "file:///android_asset/data/char_15.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "银纱：250%护盾，施加1层银纱，对全体敌人造成1层毅力伤害。[EP6]"
   },
   {
     "id": 16,
@@ -349,7 +364,8 @@
     "thumbUrl": "file:///android_asset/data/char_16.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "龙之怒：200% x 4伤害。[EP6]"
   },
   {
     "id": 17,
@@ -371,7 +387,8 @@
     "thumbUrl": "file:///android_asset/data/char_17.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "天罚：200%伤害，目标每有1个减益效果，伤害+50%（最多+300%）。[EP5]"
   },
   {
     "id": 18,
@@ -393,7 +410,8 @@
     "thumbUrl": "file:///android_asset/data/char_18.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "Renoa的舞台：选择手牌中1张卡牌消灭。每回合开始时，抽1张同名卡牌。在接下来的回合开始时，每当抽到该卡牌时，全体友军伤害+5%持续1回合。最多18层。[EP7]"
   },
   {
     "id": 19,
@@ -415,7 +433,8 @@
     "thumbUrl": "file:///android_asset/data/char_19.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "弃掉最多3张卡牌，每弃1张多抽1张。[EP5]"
   },
   {
     "id": 20,
@@ -437,7 +456,8 @@
     "thumbUrl": "file:///android_asset/data/char_20.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "摇滚：对全体敌人造成200%伤害，获得3层分贝，弃掉抽牌堆中所有卡牌。[EP5]"
   },
   {
     "id": 21,
@@ -459,7 +479,8 @@
     "thumbUrl": "file:///android_asset/data/char_21.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "全弹发射：抽2张卡，对全体敌人造成250%伤害。[EP5]"
   },
   {
     "id": 22,
@@ -481,7 +502,8 @@
     "thumbUrl": "file:///android_asset/data/char_22.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "最大输出充能射击：250%伤害，施加1层易伤。[EP5]"
   },
   {
     "id": 23,
@@ -503,7 +525,8 @@
     "thumbUrl": "file:///android_asset/data/char_23.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "暗之波动：生成2张暗影匕首。[EP5]"
   },
   {
     "id": 24,
@@ -525,7 +548,8 @@
     "thumbUrl": "file:///android_asset/data/char_24.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "终极暗影：300%伤害，获得1 AP。[EP4]"
   },
   {
     "id": 25,
@@ -547,7 +571,8 @@
     "thumbUrl": "file:///android_asset/data/char_25.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "涌泉：治疗150%，+1 AP，获得1层波。[EP6]"
   },
   {
     "id": 26,
@@ -569,7 +594,8 @@
     "thumbUrl": "file:///android_asset/data/char_26.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 27,
@@ -591,7 +617,8 @@
     "thumbUrl": "file:///android_asset/data/char_27.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "钢铁意志：每层金属化获得120%护盾。移除所有金属化。下回合开始时获得3层金属化。[EP4]"
   },
   {
     "id": 28,
@@ -613,7 +640,8 @@
     "thumbUrl": "file:///android_asset/data/char_28.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "最终一击：300%伤害，施加3层标记。[EP5]"
   },
   {
     "id": 29,
@@ -635,7 +663,8 @@
     "thumbUrl": "file:///android_asset/data/char_29.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "坚不可摧：350%护盾。[EP4]"
   },
   {
     "id": 30,
@@ -657,7 +686,8 @@
     "thumbUrl": "file:///android_asset/data/char_30.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "狂怒风暴：250%伤害，250%护盾。[EP5]"
   },
   {
     "id": 31,
@@ -679,7 +709,8 @@
     "thumbUrl": "file:///android_asset/data/char_31.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "满月斩：对全体敌人造成200%伤害，施加1层虚弱。[EP5]"
   },
   {
     "id": 32,
@@ -701,7 +732,8 @@
     "thumbUrl": "file:///android_asset/data/char_32.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "魔涌：250%伤害，获得2层士气持续1回合。[EP4]"
   },
   {
     "id": 33,
@@ -723,28 +755,30 @@
     "thumbUrl": "file:///android_asset/data/char_33.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": ""
   },
   {
     "id": 34,
-    "name": "泰妮布里亚",
+    "name": "泰妮布尼雅",
     "stars": 5,
     "element": "热情",
     "class": "心灵术士",
-    "faction": "流浪者",
-    "cv": "韩:- / 日:-",
-    "race": "人类",
-    "birthday": "?",
-    "baseAtk": 150,
-    "baseDef": 50,
-    "baseHp": 85,
+    "faction": "",
+    "cv": "韩: / 日:",
+    "race": "",
+    "birthday": "",
+    "baseAtk": 0,
+    "baseDef": 0,
+    "baseHp": 0,
     "rarity": "SSR",
-    "description": "S3新角色，详情待更新。",
-    "ability": "未知",
-    "imageUrl": "",
-    "thumbUrl": "",
+    "description": "",
+    "ability": "",
+    "imageUrl": "file:///android_asset/data/char_34.webp",
+    "thumbUrl": "file:///android_asset/data/char_34.webp",
     "nameEn": "",
     "role": "",
-    "tier": ""
+    "tier": "",
+    "egoSkill": "全民偶像：接下来发动7张节奏卡牌时，节奏卡牌的伤害量增加7%；若已发动7次，接下来发动的7张节奏卡牌额外打击1次 [EP7]"
   }
 ]
