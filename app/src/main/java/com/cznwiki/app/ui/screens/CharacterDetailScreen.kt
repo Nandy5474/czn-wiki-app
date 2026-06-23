@@ -348,7 +348,33 @@ fun CharacterDetailScreen(
                         Spacer(modifier = Modifier.height(12.dp))
                     }
 
-                    // === Section 5: Self Awareness ===
+                    // === Section 5: Ego Skill (角色大招/EP技能) ===
+                    if (char.egoSkill.isNotBlank()) {
+                        Card(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 16.dp)
+                        ) {
+                            Column(modifier = Modifier.padding(16.dp)) {
+                                Text("自我意识技能（角色大招）", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.08f),
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Text(
+                                        char.egoSkill,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        modifier = Modifier.padding(12.dp)
+                                    )
+                                }
+                            }
+                        }
+                        Spacer(modifier = Modifier.height(12.dp))
+                    }
+
+                    // === Section 6: Self Awareness (命座) ===
                     if (selfAwareness.isNotEmpty()) {
                         Card(
                             modifier = Modifier
@@ -356,7 +382,7 @@ fun CharacterDetailScreen(
                                 .padding(horizontal = 16.dp)
                         ) {
                             Column(modifier = Modifier.padding(16.dp)) {
-                                Text("自我意识", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                                Text("显示自我意识（命座）", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                                 Spacer(modifier = Modifier.height(8.dp))
                                 selfAwareness.forEach { sa ->
                                     Column(modifier = Modifier.padding(vertical = 4.dp)) {
@@ -375,7 +401,7 @@ fun CharacterDetailScreen(
                         Spacer(modifier = Modifier.height(12.dp))
                     }
 
-                    // === Section 6: Collection Management ===
+                    // === Section 7: Collection Management ===
                     var collExpanded by remember { mutableStateOf(false) }
 
                     Card(

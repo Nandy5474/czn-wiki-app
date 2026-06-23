@@ -1,5 +1,23 @@
 # CZN Wiki App 开发日志
 
+## v2.0.35 - 2026-06-22
+
+### 变更内容
+
+**自我意识数据补全**
+
+- self_awareness.json 从 193 条增至 204 条（新增 id 194-204）
+- 补全 11 个角色的 stage 3「鲜明的记忆」：凯西乌斯、妮雅、卢卡斯、百丽儿、德蕾莎、蕾伊、米卡、艾美、席琳娜、玛丽贝尔、欧文
+- 效果统一为：潜力的【强化基本卡牌】、【强化独特卡牌】、【强化中立卡牌】的等级增加 3
+- 34 个角色 self_awareness 现均为 stage 1-6 完整
+
+### 文件变更
+- data/self_awareness.json
+- data/version.json
+- app/src/main/assets/data/self_awareness.json
+- app/src/main/assets/data/version.json
+- APK: czn-wiki-v2.0.35-release.apk (v2+v3 签名)
+
 ## v2.0.28 - 2026-06-10
 
 ### 变更内容

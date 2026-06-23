@@ -1,19 +1,20 @@
 {
-  "version": "2.0.27",
+  "version": "2.0.37",
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
   "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
-  "update_date": "2026-06-10 14:00:00",
-  "changelog": "v2.0.27: 修复六大问题-角色图鉴空/阿黛海特元素职业错误/往期卡池数据/活动过期/T0详情空/版本号不一致",
-  "version_code": 27,
-  "update_notes": "全面修复: 守卫→先锋、banner元素职业正名、事件endDate过滤、destructive migration安全网、新增泰妮布里亚",
-  "update_time": "2026-06-10",
+  "events_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/events.json",
+  "banners_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/banners.json",
+  "update_date": "2026-06-23 09:00:00",
+  "changelog": "v2.0.37: 补全 8 位角色 egoSkill（海德玛丽/黛安娜/丽塔/蒂菲拉/奈音/娜嘉/阿黛海特/绯）",
+  "version_code": 37,
+  "update_notes": "App 每次启动自动检查远程数据版本，有更新时自动下载并导入；数据管理页新增「检查远程更新」按钮可手动触发。",
+  "update_time": "2026-06-23",
   "changes": [
-    "修复destructive migration后数据库空的安全网(问题1)",
-    "banners.json全部元素/职业改为国际服正名(问题2)",
-    "characters.json守卫→先锋(6角色), 新增泰妮布里亚(问题2+3)",
-    "events展示按endDate>=2026-06-10过滤+查看更多按钮(问题4)",
-    "version_code统一27(问题6)"
+    "新增 RemoteUpdateManager：从 GitHub raw URL 拉取 version.json 比较版本号，自动下载并导入差分数据",
+    "启动时后台静默检查远程更新，有新版自动静默安装",
+    "数据管理页新增「检查远程更新」卡片：显示当前/远程版本、更新进度条、更新日志",
+    "更新流程自动备份/恢复用户数据（拥有状态、命座、自定义队伍等不被覆盖）"
   ]
 }

@@ -7,16 +7,19 @@ import coil.memory.MemoryCache
 import coil.disk.DiskCache
 import com.cznwiki.app.coil.AssetUriFetcher
 import com.cznwiki.app.data.LocalDataManager
+import com.cznwiki.app.data.RemoteUpdateManager
 import com.cznwiki.app.data.database.AppDatabase
 import com.cznwiki.app.data.database.seedDatabaseFromAssets
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 class CznApplication : Application(), ImageLoaderFactory {
     val database by lazy { AppDatabase.getInstance(this) }
     val localDataManager by lazy { LocalDataManager.getInstance(this) }
+    val remoteUpdateManager by lazy { RemoteUpdateManager.getInstance(this) }
     private val appScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
     override fun newImageLoader(): ImageLoader {
@@ -59,5 +62,10 @@ class CznApplication : Application(), ImageLoaderFactory {
         }
         // 检查数据版本，版本变化时触发更新流程（保存用户修改 → 清空 → 导入 → 回灌）
         localDataManager.checkAndUpdateData(database, appScope)
+
+        // 后台静默检查远程数据更新
+        appScope.launch {
+            remoteUpdateManager.checkAndUpdateSilently(database)
+        }
     }
 }

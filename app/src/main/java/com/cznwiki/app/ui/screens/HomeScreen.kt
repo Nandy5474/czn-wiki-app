@@ -170,7 +170,10 @@ fun HomeScreen(
                 QuickEntryCard("当期活动", "活动倒计时与详情", onClick = onNavigateToEvents, tint = MaterialTheme.colorScheme.secondary)
             }
             item {
-                QuickEntryCard("队伍构筑", "创建与管理我的队伍", onClick = onNavigateToTeams, tint = MaterialTheme.colorScheme.tertiary)
+                QuickEntryCard("卡池一览", "当期与往期卡池", onClick = onNavigateToBanners, tint = MaterialTheme.colorScheme.tertiary)
+            }
+            item {
+                QuickEntryCard("队伍构筑", "创建与管理我的队伍", onClick = onNavigateToTeams, tint = MaterialTheme.colorScheme.error.copy(alpha = 0.7f))
             }
             item {
                 QuickEntryCard("数据备份", "导入/导出本地数据", onClick = onNavigateToBackup, tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f))

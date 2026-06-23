@@ -25,7 +25,8 @@ data class CharacterEntity(
     val baseDef: Int = 0,
     val baseHp: Int = 0,
     val imageUrl: String = "",
-    val thumbUrl: String = ""
+    val thumbUrl: String = "",
+    val egoSkill: String = ""
 )
 
 @Entity(tableName = "cards")

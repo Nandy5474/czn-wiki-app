@@ -1,8 +1,5 @@
 package com.cznwiki.app.ui.screens
 
-import android.app.Activity
-import android.content.Intent
-import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
@@ -20,6 +17,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.cznwiki.app.CznApplication
 import com.cznwiki.app.data.BackupManager
+import com.cznwiki.app.data.RemoteVersionInfo
+import com.cznwiki.app.data.UpdateProgress
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -27,12 +26,20 @@ import kotlinx.coroutines.launch
 fun BackupScreen() {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    val db = (context.applicationContext as CznApplication).database
+    val app = context.applicationContext as CznApplication
+    val db = app.database
+    val remoteUpdateMgr = app.remoteUpdateManager
+    val localDataMgr = app.localDataManager
     val backupManager = remember { BackupManager(context) }
 
     var statusMessage by remember { mutableStateOf("") }
     var isProcessing by remember { mutableStateOf(false) }
-    var lastExportPath by remember { mutableStateOf<String?>(null) }
+
+    // Remote update state
+    var updateProgress by remember { mutableStateOf<UpdateProgress?>(null) }
+    var remoteVersionInfo by remember { mutableStateOf<RemoteVersionInfo?>(null) }
+    var isCheckingRemote by remember { mutableStateOf(false) }
+    var localVersion by remember { mutableIntStateOf(localDataMgr.getLocalVersion()) }
 
     // Export launcher
     val exportLauncher = rememberLauncherForActivityResult(
@@ -44,14 +51,12 @@ fun BackupScreen() {
             scope.launch {
                 val path = backupManager.exportBackup(db)
                 if (path != null) {
-                    // Copy internal file to user-selected URI
                     try {
                         context.contentResolver.openOutputStream(uri)?.use { out ->
                             context.openFileInput(path.substringAfterLast("/")).use { inp ->
                                 inp.copyTo(out)
                             }
                         }
-                        lastExportPath = uri.toString()
                         statusMessage = "导出成功！文件已保存"
                     } catch (e: Exception) {
                         statusMessage = "导出失败: ${e.message}"
@@ -79,17 +84,42 @@ fun BackupScreen() {
         }
     }
 
+    fun triggerRemoteUpdate() {
+        isCheckingRemote = true
+        updateProgress = null
+        remoteVersionInfo = null
+        statusMessage = ""
+        scope.launch {
+            val info = remoteUpdateMgr.checkAndUpdateWithProgress(db) { progress ->
+                updateProgress = progress
+            }
+            if (info != null) {
+                remoteVersionInfo = info
+                localVersion = localDataMgr.getLocalVersion()
+                statusMessage = "已更新至 ${info.version}"
+            } else {
+                val progress = updateProgress
+                if (progress?.stage == "error") {
+                    statusMessage = progress.description
+                } else {
+                    statusMessage = "数据已是最新版本"
+                }
+            }
+            isCheckingRemote = false
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
     ) {
         TopAppBar(
-            title = { Text("数据备份", fontWeight = FontWeight.Bold) },
+            title = { Text("数据管理", fontWeight = FontWeight.Bold) },
             colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.surface)
         )
 
-        // Info card
+        // ── 远程数据更新 ──
         Card(
             modifier = Modifier.fillMaxWidth().padding(16.dp),
             shape = RoundedCornerShape(16.dp),
@@ -97,21 +127,87 @@ fun BackupScreen() {
         ) {
             Column(Modifier.padding(20.dp)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(Icons.Default.Info, "说明", tint = MaterialTheme.colorScheme.primary)
+                    Icon(Icons.Default.CloudSync, "更新", tint = MaterialTheme.colorScheme.primary)
                     Spacer(Modifier.width(8.dp))
-                    Text("备份说明", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                    Text("数据更新", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
                 }
                 Spacer(Modifier.height(12.dp))
-                Text("备份文件包含以下数据：", style = MaterialTheme.typography.bodyMedium)
-                Spacer(Modifier.height(8.dp))
-                Text("• 已拥有角色及命座信息", style = MaterialTheme.typography.bodySmall)
-                Text("• 自定义队伍配置", style = MaterialTheme.typography.bodySmall)
-                Spacer(Modifier.height(8.dp))
-                Text("数据更新后可通过导入备份文件恢复以上信息。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f))
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text("当前数据版本：v$localVersion", style = MaterialTheme.typography.bodyMedium)
+                    remoteVersionInfo?.let { info ->
+                        if (info.version_code > localVersion) {
+                            Text("最新版本：${info.version}",
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.error)
+                        }
+                    }
+                }
+
+                updateProgress?.let { progress ->
+                    if (progress.stage != "done" && progress.stage != "error") {
+                        Spacer(Modifier.height(12.dp))
+                        LinearProgressIndicator(
+                            progress = { progress.progress / 100f },
+                            modifier = Modifier.fillMaxWidth(),
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(Modifier.height(4.dp))
+                        Text(progress.description,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f))
+                    }
+                }
+
+                remoteVersionInfo?.let { info ->
+                    if (info.changelog.isNotBlank()) {
+                        Spacer(Modifier.height(8.dp))
+                        Text(info.changelog,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f))
+                    }
+                }
+
+                Spacer(Modifier.height(12.dp))
+                Button(
+                    onClick = { triggerRemoteUpdate() },
+                    enabled = !isCheckingRemote && !isProcessing,
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    if (isCheckingRemote) {
+                        CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp, color = MaterialTheme.colorScheme.onPrimary)
+                    } else {
+                        Icon(Icons.Default.CloudSync, "检查更新")
+                    }
+                    Spacer(Modifier.width(8.dp))
+                    Text(if (isCheckingRemote) "正在更新..." else "检查远程更新")
+                }
             }
         }
 
-        // Export section
+        // ── 备份说明 ──
+        Card(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
+            shape = RoundedCornerShape(16.dp),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
+        ) {
+            Column(Modifier.padding(20.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Icon(Icons.Default.Info, "说明", tint = MaterialTheme.colorScheme.primary)
+                    Spacer(Modifier.width(8.dp))
+                    Text("备份说明", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                }
+                Spacer(Modifier.height(8.dp))
+                Text("备份文件包含：已拥有角色、命座信息、自定义队伍配置。", style = MaterialTheme.typography.bodySmall)
+                Text("数据更新后可通过导入备份恢复以上信息。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f))
+            }
+        }
+
+        // ── 导出备份 ──
         Card(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
             shape = RoundedCornerShape(16.dp),
@@ -128,7 +224,7 @@ fun BackupScreen() {
                 Spacer(Modifier.height(12.dp))
                 Button(
                     onClick = { exportLauncher.launch("czn_backup.czbackup") },
-                    enabled = !isProcessing,
+                    enabled = !isProcessing && !isCheckingRemote,
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp)
                 ) {
@@ -140,7 +236,7 @@ fun BackupScreen() {
             }
         }
 
-        // Import section
+        // ── 导入备份 ──
         Card(
             modifier = Modifier.fillMaxWidth().padding(16.dp),
             shape = RoundedCornerShape(16.dp),
@@ -157,7 +253,7 @@ fun BackupScreen() {
                 Spacer(Modifier.height(12.dp))
                 Button(
                     onClick = { importLauncher.launch(arrayOf("*/*")) },
-                    enabled = !isProcessing,
+                    enabled = !isProcessing && !isCheckingRemote,
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)
@@ -176,7 +272,8 @@ fun BackupScreen() {
                 modifier = Modifier.fillMaxWidth().padding(16.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = if (statusMessage.contains("成功")) MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
+                    containerColor = if (statusMessage.contains("成功") || statusMessage.contains("最新"))
+                        MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
                     else MaterialTheme.colorScheme.error.copy(alpha = 0.1f)
                 )
             ) {
@@ -184,7 +281,9 @@ fun BackupScreen() {
                     statusMessage,
                     modifier = Modifier.padding(16.dp),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = if (statusMessage.contains("成功")) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error
+                    color = if (statusMessage.contains("成功") || statusMessage.contains("最新"))
+                        MaterialTheme.colorScheme.primary
+                    else MaterialTheme.colorScheme.error
                 )
             }
         }
