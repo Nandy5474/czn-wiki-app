@@ -1,0 +1,17 @@
+{
+  "version": "2.0.35",
+  "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
+  "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
+  "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
+  "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
+  "update_date": "2026-06-22 11:30:00",
+  "changelog": "v2.0.35: 补全11个角色的自我意识 stage 3（鲜明的记忆）",
+  "version_code": 35,
+  "update_notes": "卡莉佩数据修正：秃鹰发射归为灵光一闪，绯的落九天效果更新",
+  "update_time": "2026-06-22",
+  "changes": [
+    "self_awareness.json 从193条增至204条，新增id 194-204",
+    "凯西乌斯/妮雅/卢卡斯/百丽儿/德蕾莎/蕾伊/米卡/艾美/席琳娜/玛丽贝尔/欧文的 stage 3 已补全",
+    "34个角色 self_awareness 现均为 stage 1-6 完整"
+  ]
+}

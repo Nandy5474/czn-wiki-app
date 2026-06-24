@@ -434,7 +434,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": "弃掉最多3张卡牌，每弃1张多抽1张。[EP5]"
+    "egoSkill": "速升：弃掉最多3张卡牌，每弃1张多抽1张。[EP5]"
   },
   {
     "id": 20,
@@ -457,7 +457,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": "摇滚：对全体敌人造成200%伤害，获得3层分贝，弃掉抽牌堆中所有卡牌。[EP5]"
+    "egoSkill": "天际斩击：全体敌人造成300%伤害，手牌中所有攻击卡牌移动至牌堆顶部，每移动1张伤害量+50%。[EP5]"
   },
   {
     "id": 21,
@@ -764,16 +764,16 @@
     "stars": 5,
     "element": "热情",
     "class": "心灵术士",
-    "faction": "",
+    "faction": "虚无之影",
     "cv": "韩: / 日:",
-    "race": "",
-    "birthday": "",
-    "baseAtk": 0,
-    "baseDef": 0,
-    "baseHp": 0,
+    "race": "人类",
+    "birthday": "6月9日",
+    "baseAtk": 185,
+    "baseDef": 42,
+    "baseHp": 80,
     "rarity": "SSR",
-    "description": "",
-    "ability": "",
+    "description": "银河乐坛的超人气偶像。她以甜美的歌声和闪耀的舞台魅力征服了无数粉丝，但舞台之下的她，却背负着不为人知的沉重秘密。",
+    "ability": "脉冲",
     "imageUrl": "file:///android_asset/data/char_34.webp",
     "thumbUrl": "file:///android_asset/data/char_34.webp",
     "nameEn": "",
