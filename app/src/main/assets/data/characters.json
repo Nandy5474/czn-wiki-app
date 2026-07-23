@@ -753,10 +753,10 @@
     "ability": "方相神力",
     "imageUrl": "file:///android_asset/data/char_33.webp",
     "thumbUrl": "file:///android_asset/data/char_33.webp",
-    "nameEn": "",
+    "nameEn": "Fei",
     "role": "",
     "tier": "",
-    "egoSkill": "碧天：获得降临2，并使下一张落九天伤害次数增加2。[EP5]"
+    "egoSkill": "Heavenscleaver: Gain 8 Descent. For 2 turns, at start of turn, gain 8 Descent. Increase Damage Amount of next Heavensfall by 100%.[EP5]"
   },
   {
     "id": 34,

@@ -1270,42 +1270,42 @@
     "characterId": 33,
     "stage": 1,
     "name": "沉睡的记忆",
-    "effect": "到移动至手牌的炎舞曲使用时为止，为炎舞舞曲卡牌增加伤害总量提升100%的效果。",
+    "effect": "Add following effect to Blazing War Dance: Increase Damage Amount of Inferno Rhapsody moved to hand by 100% until used.",
     "id": 182
   },
   {
     "characterId": 33,
     "stage": 2,
     "name": "苏醒的记忆",
-    "effect": "战斗开始时获得降临6，且每回合首次生成落九天时获得降临2。 炎舞曲卡牌发动时，对敌人造成的伤害增加30%的固定伤害。",
+    "effect": "At start of battle, gain 6 Descent. Each turn, when the first Heavensfall is created, gain 2 Descent. When Inferno Rhapsody card is activated, inflict 30% of Damage inflicted as Fixed Damage.",
     "id": 183
   },
   {
     "characterId": 33,
     "stage": 3,
     "name": "鲜明的记忆",
-    "effect": "碧天变为增加降临2，并使下一张落九天伤害次数增加2。",
+    "effect": "Increases Heavenscleaver's Descent by 2. Add following effect: Add 2 Hits to next Heavensfall.",
     "id": 184
   },
   {
     "characterId": 33,
     "stage": 4,
     "name": "内在的记忆",
-    "effect": "战斗开始时，落九天的伤害量+80%。",
+    "effect": "At start of battle, +80% Damage Amount to Heavensfall.",
     "id": 185
   },
   {
     "characterId": 33,
     "stage": 5,
     "name": "完整的记忆",
-    "effect": "潜力的【强化基本卡牌】、【强化独特卡牌】、【强化中立卡牌】的等级增加3。",
+    "effect": "Increase level of Basic Card Upgrade, Unique Card Upgrade, and Common Card Upgrade in Potentials by 3.",
     "id": 186
   },
   {
     "characterId": 33,
     "stage": 6,
     "name": "释放的记忆",
-    "effect": "战斗开始时，炎舞的伤害量+120%。 战斗开始时，以及每使用落九天卡牌3次时，获得诛邪审判1。 诛邪审判：落九天的伤害次数增加3，效果触发后移除诛邪审判",
+    "effect": "At start of battle, +120% Damage Amount to Flame Arts. At start of battle or each time 3 Heavensfall cards are used, gain 1 Judgment Upon the Wicked. Judgment Upon the Wicked: Add 3 Hits to Heavensfall. When activated, remove Judgment Upon the Wicked.",
     "id": 187
   },
   {
