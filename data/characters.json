@@ -43,7 +43,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": ""
+    "egoSkill": "剑之乐园：消耗墓地中全部极光剑逐层结算伤害，基础伤害上限2000%，依本次战斗期间已丢弃的卡牌数量伤害量提升+80%(最多20张)，技能结束后回收所有手牌。[EP5]"
   },
   {
     "id": 3,
@@ -66,7 +66,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": ""
+    "egoSkill": "光辉微笑：生成1张邱比特射击，生成2张心型弹药。[EP5]"
   },
   {
     "id": 4,
@@ -89,7 +89,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": ""
+    "egoSkill": "荣耀时刻：时间超越6，按照本次战斗期间发动卡牌的行动点消耗之和，下次使用的自身攻击卡牌伤害量增加10%(最多200%)。[EP5]"
   },
   {
     "id": 5,
@@ -112,7 +112,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": ""
+    "egoSkill": "创造共鸣：选择生成1张创造卡牌，接下来2次使用自我意识技能时额外生成，接下来使用的自我意识技能费用减少2。[EP5]"
   },
   {
     "id": 6,
@@ -135,7 +135,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": ""
+    "egoSkill": "反射:零：对全体敌人造成基于防御的伤害250%，2张费用最高的卡牌的费用之和每有1，即可使本技能伤害量+50%，消耗这些卡牌。[EP5]"
   },
   {
     "id": 7,
@@ -158,7 +158,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": ""
+    "egoSkill": "掠食者的狩猎法：贪食10，基于防御的伤害250%，若完美饱餐在坟墓中，则掠食5。[EP5]"
   },
   {
     "id": 8,
@@ -227,7 +227,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": "冰霜女王的领域：250%护盾，获得2层坚韧持续1回合。[EP4]"
+    "egoSkill": "天际斩击：全体敌人造成300%伤害，手牌中所有攻击卡牌移动至牌堆顶部，每移动1张伤害量+50%。[EP5]"
   },
   {
     "id": 11,
@@ -434,7 +434,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": "弃掉最多3张卡牌，每弃1张多抽1张。[EP5]"
+    "egoSkill": "速升：弃掉最多3张卡牌，每弃1张多抽1张。[EP5]"
   },
   {
     "id": 20,
@@ -457,7 +457,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": "摇滚：对全体敌人造成200%伤害，获得3层分贝，弃掉抽牌堆中所有卡牌。[EP5]"
+    "egoSkill": "ROCK AND ROLL：对所有敌人造成200%伤害，分贝3，丢弃所有抽取卡牌。[EP5]"
   },
   {
     "id": 21,
@@ -595,7 +595,7 @@
     "nameEn": "",
     "role": "",
     "tier": "",
-    "egoSkill": ""
+    "egoSkill": "快乐结局：获得300%护盾，依持有的护盾获得固定治愈(不超过最大HP的30%)。[EP5]"
   },
   {
     "id": 27,
@@ -753,10 +753,10 @@
     "ability": "方相神力",
     "imageUrl": "file:///android_asset/data/char_33.webp",
     "thumbUrl": "file:///android_asset/data/char_33.webp",
-    "nameEn": "",
+    "nameEn": "Fei",
     "role": "",
     "tier": "",
-    "egoSkill": ""
+    "egoSkill": "Heavenscleaver: Gain 8 Descent. For 2 turns, at start of turn, gain 8 Descent. Increase Damage Amount of next Heavensfall by 100%.[EP5]"
   },
   {
     "id": 34,
@@ -764,16 +764,16 @@
     "stars": 5,
     "element": "热情",
     "class": "心灵术士",
-    "faction": "",
+    "faction": "虚无之影",
     "cv": "韩: / 日:",
-    "race": "",
-    "birthday": "",
-    "baseAtk": 0,
-    "baseDef": 0,
-    "baseHp": 0,
+    "race": "人类",
+    "birthday": "6月9日",
+    "baseAtk": 185,
+    "baseDef": 42,
+    "baseHp": 80,
     "rarity": "SSR",
-    "description": "",
-    "ability": "",
+    "description": "银河乐坛的超人气偶像。她以甜美的歌声和闪耀的舞台魅力征服了无数粉丝，但舞台之下的她，却背负着不为人知的沉重秘密。",
+    "ability": "脉冲",
     "imageUrl": "file:///android_asset/data/char_34.webp",
     "thumbUrl": "file:///android_asset/data/char_34.webp",
     "nameEn": "",
