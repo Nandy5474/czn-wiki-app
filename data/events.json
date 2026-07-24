@@ -1,306 +1,82 @@
 [
   {
     "id": 1,
-    "name": "回荡在银河中的歌声",
-    "description": "",
-    "endDate": "2026-07-07",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "Fei & Ruixiang Rate-Up Rescue 招募",
+    "description": "新战斗员 Fei + 新伙伴 Ruixiang 概率提升招募",
+    "endDate": "2026-07-29",
+    "url": "",
+    "server": "Global"
   },
   {
     "id": 2,
-    "name": "遗失的童话书",
-    "description": "",
-    "endDate": "2026-06-16",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "Arena Season 2",
+    "description": "竞技场第二赛季进行中",
+    "endDate": "",
+    "url": "",
+    "server": "Global"
   },
   {
     "id": 3,
-    "name": "前往梦境的邀请",
-    "description": "",
-    "endDate": "2026-06-16",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "Sortie 新内容",
+    "description": "Sortie 玩法新增内容",
+    "endDate": "",
+    "url": "",
+    "server": "Global"
   },
   {
     "id": 4,
-    "name": "伊甸尼蒂号巡逻作战",
-    "description": "",
-    "endDate": "2026-06-16",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "大龟裂下半期 Boss「迷雾中的女人」",
+    "description": "大龟裂下半期开启，Boss「迷雾中的女人」登场",
+    "endDate": "2026-07-29",
+    "url": "",
+    "server": "Global"
   },
   {
     "id": 5,
-    "name": "全力战第二期",
-    "description": "",
-    "endDate": "2026-07-07",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "零式系统「环境变量」新增节点",
+    "description": "新增强制绕过叙事路线、优化独特数据等节点",
+    "endDate": "2026-07-29",
+    "url": "",
+    "server": "Global"
   },
   {
     "id": 6,
-    "name": "极速狂飙-模拟",
-    "description": "",
-    "endDate": "2026-06-03",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "次元的黄昏新增挑战内容",
+    "description": "新增挑战内容、重置奖励，支援效果新增基础攻击卡牌伤害提升",
+    "endDate": "",
+    "url": "",
+    "server": "Global"
   },
   {
     "id": 7,
-    "name": "半周年庆典",
-    "description": "",
-    "endDate": "2026-05-27",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "泰妮布里雅&阿莉娅 UP 招募",
+    "description": "泰妮布里雅与阿莉娅概率提升招募",
+    "endDate": "2026-07-29",
+    "url": "",
+    "server": "CN"
   },
   {
     "id": 8,
-    "name": "柳树下的阴影",
-    "description": "",
-    "endDate": "2026-05-27",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "友纪复刻招募",
+    "description": "友纪复刻概率提升招募",
+    "endDate": "2026-08-12",
+    "url": "",
+    "server": "CN"
   },
   {
     "id": 9,
-    "name": "全力战",
-    "description": "",
-    "endDate": "2026-05-27",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "国服上线纪念累计签到",
+    "description": "新晋领航者累计签到活动，完成任务领取奖励",
+    "endDate": "2027-07-20",
+    "url": "",
+    "server": "CN"
   },
   {
     "id": 10,
-    "name": "常驻伙伴8折池",
-    "description": "",
-    "endDate": "2026-05-27",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 11,
-    "name": "回荡在银河中的歌声（预告）",
-    "description": "",
-    "endDate": "2026-04-29",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 12,
-    "name": "火线突破",
-    "description": "",
-    "endDate": "2026-04-29",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 13,
-    "name": "第3赛季季前赛",
-    "description": "",
-    "endDate": "2026-04-29",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 14,
-    "name": "第二赛季大龟裂下半",
-    "description": "",
-    "endDate": "2026-04-08",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 15,
-    "name": "宇宙万物的记录者",
-    "description": "",
-    "endDate": "2026-04-08",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 16,
-    "name": "怪物们的竞技场",
-    "description": "",
-    "endDate": "2026-04-08",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 17,
-    "name": "第二赛季-业火种子",
-    "description": "",
-    "endDate": "2026-04-08",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 18,
-    "name": "愚人节限定卡面",
-    "description": "",
-    "endDate": "2026-04-03",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 19,
-    "name": "记忆碎片获取翻倍",
-    "description": "",
-    "endDate": "2026-03-25",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 20,
-    "name": "斯普利兹的阴影",
-    "description": "",
-    "endDate": "2026-03-18",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 21,
-    "name": "第二赛季大龟裂上半",
-    "description": "",
-    "endDate": "2026-03-18",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 22,
-    "name": "9号街的佣兵事务所",
-    "description": "",
-    "endDate": "2026-02-25",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 23,
-    "name": "再次，前往法典",
-    "description": "",
-    "endDate": "2026-02-09",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 24,
-    "name": "「娜嘉」创伤单元码活动",
-    "description": "",
-    "endDate": "2026-02-04",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 25,
-    "name": "哀嚎螺旋塔（测试版）",
-    "description": "",
-    "endDate": "2026-02-04",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 26,
-    "name": "在优尼格拉姆中见吧",
-    "description": "",
-    "endDate": "2026-01-27",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 27,
-    "name": "特别探索奖励——第0研究所",
-    "description": "",
-    "endDate": "2026-01-14",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 28,
-    "name": "追随星之轨道",
-    "description": "",
-    "endDate": "2026-01-14",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 29,
-    "name": "银河系灾害——禁忌催化剂",
-    "description": "",
-    "endDate": "2026-01-14",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 30,
-    "name": "零号系统",
-    "description": "",
-    "endDate": "2026-01-13",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 31,
-    "name": "虚拟战术模拟",
-    "description": "",
-    "endDate": "2025-12-24",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 32,
-    "name": "方舟的守护者",
-    "description": "",
-    "endDate": "2025-12-02",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 33,
-    "name": "银河系灾害出动准备",
-    "description": "",
-    "endDate": "2025-11-26",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 34,
-    "name": "生锈锚上的闪耀光芒",
-    "description": "",
-    "endDate": "2025-11-12",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 35,
-    "name": "超时空的流域——次元黄昏",
-    "description": "",
-    "endDate": "2025-11-12",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 36,
-    "name": "蕾伊的礼物",
-    "description": "",
-    "endDate": "2025-11-04",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 37,
-    "name": "凝结在羽翼末端的爱",
-    "description": "黛安娜个人故事活动",
-    "endDate": "2026-07-01",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
-  },
-  {
-    "id": 38,
-    "name": "超速驱动",
-    "description": "模拟奖励双倍",
-    "endDate": "2026-06-17",
-    "url": "https://www.gamekee.com/czn/huodong/104",
-    "server": "国际服"
+    "name": "Season 4「Shattered Light and Claw」(破碎之光与利爪)",
+    "description": "7月28日上线，三位新角色：希露德(Hilde)、阿拉贝拉(Arabella)、奥尔加(Olga)",
+    "endDate": "",
+    "url": "",
+    "server": "Global"
   }
 ]

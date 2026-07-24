@@ -1,11 +1,18 @@
 {
-  "version": "2.0.39",
-  "version_code": 39,
-  "versionName": "2.0.39",
-  "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/characters.json",
-  "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/cards.json",
-  "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/self_awareness.json",
-  "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/user_collection.json",
-  "update_date": "2026-06-24",
-  "changelog": "v2.0.39: 修复友纪/妮雅 egoSkill 串号错误 & 妮雅 self_awareness 数据修正"
+  "version": "2.0.40",
+  "version_code": 40,
+  "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
+  "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
+  "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
+  "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
+  "events_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/events.json",
+  "banners_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/banners.json",
+  "update_date": "2026-07-24",
+  "changelog": "v2.0.40: 更新绯国际服数据; 新增活动与卡池数据; 支持远程事件/卡池更新",
+  "changes": [
+    "新增绯(Fei)国际服 egoSkill 数据",
+    "新增 events.json 活动数据(10条)",
+    "新增 banners.json 卡池数据(4条)",
+    "version.json 新增 events_url 和 banners_url 远程更新地址"
+  ]
 }
