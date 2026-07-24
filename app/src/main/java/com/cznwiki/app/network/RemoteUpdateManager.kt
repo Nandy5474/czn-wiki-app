@@ -38,6 +38,8 @@ class RemoteUpdateManager(
         private const val CARDS_URL = "${BASE_URL}cards.json"
         private const val SELF_AWARENESS_URL = "${BASE_URL}self_awareness.json"
         private const val USER_COLLECTION_URL = "${BASE_URL}user_collection.json"
+        private const val EVENTS_URL = "${BASE_URL}events.json"
+        private const val BANNERS_URL = "${BASE_URL}banners.json"
 
         @Volatile
         private var instance: RemoteUpdateManager? = null
@@ -64,6 +66,8 @@ class RemoteUpdateManager(
         val cards_url: String = CARDS_URL,
         val self_awareness_url: String = SELF_AWARENESS_URL,
         val user_collection_url: String = USER_COLLECTION_URL,
+        val events_url: String = EVENTS_URL,
+        val banners_url: String = BANNERS_URL,
         val update_date: String = "",
         val changelog: String = ""
     )
@@ -77,7 +81,9 @@ class RemoteUpdateManager(
         val charsUpdated: Int = 0,
         val cardsUpdated: Int = 0,
         val saUpdated: Int = 0,
-        val userCollUpdated: Int = 0
+        val userCollUpdated: Int = 0,
+        val eventsUpdated: Int = 0,
+        val bannersUpdated: Int = 0
     )
 
     /** Get current local data version */
@@ -124,6 +130,8 @@ class RemoteUpdateManager(
             var charsUpdated = 0
             var cardsUpdated = 0
             var saUpdated = 0
+            var eventsUpdated = 0
+            var bannersUpdated = 0
 
             // Download characters
             try {
@@ -168,6 +176,36 @@ class RemoteUpdateManager(
                 }
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to update self-awareness", e)
+            }
+
+            // Download events
+            try {
+                onStatus(UpdateStatus.Downloading("活动数据"))
+                val eventsJson = fetchUrl(remoteVersion.events_url)
+                if (eventsJson != null) {
+                    val events: List<EventEntity> = gson.fromJson(
+                        eventsJson, object : TypeToken<List<EventEntity>>() {}.type
+                    )
+                    database.eventDao().insertAll(events)
+                    eventsUpdated = events.size
+                }
+            } catch (e: Exception) {
+                Log.w(TAG, "Failed to update events", e)
+            }
+
+            // Download banners
+            try {
+                onStatus(UpdateStatus.Downloading("卡池数据"))
+                val bannersJson = fetchUrl(remoteVersion.banners_url)
+                if (bannersJson != null) {
+                    val banners: List<BannerEntity> = gson.fromJson(
+                        bannersJson, object : TypeToken<List<BannerEntity>>() {}.type
+                    )
+                    database.bannerDao().insertAll(banners)
+                    bannersUpdated = banners.size
+                }
+            } catch (e: Exception) {
+                Log.w(TAG, "Failed to update banners", e)
             }
 
             // === 远程更新后：回灌用户修改到 Room ===
