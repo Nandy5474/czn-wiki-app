@@ -1,54 +1,28 @@
 [
   {
     "id": 1,
-    "name": "Fei 新角色 UP",
+    "name": "绯 (Fei) 复刻",
     "stars": 5,
-    "character": "Fei",
+    "character": "绯",
     "element": "虚无",
-    "className": "流浪者",
-    "type": "新角色",
-    "startDate": "2026-07-08",
-    "endDate": "2026-07-29",
+    "className": "游侠",
+    "type": "复刻",
+    "startDate": "2026-07-24",
+    "endDate": "2026-08-14",
     "url": "",
     "server": "Global"
   },
   {
     "id": 2,
-    "name": "Ruixiang 新伙伴",
-    "stars": 0,
-    "character": "Ruixiang",
-    "element": "",
-    "className": "",
-    "type": "新伙伴",
-    "startDate": "2026-07-08",
-    "endDate": "2026-07-29",
-    "url": "",
-    "server": "Global"
-  },
-  {
-    "id": 3,
-    "name": "泰妮布里雅 & 阿莉娅 UP",
-    "stars": 5,
-    "character": "泰妮布里雅 & 阿莉娅",
-    "element": "热情",
-    "className": "奥义师 / 辅战员",
-    "type": "新角色",
-    "startDate": "2026-07-08",
-    "endDate": "2026-07-29",
-    "url": "",
-    "server": "CN"
-  },
-  {
-    "id": 4,
     "name": "友纪复刻",
     "stars": 5,
     "character": "友纪",
     "element": "热情",
     "className": "",
     "type": "复刻",
-    "startDate": "2026-07-22",
-    "endDate": "2026-08-12",
+    "startDate": "2026-07-24",
+    "endDate": "2026-08-14",
     "url": "",
-    "server": "CN"
+    "server": "Global"
   }
 ]
