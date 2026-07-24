@@ -89,7 +89,7 @@ fun HomeScreen(
 
     LaunchedEffect(Unit) {
         events = db.eventDao().getAllEventsSync()
-        currentBanners = db.bannerDao().getAllBannersSync().filter { it.endDate >= today }
+        currentBanners = db.bannerDao().getAllBannersSync().filter { it.endDate >= today && it.server == "Global" }
     }
 
     // Unified sorted events: active (asc by endDate) -> ended (desc by endDate)
@@ -236,9 +236,11 @@ fun HomeScreen(
             )
             LazyRow(
                 contentPadding = PaddingValues(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                modifier = Modifier.height(IntrinsicSize.Max)
             ) {
                 itemsIndexed(currentBanners.take(3)) { index, banner ->
+                    Column(Modifier.fillMaxHeight()) {
                     val endDate = try { dateFormat.parse(banner.endDate) } catch (_: Exception) { null }
                     val remainDays = if (endDate != null) ((endDate.time - System.currentTimeMillis()) / (1000 * 60 * 60 * 24) + 1).toInt() else -1
                     var visible by remember { mutableStateOf(false) }
@@ -262,6 +264,7 @@ fun HomeScreen(
                             onClick = onNavigateToBanners
                         )
                     }
+                    }
                 }
             }
             Spacer(Modifier.height(4.dp))
@@ -276,22 +279,33 @@ fun HomeScreen(
         )
         LazyRow(
             contentPadding = PaddingValues(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.height(IntrinsicSize.Max)
         ) {
             item {
+                Box(Modifier.fillMaxHeight()) {
                 QuickEntryCard("角色图鉴", "浏览全部战斗员资料", onClick = onNavigateToCharacterList, tint = MaterialTheme.colorScheme.primary)
+                }
             }
             item {
+                Box(Modifier.fillMaxHeight()) {
                 QuickEntryCard("当期活动", "活动倒计时与详情", onClick = onNavigateToEvents, tint = MaterialTheme.colorScheme.secondary)
+                }
             }
             item {
+                Box(Modifier.fillMaxHeight()) {
                 QuickEntryCard("卡池一览", "当期与往期卡池", onClick = onNavigateToBanners, tint = MaterialTheme.colorScheme.tertiary)
+                }
             }
             item {
+                Box(Modifier.fillMaxHeight()) {
                 QuickEntryCard("队伍构筑", "创建与管理我的队伍", onClick = onNavigateToTeams, tint = MaterialTheme.colorScheme.error.copy(alpha = 0.7f))
+                }
             }
             item {
+                Box(Modifier.fillMaxHeight()) {
                 QuickEntryCard("数据备份", "导入/导出本地数据", onClick = onNavigateToBackup, tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f))
+                }
             }
         }
 
@@ -370,10 +384,13 @@ fun HomeScreen(
         )
         LazyRow(
             contentPadding = PaddingValues(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.height(IntrinsicSize.Max)
         ) {
             items(t0Chars) { (id, name, role) ->
+                Box(Modifier.fillMaxHeight()) {
                 T0CharacterCard(name = name, role = role, onClick = { onNavigateToCharacter(id) })
+                }
             }
         }
 
@@ -383,7 +400,7 @@ fun HomeScreen(
         val historyBanners = remember { mutableStateListOf<BannerEntity>() }
         LaunchedEffect(Unit) {
             historyBanners.clear()
-            historyBanners.addAll(db.bannerDao().getAllBannersSync().filter { it.endDate < today }.take(2))
+            historyBanners.addAll(db.bannerDao().getAllBannersSync().filter { it.endDate < today && it.server == "Global" }.take(2))
         }
         if (historyBanners.isNotEmpty()) {
             Text(
@@ -394,9 +411,11 @@ fun HomeScreen(
             )
             LazyRow(
                 contentPadding = PaddingValues(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                modifier = Modifier.height(IntrinsicSize.Max)
             ) {
                 items(historyBanners.toList()) { banner ->
+                    Box(Modifier.fillMaxHeight()) {
                     Card(
                         modifier = Modifier.width(180.dp).clickable(onClick = onNavigateToBanners),
                         shape = RoundedCornerShape(12.dp),
@@ -413,9 +432,10 @@ fun HomeScreen(
                             if (banner.server.isNotEmpty()) Text(
                                 banner.server,
                                 style = MaterialTheme.typography.labelSmall,
-                                color = if (banner.server == "国际服") Color(0xFF4FC3F7) else Color(0xFFFF7043)
+                                color = if (banner.server == "Global") Color(0xFF4FC3F7) else Color(0xFFFF7043)
                             )
                         }
+                    }
                     }
                 }
             }
@@ -779,7 +799,7 @@ fun BannerCountdownCard(
                 Text(
                     server,
                     style = MaterialTheme.typography.labelSmall,
-                    color = if (server == "国际服") Color(0xFF4FC3F7) else Color(0xFFFF7043)
+                    color = if (server == "Global") Color(0xFF4FC3F7) else Color(0xFFFF7043)
                 )
             }
             Spacer(Modifier.height(8.dp))
