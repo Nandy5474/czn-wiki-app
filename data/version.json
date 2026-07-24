@@ -1,6 +1,6 @@
 {
-  "version": "2.0.41",
-  "version_code": 41,
+  "version": "2.0.42",
+  "version_code": 42,
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
@@ -8,7 +8,7 @@
   "events_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/events.json",
   "banners_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/banners.json",
   "update_date": "2026-07-24",
-  "changelog": "v2.0.41: 修正绯国际服卡池类型为首发; RemoteUpdateManager 完善 events/banners 远程更新支持",
+  "changelog": "v2.0.42: 修正绯(Global)卡池时间7/8-7/29; 友纪(国服)卡池时间7/22-8/12",
   "changes": [
     "新增绯(Fei)国际服 egoSkill 数据",
     "新增 events.json 活动数据(10条)",

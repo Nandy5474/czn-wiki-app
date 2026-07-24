@@ -7,8 +7,8 @@
     "element": "虚无",
     "className": "游侠",
     "type": "新角色",
-    "startDate": "2026-07-24",
-    "endDate": "2026-08-14",
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-29",
     "url": "",
     "server": "Global"
   },
@@ -17,12 +17,12 @@
     "name": "友纪复刻",
     "stars": 5,
     "character": "友纪",
-    "element": "热情",
-    "className": "",
+    "element": "秩序",
+    "className": "前锋",
     "type": "复刻",
-    "startDate": "2026-07-24",
-    "endDate": "2026-08-14",
+    "startDate": "2026-07-22",
+    "endDate": "2026-08-12",
     "url": "",
-    "server": "Global"
+    "server": "国服"
   }
 ]
