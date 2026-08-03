@@ -1,14 +1,14 @@
 {
-  "version": "2.0.43",
-  "version_code": 43,
+  "version": "2.0.47",
+  "version_code": 47,
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
   "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
   "events_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/events.json",
   "banners_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/banners.json",
-  "update_date": "2026-07-24",
-  "changelog": "v2.0.45: 回退绯卡池类型为新角色; 首页卡池显示修复&活动排序修正&UI动效增强",
+  "update_date": "2026-08-03",
+  "changelog": "v2.0.47: OTA管理后台 + RemoteUpdateManager静默检查/重试增强",
   "changes": [
     "新增绯(Fei)国际服 egoSkill 数据",
     "新增 events.json 活动数据(10条)",

@@ -201,6 +201,7 @@ fun HomeScreen(
                                 val result = updateManager.checkForUpdate { status ->
                                     updateStatusText = when (status) {
                                         is RemoteUpdateManager.UpdateStatus.Checking -> "正在检查版本..."
+                                        is RemoteUpdateManager.UpdateStatus.Progress -> "下载中 ${status.progress.filesDone}/${status.progress.totalFiles}"
                                         is RemoteUpdateManager.UpdateStatus.Downloading -> "正在下载${status.step}..."
                                         is RemoteUpdateManager.UpdateStatus.Done -> "更新完成"
                                         is RemoteUpdateManager.UpdateStatus.Error -> "更新失败: ${status.message}"

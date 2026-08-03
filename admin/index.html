@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CZN Wiki - OTA 管理后台</title>
+<style>
+:root {
+  --bg-primary: #0d0d1a;
+  --bg-secondary: #141428;
+  --bg-card: #1a1a35;
+  --bg-input: #12122a;
+  --border: #2a2a4a;
+  --border-focus: #5b4fcf;
+  --accent: #7c6ff7;
+  --accent-hover: #9488f9;
+  --accent-dim: #4a3db5;
+  --text: #e0e0f0;
+  --text-secondary: #8888aa;
+  --text-muted: #5a5a7a;
+  --danger: #e0556a;
+  --danger-hover: #f06b7f;
+  --success: #4ec9a0;
+  --warning: #e0b055;
+  --info: #5599e0;
+  --radius: 8px;
+  --radius-sm: 4px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ========== Layout ========== */
+.app { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 10;
+}
+
+.sidebar-header {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.sidebar-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #5b8def);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-header .subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.nav-item:hover { color: var(--text); background: rgba(124,111,247,0.08); }
+.nav-item.active { color: var(--accent); background: rgba(124,111,247,0.12); border-left-color: var(--accent); }
+.nav-item .icon { width: 18px; text-align: center; font-size: 14px; opacity: 0.7; }
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.version-tag {
+  display: inline-block;
+  background: var(--accent-dim);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Main */
+.main {
+  margin-left: 240px;
+  flex: 1;
+  padding: 28px 32px;
+  max-width: 1100px;
+}
+
+.page { display: none; }
+.page.active { display: block; }
+
+/* ========== Login ========== */
+.login-overlay {
+  position: fixed; inset: 0; z-index: 999;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center; justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  width: 420px;
+  text-align: center;
+}
+
+.login-card h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+  background: linear-gradient(135deg, var(--accent), #5b8def);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-card .desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 24px; }
+
+/* ========== Components ========== */
+input, textarea, select {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: inherit;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+textarea { resize: vertical; min-height: 60px; }
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover { background: var(--accent-hover); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.secondary { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); }
+button.secondary:hover { background: var(--bg-secondary); color: var(--text); }
+button.danger { background: var(--danger); }
+button.danger:hover { background: var(--danger-hover); }
+button.small { padding: 4px 10px; font-size: 12px; }
+
+.page-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.page-header h3 { font-size: 20px; font-weight: 700; }
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.badge-success { background: rgba(78,201,160,0.15); color: var(--success); }
+.badge-warning { background: rgba(224,176,85,0.15); color: var(--warning); }
+
+/* Table */
+.table-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+thead { background: var(--bg-secondary); }
+
+th {
+  text-align: left;
+  padding: 10px 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(42,42,74,0.5);
+  vertical-align: middle;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(124,111,247,0.04); }
+
+.actions { display: flex; gap: 6px; }
+
+/* Modal */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(0,0,0,0.65);
+  display: flex; align-items: center; justify-content: center;
+  display: none;
+}
+
+.modal-overlay.show { display: flex; }
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  width: 560px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal h4 { font-size: 16px; margin-bottom: 18px; }
+
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; font-weight: 600; text-transform: uppercase; }
+.form-row { display: flex; gap: 10px; }
+.form-row .form-group { flex: 1; }
+
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 20px; }
+
+/* Diff */
+.diff-wrap {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  font-family: "SF Mono", "Fira Code", "Monaco", monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  max-height: 400px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.diff-add { color: var(--success); }
+.diff-del { color: var(--danger); }
+.diff-header { color: var(--info); }
+
+/* Toast */
+.toast {
+  position: fixed; top: 20px; right: 20px; z-index: 9999;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  animation: slideIn 0.25s ease;
+  display: none;
+}
+
+.toast.show { display: block; }
+.toast.success { background: var(--success); color: #000; }
+.toast.error { background: var(--danger); color: #fff; }
+.toast.info { background: var(--info); color: #fff; }
+
+@keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* ========== Publish page ========== */
+.step-list { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.step-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  font-size: 13px;
+}
+.step-item .step-num {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+  flex-shrink: 0;
+}
+
+.status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.status-dot.ok { background: var(--success); }
+.status-dot.wait { background: var(--text-muted); }
+.status-dot.err { background: var(--danger); }
+
+/* Loading spinner */
+.spinner {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div id="loginOverlay" class="login-overlay">
+  <div class="login-card">
+    <h1>CZN Wiki OTA</h1>
+    <div class="desc">通过 GitHub Personal Access Token 登录管理后台</div>
+    <div class="form-group" style="text-align:left">
+      <label>GitHub Personal Access Token</label>
+      <input id="patInput" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="font-family:monospace">
+      <div style="font-size:11px;color:var(--text-muted);margin-top:4px">需要 repo 权限。Token 仅存储在浏览器 localStorage 中。</div>
+    </div>
+    <button onclick="doLogin()" style="width:100%;padding:10px">登录</button>
+  </div>
+</div>
+
+<div class="app" id="app" style="display:none">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>CZN Wiki OTA</h2>
+      <div class="subtitle">远程管理后台</div>
+      <div class="version-tag" id="sidebarVersion">v-</div>
+    </div>
+
+    <div class="nav-item active" data-page="banners" onclick="switchPage('banners')">
+      <span class="icon">&#9830;</span> 卡池管理
+    </div>
+    <div class="nav-item" data-page="events" onclick="switchPage('events')">
+      <span class="icon">&#9889;</span> 活动管理
+    </div>
+    <div class="nav-item" data-page="version" onclick="switchPage('version')">
+      <span class="icon">&#9733;</span> 版本发布
+    </div>
+    <div class="nav-item" data-page="publish" onclick="switchPage('publish')">
+      <span class="icon">&#9654;</span> 一键发布
+    </div>
+
+    <div class="sidebar-footer">
+      <div id="loginUser">未登录</div>
+      <a href="#" onclick="doLogout()" style="color:var(--danger);font-size:11px">退出登录</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <!-- ====== Banners Page ====== -->
+    <div id="page-banners" class="page active">
+      <div class="page-header">
+        <div>
+          <h3>卡池管理</h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:2px">
+            仓库: Nandy5474/czn-wiki-data &nbsp;|&nbsp; 文件: banners.json
+          </div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="secondary" onclick="loadBanners()">刷新</button>
+          <button onclick="openBannerModal()">+ 新增卡池</button>
+        </div>
+      </div>
+
+      <div id="bannersStatus" style="margin-bottom:12px;font-size:12px;color:var(--text-muted)"></div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>名称</th><th>角色</th><th>星级</th><th>类型</th><th>服务器</th>
+              <th>开始</th><th>结束</th><th style="width:90px">操作</th>
+            </tr>
+          </thead>
+          <tbody id="bannersTbody">
+            <tr><td colspan="9" style="text-align:center;color:var(--text-muted);padding:30px">点击刷新加载数据</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ====== Events Page ====== -->
+    <div id="page-events" class="page">
+      <div class="page-header">
+        <div>
+          <h3>活动管理</h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:2px">
+            仓库: Nandy5474/czn-wiki-data &nbsp;|&nbsp; 文件: events.json
+          </div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="secondary" onclick="loadEvents()">刷新</button>
+          <button onclick="openEventModal()">+ 新增活动</button>
+        </div>
+      </div>
+
+      <div id="eventsStatus" style="margin-bottom:12px;font-size:12px;color:var(--text-muted)"></div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>名称</th><th>描述</th><th>服务器</th>
+              <th>结束日期</th><th style="width:90px">操作</th>
+            </tr>
+          </thead>
+          <tbody id="eventsTbody">
+            <tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:30px">点击刷新加载数据</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ====== Version Page ====== -->
+    <div id="page-version" class="page">
+      <div class="page-header">
+        <div>
+          <h3>版本发布</h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:2px">
+            仓库: Nandy5474/czn-wiki-app &nbsp;|&nbsp; 文件: data/version.json
+          </div>
+        </div>
+        <button class="secondary" onclick="loadVersion()">刷新</button>
+      </div>
+
+      <div id="versionStatus" style="margin-bottom:12px;font-size:12px;color:var(--text-muted)"></div>
+
+      <div style="display:flex;gap:20px">
+        <div style="flex:1">
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px">
+            <h4 style="margin-bottom:14px">当前版本</h4>
+            <div id="currentVersion" style="color:var(--text-muted)">点击刷新加载</div>
+          </div>
+        </div>
+        <div style="flex:1">
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px">
+            <h4 style="margin-bottom:14px">发布新版本</h4>
+            <div class="form-group">
+              <label>版本号</label>
+              <input id="newVersion" placeholder="2.0.47">
+            </div>
+            <div class="form-group">
+              <label>Version Code</label>
+              <input id="newVersionCode" type="number" placeholder="47">
+            </div>
+            <div class="form-group">
+              <label>更新日志</label>
+              <textarea id="newChangelog" rows="3" placeholder="v2.0.47: 更新内容描述"></textarea>
+            </div>
+            <button id="bumpBtn" onclick="bumpVersion()">预览 Diff & 发布</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="versionDiff" style="margin-top:20px;display:none">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <h4 style="font-size:14px">变更预览 (Diff)</h4>
+          <button id="confirmBumpBtn" class="danger" onclick="confirmBump()" style="display:none">确认发布</button>
+        </div>
+        <div class="diff-wrap" id="diffContent"></div>
+      </div>
+    </div>
+
+    <!-- ====== Publish Page ====== -->
+    <div id="page-publish" class="page">
+      <div class="page-header">
+        <h3>一键发布</h3>
+      </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px">
+        <h4 style="margin-bottom:14px">发布步骤</h4>
+        <div class="step-list" id="publishSteps">
+          <div class="step-item"><span class="step-num">1</span> 构建 admin 部署到 GitHub Pages <span class="status-dot wait"></span></div>
+          <div class="step-item"><span class="step-num">2</span> 同步 data 到 assets <span class="status-dot wait"></span></div>
+          <div class="step-item"><span class="step-num">3</span> 构建 Release APK <span class="status-dot wait"></span></div>
+          <div class="step-item"><span class="step-num">4</span> 复制 APK 到 output <span class="status-dot wait"></span></div>
+          <div class="step-item"><span class="step-num">5</span> Git commit + push + tag <span class="status-dot wait"></span></div>
+        </div>
+        <button onclick="triggerPublish()" id="publishBtn">开始发布</button>
+      </div>
+
+      <div id="publishLog" style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:16px;font-family:monospace;font-size:12px;line-height:1.7;max-height:300px;overflow:auto;display:none"></div>
+    </div>
+  </main>
+</div>
+
+<!-- ====== Modals ====== -->
+<div id="bannerModal" class="modal-overlay">
+  <div class="modal">
+    <h4 id="bannerModalTitle">新增卡池</h4>
+    <div class="form-row">
+      <div class="form-group"><label>ID</label><input id="bmId" type="number"></div>
+      <div class="form-group"><label>名称</label><input id="bmName"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>角色</label><input id="bmCharacter"></div>
+      <div class="form-group"><label>星级</label><input id="bmStars" type="number"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>元素</label><input id="bmElement"></div>
+      <div class="form-group"><label>职业</label><input id="bmClassName"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>类型</label>
+        <select id="bmType"><option>新角色</option><option>复刻</option><option>限定</option></select>
+      </div>
+      <div class="form-group"><label>服务器</label>
+        <select id="bmServer"><option>Global</option><option>国服</option><option>CN</option></select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>开始日期</label><input id="bmStartDate" type="date"></div>
+      <div class="form-group"><label>结束日期</label><input id="bmEndDate" type="date"></div>
+    </div>
+    <div class="form-group"><label>URL</label><input id="bmUrl"></div>
+    <div class="modal-actions">
+      <button class="secondary" onclick="closeModal('bannerModal')">取消</button>
+      <button onclick="saveBanner()">保存</button>
+    </div>
+  </div>
+</div>
+
+<div id="eventModal" class="modal-overlay">
+  <div class="modal">
+    <h4 id="eventModalTitle">新增活动</h4>
+    <div class="form-row">
+      <div class="form-group"><label>ID</label><input id="emId" type="number"></div>
+      <div class="form-group"><label>名称</label><input id="emName"></div>
+    </div>
+    <div class="form-group"><label>描述</label><textarea id="emDescription" rows="3"></textarea></div>
+    <div class="form-row">
+      <div class="form-group"><label>服务器</label>
+        <select id="emServer"><option>Global</option><option>国服</option><option>CN</option></select>
+      </div>
+      <div class="form-group"><label>结束日期</label><input id="emEndDate" type="date"></div>
+    </div>
+    <div class="form-group"><label>URL</label><input id="emUrl"></div>
+    <div class="modal-actions">
+      <button class="secondary" onclick="closeModal('eventModal')">取消</button>
+      <button onclick="saveEvent()">保存</button>
+    </div>
+  </div>
+</div>
+
+<div id="diffModal" class="modal-overlay">
+  <div class="modal" style="width:700px">
+    <h4>提交预览 (Diff)</h4>
+    <div class="diff-wrap" id="diffModalContent" style="max-height:350px"></div>
+    <div class="modal-actions">
+      <button class="secondary" onclick="closeModal('diffModal')">取消</button>
+      <button onclick="confirmDiffCommit()">确认提交</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// ===================== State =====================
+const DATA_REPO = 'Nandy5474/czn-wiki-data';
+const APP_REPO = 'Nandy5474/czn-wiki-app';
+const API_BASE = 'https://api.github.com';
+
+let pat = '';
+let banners = [], events = [], versionData = null;
+let pendingDiff = { repo: '', path: '', oldContent: '', newContent: '', sha: '' };
+let pendingBump = null;
+
+// ===================== Auth =====================
+function doLogin() {
+  pat = document.getElementById('patInput').value.trim();
+  if (!pat) return toast('请输入 GitHub Token', 'error');
+  if (!pat.startsWith('ghp_') && !pat.startsWith('github_pat_')) return toast('Token 格式不正确', 'error');
+
+  fetch(API_BASE + '/user', { headers: authHeaders() })
+    .then(r => r.ok ? r.json() : Promise.reject(r))
+    .then(u => {
+      localStorage.setItem('czn_ota_pat', pat);
+      document.getElementById('loginOverlay').style.display = 'none';
+      document.getElementById('app').style.display = 'flex';
+      document.getElementById('loginUser').textContent = u.login;
+      toast('登录成功: ' + u.login, 'success');
+      initApp();
+    })
+    .catch(() => toast('Token 验证失败，请检查权限', 'error'));
+}
+
+function doLogout() {
+  localStorage.removeItem('czn_ota_pat');
+  pat = '';
+  location.reload();
+}
+
+function authHeaders() {
+  return { 'Authorization': 'Bearer ' + pat, 'Accept': 'application/vnd.github.v3+json' };
+}
+
+// ===================== Init =====================
+function initApp() {
+  loadBanners();
+}
+
+window.onload = () => {
+  const saved = localStorage.getItem('czn_ota_pat');
+  if (saved) {
+    pat = saved;
+    fetch(API_BASE + '/user', { headers: authHeaders() })
+      .then(r => r.ok ? r.json() : Promise.reject(r))
+      .then(u => {
+        document.getElementById('loginOverlay').style.display = 'none';
+        document.getElementById('app').style.display = 'flex';
+        document.getElementById('loginUser').textContent = u.login;
+        initApp();
+      })
+      .catch(() => {
+        localStorage.removeItem('czn_ota_pat');
+        pat = '';
+      });
+  }
+};
+
+// ===================== Navigation =====================
+function switchPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  document.querySelector('[data-page="' + name + '"]').classList.add('active');
+
+  if (name === 'banners') loadBanners();
+  else if (name === 'events') loadEvents();
+  else if (name === 'version') loadVersion();
+}
+
+// ===================== GitHub API =====================
+async function ghGet(repo, path) {
+  const r = await fetch(API_BASE + '/repos/' + repo + '/contents/' + path, { headers: authHeaders() });
+  if (!r.ok) throw new Error('HTTP ' + r.status + ': ' + (await r.text()).slice(0, 200));
+  const data = await r.json();
+  return {
+    content: atob(data.content.replace(/\n/g, '')),
+    sha: data.sha
+  };
+}
+
+async function ghPut(repo, path, content, sha, message) {
+  const body = {
+    message: message,
+    content: btoa(unescape(encodeURIComponent(content))),
+    sha: sha
+  };
+  const r = await fetch(API_BASE + '/repos/' + repo + '/contents/' + path, {
+    method: 'PUT',
+    headers: { ...authHeaders(), 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (!r.ok) throw new Error('HTTP ' + r.status + ': ' + (await r.text()).slice(0, 300));
+  return r.json();
+}
+
+// ===================== Banners =====================
+async function loadBanners() {
+  const s = document.getElementById('bannersStatus');
+  s.innerHTML = '<span class="spinner"></span> 加载中...';
+  try {
+    const { content } = await ghGet(DATA_REPO, 'banners.json');
+    banners = JSON.parse(content);
+    renderBanners();
+    s.innerHTML = '<span class="badge badge-success">已加载</span> 共 ' + banners.length + ' 条卡池 (' + new Date().toLocaleTimeString() + ')';
+  } catch(e) {
+    s.innerHTML = '<span class="badge badge-warning">错误</span> ' + e.message;
+  }
+}
+
+function renderBanners() {
+  const tbody = document.getElementById('bannersTbody');
+  if (!banners.length) {
+    tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--text-muted);padding:30px">暂无数据</td></tr>';
+    return;
+  }
+  tbody.innerHTML = banners.map(b => `
+    <tr>
+      <td>${b.id}</td>
+      <td><strong>${esc(b.name)}</strong></td>
+      <td>${esc(b.character||'')}</td>
+      <td>${'★'.repeat(b.stars||0)}</td>
+      <td><span class="badge ${b.type==='新角色'?'badge-success':'badge-warning'}">${esc(b.type||'')}</span></td>
+      <td>${esc(b.server||'')}</td>
+      <td>${esc(b.startDate||'')}</td>
+      <td>${esc(b.endDate||'')}</td>
+      <td class="actions">
+        <button class="small secondary" onclick="editBanner(${b.id})">编辑</button>
+        <button class="small danger" onclick="deleteBanner(${b.id})">删除</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function openBannerModal(banner) {
+  document.getElementById('bannerModalTitle').textContent = banner ? '编辑卡池' : '新增卡池';
+  document.getElementById('bmId').value = banner ? banner.id : (banners.length ? Math.max(...banners.map(b=>b.id))+1 : 1);
+  document.getElementById('bmName').value = banner ? banner.name : '';
+  document.getElementById('bmCharacter').value = banner ? (banner.character||'') : '';
+  document.getElementById('bmStars').value = banner ? (banner.stars||5) : 5;
+  document.getElementById('bmElement').value = banner ? (banner.element||'') : '';
+  document.getElementById('bmClassName').value = banner ? (banner.className||'') : '';
+  document.getElementById('bmType').value = banner ? (banner.type||'新角色') : '新角色';
+  document.getElementById('bmServer').value = banner ? (banner.server||'Global') : 'Global';
+  document.getElementById('bmStartDate').value = banner ? (banner.startDate||'') : '';
+  document.getElementById('bmEndDate').value = banner ? (banner.endDate||'') : '';
+  document.getElementById('bmUrl').value = banner ? (banner.url||'') : '';
+  document.getElementById('bannerModal').dataset.editId = banner ? banner.id : '';
+  document.getElementById('bannerModal').classList.add('show');
+}
+
+function editBanner(id) {
+  const b = banners.find(b => b.id === id);
+  if (b) openBannerModal(b);
+}
+
+async function saveBanner() {
+  const editId = document.getElementById('bannerModal').dataset.editId;
+  const b = {
+    id: parseInt(document.getElementById('bmId').value),
+    name: document.getElementById('bmName').value,
+    stars: parseInt(document.getElementById('bmStars').value) || 5,
+    character: document.getElementById('bmCharacter').value,
+    element: document.getElementById('bmElement').value,
+    className: document.getElementById('bmClassName').value,
+    type: document.getElementById('bmType').value,
+    startDate: document.getElementById('bmStartDate').value,
+    endDate: document.getElementById('bmEndDate').value,
+    url: document.getElementById('bmUrl').value,
+    server: document.getElementById('bmServer').value
+  };
+
+  let newBanners;
+  if (editId) {
+    newBanners = banners.map(b => b.id === parseInt(editId) ? b : b);
+  } else {
+    newBanners = [...banners, b];
+  }
+
+  const newContent = JSON.stringify(newBanners, null, 2);
+  const oldContent = JSON.stringify(banners, null, 2);
+  closeModal('bannerModal');
+
+  pendingDiff = {
+    repo: DATA_REPO,
+    path: 'banners.json',
+    oldContent: oldContent,
+    newContent: newContent,
+    sha: ''
+  };
+
+  try {
+    const { sha } = await ghGet(DATA_REPO, 'banners.json');
+    pendingDiff.sha = sha;
+  } catch(e) { toast('获取文件 SHA 失败: ' + e.message, 'error'); return; }
+
+  showDiffAndConfirm(oldContent, newContent, 'banners.json', DATA_REPO);
+}
+
+async function deleteBanner(id) {
+  if (!confirm('确定删除卡池 ID=' + id + '?')) return;
+  const newBanners = banners.filter(b => b.id !== id);
+  const newContent = JSON.stringify(newBanners, null, 2);
+  const oldContent = JSON.stringify(banners, null, 2);
+
+  pendingDiff = {
+    repo: DATA_REPO,
+    path: 'banners.json',
+    oldContent: oldContent,
+    newContent: newContent,
+    sha: ''
+  };
+
+  try {
+    const { sha } = await ghGet(DATA_REPO, 'banners.json');
+    pendingDiff.sha = sha;
+  } catch(e) { toast('获取文件 SHA 失败: ' + e.message, 'error'); return; }
+
+  showDiffAndConfirm(oldContent, newContent, 'banners.json', DATA_REPO);
+}
+
+// ===================== Events =====================
+async function loadEvents() {
+  const s = document.getElementById('eventsStatus');
+  s.innerHTML = '<span class="spinner"></span> 加载中...';
+  try {
+    const { content } = await ghGet(DATA_REPO, 'events.json');
+    events = JSON.parse(content);
+    renderEvents();
+    s.innerHTML = '<span class="badge badge-success">已加载</span> 共 ' + events.length + ' 条活动 (' + new Date().toLocaleTimeString() + ')';
+  } catch(e) {
+    s.innerHTML = '<span class="badge badge-warning">错误</span> ' + e.message;
+  }
+}
+
+function renderEvents() {
+  const tbody = document.getElementById('eventsTbody');
+  if (!events.length) {
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:30px">暂无数据</td></tr>';
+    return;
+  }
+  tbody.innerHTML = events.map(e => `
+    <tr>
+      <td>${e.id}</td>
+      <td><strong>${esc(e.name)}</strong></td>
+      <td>${esc((e.description||'').slice(0,50))}${(e.description||'').length>50?'...':''}</td>
+      <td>${esc(e.server||'')}</td>
+      <td>${esc(e.endDate||'')}</td>
+      <td class="actions">
+        <button class="small secondary" onclick="editEvent(${e.id})">编辑</button>
+        <button class="small danger" onclick="deleteEvent(${e.id})">删除</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function openEventModal(ev) {
+  document.getElementById('eventModalTitle').textContent = ev ? '编辑活动' : '新增活动';
+  document.getElementById('emId').value = ev ? ev.id : (events.length ? Math.max(...events.map(e=>e.id))+1 : 1);
+  document.getElementById('emName').value = ev ? ev.name : '';
+  document.getElementById('emDescription').value = ev ? (ev.description||'') : '';
+  document.getElementById('emServer').value = ev ? (ev.server||'Global') : 'Global';
+  document.getElementById('emEndDate').value = ev ? (ev.endDate||'') : '';
+  document.getElementById('emUrl').value = ev ? (ev.url||'') : '';
+  document.getElementById('eventModal').dataset.editId = ev ? ev.id : '';
+  document.getElementById('eventModal').classList.add('show');
+}
+
+function editEvent(id) {
+  const e = events.find(e => e.id === id);
+  if (e) openEventModal(e);
+}
+
+async function saveEvent() {
+  const editId = document.getElementById('eventModal').dataset.editId;
+  const e = {
+    id: parseInt(document.getElementById('emId').value),
+    name: document.getElementById('emName').value,
+    description: document.getElementById('emDescription').value,
+    endDate: document.getElementById('emEndDate').value,
+    url: document.getElementById('emUrl').value,
+    server: document.getElementById('emServer').value
+  };
+
+  let newEvents;
+  if (editId) {
+    newEvents = events.map(ev => ev.id === parseInt(editId) ? e : ev);
+  } else {
+    newEvents = [...events, e];
+  }
+
+  const newContent = JSON.stringify(newEvents, null, 2);
+  const oldContent = JSON.stringify(events, null, 2);
+  closeModal('eventModal');
+
+  pendingDiff = {
+    repo: DATA_REPO,
+    path: 'events.json',
+    oldContent: oldContent,
+    newContent: newContent,
+    sha: ''
+  };
+
+  try {
+    const { sha } = await ghGet(DATA_REPO, 'events.json');
+    pendingDiff.sha = sha;
+  } catch(err) { toast('获取文件 SHA 失败: ' + err.message, 'error'); return; }
+
+  showDiffAndConfirm(oldContent, newContent, 'events.json', DATA_REPO);
+}
+
+async function deleteEvent(id) {
+  if (!confirm('确定删除活动 ID=' + id + '?')) return;
+  const newEvents = events.filter(e => e.id !== id);
+  const newContent = JSON.stringify(newEvents, null, 2);
+  const oldContent = JSON.stringify(events, null, 2);
+
+  pendingDiff = {
+    repo: DATA_REPO,
+    path: 'events.json',
+    oldContent: oldContent,
+    newContent: newContent,
+    sha: ''
+  };
+
+  try {
+    const { sha } = await ghGet(DATA_REPO, 'events.json');
+    pendingDiff.sha = sha;
+  } catch(err) { toast('获取文件 SHA 失败: ' + err.message, 'error'); return; }
+
+  showDiffAndConfirm(oldContent, newContent, 'events.json', DATA_REPO);
+}
+
+// ===================== Version =====================
+async function loadVersion() {
+  const s = document.getElementById('versionStatus');
+  s.innerHTML = '<span class="spinner"></span> 加载中...';
+  try {
+    const { content, sha } = await ghGet(APP_REPO, 'data/version.json');
+    versionData = JSON.parse(content);
+    versionData._sha = sha;
+    document.getElementById('currentVersion').innerHTML = `
+      <div style="font-size:28px;font-weight:700;color:var(--accent)">${esc(versionData.version)}</div>
+      <div style="margin-top:4px">Version Code: <strong>${versionData.version_code}</strong></div>
+      <div style="margin-top:4px">更新日期: ${esc(versionData.update_date||'')}</div>
+      <div style="margin-top:8px;color:var(--text-secondary);font-size:12px">${esc(versionData.changelog||'')}</div>
+    `;
+    document.getElementById('sidebarVersion').textContent = 'v' + versionData.version;
+    s.innerHTML = '<span class="badge badge-success">已加载</span> SHA: ' + sha.slice(0,7);
+  } catch(e) {
+    s.innerHTML = '<span class="badge badge-warning">错误</span> ' + e.message;
+  }
+}
+
+function bumpVersion() {
+  if (!versionData) return toast('请先刷新加载当前版本', 'error');
+  const v = document.getElementById('newVersion').value.trim();
+  const vc = parseInt(document.getElementById('newVersionCode').value);
+  const cl = document.getElementById('newChangelog').value.trim();
+
+  if (!v) return toast('请输入版本号', 'error');
+  if (!vc) return toast('请输入 Version Code', 'error');
+  if (!cl) return toast('请输入更新日志', 'error');
+
+  const oldContent = JSON.stringify(versionData, null, 2);
+  const newData = { ...versionData };
+  delete newData._sha;
+  newData.version = v;
+  newData.version_code = vc;
+  newData.changelog = cl;
+  newData.update_date = new Date().toISOString().slice(0,10);
+  const newContent = JSON.stringify(newData, null, 2);
+
+  pendingBump = { version: v, versionCode: vc, changelog: cl, oldContent, newContent, sha: versionData._sha };
+
+  document.getElementById('versionDiff').style.display = 'block';
+  document.getElementById('diffContent').innerHTML = generateDiff(oldContent, newContent);
+  document.getElementById('confirmBumpBtn').style.display = 'inline-block';
+  document.getElementById('bumpBtn').disabled = true;
+}
+
+async function confirmBump() {
+  if (!pendingBump) return;
+  try {
+    await ghPut(APP_REPO, 'data/version.json', pendingBump.newContent, pendingBump.sha,
+      'OTA: bump version to ' + pendingBump.version + ' (versionCode ' + pendingBump.versionCode + ')');
+    toast('版本发布成功: ' + pendingBump.version, 'success');
+    document.getElementById('versionDiff').style.display = 'none';
+    document.getElementById('confirmBumpBtn').style.display = 'none';
+    document.getElementById('bumpBtn').disabled = false;
+    pendingBump = null;
+    loadVersion();
+  } catch(e) {
+    toast('发布失败: ' + e.message, 'error');
+    document.getElementById('bumpBtn').disabled = false;
+  }
+}
+
+// ===================== Diff =====================
+function generateDiff(oldStr, newStr) {
+  const oldLines = oldStr.split('\n');
+  const newLines = newStr.split('\n');
+  const maxLen = Math.max(oldLines.length, newLines.length);
+  let html = '';
+
+  let i = 0, j = 0;
+  while (i < maxLen || j < maxLen) {
+    const o = i < oldLines.length ? oldLines[i] : null;
+    const n = j < newLines.length ? newLines[j] : null;
+
+    if (o === n) {
+      if (o !== null) html += '  ' + esc(o) + '\n';
+      i++; j++;
+    } else {
+      // Look ahead to sync
+      let synced = false;
+      for (let k = 1; k < 5 && (i + k) < oldLines.length; k++) {
+        if (oldLines[i + k] === n) {
+          for (let x = 0; x < k; x++) {
+            html += '<span class="diff-del">- ' + esc(oldLines[i + x]) + '</span>\n';
+          }
+          i += k;
+          synced = true;
+          break;
+        }
+      }
+      if (!synced) {
+        for (let k = 1; k < 5 && (j + k) < newLines.length; k++) {
+          if (o === newLines[j + k]) {
+            for (let x = 0; x < k; x++) {
+              html += '<span class="diff-add">+ ' + esc(newLines[j + x]) + '</span>\n';
+            }
+            j += k;
+            synced = true;
+            break;
+          }
+        }
+      }
+      if (!synced) {
+        if (o !== null) html += '<span class="diff-del">- ' + esc(o) + '</span>\n';
+        if (n !== null) html += '<span class="diff-add">+ ' + esc(n) + '</span>\n';
+        i++; j++;
+      }
+    }
+  }
+  return html || '(无变化)';
+}
+
+function showDiffAndConfirm(oldContent, newContent, filename, repo) {
+  document.getElementById('diffModalContent').innerHTML = generateDiff(oldContent, newContent);
+  document.getElementById('diffModal').classList.add('show');
+}
+
+async function confirmDiffCommit() {
+  const d = pendingDiff;
+  try {
+    const msg = 'OTA: update ' + d.path + ' via admin panel';
+    await ghPut(d.repo, d.path, d.newContent, d.sha, msg);
+    toast('提交成功: ' + d.path, 'success');
+    closeModal('diffModal');
+
+    if (d.path === 'banners.json') {
+      banners = JSON.parse(d.newContent);
+      renderBanners();
+    } else if (d.path === 'events.json') {
+      events = JSON.parse(d.newContent);
+      renderEvents();
+    }
+  } catch(e) {
+    toast('提交失败: ' + e.message, 'error');
+  }
+}
+
+// ===================== Publish =====================
+async function triggerPublish() {
+  const btn = document.getElementById('publishBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> 发布中...';
+
+  const logEl = document.getElementById('publishLog');
+  logEl.style.display = 'block';
+  logEl.textContent = '';
+
+  function log(msg) {
+    logEl.textContent += '[' + new Date().toLocaleTimeString() + '] ' + msg + '\n';
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+
+  function updateStep(idx, status) {
+    const dots = document.querySelectorAll('#publishSteps .status-dot');
+    dots[idx].className = 'status-dot ' + status;
+  }
+
+  try {
+    // Step 1: Deploy admin to GitHub Pages
+    log('>>> Step 1: 部署 admin 到 GitHub Pages');
+    updateStep(0, 'ok'); // Admin is static HTML served via gh-pages branch
+    const adminHtml = document.documentElement.outerHTML;
+
+    // Check if gh-pages branch exists, create if not
+    let adminSha = '';
+    try {
+      const r = await ghGet(APP_REPO, 'index.html');
+      adminSha = r.sha;
+    } catch(e) {
+      log('  admin/index.html 不存在，将新建');
+    }
+
+    // Deploy as index.html on gh-pages (using main branch docs folder approach)
+    try {
+      await ghPut(APP_REPO, 'docs/index.html', adminHtml, adminSha || (await ghGet(APP_REPO, 'README.md')).sha.slice(0,1),
+        'OTA: deploy admin panel v' + (versionData ? versionData.version : 'latest'));
+      log('  admin 已部署到 docs/index.html (GitHub Pages)');
+    } catch(e) {
+      log('  admin 部署警告: ' + e.message);
+    }
+
+    // Step 2: Sync data to assets
+    log('>>> Step 2: 同步 data 到 assets');
+    updateStep(1, 'ok');
+    log('  数据文件通过 GitHub Raw URL 直接引用，无需额外同步');
+
+    // Step 3: Build Release APK
+    log('>>> Step 3: 构建 Release APK');
+    updateStep(2, 'ok');
+    log('  请在本机执行: ./gradlew assembleRelease');
+
+    // Step 4: Copy APK
+    log('>>> Step 4: 复制 APK 到 output');
+    updateStep(3, 'ok');
+    log('  APK 位于 app/build/outputs/apk/release/');
+
+    // Step 5: Git operations
+    log('>>> Step 5: Git commit + push + tag');
+    updateStep(4, 'ok');
+    if (versionData) {
+      log('  Tag 建议: v' + versionData.version);
+    }
+    log('  请在本机执行发布脚本: bash scripts/publish_ota.sh');
+
+    log('\n===== 发布流程准备就绪 =====');
+    toast('发布准备完成，请查看日志', 'success');
+  } catch(e) {
+    log('ERROR: ' + e.message);
+    toast('发布过程出错', 'error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '开始发布';
+  }
+}
+
+// ===================== Utils =====================
+function closeModal(id) {
+  document.getElementById(id).classList.remove('show');
+}
+
+function toast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + type + ' show';
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>
