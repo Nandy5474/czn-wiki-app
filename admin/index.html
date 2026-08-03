@@ -378,6 +378,9 @@ tr:hover td { background: rgba(124,111,247,0.04); }
     <div class="nav-item" data-page="events" onclick="switchPage('events')">
       <span class="icon">&#9889;</span> 活动管理
     </div>
+    <div class="nav-item" data-page="characters" onclick="switchPage('characters')">
+      <span class="icon">&#9734;</span> 角色管理
+    </div>
     <div class="nav-item" data-page="version" onclick="switchPage('version')">
       <span class="icon">&#9733;</span> 版本发布
     </div>
@@ -451,6 +454,43 @@ tr:hover td { background: rgba(124,111,247,0.04); }
           </thead>
           <tbody id="eventsTbody">
             <tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:30px">点击刷新加载数据</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ====== Characters Page ====== -->
+    <div id="page-characters" class="page">
+      <div class="page-header">
+        <div>
+          <h3>角色管理</h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:2px">
+            仓库: Nandy5474/czn-wiki-app &nbsp;|&nbsp; 文件: data/characters.json &nbsp;|&nbsp;
+            <span style="color:var(--accent)">本地/远程双源读取</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <select id="charSource" style="width:auto" onchange="onCharSourceChange()">
+            <option value="github">GitHub 远程</option>
+            <option value="local">本地文件</option>
+          </select>
+          <button class="secondary" onclick="loadCharacters()">刷新</button>
+          <button onclick="openCharacterModal()">+ 新增角色</button>
+          <input type="file" id="localCharFileInput" accept=".json" style="display:none" onchange="handleLocalCharFile(event)">
+        </div>
+      </div>
+
+      <div id="charactersStatus" style="margin-bottom:12px;font-size:12px;color:var(--text-muted)"></div>
+
+      <div class="table-wrap" style="overflow-x:auto">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>名称</th><th>稀有度</th><th>元素</th><th>职业</th><th>阵营</th><th>武器</th><th style="width:90px">操作</th>
+            </tr>
+          </thead>
+          <tbody id="charactersTbody">
+            <tr><td colspan="8" style="text-align:center;color:var(--text-muted);padding:30px">点击刷新加载数据</td></tr>
           </tbody>
         </table>
       </div>
@@ -587,6 +627,42 @@ tr:hover td { background: rgba(124,111,247,0.04); }
   </div>
 </div>
 
+<div id="characterModal" class="modal-overlay">
+  <div class="modal" style="width:640px">
+    <h4 id="characterModalTitle">新增角色</h4>
+    <div class="form-row">
+      <div class="form-group"><label>ID</label><input id="cmId" type="number"></div>
+      <div class="form-group"><label>名称</label><input id="cmName"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>稀有度 (rarity)</label><input id="cmRarity"></div>
+      <div class="form-group"><label>元素 (element)</label><input id="cmElement"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>职业 (className)</label><input id="cmClassName"></div>
+      <div class="form-group"><label>定位 (role)</label><input id="cmRole"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>武器 (weapon)</label><input id="cmWeapon"></div>
+      <div class="form-group"><label>阵营 (faction)</label><input id="cmFaction"></div>
+    </div>
+    <div class="form-group"><label>描述 (description)</label><textarea id="cmDescription" rows="2"></textarea></div>
+    <div class="form-row">
+      <div class="form-group"><label>图片 URL (imageUrl)</label><input id="cmImageUrl"></div>
+      <div class="form-group"><label>缩略图 URL (thumbUrl)</label><input id="cmThumbUrl"></div>
+    </div>
+    <div class="form-group"><label>技能名称 (skill_name)</label><input id="cmSkillName"></div>
+    <div class="form-group"><label>技能描述 (skill_desc)</label><textarea id="cmSkillDesc" rows="2"></textarea></div>
+    <div class="form-group"><label>大招名称 (ego_skill_name)</label><input id="cmEgoSkillName"></div>
+    <div class="form-group"><label>大招描述 (ego_skill_desc)</label><textarea id="cmEgoSkillDesc" rows="2"></textarea></div>
+    <div class="form-group"><label>大招消耗 (ego_skill_cost)</label><input id="cmEgoSkillCost" type="number"></div>
+    <div class="modal-actions">
+      <button class="secondary" onclick="closeModal('characterModal')">取消</button>
+      <button onclick="saveCharacter()">保存</button>
+    </div>
+  </div>
+</div>
+
 <div id="diffModal" class="modal-overlay">
   <div class="modal" style="width:700px">
     <h4>提交预览 (Diff)</h4>
@@ -607,7 +683,7 @@ const APP_REPO = 'Nandy5474/czn-wiki-app';
 const API_BASE = 'https://api.github.com';
 
 let pat = '';
-let banners = [], events = [], versionData = null;
+let banners = [], events = [], characters = [], versionData = null;
 let pendingDiff = { repo: '', path: '', oldContent: '', newContent: '', sha: '' };
 let pendingBump = null;
 
@@ -673,6 +749,7 @@ function switchPage(name) {
 
   if (name === 'banners') loadBanners();
   else if (name === 'events') loadEvents();
+  else if (name === 'characters') loadCharacters();
   else if (name === 'version') loadVersion();
 }
 
@@ -780,7 +857,7 @@ async function saveBanner() {
 
   let newBanners;
   if (editId) {
-    newBanners = banners.map(b => b.id === parseInt(editId) ? b : b);
+    newBanners = banners.map(item => item.id === parseInt(editId) ? b : item);
   } else {
     newBanners = [...banners, b];
   }
@@ -939,6 +1016,189 @@ async function deleteEvent(id) {
   showDiffAndConfirm(oldContent, newContent, 'events.json', DATA_REPO);
 }
 
+// ===================== Characters =====================
+function onCharSourceChange() {
+  const src = document.getElementById('charSource').value;
+  if (src === 'local') {
+    document.getElementById('localCharFileInput').click();
+  } else {
+    loadCharacters();
+  }
+}
+
+function handleLocalCharFile(event) {
+  const file = event.target.files[0];
+  if (!file) {
+    document.getElementById('charSource').value = 'github';
+    return;
+  }
+  const s = document.getElementById('charactersStatus');
+  s.innerHTML = '<span class="spinner"></span> 读取本地文件...';
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const raw = e.target.result;
+      characters = JSON.parse(raw);
+      if (!Array.isArray(characters)) {
+        characters = characters.characters || [];
+      }
+      renderCharacters();
+      s.innerHTML = '<span class="badge badge-success">本地已加载</span> 共 ' + characters.length + ' 个角色 (' + new Date().toLocaleTimeString() + ')';
+      toast('已从本地文件加载 ' + characters.length + ' 个角色', 'success');
+    } catch(err) {
+      s.innerHTML = '<span class="badge badge-warning">解析失败</span> ' + err.message;
+      toast('JSON 解析失败: ' + err.message, 'error');
+    }
+  };
+  reader.onerror = function() {
+    s.innerHTML = '<span class="badge badge-warning">读取失败</span>';
+    toast('文件读取失败', 'error');
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+
+async function loadCharacters() {
+  const src = document.getElementById('charSource').value;
+  if (src === 'local') {
+    document.getElementById('localCharFileInput').click();
+    return;
+  }
+  const s = document.getElementById('charactersStatus');
+  s.innerHTML = '<span class="spinner"></span> 从 GitHub 加载中...';
+  try {
+    const { content } = await ghGet(APP_REPO, 'data/characters.json');
+    characters = JSON.parse(content);
+    if (!Array.isArray(characters)) {
+      characters = characters.characters || [];
+    }
+    renderCharacters();
+    s.innerHTML = '<span class="badge badge-success">GitHub 已加载</span> 共 ' + characters.length + ' 个角色 (' + new Date().toLocaleTimeString() + ')';
+  } catch(e) {
+    s.innerHTML = '<span class="badge badge-warning">远程加载失败</span> ' + e.message + '。可切换到"本地文件"加载。';
+  }
+}
+
+function renderCharacters() {
+  const tbody = document.getElementById('charactersTbody');
+  if (!characters.length) {
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--text-muted);padding:30px">暂无数据</td></tr>';
+    return;
+  }
+  tbody.innerHTML = characters.map(c => `
+    <tr>
+      <td>${c.id}</td>
+      <td><strong>${esc(c.name)}</strong></td>
+      <td>${'★'.repeat(parseInt(c.rarity)||0)}</td>
+      <td>${esc(c.element||'')}</td>
+      <td>${esc(c.className||'')}</td>
+      <td>${esc(c.faction||'')}</td>
+      <td>${esc(c.weapon||'')}</td>
+      <td class="actions">
+        <button class="small secondary" onclick="editCharacter(${c.id})">编辑</button>
+        <button class="small danger" onclick="deleteCharacter(${c.id})">删除</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function openCharacterModal(ch) {
+  document.getElementById('characterModalTitle').textContent = ch ? '编辑角色' : '新增角色';
+  document.getElementById('cmId').value = ch ? ch.id : (characters.length ? Math.max(...characters.map(c=>c.id))+1 : 1);
+  document.getElementById('cmName').value = ch ? (ch.name||'') : '';
+  document.getElementById('cmRarity').value = ch ? (ch.rarity||'') : '';
+  document.getElementById('cmElement').value = ch ? (ch.element||'') : '';
+  document.getElementById('cmClassName').value = ch ? (ch.className||'') : '';
+  document.getElementById('cmRole').value = ch ? (ch.role||'') : '';
+  document.getElementById('cmWeapon').value = ch ? (ch.weapon||'') : '';
+  document.getElementById('cmFaction').value = ch ? (ch.faction||'') : '';
+  document.getElementById('cmDescription').value = ch ? (ch.description||'') : '';
+  document.getElementById('cmImageUrl').value = ch ? (ch.imageUrl||'') : '';
+  document.getElementById('cmThumbUrl').value = ch ? (ch.thumbUrl||'') : '';
+  document.getElementById('cmSkillName').value = ch ? (ch.skill_name||'') : '';
+  document.getElementById('cmSkillDesc').value = ch ? (ch.skill_desc||'') : '';
+  document.getElementById('cmEgoSkillName').value = ch ? (ch.ego_skill_name||'') : '';
+  document.getElementById('cmEgoSkillDesc').value = ch ? (ch.ego_skill_desc||'') : '';
+  document.getElementById('cmEgoSkillCost').value = ch ? (ch.ego_skill_cost||'') : '';
+  document.getElementById('characterModal').dataset.editId = ch ? ch.id : '';
+  document.getElementById('characterModal').classList.add('show');
+}
+
+function editCharacter(id) {
+  const c = characters.find(c => c.id === id);
+  if (c) openCharacterModal(c);
+}
+
+async function saveCharacter() {
+  const editId = document.getElementById('characterModal').dataset.editId;
+  const ch = {
+    id: parseInt(document.getElementById('cmId').value),
+    name: document.getElementById('cmName').value,
+    rarity: document.getElementById('cmRarity').value,
+    element: document.getElementById('cmElement').value,
+    className: document.getElementById('cmClassName').value,
+    role: document.getElementById('cmRole').value,
+    weapon: document.getElementById('cmWeapon').value,
+    faction: document.getElementById('cmFaction').value,
+    description: document.getElementById('cmDescription').value,
+    imageUrl: document.getElementById('cmImageUrl').value,
+    thumbUrl: document.getElementById('cmThumbUrl').value,
+    skill_name: document.getElementById('cmSkillName').value,
+    skill_desc: document.getElementById('cmSkillDesc').value,
+    ego_skill_name: document.getElementById('cmEgoSkillName').value,
+    ego_skill_desc: document.getElementById('cmEgoSkillDesc').value,
+    ego_skill_cost: parseInt(document.getElementById('cmEgoSkillCost').value) || 0
+  };
+
+  let newChars;
+  if (editId) {
+    newChars = characters.map(item => item.id === parseInt(editId) ? ch : item);
+  } else {
+    newChars = [...characters, ch];
+  }
+
+  const newContent = JSON.stringify(newChars, null, 2);
+  const oldContent = JSON.stringify(characters, null, 2);
+  closeModal('characterModal');
+
+  pendingDiff = {
+    repo: APP_REPO,
+    path: 'data/characters.json',
+    oldContent: oldContent,
+    newContent: newContent,
+    sha: ''
+  };
+
+  try {
+    const { sha } = await ghGet(APP_REPO, 'data/characters.json');
+    pendingDiff.sha = sha;
+  } catch(e) { toast('获取文件 SHA 失败: ' + e.message, 'error'); return; }
+
+  showDiffAndConfirm(oldContent, newContent, 'data/characters.json', APP_REPO);
+}
+
+async function deleteCharacter(id) {
+  if (!confirm('确定删除角色 ID=' + id + '?')) return;
+  const newChars = characters.filter(c => c.id !== id);
+  const newContent = JSON.stringify(newChars, null, 2);
+  const oldContent = JSON.stringify(characters, null, 2);
+
+  pendingDiff = {
+    repo: APP_REPO,
+    path: 'data/characters.json',
+    oldContent: oldContent,
+    newContent: newContent,
+    sha: ''
+  };
+
+  try {
+    const { sha } = await ghGet(APP_REPO, 'data/characters.json');
+    pendingDiff.sha = sha;
+  } catch(e) { toast('获取文件 SHA 失败: ' + e.message, 'error'); return; }
+
+  showDiffAndConfirm(oldContent, newContent, 'data/characters.json', APP_REPO);
+}
+
 // ===================== Version =====================
 async function loadVersion() {
   const s = document.getElementById('versionStatus');
@@ -1073,6 +1333,10 @@ async function confirmDiffCommit() {
     } else if (d.path === 'events.json') {
       events = JSON.parse(d.newContent);
       renderEvents();
+    } else if (d.path === 'data/characters.json') {
+      characters = JSON.parse(d.newContent);
+      if (!Array.isArray(characters)) characters = characters.characters || [];
+      renderCharacters();
     }
   } catch(e) {
     toast('提交失败: ' + e.message, 'error');

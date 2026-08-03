@@ -17,8 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.cznwiki.app.CznApplication
 import com.cznwiki.app.data.BackupManager
-import com.cznwiki.app.data.RemoteVersionInfo
-import com.cznwiki.app.data.UpdateProgress
+import com.cznwiki.app.network.RemoteUpdateManager
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -36,8 +35,9 @@ fun BackupScreen() {
     var isProcessing by remember { mutableStateOf(false) }
 
     // Remote update state
-    var updateProgress by remember { mutableStateOf<UpdateProgress?>(null) }
-    var remoteVersionInfo by remember { mutableStateOf<RemoteVersionInfo?>(null) }
+    var updateProgressDesc by remember { mutableStateOf("") }
+    var updateProgressPct by remember { mutableStateOf(0f) }
+    var updateResult by remember { mutableStateOf<RemoteUpdateManager.UpdateResult?>(null) }
     var isCheckingRemote by remember { mutableStateOf(false) }
     var localVersion by remember { mutableIntStateOf(localDataMgr.getLocalVersion()) }
 
@@ -86,24 +86,44 @@ fun BackupScreen() {
 
     fun triggerRemoteUpdate() {
         isCheckingRemote = true
-        updateProgress = null
-        remoteVersionInfo = null
+        updateProgressDesc = ""
+        updateProgressPct = 0f
+        updateResult = null
         statusMessage = ""
         scope.launch {
-            val info = remoteUpdateMgr.checkAndUpdateWithProgress(db) { progress ->
-                updateProgress = progress
-            }
-            if (info != null) {
-                remoteVersionInfo = info
-                localVersion = localDataMgr.getLocalVersion()
-                statusMessage = "已更新至 ${info.version}"
-            } else {
-                val progress = updateProgress
-                if (progress?.stage == "error") {
-                    statusMessage = progress.description
-                } else {
-                    statusMessage = "数据已是最新版本"
+            val result = remoteUpdateMgr.checkForUpdate { status ->
+                when (status) {
+                    is RemoteUpdateManager.UpdateStatus.Checking -> {
+                        updateProgressDesc = "正在检查远程版本..."
+                        updateProgressPct = 0f
+                    }
+                    is RemoteUpdateManager.UpdateStatus.Downloading -> {
+                        updateProgressDesc = "正在下载${status.step}..."
+                    }
+                    is RemoteUpdateManager.UpdateStatus.Progress -> {
+                        val p = status.progress
+                        updateProgressDesc = "下载 ${p.fileLabel} (${p.filesDone}/${p.totalFiles})"
+                        updateProgressPct = p.filesDone.toFloat() / p.totalFiles
+                    }
+                    is RemoteUpdateManager.UpdateStatus.Done -> {
+                        updateProgressPct = 1f
+                        updateResult = status.result
+                        localVersion = localDataMgr.getLocalVersion()
+                        statusMessage = "已更新至 ${status.result.remoteVersion}"
+                    }
+                    is RemoteUpdateManager.UpdateStatus.Error -> {
+                        statusMessage = status.message
+                    }
                 }
+            }
+            // checkForUpdate returns result directly; if Done wasn't emitted, use the return value
+            if (updateResult == null && result.success) {
+                updateResult = result
+                localVersion = localDataMgr.getLocalVersion()
+                statusMessage = if (result.remoteVersion.isNotBlank()) "已更新至 ${result.remoteVersion}" else result.message
+            }
+            if (updateResult == null && !result.success && statusMessage.isBlank()) {
+                statusMessage = result.message
             }
             isCheckingRemote = false
         }
@@ -138,34 +158,32 @@ fun BackupScreen() {
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text("当前数据版本：v$localVersion", style = MaterialTheme.typography.bodyMedium)
-                    remoteVersionInfo?.let { info ->
-                        if (info.version_code > localVersion) {
-                            Text("最新版本：${info.version}",
+                    updateResult?.let { res ->
+                        if (res.version > localVersion && res.remoteVersion.isNotBlank()) {
+                            Text("最新版本：${res.remoteVersion}",
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.error)
                         }
                     }
                 }
 
-                updateProgress?.let { progress ->
-                    if (progress.stage != "done" && progress.stage != "error") {
-                        Spacer(Modifier.height(12.dp))
-                        LinearProgressIndicator(
-                            progress = { progress.progress / 100f },
-                            modifier = Modifier.fillMaxWidth(),
-                            color = MaterialTheme.colorScheme.primary
-                        )
-                        Spacer(Modifier.height(4.dp))
-                        Text(progress.description,
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f))
-                    }
+                if (updateProgressDesc.isNotEmpty() && isCheckingRemote) {
+                    Spacer(Modifier.height(12.dp))
+                    LinearProgressIndicator(
+                        progress = { updateProgressPct },
+                        modifier = Modifier.fillMaxWidth(),
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    Spacer(Modifier.height(4.dp))
+                    Text(updateProgressDesc,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f))
                 }
 
-                remoteVersionInfo?.let { info ->
-                    if (info.changelog.isNotBlank()) {
+                updateResult?.let { res ->
+                    if (res.message.isNotBlank()) {
                         Spacer(Modifier.height(8.dp))
-                        Text(info.changelog,
+                        Text(res.message,
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f))
                     }
