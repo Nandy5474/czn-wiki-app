@@ -23,6 +23,11 @@ import java.util.Date
 import java.util.Locale
 
 class CznApplication : Application(), ImageLoaderFactory {
+    companion object {
+        var initStatus: String = "未开始"
+        var initError: String? = null
+    }
+
     val database by lazy { AppDatabase.getInstance(this) }
     val localDataManager by lazy { LocalDataManager.getInstance(this) }
     val remoteUpdateManager by lazy { RemoteUpdateManager.getInstance(this, database) }

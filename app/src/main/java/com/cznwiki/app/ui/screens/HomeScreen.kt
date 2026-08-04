@@ -74,12 +74,24 @@ fun HomeScreen(
     val app = context.applicationContext as CznApplication
     val db = app.database
 
-    // === 隔离诊断：纯占位 UI，跳过所有数据依赖 ===
+    // === 逐步诊断：读取初始化状态 ===
+    val status = remember { CznApplication.initStatus }
+    val error = remember { CznApplication.initError }
     Box(
         modifier = Modifier.fillMaxSize().background(Color.White),
         contentAlignment = Alignment.Center
     ) {
-        Text("HomeScreen 渲染成功", color = Color.Black, fontSize = 20.sp)
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text("状态: $status", color = Color.Black, fontSize = 14.sp)
+            if (error != null) {
+                Text(
+                    "错误: $error",
+                    color = Color.Red,
+                    fontSize = 12.sp,
+                    modifier = Modifier.padding(top = 8.dp)
+                )
+            }
+        }
     }
     return  // 阻止后续复杂代码执行，以下代码不可达
     // ==============================================
