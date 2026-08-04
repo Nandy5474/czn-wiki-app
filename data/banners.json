@@ -15,16 +15,16 @@
   },
   {
     "id": 2,
-    "name": "友纪复刻",
+    "name": "友纪",
     "stars": 5,
     "character": "友纪",
     "element": "秩序",
-    "className": "前锋",
+    "className": "决斗家",
     "type": "复刻",
+    "status": "current",
     "startDate": "2026-07-22",
     "endDate": "2026-08-12",
     "url": "",
-    "server": "国服",
-    "status": "current"
+    "server": "Global"
   }
 ]
