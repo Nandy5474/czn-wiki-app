@@ -23,3 +23,7 @@
 -keep class * extends androidx.room.RoomDatabase { *; }
 -keep @androidx.room.Dao class * { *; }
 -dontwarn androidx.room.paging.**
+
+# Coil - keep all coil classes to prevent R8 from stripping image loading
+-keep class coil.** { *; }
+-dontwarn coil.**

@@ -1,8 +1,11 @@
 package com.cznwiki.app.ui.theme
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 
 private val DarkColorScheme = darkColorScheme(
@@ -30,6 +33,12 @@ private val DarkColorScheme = darkColorScheme(
 fun CznWikiTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = DarkColorScheme,
-        content = content
-    )
+    ) {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            content()
+        }
+    }
 }

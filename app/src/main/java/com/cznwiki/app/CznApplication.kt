@@ -62,6 +62,7 @@ class CznApplication : Application(), ImageLoaderFactory {
                     seedDatabaseFromAssets(this@CznApplication, database)
                 }
                 localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
+                Log.i("CznApp", ">>> APP START OK: charCount will be checked in Block 2")
             }
         } catch (e: Exception) {
             Log.e("CznApp", "Block 1 failed: initial seed", e)
