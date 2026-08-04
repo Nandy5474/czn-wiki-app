@@ -869,8 +869,9 @@ async function loadBanners() {
   const s = document.getElementById('bannersStatus');
   s.innerHTML = '<span class="spinner"></span> 加载中...';
   try {
-    const { content } = await ghGet(DATA_REPO, 'data/banners.json');
-    banners = JSON.parse(content);
+    const r = await fetch('https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/banners.json');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    banners = JSON.parse(await r.text());
     // Auto-classify banners without status field based on endDate
     const today = new Date().toISOString().slice(0, 10);
     banners.forEach(b => {

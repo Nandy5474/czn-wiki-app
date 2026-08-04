@@ -45,8 +45,6 @@ import com.cznwiki.app.CznApplication
 import com.cznwiki.app.data.entity.BannerEntity
 import com.cznwiki.app.data.entity.EventEntity
 import com.cznwiki.app.network.RemoteUpdateManager
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -71,32 +69,40 @@ fun HomeScreen(
     onNavigateToTeams: () -> Unit = {},
     onNavigateToBackup: () -> Unit = {}
 ) {
+    HomeContent(
+        onNavigateToCharacter = onNavigateToCharacter,
+        onNavigateToCharacterList = onNavigateToCharacterList,
+        onNavigateToEvents = onNavigateToEvents,
+        onNavigateToBanners = onNavigateToBanners,
+        onNavigateToTeams = onNavigateToTeams,
+        onNavigateToBackup = onNavigateToBackup
+    )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun HomeContent(
+    onNavigateToCharacter: (Int) -> Unit,
+    onNavigateToCharacterList: () -> Unit,
+    onNavigateToEvents: () -> Unit = {},
+    onNavigateToBanners: () -> Unit = {},
+    onNavigateToTeams: () -> Unit = {},
+    onNavigateToBackup: () -> Unit = {}
+) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     val app = context.applicationContext as CznApplication
     val db = app.database
 
-    // === 逐步诊断：读取初始化状态 ===
-    val status by CznApplication.initStatusFlow.collectAsState()
-    val error by CznApplication.initErrorFlow.collectAsState()
-    Box(
-        modifier = Modifier.fillMaxSize().background(Color.White),
-        contentAlignment = Alignment.Center
-    ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text("状态: $status", color = Color.Black, fontSize = 14.sp)
-            if (error != null) {
-                Text(
-                    "错误: $error",
-                    color = Color.Red,
-                    fontSize = 12.sp,
-                    modifier = Modifier.padding(top = 8.dp)
-                )
-            }
+    // Compose error boundary: catch initialization errors
+    var renderError by remember { mutableStateOf<String?>(null) }
+    if (renderError != null) {
+        Box(modifier = Modifier.fillMaxSize().background(Color(0xFF1A0533)), contentAlignment = Alignment.Center) {
+            Text("渲染异常: $renderError", color = Color.White, fontSize = 14.sp)
         }
+        return
     }
-    return  // 阻止后续复杂代码执行，以下代码不可达
-    // ==============================================
+
     val updateManager = remember { RemoteUpdateManager.getInstance(context, db) }
 
     var showUpdateDialog by remember { mutableStateOf(false) }

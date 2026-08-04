@@ -1,7 +1,6 @@
 package com.cznwiki.app
 
 import android.app.Application
-import android.os.Environment
 import android.util.Log
 import coil.ImageLoader
 import coil.ImageLoaderFactory
@@ -15,19 +14,13 @@ import com.cznwiki.app.data.database.seedDatabaseFromAssets
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import java.io.FileWriter
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
 class CznApplication : Application(), ImageLoaderFactory {
-    companion object {
-        val initStatusFlow = MutableStateFlow("未开始")
-        val initErrorFlow = MutableStateFlow<String?>(null)
-    }
 
     val database by lazy { AppDatabase.getInstance(this) }
     val localDataManager by lazy { LocalDataManager.getInstance(this) }
@@ -57,62 +50,64 @@ class CznApplication : Application(), ImageLoaderFactory {
 
     override fun onCreate() {
         super.onCreate()
+
+        // Global crash capture
         Thread.setDefaultUncaughtExceptionHandler { thread, e ->
             val crashLog = java.io.File(this@CznApplication.getExternalFilesDir(null), "crash_log.txt")
             crashLog.appendText("${SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())}\nThread: ${thread.name}\n${e.stackTraceToString()}\n---\n")
         }
 
-        // Step 1: localDataManager
+        Log.i("CznApp", ">>> APP START")
+
+        // Block 1: First-time seed if no local version
         try {
-            initStatusFlow.value = "Step1: localDataManager 初始化中..."
-            val ver = localDataManager.getLocalVersion()
-            initStatusFlow.value = "Step1 OK: localVersion=$ver"
+            val localVer = localDataManager.getLocalVersion()
+            if (localVer == 0) {
+                Log.i("CznApp", "First run (localVersion=0), seeding from assets...")
+                runBlocking(Dispatchers.IO) {
+                    seedDatabaseFromAssets(this@CznApplication, database)
+                    localDataManager.setLocalVersion(1)
+                }
+                Log.i("CznApp", "Block1 OK: first-time seed complete")
+            } else {
+                Log.i("CznApp", "Block1 OK: localVersion=$localVer, skip seed")
+            }
         } catch (e: Exception) {
-            initErrorFlow.value = "Step1 FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
-            return
+            Log.e("CznApp", "Block1 FAILED: ${e.message}", e)
         }
 
-        // Step 2: database instance
-        try {
-            initStatusFlow.value = "Step2: 数据库实例创建中..."
-            val db = database
-            initStatusFlow.value = "Step2 OK: database instance created"
-        } catch (e: Exception) {
-            initErrorFlow.value = "Step2 FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
-            return
-        }
-
-        // Step 3: characterDao.getCount()
-        try {
-            initStatusFlow.value = "Step3: characterDao.getCount() 查询中..."
-            val count = runBlocking(Dispatchers.IO) { database.characterDao().getCount() }
-            initStatusFlow.value = "Step3 OK: charCount=$count"
-        } catch (e: Exception) {
-            initErrorFlow.value = "Step3 FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
-            return
-        }
-
-        // Step 4: seed if empty
+        // Block 2: Safety net — if DB still empty, re-seed
         try {
             val count = runBlocking(Dispatchers.IO) { database.characterDao().getCount() }
             if (count == 0) {
-                initStatusFlow.value = "Step4: seedDatabaseFromAssets..."
-                runBlocking(Dispatchers.IO) { seedDatabaseFromAssets(this@CznApplication, database) }
-                initStatusFlow.value = "Step4 OK: seeded"
+                Log.w("CznApp", "Block2: charCount=0, safety net re-seed...")
+                runBlocking(Dispatchers.IO) {
+                    seedDatabaseFromAssets(this@CznApplication, database)
+                }
+                Log.i("CznApp", "Block2 OK: safety net seed complete")
             } else {
-                initStatusFlow.value = "Step4: skipped (already has data)"
+                Log.i("CznApp", "Block2 OK: charCount=$count")
             }
         } catch (e: Exception) {
-            initErrorFlow.value = "Step4 FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
-            return
+            Log.e("CznApp", "Block2 FAILED: ${e.message}", e)
         }
 
-        // Final
+        // Block 3: Check and update from OTA data
         try {
-            val finalCount = runBlocking(Dispatchers.IO) { database.characterDao().getCount() }
-            initStatusFlow.value = "完成: charCount=$finalCount"
+            localDataManager.checkAndUpdateData(database, appScope)
+            Log.i("CznApp", "Block3 OK: checkAndUpdateData finished")
         } catch (e: Exception) {
-            initErrorFlow.value = "Final FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
+            Log.e("CznApp", "Block3 FAILED: ${e.message}", e)
+        }
+
+        // Block 4: Remote background check
+        try {
+            appScope.launch {
+                remoteUpdateManager.startSilentBackgroundCheck()
+            }
+            Log.i("CznApp", "Block4 OK: remote check launched")
+        } catch (e: Exception) {
+            Log.e("CznApp", "Block4 FAILED: ${e.message}", e)
         }
     }
 }
