@@ -703,7 +703,7 @@ tr:hover td { background: rgba(124,111,247,0.04); }
         <input type="file" id="cmImageFileInput" accept="image/*" style="display:none" onchange="handleImageUpload('imageUrl', event)">
         <button type="button" class="small secondary" onclick="document.getElementById('cmImageFileInput').click()">选择图片</button>
       </div>
-      <img id="cmImagePreview" class="img-preview">
+      <img id="cmImagePreview" class="img-preview" referrerpolicy="no-referrer" onerror="this.style.display='none'">
     </div>
     <div class="form-group">
       <label>缩略图 (thumbUrl)</label>
@@ -712,7 +712,7 @@ tr:hover td { background: rgba(124,111,247,0.04); }
         <input type="file" id="cmThumbFileInput" accept="image/*" style="display:none" onchange="handleImageUpload('thumbUrl', event)">
         <button type="button" class="small secondary" onclick="document.getElementById('cmThumbFileInput').click()">选择图片</button>
       </div>
-      <img id="cmThumbPreview" class="img-preview">
+      <img id="cmThumbPreview" class="img-preview" referrerpolicy="no-referrer" onerror="this.style.display='none'">
     </div>
     <div class="modal-actions">
       <button class="secondary" onclick="closeModal('characterModal')">取消</button>
@@ -824,6 +824,13 @@ async function ghGet(repo, path) {
   };
 }
 
+async function ghGetSha(repo, path) {
+  const r = await fetch(API_BASE + '/repos/' + repo + '/contents/' + path + '?ref=main', { headers: authHeaders() });
+  if (!r.ok) throw new Error('HTTP ' + r.status + ': ' + (await r.text()).slice(0, 200));
+  const data = await r.json();
+  return data.sha;
+}
+
 async function ghPut(repo, path, content, sha, message) {
   const body = {
     message: message,
@@ -864,6 +871,13 @@ async function loadBanners() {
   try {
     const { content } = await ghGet(DATA_REPO, 'data/banners.json');
     banners = JSON.parse(content);
+    // Auto-classify banners without status field based on endDate
+    const today = new Date().toISOString().slice(0, 10);
+    banners.forEach(b => {
+      if (!b.status) {
+        b.status = b.endDate && b.endDate < today ? 'history' : 'current';
+      }
+    });
     renderBanners();
     s.innerHTML = '<span class="badge badge-success">已加载</span> 共 ' + banners.length + ' 条卡池 (' + new Date().toLocaleTimeString() + ')';
   } catch(e) {
@@ -1179,7 +1193,7 @@ function renderCharacters() {
   tbody.innerHTML = characters.map(c => `
     <tr>
       <td>${c.id}</td>
-      <td>${c.thumbUrl ? `<img src="${esc(c.thumbUrl)}" style="width:36px;height:36px;border-radius:4px;object-fit:cover">` : '-'}</td>
+      <td>${c.thumbUrl ? `<img src="${c.thumbUrl}" referrerpolicy="no-referrer" onerror="this.style.display='none';var t=document.createTextNode('无图');this.parentNode.insertBefore(t,this);" style="width:36px;height:36px;border-radius:4px;object-fit:cover">` : '-'}</td>
       <td><strong>${esc(c.name)}</strong></td>
       <td>${'★'.repeat(c.stars||0)}</td>
       <td><span class="badge ${(c.rarity||'')==='SSR'?'badge-success':(c.rarity||'')==='SR'?'badge-warning':''}">${esc(c.rarity||'')}</span></td>
@@ -1219,8 +1233,12 @@ function openCharacterModal(ch) {
   // Image previews
   const imgPrev = document.getElementById('cmImagePreview');
   const thumbPrev = document.getElementById('cmThumbPreview');
+  imgPrev.referrerPolicy = 'no-referrer';
+  imgPrev.onerror = function(){this.style.display='none'};
   imgPrev.style.display = ch && ch.imageUrl ? 'block' : 'none';
   imgPrev.src = ch ? (ch.imageUrl||'') : '';
+  thumbPrev.referrerPolicy = 'no-referrer';
+  thumbPrev.onerror = function(){this.style.display='none'};
   thumbPrev.style.display = ch && ch.thumbUrl ? 'block' : 'none';
   thumbPrev.src = ch ? (ch.thumbUrl||'') : '';
   // Clear pending uploads
@@ -1266,8 +1284,7 @@ async function uploadImagesAndGetUrls() {
     try {
       let sha = null;
       try {
-        const r = await ghGet(APP_REPO, ghPath);
-        sha = r.sha;
+        sha = await ghGetSha(APP_REPO, ghPath);
       } catch(e) { /* file not exists, create new */ }
       await ghPutBinary(APP_REPO, ghPath, upload.base64, sha, 'OTA: upload ' + field + ' for ' + name);
       urls[field] = 'https://raw.githubusercontent.com/' + APP_REPO + '/main/' + ghPath;

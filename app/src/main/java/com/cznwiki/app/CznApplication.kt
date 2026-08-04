@@ -1,6 +1,8 @@
 package com.cznwiki.app
 
 import android.app.Application
+import android.os.Environment
+import android.util.Log
 import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.memory.MemoryCache
@@ -15,6 +17,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import java.io.FileWriter
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class CznApplication : Application(), ImageLoaderFactory {
     val database by lazy { AppDatabase.getInstance(this) }
@@ -45,27 +51,35 @@ class CznApplication : Application(), ImageLoaderFactory {
 
     override fun onCreate() {
         super.onCreate()
-        // 首次启动：同步从 assets 导入基础数据，等待完成后再继续
-        if (localDataManager.getLocalVersion() == 0) {
-            runBlocking(Dispatchers.IO) {
-                seedDatabaseFromAssets(this@CznApplication, database)
-            }
-            localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
+        Thread.setDefaultUncaughtExceptionHandler { thread, e ->
+            val crashLog = java.io.File(this@CznApplication.getExternalFilesDir(null), "crash_log.txt")
+            crashLog.appendText("${SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())}\nThread: ${thread.name}\n${e.stackTraceToString()}\n---\n")
         }
-        // 安全网：如果数据库因 Destructive Migration 被清空，强制重新导入
-        runBlocking(Dispatchers.IO) {
-            val charCount = database.characterDao().getCount()
-            if (charCount == 0 && localDataManager.getLocalVersion() > 0) {
-                seedDatabaseFromAssets(this@CznApplication, database)
+        try {
+            // 首次启动：同步从 assets 导入基础数据，等待完成后再继续
+            if (localDataManager.getLocalVersion() == 0) {
+                runBlocking(Dispatchers.IO) {
+                    seedDatabaseFromAssets(this@CznApplication, database)
+                }
                 localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
             }
-        }
-        // 检查数据版本，版本变化时触发更新流程（保存用户修改 → 清空 → 导入 → 回灌）
-        localDataManager.checkAndUpdateData(database, appScope)
+            // 安全网：如果数据库因 Destructive Migration 被清空，强制重新导入
+            runBlocking(Dispatchers.IO) {
+                val charCount = database.characterDao().getCount()
+                if (charCount == 0 && localDataManager.getLocalVersion() > 0) {
+                    seedDatabaseFromAssets(this@CznApplication, database)
+                    localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
+                }
+            }
+            // 检查数据版本，版本变化时触发更新流程（保存用户修改 → 清空 → 导入 → 回灌）
+            localDataManager.checkAndUpdateData(database, appScope)
 
-        // 后台静默检查远程数据更新
-        appScope.launch {
-            remoteUpdateManager.startSilentBackgroundCheck()
+            // 后台静默检查远程数据更新
+            appScope.launch {
+                remoteUpdateManager.startSilentBackgroundCheck()
+            }
+        } catch (t: Throwable) {
+            Log.e("CznApp", "FATAL startup crash", t)
         }
     }
 }
