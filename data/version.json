@@ -1,6 +1,6 @@
 {
-  "version": "2.0.50",
-  "version_code": 50,
+  "version": "2.0.51",
+  "version_code": 51,
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
@@ -8,9 +8,10 @@
   "events_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/events.json",
   "banners_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/banners.json",
   "update_date": "2026-08-04",
-  "changelog": "v2.0.50: 修复远程URL + 闪退排查加固",
+  "changelog": "v2.0.51: 后台增强-历史卡池管理+角色字段对齐+图片上传",
   "changes": [
-    "修复 events_url / banners_url 指向错误仓库(czn-wiki-data → czn-wiki-app)",
-    "HomeScreen 空值保护加固，防止 banner/event 数据异常崩溃"
+    "卡池管理加入历史卡池状态（当前/历史）筛选",
+    "角色管理表单字段完全对齐 characters.json 结构",
+    "角色管理新增图片上传功能（头像/缩略图→GitHub仓库）"
   ]
 }
