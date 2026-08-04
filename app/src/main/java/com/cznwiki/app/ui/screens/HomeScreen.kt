@@ -85,6 +85,7 @@ fun HomeScreen(
 
     var events by remember { mutableStateOf<List<EventEntity>>(emptyList()) }
     var currentBanners by remember { mutableStateOf<List<BannerEntity>>(emptyList()) }
+    var isDatabaseEmpty by remember { mutableStateOf(false) }
     val today = LocalDate.now().toString()
 
     LaunchedEffect(Unit) {
@@ -92,6 +93,13 @@ fun HomeScreen(
             events = db.eventDao().getAllEventsSync()
             currentBanners = db.bannerDao().getAllBannersSync().filter {
                 (it.endDate ?: "") >= today && (it.server ?: "") == "Global"
+            }
+            // 防御性检查：events 和 banners 都为空时检查 characters
+            if (events.isEmpty() && currentBanners.isEmpty()) {
+                val charCount = db.characterDao().getCount()
+                if (charCount == 0) {
+                    isDatabaseEmpty = true
+                }
             }
         } catch (_: Exception) {
             events = emptyList()
@@ -120,6 +128,23 @@ fun HomeScreen(
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
     ) {
+        // 防御性空白页：数据库为空时显示提示
+        if (isDatabaseEmpty) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(32.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    "数据库为空，请重新安装",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.error,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
+
         // === Hero Area with Animated Particles ===
         Box(
             modifier = Modifier
