@@ -15,6 +15,7 @@ import com.cznwiki.app.data.database.seedDatabaseFromAssets
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.io.FileWriter
@@ -24,8 +25,8 @@ import java.util.Locale
 
 class CznApplication : Application(), ImageLoaderFactory {
     companion object {
-        var initStatus: String = "未开始"
-        var initError: String? = null
+        val initStatusFlow = MutableStateFlow("未开始")
+        val initErrorFlow = MutableStateFlow<String?>(null)
     }
 
     val database by lazy { AppDatabase.getInstance(this) }
@@ -60,7 +61,58 @@ class CznApplication : Application(), ImageLoaderFactory {
             val crashLog = java.io.File(this@CznApplication.getExternalFilesDir(null), "crash_log.txt")
             crashLog.appendText("${SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())}\nThread: ${thread.name}\n${e.stackTraceToString()}\n---\n")
         }
-        // 跳过所有数据初始化——仅测试 UI 能否渲染
-        Log.i("CznApp", ">>> Minimal init: no data loading, testing UI only")
+
+        // Step 1: localDataManager
+        try {
+            initStatusFlow.value = "Step1: localDataManager 初始化中..."
+            val ver = localDataManager.getLocalVersion()
+            initStatusFlow.value = "Step1 OK: localVersion=$ver"
+        } catch (e: Exception) {
+            initErrorFlow.value = "Step1 FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
+            return
+        }
+
+        // Step 2: database instance
+        try {
+            initStatusFlow.value = "Step2: 数据库实例创建中..."
+            val db = database
+            initStatusFlow.value = "Step2 OK: database instance created"
+        } catch (e: Exception) {
+            initErrorFlow.value = "Step2 FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
+            return
+        }
+
+        // Step 3: characterDao.getCount()
+        try {
+            initStatusFlow.value = "Step3: characterDao.getCount() 查询中..."
+            val count = runBlocking(Dispatchers.IO) { database.characterDao().getCount() }
+            initStatusFlow.value = "Step3 OK: charCount=$count"
+        } catch (e: Exception) {
+            initErrorFlow.value = "Step3 FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
+            return
+        }
+
+        // Step 4: seed if empty
+        try {
+            val count = runBlocking(Dispatchers.IO) { database.characterDao().getCount() }
+            if (count == 0) {
+                initStatusFlow.value = "Step4: seedDatabaseFromAssets..."
+                runBlocking(Dispatchers.IO) { seedDatabaseFromAssets(this@CznApplication, database) }
+                initStatusFlow.value = "Step4 OK: seeded"
+            } else {
+                initStatusFlow.value = "Step4: skipped (already has data)"
+            }
+        } catch (e: Exception) {
+            initErrorFlow.value = "Step4 FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
+            return
+        }
+
+        // Final
+        try {
+            val finalCount = runBlocking(Dispatchers.IO) { database.characterDao().getCount() }
+            initStatusFlow.value = "完成: charCount=$finalCount"
+        } catch (e: Exception) {
+            initErrorFlow.value = "Final FAILED: ${e.message}\n${e.stackTraceToString().take(500)}"
+        }
     }
 }

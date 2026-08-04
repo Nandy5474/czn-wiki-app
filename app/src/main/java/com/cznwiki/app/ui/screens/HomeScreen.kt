@@ -45,6 +45,8 @@ import com.cznwiki.app.CznApplication
 import com.cznwiki.app.data.entity.BannerEntity
 import com.cznwiki.app.data.entity.EventEntity
 import com.cznwiki.app.network.RemoteUpdateManager
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -75,8 +77,8 @@ fun HomeScreen(
     val db = app.database
 
     // === 逐步诊断：读取初始化状态 ===
-    val status = remember { CznApplication.initStatus }
-    val error = remember { CznApplication.initError }
+    val status by CznApplication.initStatusFlow.collectAsState()
+    val error by CznApplication.initErrorFlow.collectAsState()
     Box(
         modifier = Modifier.fillMaxSize().background(Color.White),
         contentAlignment = Alignment.Center
