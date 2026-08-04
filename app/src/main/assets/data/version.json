@@ -1,6 +1,6 @@
 {
-  "version": "2.0.52",
-  "version_code": 52,
+  "version": "2.0.53",
+  "version_code": 53,
   "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
   "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
   "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
@@ -8,7 +8,7 @@
   "events_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/events.json",
   "banners_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/banners.json",
   "update_date": "2026-08-04",
-  "changelog": "v2.0.52: 全局崩溃捕获+启动加固",
+  "changelog": "v2.0.53: 拆分启动保护粒度，修复黑屏",
   "changes": [
     "新增绯(Fei)国际服 egoSkill 数据",
     "新增 events.json 活动数据(10条)",

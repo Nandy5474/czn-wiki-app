@@ -55,15 +55,20 @@ class CznApplication : Application(), ImageLoaderFactory {
             val crashLog = java.io.File(this@CznApplication.getExternalFilesDir(null), "crash_log.txt")
             crashLog.appendText("${SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())}\nThread: ${thread.name}\n${e.stackTraceToString()}\n---\n")
         }
+        // Block 1: 首次启动数据导入（关键）
         try {
-            // 首次启动：同步从 assets 导入基础数据，等待完成后再继续
             if (localDataManager.getLocalVersion() == 0) {
                 runBlocking(Dispatchers.IO) {
                     seedDatabaseFromAssets(this@CznApplication, database)
                 }
                 localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
             }
-            // 安全网：如果数据库因 Destructive Migration 被清空，强制重新导入
+        } catch (e: Exception) {
+            Log.e("CznApp", "Block 1 failed: initial seed", e)
+        }
+
+        // Block 2: 安全网——数据库为空时重新导入（关键）
+        try {
             runBlocking(Dispatchers.IO) {
                 val charCount = database.characterDao().getCount()
                 if (charCount == 0 && localDataManager.getLocalVersion() > 0) {
@@ -71,15 +76,24 @@ class CznApplication : Application(), ImageLoaderFactory {
                     localDataManager.setLocalVersion(localDataManager.getAssetsVersion())
                 }
             }
-            // 检查数据版本，版本变化时触发更新流程（保存用户修改 → 清空 → 导入 → 回灌）
-            localDataManager.checkAndUpdateData(database, appScope)
+        } catch (e: Exception) {
+            Log.e("CznApp", "Block 2 failed: safety net seed", e)
+        }
 
-            // 后台静默检查远程数据更新
+        // Block 3: 数据版本检查及迁移（允许失败）
+        try {
+            localDataManager.checkAndUpdateData(database, appScope)
+        } catch (e: Exception) {
+            Log.e("CznApp", "Block 3 failed: checkAndUpdateData", e)
+        }
+
+        // Block 4: 后台远程更新检查（允许失败）
+        try {
             appScope.launch {
                 remoteUpdateManager.startSilentBackgroundCheck()
             }
-        } catch (t: Throwable) {
-            Log.e("CznApp", "FATAL startup crash", t)
+        } catch (e: Exception) {
+            Log.e("CznApp", "Block 4 failed: remote check", e)
         }
     }
 }
