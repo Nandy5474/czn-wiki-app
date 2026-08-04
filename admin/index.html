@@ -755,11 +755,11 @@ function switchPage(name) {
 
 // ===================== GitHub API =====================
 async function ghGet(repo, path) {
-  const r = await fetch(API_BASE + '/repos/' + repo + '/contents/' + path, { headers: authHeaders() });
+  const r = await fetch(API_BASE + '/repos/' + repo + '/contents/' + path + '?ref=main', { headers: authHeaders() });
   if (!r.ok) throw new Error('HTTP ' + r.status + ': ' + (await r.text()).slice(0, 200));
   const data = await r.json();
   return {
-    content: atob(data.content.replace(/\n/g, '')),
+    content: decodeURIComponent(escape(atob(data.content.replace(/\n/g, '')))),
     sha: data.sha
   };
 }
@@ -768,7 +768,8 @@ async function ghPut(repo, path, content, sha, message) {
   const body = {
     message: message,
     content: btoa(unescape(encodeURIComponent(content))),
-    sha: sha
+    sha: sha,
+    branch: 'main'
   };
   const r = await fetch(API_BASE + '/repos/' + repo + '/contents/' + path, {
     method: 'PUT',
