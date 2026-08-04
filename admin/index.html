@@ -401,7 +401,7 @@ tr:hover td { background: rgba(124,111,247,0.04); }
         <div>
           <h3>卡池管理</h3>
           <div style="font-size:12px;color:var(--text-muted);margin-top:2px">
-            仓库: Nandy5474/czn-wiki-data &nbsp;|&nbsp; 文件: banners.json
+            仓库: Nandy5474/czn-wiki-app &nbsp;|&nbsp; 文件: data/banners.json
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -433,7 +433,7 @@ tr:hover td { background: rgba(124,111,247,0.04); }
         <div>
           <h3>活动管理</h3>
           <div style="font-size:12px;color:var(--text-muted);margin-top:2px">
-            仓库: Nandy5474/czn-wiki-data &nbsp;|&nbsp; 文件: events.json
+            仓库: Nandy5474/czn-wiki-app &nbsp;|&nbsp; 文件: data/events.json
           </div>
         </div>
         <div style="display:flex;gap:8px">
@@ -678,7 +678,7 @@ tr:hover td { background: rgba(124,111,247,0.04); }
 
 <script>
 // ===================== State =====================
-const DATA_REPO = 'Nandy5474/czn-wiki-data';
+const DATA_REPO = 'Nandy5474/czn-wiki-app';
 const APP_REPO = 'Nandy5474/czn-wiki-app';
 const API_BASE = 'https://api.github.com';
 
@@ -785,7 +785,7 @@ async function loadBanners() {
   const s = document.getElementById('bannersStatus');
   s.innerHTML = '<span class="spinner"></span> 加载中...';
   try {
-    const { content } = await ghGet(DATA_REPO, 'banners.json');
+    const { content } = await ghGet(DATA_REPO, 'data/banners.json');
     banners = JSON.parse(content);
     renderBanners();
     s.innerHTML = '<span class="badge badge-success">已加载</span> 共 ' + banners.length + ' 条卡池 (' + new Date().toLocaleTimeString() + ')';
@@ -869,18 +869,18 @@ async function saveBanner() {
 
   pendingDiff = {
     repo: DATA_REPO,
-    path: 'banners.json',
+    path: 'data/banners.json',
     oldContent: oldContent,
     newContent: newContent,
     sha: ''
   };
 
   try {
-    const { sha } = await ghGet(DATA_REPO, 'banners.json');
+    const { sha } = await ghGet(DATA_REPO, 'data/banners.json');
     pendingDiff.sha = sha;
   } catch(e) { toast('获取文件 SHA 失败: ' + e.message, 'error'); return; }
 
-  showDiffAndConfirm(oldContent, newContent, 'banners.json', DATA_REPO);
+  showDiffAndConfirm(oldContent, newContent, 'data/banners.json', DATA_REPO);
 }
 
 async function deleteBanner(id) {
@@ -891,18 +891,18 @@ async function deleteBanner(id) {
 
   pendingDiff = {
     repo: DATA_REPO,
-    path: 'banners.json',
+    path: 'data/banners.json',
     oldContent: oldContent,
     newContent: newContent,
     sha: ''
   };
 
   try {
-    const { sha } = await ghGet(DATA_REPO, 'banners.json');
+    const { sha } = await ghGet(DATA_REPO, 'data/banners.json');
     pendingDiff.sha = sha;
   } catch(e) { toast('获取文件 SHA 失败: ' + e.message, 'error'); return; }
 
-  showDiffAndConfirm(oldContent, newContent, 'banners.json', DATA_REPO);
+  showDiffAndConfirm(oldContent, newContent, 'data/banners.json', DATA_REPO);
 }
 
 // ===================== Events =====================
@@ -910,7 +910,7 @@ async function loadEvents() {
   const s = document.getElementById('eventsStatus');
   s.innerHTML = '<span class="spinner"></span> 加载中...';
   try {
-    const { content } = await ghGet(DATA_REPO, 'events.json');
+    const { content } = await ghGet(DATA_REPO, 'data/events.json');
     events = JSON.parse(content);
     renderEvents();
     s.innerHTML = '<span class="badge badge-success">已加载</span> 共 ' + events.length + ' 条活动 (' + new Date().toLocaleTimeString() + ')';
@@ -981,18 +981,18 @@ async function saveEvent() {
 
   pendingDiff = {
     repo: DATA_REPO,
-    path: 'events.json',
+    path: 'data/events.json',
     oldContent: oldContent,
     newContent: newContent,
     sha: ''
   };
 
   try {
-    const { sha } = await ghGet(DATA_REPO, 'events.json');
+    const { sha } = await ghGet(DATA_REPO, 'data/events.json');
     pendingDiff.sha = sha;
   } catch(err) { toast('获取文件 SHA 失败: ' + err.message, 'error'); return; }
 
-  showDiffAndConfirm(oldContent, newContent, 'events.json', DATA_REPO);
+  showDiffAndConfirm(oldContent, newContent, 'data/events.json', DATA_REPO);
 }
 
 async function deleteEvent(id) {
@@ -1003,18 +1003,18 @@ async function deleteEvent(id) {
 
   pendingDiff = {
     repo: DATA_REPO,
-    path: 'events.json',
+    path: 'data/events.json',
     oldContent: oldContent,
     newContent: newContent,
     sha: ''
   };
 
   try {
-    const { sha } = await ghGet(DATA_REPO, 'events.json');
+    const { sha } = await ghGet(DATA_REPO, 'data/events.json');
     pendingDiff.sha = sha;
   } catch(err) { toast('获取文件 SHA 失败: ' + err.message, 'error'); return; }
 
-  showDiffAndConfirm(oldContent, newContent, 'events.json', DATA_REPO);
+  showDiffAndConfirm(oldContent, newContent, 'data/events.json', DATA_REPO);
 }
 
 // ===================== Characters =====================
@@ -1328,10 +1328,10 @@ async function confirmDiffCommit() {
     toast('提交成功: ' + d.path, 'success');
     closeModal('diffModal');
 
-    if (d.path === 'banners.json') {
+    if (d.path === 'data/banners.json') {
       banners = JSON.parse(d.newContent);
       renderBanners();
-    } else if (d.path === 'events.json') {
+    } else if (d.path === 'data/events.json') {
       events = JSON.parse(d.newContent);
       renderEvents();
     } else if (d.path === 'data/characters.json') {

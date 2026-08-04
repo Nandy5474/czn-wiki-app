@@ -88,8 +88,15 @@ fun HomeScreen(
     val today = LocalDate.now().toString()
 
     LaunchedEffect(Unit) {
-        events = db.eventDao().getAllEventsSync()
-        currentBanners = db.bannerDao().getAllBannersSync().filter { it.endDate >= today && it.server == "Global" }
+        try {
+            events = db.eventDao().getAllEventsSync()
+            currentBanners = db.bannerDao().getAllBannersSync().filter {
+                (it.endDate ?: "") >= today && (it.server ?: "") == "Global"
+            }
+        } catch (_: Exception) {
+            events = emptyList()
+            currentBanners = emptyList()
+        }
     }
 
     // Unified sorted events: active (asc by endDate) -> ended (desc by endDate)
@@ -400,8 +407,12 @@ fun HomeScreen(
         // === Banner History Quick View ===
         val historyBanners = remember { mutableStateListOf<BannerEntity>() }
         LaunchedEffect(Unit) {
-            historyBanners.clear()
-            historyBanners.addAll(db.bannerDao().getAllBannersSync().filter { it.endDate < today && it.server == "Global" }.take(2))
+            try {
+                historyBanners.clear()
+                historyBanners.addAll(db.bannerDao().getAllBannersSync().filter {
+                    (it.endDate ?: "") < today && (it.server ?: "") == "Global"
+                }.take(2))
+            } catch (_: Exception) { /* silently ignore */ }
         }
         if (historyBanners.isNotEmpty()) {
             Text(
