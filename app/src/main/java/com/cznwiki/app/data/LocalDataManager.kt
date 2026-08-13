@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import android.util.Log
 import com.cznwiki.app.data.database.AppDatabase
 import com.cznwiki.app.data.entity.UserCollectionEntity
+import com.cznwiki.app.data.entity.parseCharacters
 import com.google.gson.Gson
 import com.google.gson.JsonParseException
 import com.google.gson.reflect.TypeToken
@@ -222,16 +223,13 @@ class LocalDataManager(private val context: Context) {
             val charJson = context.assets.open("data/characters.json")
                 .bufferedReader().use { it.readText() }
             val charList: List<com.cznwiki.app.data.entity.CharacterEntity> = try {
-                gson.fromJson(
-                    charJson,
-                    object : TypeToken<List<com.cznwiki.app.data.entity.CharacterEntity>>() {}.type
-                )
+                parseCharacters(charJson, gson)
             } catch (e: JsonParseException) {
                 Log.w(TAG, "characters.json is not a top-level array, trying wrapped object format", e)
                 try {
                     val wrapped = gson.fromJson(charJson, Map::class.java)
                     val innerList = wrapped["characters"]
-                    gson.fromJson(gson.toJson(innerList), object : TypeToken<List<com.cznwiki.app.data.entity.CharacterEntity>>() {}.type)
+                    parseCharacters(gson.toJson(innerList), gson)
                 } catch (e2: Exception) {
                     Log.e(TAG, "Failed to parse characters.json in both formats", e2)
                     throw e

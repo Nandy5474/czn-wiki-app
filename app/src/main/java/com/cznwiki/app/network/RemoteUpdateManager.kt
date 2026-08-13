@@ -267,11 +267,13 @@ class RemoteUpdateManager(
                 )
                 filesDone++
                 if (charsJson != null) {
-                    val chars: List<CharacterEntity> = gson.fromJson(
-                        charsJson, object : TypeToken<List<CharacterEntity>>() {}.type
-                    )
-                    database.characterDao().insertAll(chars)
-                    charsUpdated = chars.size
+                    val chars: List<CharacterEntity> = parseCharacters(charsJson, gson)
+                    if (chars.isNotEmpty()) {
+                        database.characterDao().insertAll(chars)
+                        charsUpdated = chars.size
+                    } else {
+                        Log.w(TAG, "Remote characters.json parsed to empty list, skipped import")
+                    }
                 }
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to update characters", e)
