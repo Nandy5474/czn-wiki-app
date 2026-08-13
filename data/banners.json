@@ -222,5 +222,19 @@
     "url": "",
     "server": "Global",
     "status": "current"
+  },
+  {
+    "id": 17,
+    "name": "千鹤",
+    "stars": 5,
+    "character": "千鹤",
+    "element": "虚无",
+    "className": "心灵术士",
+    "type": "复刻",
+    "status": "current",
+    "startDate": "2026-08-12",
+    "endDate": "2026-09-01",
+    "url": "",
+    "server": "Global"
   }
 ]
