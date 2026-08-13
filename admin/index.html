@@ -1224,6 +1224,16 @@ async function loadCharacters() {
   }
 }
 
+// 将 Android 本地资源路径(file:///android_asset/data/xxx)转换为 GitHub raw URL 供后台预览
+function resolveAssetUrl(url) {
+  if (!url) return url;
+  if (url.indexOf('file:///android_asset/data/') === 0) {
+    const fn = url.substring(url.lastIndexOf('/') + 1);
+    return 'https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/portraits/' + fn;
+  }
+  return url;
+}
+
 function renderCharacters() {
   const tbody = document.getElementById('charactersTbody');
   if (!characters.length) {
@@ -1233,7 +1243,7 @@ function renderCharacters() {
   tbody.innerHTML = characters.map(c => `
     <tr>
       <td>${c.id}</td>
-      <td>${c.thumbUrl ? `<img src="${c.thumbUrl}" referrerpolicy="no-referrer" onerror="this.style.display='none';var t=document.createTextNode('无图');this.parentNode.insertBefore(t,this);" style="width:36px;height:36px;border-radius:4px;object-fit:cover">` : '-'}</td>
+      <td>${c.thumbUrl ? `<img src="${resolveAssetUrl(c.thumbUrl)}" referrerpolicy="no-referrer" onerror="this.style.display='none';var t=document.createTextNode('无图');this.parentNode.insertBefore(t,this);" style="width:36px;height:36px;border-radius:4px;object-fit:cover">` : '-'}</td>
       <td><strong>${esc(c.name)}</strong></td>
       <td>${'★'.repeat(c.stars||0)}</td>
       <td><span class="badge ${(c.rarity||'')==='SSR'?'badge-success':(c.rarity||'')==='SR'?'badge-warning':''}">${esc(c.rarity||'')}</span></td>
@@ -1280,11 +1290,11 @@ function openCharacterModal(ch) {
   imgPrev.referrerPolicy = 'no-referrer';
   imgPrev.onerror = function(){this.style.display='none'};
   imgPrev.style.display = ch && ch.imageUrl ? 'block' : 'none';
-  imgPrev.src = ch ? (ch.imageUrl||'') : '';
+  imgPrev.src = ch ? resolveAssetUrl(ch.imageUrl||'') : '';
   thumbPrev.referrerPolicy = 'no-referrer';
   thumbPrev.onerror = function(){this.style.display='none'};
   thumbPrev.style.display = ch && ch.thumbUrl ? 'block' : 'none';
-  thumbPrev.src = ch ? (ch.thumbUrl||'') : '';
+  thumbPrev.src = ch ? resolveAssetUrl(ch.thumbUrl||'') : '';
   // Clear pending uploads
   pendingImageUploads = {};
   document.getElementById('cmImageFileInput').value = '';
