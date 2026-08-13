@@ -191,6 +191,7 @@ fun HomeScreen(
             item { QuickEntryCard("当期活动", "活动倒计时详情", onClick = onNavigateToEvents, tint = MaterialTheme.colorScheme.secondary) }
             item { QuickEntryCard("卡池一览", "当期与往期卡池", onClick = onNavigateToBanners, tint = MaterialTheme.colorScheme.tertiary) }
             item { QuickEntryCard("队伍构筑", "创建管理我的队伍", onClick = onNavigateToTeams, tint = Color(0xFFFF7043)) }
+            item { QuickEntryCard("数据管理", "检查更新与备份", onClick = onNavigateToBackup, tint = Color(0xFF26A69A)) }
         }
 
         Spacer(Modifier.height(8.dp))
