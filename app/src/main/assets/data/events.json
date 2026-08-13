@@ -5,7 +5,8 @@
     "description": "新战斗员 Fei + 新伙伴 Ruixiang 概率提升招募",
     "endDate": "2026-07-29",
     "url": "",
-    "server": "Global"
+    "server": "Global",
+    "status": "ended"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "description": "竞技场第二赛季进行中",
     "endDate": "",
     "url": "",
-    "server": "Global"
+    "server": "Global",
+    "status": "active"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "description": "Sortie 玩法新增内容",
     "endDate": "",
     "url": "",
-    "server": "Global"
+    "server": "Global",
+    "status": "active"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "description": "大龟裂下半期开启，Boss「迷雾中的女人」登场",
     "endDate": "2026-07-29",
     "url": "",
-    "server": "Global"
+    "server": "Global",
+    "status": "ended"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "description": "新增强制绕过叙事路线、优化独特数据等节点",
     "endDate": "2026-07-29",
     "url": "",
-    "server": "Global"
+    "server": "Global",
+    "status": "ended"
   },
   {
     "id": 6,
@@ -45,31 +50,8 @@
     "description": "新增挑战内容、重置奖励，支援效果新增基础攻击卡牌伤害提升",
     "endDate": "",
     "url": "",
-    "server": "Global"
-  },
-  {
-    "id": 7,
-    "name": "泰妮布里雅&阿莉娅 UP 招募",
-    "description": "泰妮布里雅与阿莉娅概率提升招募",
-    "endDate": "2026-07-29",
-    "url": "",
-    "server": "CN"
-  },
-  {
-    "id": 8,
-    "name": "友纪复刻招募",
-    "description": "友纪复刻概率提升招募",
-    "endDate": "2026-08-12",
-    "url": "",
-    "server": "CN"
-  },
-  {
-    "id": 9,
-    "name": "国服上线纪念累计签到",
-    "description": "新晋领航者累计签到活动，完成任务领取奖励",
-    "endDate": "2027-07-20",
-    "url": "",
-    "server": "CN"
+    "server": "Global",
+    "status": "active"
   },
   {
     "id": 10,
@@ -77,6 +59,7 @@
     "description": "7月28日上线，三位新角色：希露德(Hilde)、阿拉贝拉(Arabella)、奥尔加(Olga)",
     "endDate": "",
     "url": "",
-    "server": "Global"
+    "server": "Global",
+    "status": "active"
   }
 ]

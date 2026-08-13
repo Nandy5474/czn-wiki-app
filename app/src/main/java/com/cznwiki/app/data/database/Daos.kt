@@ -102,10 +102,10 @@ interface UserCollectionDao {
 
 @Dao
 interface EventDao {
-    @Query("SELECT * FROM events ORDER BY endDate ASC")
+    @Query("SELECT * FROM events WHERE server='Global' ORDER BY endDate ASC")
     fun getAllEvents(): Flow<List<EventEntity>>
 
-    @Query("SELECT * FROM events ORDER BY endDate ASC")
+    @Query("SELECT * FROM events WHERE server='Global' ORDER BY endDate ASC")
     suspend fun getAllEventsSync(): List<EventEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -117,13 +117,13 @@ interface EventDao {
 
 @Dao
 interface BannerDao {
-    @Query("SELECT * FROM banners WHERE type = 'current' ORDER BY endDate ASC")
+    @Query("SELECT * FROM banners WHERE type = 'current' AND server='Global' ORDER BY endDate ASC")
     fun getCurrentBanners(): Flow<List<BannerEntity>>
 
-    @Query("SELECT * FROM banners WHERE type = 'history' ORDER BY endDate DESC")
+    @Query("SELECT * FROM banners WHERE type = 'history' AND server='Global' ORDER BY endDate DESC")
     fun getHistoryBanners(): Flow<List<BannerEntity>>
 
-    @Query("SELECT * FROM banners ORDER BY endDate DESC")
+    @Query("SELECT * FROM banners WHERE server='Global' ORDER BY endDate DESC")
     suspend fun getAllBannersSync(): List<BannerEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

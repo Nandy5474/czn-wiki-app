@@ -1,11 +1,13 @@
 {
-  "version": "2.0.59",
-  "version_code": 59,
-  "versionName": "2.0.59",
-  "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/characters.json",
-  "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/cards.json",
-  "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/self_awareness.json",
-  "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-data/main/user_collection.json",
-  "update_date": "2026-08-04",
-  "changelog": "v2.0.59: 恢复完整功能+Compose错误边界+后台历史数据"
+  "version": "2.0.61",
+  "version_code": 61,
+  "versionName": "2.0.61",
+  "characters_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/characters.json",
+  "cards_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/cards.json",
+  "self_awareness_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/self_awareness.json",
+  "user_collection_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/user_collection.json",
+  "events_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/events.json",
+  "banners_url": "https://raw.githubusercontent.com/Nandy5474/czn-wiki-app/main/data/banners.json",
+  "update_date": "2026-08-05",
+  "changelog": "v2.0.61: OTA数据仓库同步+希露德角色补全+根version修正"
 }

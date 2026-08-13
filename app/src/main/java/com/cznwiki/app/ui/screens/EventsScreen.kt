@@ -24,11 +24,10 @@ fun EventsScreen() {
     var events by remember { mutableStateOf<List<EventEntity>>(emptyList()) }
 
     LaunchedEffect(Unit) {
-        val now = "2026-06-22"
-        events = db.eventDao().getAllEventsSync().sortedWith(
-            compareBy<EventEntity> { it.endDate < now }  // active first (false < true)
-                .thenBy { it.endDate }                      // then by endDate ascending
-        )
+        val today = java.time.LocalDate.now().toString()
+        events = db.eventDao().getAllEventsSync()
+            .filter { it.endDate >= today || it.endDate.isEmpty() }
+            .sortedBy { it.endDate }
     }
 
     Column(Modifier.fillMaxSize()) {

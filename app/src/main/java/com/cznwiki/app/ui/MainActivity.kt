@@ -1,6 +1,10 @@
 package com.cznwiki.app.ui
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.TextView
+import android.widget.LinearLayout
+import android.graphics.Color
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -26,10 +30,22 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
-            CznWikiTheme {
-                CznWikiApp()
+        try {
+            setContent {
+                CznWikiTheme {
+                    CznWikiApp()
+                }
             }
+        } catch (e: Exception) {
+            Log.e("MainActivity", "setContent crashed, falling back to TextView", e)
+            val errorView = TextView(this).apply {
+                text = "应用初始化失败，请重启应用\n\n错误信息:\n${e.javaClass.simpleName}: ${e.message}"
+                setTextColor(Color.parseColor("#E0E0F0"))
+                setBackgroundColor(Color.parseColor("#1A0533"))
+                textSize = 14f
+                setPadding(32, 32, 32, 32)
+            }
+            setContentView(errorView)
         }
     }
 }
