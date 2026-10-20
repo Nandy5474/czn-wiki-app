@@ -152,3 +152,72 @@ data class TeamEntity(
     val member3Id: Int? = null,
     val createdAt: Long = System.currentTimeMillis()
 )
+
+/**
+ * 解析 partners.json 为 PartnerEntity 列表，并对缺失/为 null 的字段做兜底清洗。
+ *
+ * 与 parseCharacters 同一策略：Gson 反序列化 Kotlin data class 时若 JSON 缺少某字段
+ * 会绕过非空检查写入 null，导致 Room 非空列被写入 NULL。这里改用 JsonObject 逐字段
+ * 取值，缺失一律回退默认值，从源头杜绝 NULL 污染。
+ */
+fun parsePartners(json: String, gson: Gson): List<PartnerEntity> {
+    val arr: JsonArray = try {
+        gson.fromJson(json, JsonArray::class.java)
+    } catch (e: Exception) {
+        return emptyList()
+    } ?: return emptyList()
+
+    return arr.mapNotNull { el ->
+        if (!el.isJsonObject) return@mapNotNull null
+        val o: JsonObject = el.asJsonObject
+
+        fun str(key: String): String =
+            o.get(key)?.takeIf { it.isJsonPrimitive && it.asJsonPrimitive.isString }?.asString ?: ""
+        fun int(key: String): Int =
+            o.get(key)?.takeIf { it.isJsonPrimitive && it.asJsonPrimitive.isNumber }?.asInt ?: 0
+
+        PartnerEntity(
+            id = str("id"),
+            name = str("name"),
+            nameEn = str("nameEn"),
+            slug = str("slug"),
+            rarity = int("rarity"),
+            className = str("class"),
+            classEn = str("classEn"),
+            faction = str("faction"),
+            factionEn = str("factionEn"),
+            stats = str("stats"),
+            passiveName = str("passiveName"),
+            passiveDesc = str("passiveDesc"),
+            egoName = str("egoName"),
+            egoDesc = str("egoDesc"),
+            egoCost = int("egoCost"),
+            thumbUrl = str("thumbUrl"),
+            imageUrl = str("imageUrl"),
+            source = str("source")
+        )
+    }
+}
+
+@Entity(tableName = "partners")
+data class PartnerEntity(
+    @PrimaryKey val id: String,
+    val name: String,
+    val nameEn: String = "",
+    val slug: String = "",
+    val rarity: Int = 0,
+    @SerializedName("class")
+    val className: String = "",
+    val classEn: String = "",
+    val faction: String = "",
+    val factionEn: String = "",
+    val stats: String = "",
+    val passiveName: String = "",
+    val passiveDesc: String = "",
+    val egoName: String = "",
+    val egoDesc: String = "",
+    val egoCost: Int = 0,
+    val thumbUrl: String = "",
+    val imageUrl: String = "",
+    val source: String = ""
+)

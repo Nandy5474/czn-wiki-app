@@ -60,6 +60,7 @@ class RemoteUpdateManager(
         private const val USER_COLLECTION_URL = "${BASE_URL}user_collection.json"
         private const val EVENTS_URL = "${BASE_URL}events.json"
         private const val BANNERS_URL = "${BASE_URL}banners.json"
+        private const val PARTNERS_URL = "${BASE_URL}partners.json"
 
         @Volatile
         private var instance: RemoteUpdateManager? = null
@@ -108,6 +109,7 @@ class RemoteUpdateManager(
         val user_collection_url: String = USER_COLLECTION_URL,
         val events_url: String = EVENTS_URL,
         val banners_url: String = BANNERS_URL,
+        val partners_url: String = PARTNERS_URL,
         val update_date: String = "",
         val changelog: String = ""
     )
@@ -123,7 +125,8 @@ class RemoteUpdateManager(
         val saUpdated: Int = 0,
         val userCollUpdated: Int = 0,
         val eventsUpdated: Int = 0,
-        val bannersUpdated: Int = 0
+        val bannersUpdated: Int = 0,
+        val partnersUpdated: Int = 0
     )
 
     /** Get current local data version */
@@ -246,7 +249,8 @@ class RemoteUpdateManager(
                 DownloadTask("卡牌数据", remoteVersion.cards_url),
                 DownloadTask("命座数据", remoteVersion.self_awareness_url),
                 DownloadTask("活动数据", remoteVersion.events_url),
-                DownloadTask("卡池数据", remoteVersion.banners_url)
+                DownloadTask("卡池数据", remoteVersion.banners_url),
+                DownloadTask("伙伴数据", remoteVersion.partners_url)
             )
             val totalFiles = tasks.size
             var filesDone = 0
@@ -257,6 +261,7 @@ class RemoteUpdateManager(
             var saUpdated = 0
             var eventsUpdated = 0
             var bannersUpdated = 0
+            var partnersUpdated = 0
 
             // Download characters
             try {
@@ -360,6 +365,28 @@ class RemoteUpdateManager(
                 filesDone++
             }
 
+            // Download partners
+            try {
+                onStatus(UpdateStatus.Downloading("伙伴数据"))
+                val partnersJson = fetchUrlWithProgress(
+                    remoteVersion.partners_url,
+                    onStatus, "伙伴数据", 5, totalFiles
+                )
+                filesDone++
+                if (partnersJson != null) {
+                    val partners: List<PartnerEntity> = parsePartners(partnersJson, gson)
+                    if (partners.isNotEmpty()) {
+                        database.partnerDao().insertAll(partners)
+                        partnersUpdated = partners.size
+                    } else {
+                        Log.w(TAG, "Remote partners.json parsed to empty list, skipped import")
+                    }
+                }
+            } catch (e: Exception) {
+                Log.w(TAG, "Failed to update partners", e)
+                filesDone++
+            }
+
             // Notify final progress: all files done (success or fail)
             onStatus(UpdateStatus.Progress(DownloadProgress(
                 fileLabel = "完成",
@@ -388,6 +415,7 @@ class RemoteUpdateManager(
                 userCollUpdated = savedCount,
                 eventsUpdated = eventsUpdated,
                 bannersUpdated = bannersUpdated,
+                partnersUpdated = partnersUpdated,
                 update_date = remoteVersion.update_date
             )
         } catch (e: Exception) {

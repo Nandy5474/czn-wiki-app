@@ -156,3 +156,30 @@ interface TeamDao {
     @Delete
     suspend fun delete(team: TeamEntity)
 }
+
+@Dao
+interface PartnerDao {
+    @Query("SELECT * FROM partners ORDER BY CAST(id AS INTEGER) ASC")
+    fun getAllPartners(): Flow<List<PartnerEntity>>
+
+    @Query("SELECT * FROM partners ORDER BY CAST(id AS INTEGER) ASC")
+    suspend fun getAllPartnersSync(): List<PartnerEntity>
+
+    @Query("SELECT * FROM partners WHERE id = :id")
+    suspend fun getPartnerById(id: String): PartnerEntity?
+
+    @Query("SELECT * FROM partners WHERE name LIKE '%' || :query || '%' OR nameEn LIKE '%' || :query || '%' OR slug LIKE '%' || :query || '%'")
+    fun searchPartners(query: String): Flow<List<PartnerEntity>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(partners: List<PartnerEntity>)
+
+    @Query("SELECT COUNT(*) FROM partners")
+    suspend fun getCount(): Int
+
+    @Query("SELECT id FROM partners ORDER BY CAST(id AS INTEGER) ASC")
+    suspend fun getAllPartnerIdsSync(): List<String>
+
+    @Query("DELETE FROM partners")
+    suspend fun deleteAll()
+}

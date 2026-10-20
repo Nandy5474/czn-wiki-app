@@ -3,6 +3,7 @@ package com.cznwiki.app.data.database
 import android.content.Context
 import android.util.Log
 import androidx.room.*
+import androidx.room.migration.Migration
 import com.cznwiki.app.data.entity.*
 import com.google.gson.Gson
 import com.google.gson.JsonParseException
@@ -12,9 +13,9 @@ import com.google.gson.reflect.TypeToken
     entities = [
         CharacterEntity::class, CardEntity::class, SelfAwarenessEntity::class,
         UserCollectionEntity::class, EventEntity::class, BannerEntity::class,
-        TeamEntity::class
+        TeamEntity::class, PartnerEntity::class
     ],
-    version = 5,
+    version = 6,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -25,13 +26,29 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun eventDao(): EventDao
     abstract fun bannerDao(): BannerDao
     abstract fun teamDao(): TeamDao
+    abstract fun partnerDao(): PartnerDao
 
     companion object {
         @Volatile private var INSTANCE: AppDatabase? = null
 
+        val MIGRATION_5_6 = object : Migration(5, 6) {
+            override fun migrate(db: androidx.sqlite.db.SupportSQLiteDatabase) {
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS `partners` (`id` TEXT NOT NULL, " +
+                        "`name` TEXT NOT NULL, `nameEn` TEXT NOT NULL, `slug` TEXT NOT NULL, " +
+                        "`rarity` INTEGER NOT NULL, `className` TEXT NOT NULL, `classEn` TEXT NOT NULL, " +
+                        "`faction` TEXT NOT NULL, `factionEn` TEXT NOT NULL, `stats` TEXT NOT NULL, " +
+                        "`passiveName` TEXT NOT NULL, `passiveDesc` TEXT NOT NULL, `egoName` TEXT NOT NULL, " +
+                        "`egoDesc` TEXT NOT NULL, `egoCost` INTEGER NOT NULL, `thumbUrl` TEXT NOT NULL, " +
+                        "`imageUrl` TEXT NOT NULL, `source` TEXT NOT NULL, PRIMARY KEY(`id`))"
+                )
+            }
+        }
+
         fun getInstance(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
                 INSTANCE ?: Room.databaseBuilder(context, AppDatabase::class.java, "czn_wiki.db")
+                    .addMigrations(MIGRATION_5_6)
                     .fallbackToDestructiveMigration()
                     .build()
                     .also { INSTANCE = it }
@@ -122,5 +139,13 @@ suspend fun seedDatabaseFromAssets(context: Context, database: AppDatabase) {
         if (bannerList.isNotEmpty()) database.bannerDao().insertAll(bannerList)
     } catch (e: Exception) {
         Log.e("AppDatabase", "Failed to seed banners from assets", e)
+    }
+
+    try {
+        val partnersJson = context.assets.open("data/partners.json").bufferedReader().use { it.readText() }
+        val partnersList: List<PartnerEntity> = parsePartners(partnersJson, gson)
+        if (partnersList.isNotEmpty()) database.partnerDao().insertAll(partnersList)
+    } catch (e: Exception) {
+        Log.e("AppDatabase", "Failed to seed partners from assets", e)
     }
 }

@@ -17,7 +17,7 @@
     "ability": "闪电",
     "imageUrl": "file:///android_asset/data/char_01.png",
     "thumbUrl": "file:///android_asset/data/char_01.png",
-    "nameEn": "",
+    "nameEn": "Hugo",
     "role": "主C(狩猎)",
     "tier": "T1",
     "egoSkill": "狩猎开始：250%伤害。持续1回合，当其他战斗员使用卡牌时，触发1次狩猎开始攻击（最多3次）。[EP5]"
@@ -40,7 +40,7 @@
     "ability": "生成光之长剑",
     "imageUrl": "file:///android_asset/data/char_02.png",
     "thumbUrl": "file:///android_asset/data/char_02.png",
-    "nameEn": "",
+    "nameEn": "Heidemarie",
     "role": "主C(弃牌/极光)",
     "tier": "T1",
     "egoSkill": "剑之乐园：消耗墓地中全部极光剑逐层结算伤害，基础伤害上限2000%，依本次战斗期间已丢弃的卡牌数量伤害量提升+80%(最多20张)，技能结束后回收所有手牌。[EP5]"
@@ -63,7 +63,7 @@
     "ability": "和谐银河",
     "imageUrl": "file:///android_asset/data/char_03.png",
     "thumbUrl": "file:///android_asset/data/char_03.png",
-    "nameEn": "",
+    "nameEn": "Diana",
     "role": "主C(弃牌)",
     "tier": "T0",
     "egoSkill": "光辉微笑：生成1张邱比特射击，生成2张心型弹药。[EP5]"
@@ -86,7 +86,7 @@
     "ability": "掌控时空",
     "imageUrl": "file:///android_asset/data/char_04.png",
     "thumbUrl": "file:///android_asset/data/char_04.png",
-    "nameEn": "",
+    "nameEn": "Rita",
     "role": "辅助(护盾/净化)",
     "tier": "T2",
     "egoSkill": "荣耀时刻：时间超越6，按照本次战斗期间发动卡牌的行动点消耗之和，下次使用的自身攻击卡牌伤害量增加10%(最多200%)。[EP5]"
@@ -109,7 +109,7 @@
     "ability": "创造界",
     "imageUrl": "file:///android_asset/data/char_05.png",
     "thumbUrl": "file:///android_asset/data/char_05.png",
-    "nameEn": "",
+    "nameEn": "Tiphera",
     "role": "辅助(士气/增益)",
     "tier": "T0",
     "egoSkill": "创造共鸣：选择生成1张创造卡牌，接下来2次使用自我意识技能时额外生成，接下来使用的自我意识技能费用减少2。[EP5]"
@@ -132,7 +132,7 @@
     "ability": "无",
     "imageUrl": "file:///android_asset/data/char_06.png",
     "thumbUrl": "file:///android_asset/data/char_06.png",
-    "nameEn": "",
+    "nameEn": "Nine",
     "role": "副C(追击)",
     "tier": "T2",
     "egoSkill": "反射:零：对全体敌人造成基于防御的伤害250%，2张费用最高的卡牌的费用之和每有1，即可使本技能伤害量+50%，消耗这些卡牌。[EP5]"
@@ -155,7 +155,7 @@
     "ability": "驭龙",
     "imageUrl": "file:///android_asset/data/char_07.png",
     "thumbUrl": "file:///android_asset/data/char_07.png",
-    "nameEn": "",
+    "nameEn": "Narja",
     "role": "控制师(软控)",
     "tier": "T2",
     "egoSkill": "掠食者的狩猎法：贪食10，基于防御的伤害250%，若完美饱餐在坟墓中，则掠食5。[EP5]"
@@ -178,7 +178,7 @@
     "ability": "钴蓝之光",
     "imageUrl": "file:///android_asset/data/char_08.png",
     "thumbUrl": "file:///android_asset/data/char_08.png",
-    "nameEn": "",
+    "nameEn": "Sereniel",
     "role": "主C(单点)",
     "tier": "T2",
     "egoSkill": "守护天使：300%护盾，获得2层伤害减免持续1回合。[EP4]"
@@ -201,7 +201,7 @@
     "ability": "月影剑",
     "imageUrl": "file:///android_asset/data/char_09.png",
     "thumbUrl": "file:///android_asset/data/char_09.png",
-    "nameEn": "",
+    "nameEn": "Chizuru",
     "role": "控制师(群体)",
     "tier": "T2",
     "egoSkill": "樱吹雪：150% x 3伤害，施加1层热情弱点。[EP5]"
@@ -224,7 +224,7 @@
     "ability": "疾速",
     "imageUrl": "file:///android_asset/data/char_10.png",
     "thumbUrl": "file:///android_asset/data/char_10.png",
-    "nameEn": "",
+    "nameEn": "Yuki",
     "role": "副C/坦克",
     "tier": "T1",
     "egoSkill": "天际斩击：全体敌人造成300%伤害，手牌中所有攻击卡牌移动至牌堆顶部，每移动1张伤害量+50%。[EP5]"
@@ -247,7 +247,7 @@
     "ability": "聚能",
     "imageUrl": "file:///android_asset/data/char_11.png",
     "thumbUrl": "file:///android_asset/data/char_11.png",
-    "nameEn": "",
+    "nameEn": "Haru",
     "role": "坦克(护盾)",
     "tier": "T2",
     "egoSkill": "雷神降临：对全体敌人造成300%伤害，对目标施加2层易伤，对其他敌人施加1层易伤。[EP5]"
@@ -270,7 +270,7 @@
     "ability": "迷雾",
     "imageUrl": "file:///android_asset/data/char_12.png",
     "thumbUrl": "file:///android_asset/data/char_12.png",
-    "nameEn": "",
+    "nameEn": "Rin",
     "role": "主C(爆发)",
     "tier": "T2",
     "egoSkill": "暗雾秘剑·灭：200% x 2伤害，获得1层暗雾剑术。[EP5]"
@@ -293,7 +293,7 @@
     "ability": "绽放",
     "imageUrl": "file:///android_asset/data/char_13.png",
     "thumbUrl": "file:///android_asset/data/char_13.png",
-    "nameEn": "",
+    "nameEn": "Veronica",
     "role": "副C/辅助",
     "tier": "T0",
     "egoSkill": "卡牌大师：抽3张卡牌。若队伍中有Rachel，额外抽2张。[EP4]"
@@ -316,7 +316,7 @@
     "ability": "寒冰",
     "imageUrl": "file:///android_asset/data/char_14.png",
     "thumbUrl": "file:///android_asset/data/char_14.png",
-    "nameEn": "",
+    "nameEn": "Magna",
     "role": "坦克/保护",
     "tier": "T1",
     "egoSkill": "铁壁要塞：300%护盾，获得1层坚韧。[EP4]"
@@ -339,7 +339,7 @@
     "ability": "神谕",
     "imageUrl": "file:///android_asset/data/char_15.png",
     "thumbUrl": "file:///android_asset/data/char_15.png",
-    "nameEn": "",
+    "nameEn": "Khalipe",
     "role": "先锋(先手)",
     "tier": "T2",
     "egoSkill": "银纱：250%护盾，施加1层银纱，对全体敌人造成1层毅力伤害。[EP6]"
@@ -362,7 +362,7 @@
     "ability": "金刚不坏",
     "imageUrl": "file:///android_asset/data/char_16.png",
     "thumbUrl": "file:///android_asset/data/char_16.png",
-    "nameEn": "",
+    "nameEn": "Mei Lin",
     "role": "主C(连击)",
     "tier": "T1",
     "egoSkill": "龙之怒：200% x 4伤害。[EP6]"
@@ -385,7 +385,7 @@
     "ability": "光之幕",
     "imageUrl": "file:///android_asset/data/char_17.png",
     "thumbUrl": "file:///android_asset/data/char_17.png",
-    "nameEn": "",
+    "nameEn": "Orlea",
     "role": "全能辅助(最强奶妈)",
     "tier": "T0",
     "egoSkill": "天罚：200%伤害，目标每有1个减益效果，伤害+50%（最多+300%）。[EP5]"
@@ -408,7 +408,7 @@
     "ability": "黑玫瑰",
     "imageUrl": "file:///android_asset/data/char_18.png",
     "thumbUrl": "file:///android_asset/data/char_18.png",
-    "nameEn": "",
+    "nameEn": "Renoa",
     "role": "副C(标记)",
     "tier": "T2",
     "egoSkill": "Renoa的舞台：选择手牌中1张卡牌消灭。每回合开始时，抽1张同名卡牌。在接下来的回合开始时，每当抽到该卡牌时，全体友军伤害+5%持续1回合。最多18层。[EP7]"
@@ -431,7 +431,7 @@
     "ability": "空间移动",
     "imageUrl": "file:///android_asset/data/char_19.png",
     "thumbUrl": "file:///android_asset/data/char_19.png",
-    "nameEn": "",
+    "nameEn": "Cassius",
     "role": "士气发动机(最强辅助)",
     "tier": "T0",
     "egoSkill": "速升：弃掉最多3张卡牌，每弃1张多抽1张。[EP5]"
@@ -454,7 +454,7 @@
     "ability": "音波",
     "imageUrl": "file:///android_asset/data/char_20.png",
     "thumbUrl": "file:///android_asset/data/char_20.png",
-    "nameEn": "",
+    "nameEn": "Nia",
     "role": "辅助(控制)",
     "tier": "T2",
     "egoSkill": "ROCK AND ROLL：对所有敌人造成200%伤害，分贝3，丢弃所有抽取卡牌。[EP5]"
@@ -477,7 +477,7 @@
     "ability": "魔眼",
     "imageUrl": "file:///android_asset/data/char_21.png",
     "thumbUrl": "file:///android_asset/data/char_21.png",
-    "nameEn": "",
+    "nameEn": "Lucas",
     "role": "副C(狩猎)",
     "tier": "T3",
     "egoSkill": "全弹发射：抽2张卡，对全体敌人造成250%伤害。[EP5]"
@@ -500,7 +500,7 @@
     "ability": "怪力",
     "imageUrl": "file:///android_asset/data/char_22.png",
     "thumbUrl": "file:///android_asset/data/char_22.png",
-    "nameEn": "",
+    "nameEn": "Beryl",
     "role": "游侠(基础)",
     "tier": "T3",
     "egoSkill": "最大输出充能射击：250%伤害，施加1层易伤。[EP5]"
@@ -523,7 +523,7 @@
     "ability": "暗",
     "imageUrl": "file:///android_asset/data/char_23.png",
     "thumbUrl": "file:///android_asset/data/char_23.png",
-    "nameEn": "",
+    "nameEn": "Tressa",
     "role": "心灵术士(基础)",
     "tier": "T3",
     "egoSkill": "暗之波动：生成2张暗影匕首。[EP5]"
@@ -546,7 +546,7 @@
     "ability": "暗物质",
     "imageUrl": "file:///android_asset/data/char_24.png",
     "thumbUrl": "file:///android_asset/data/char_24.png",
-    "nameEn": "",
+    "nameEn": "Rei",
     "role": "控制师(基础)",
     "tier": "T3",
     "egoSkill": "终极暗影：300%伤害，获得1 AP。[EP4]"
@@ -569,7 +569,7 @@
     "ability": "水波",
     "imageUrl": "file:///android_asset/data/char_25.png",
     "thumbUrl": "file:///android_asset/data/char_25.png",
-    "nameEn": "",
+    "nameEn": "Mika",
     "role": "控制师(基础)",
     "tier": "T3",
     "egoSkill": "涌泉：治疗150%，+1 AP，获得1层波。[EP6]"
@@ -592,7 +592,7 @@
     "ability": "实现童话",
     "imageUrl": "file:///android_asset/data/char_26.png",
     "thumbUrl": "file:///android_asset/data/char_26.png",
-    "nameEn": "",
+    "nameEn": "Adelheid",
     "role": "先锋(速攻)",
     "tier": "T1",
     "egoSkill": "快乐结局：获得300%护盾，依持有的护盾获得固定治愈(不超过最大HP的30%)。[EP5]"
@@ -615,7 +615,7 @@
     "ability": "钢铁化",
     "imageUrl": "file:///android_asset/data/char_27.png",
     "thumbUrl": "file:///android_asset/data/char_27.png",
-    "nameEn": "",
+    "nameEn": "Amir",
     "role": "先锋(基础)",
     "tier": "T3",
     "egoSkill": "钢铁意志：每层金属化获得120%护盾。移除所有金属化。下回合开始时获得3层金属化。[EP4]"
@@ -638,7 +638,7 @@
     "ability": "千里眼",
     "imageUrl": "file:///android_asset/data/char_28.png",
     "thumbUrl": "file:///android_asset/data/char_28.png",
-    "nameEn": "",
+    "nameEn": "Selena",
     "role": "游侠(基础)",
     "tier": "T3",
     "egoSkill": "最终一击：300%伤害，施加3层标记。[EP5]"
@@ -661,7 +661,7 @@
     "ability": "铜墙铁壁",
     "imageUrl": "file:///android_asset/data/char_29.png",
     "thumbUrl": "file:///android_asset/data/char_29.png",
-    "nameEn": "",
+    "nameEn": "Maribell",
     "role": "先锋(坦克)",
     "tier": "T3",
     "egoSkill": "坚不可摧：350%护盾。[EP4]"
@@ -684,7 +684,7 @@
     "ability": "风",
     "imageUrl": "file:///android_asset/data/char_30.png",
     "thumbUrl": "file:///android_asset/data/char_30.png",
-    "nameEn": "",
+    "nameEn": "Owen",
     "role": "格斗家(基础)",
     "tier": "T3",
     "egoSkill": "狂怒风暴：250%伤害，250%护盾。[EP5]"
@@ -707,7 +707,7 @@
     "ability": "魔眼",
     "imageUrl": "file:///android_asset/data/char_31.png",
     "thumbUrl": "file:///android_asset/data/char_31.png",
-    "nameEn": "",
+    "nameEn": "Luke",
     "role": "主C(群体/虚弱)",
     "tier": "T1",
     "egoSkill": "满月斩：对全体敌人造成200%伤害，施加1层虚弱。[EP5]"
@@ -730,7 +730,7 @@
     "ability": "虚无",
     "imageUrl": "file:///android_asset/data/char_32.png",
     "thumbUrl": "file:///android_asset/data/char_32.png",
-    "nameEn": "",
+    "nameEn": "Kayron",
     "role": "主C(爆发型)",
     "tier": "T1",
     "egoSkill": "魔涌：250%伤害，获得2层士气持续1回合。[EP4]"
@@ -776,7 +776,7 @@
     "ability": "脉冲",
     "imageUrl": "file:///android_asset/data/char_34.png",
     "thumbUrl": "file:///android_asset/data/char_34.png",
-    "nameEn": "",
+    "nameEn": "Tenebria",
     "role": "副C(节奏)",
     "tier": "T1",
     "egoSkill": "全民偶像：接下来发动7张节奏卡牌时，节奏卡牌的伤害量增加7%；若已发动7次，接下来发动的7张节奏卡牌额外打击1次 [EP7]"
@@ -798,6 +798,79 @@
     "description": "被称为战场诈欺师的旷世谋略家「钢铁之雨」--「狐狸小队」的小队长,被称为战场诈欺师的谋略家。虽然因为豁达乐天的个性而显得漫不经心，但能精准找出敌人的破绽并一击命中，本事相当了得。他有著坚定的信念,那就是「世上没有任何东西比人的性命更珍贵」。",
     "ability": "",
     "imageUrl": "file:///android_asset/data/char_35.png",
-    "thumbUrl": "file:///android_asset/data/char_35.png"
+    "thumbUrl": "file:///android_asset/data/char_35.png",
+    "nameEn": "Hilde",
+    "role": null,
+    "tier": "T0.5",
+    "egoSkill": null
+  },
+  {
+    "id": 36,
+    "name": "阿拉贝拉",
+    "stars": 5,
+    "element": "本能",
+    "class": "决斗家",
+    "faction": "恒星家族",
+    "cv": "",
+    "race": "",
+    "birthday": "",
+    "baseAtk": 160,
+    "baseDef": 45,
+    "baseHp": 90,
+    "rarity": "SSR",
+    "description": "阿拉贝拉是国际服希露德之后登场的本能属性决斗家（Striker）。GameKee 评级 T0（卡厄思 T0 / 超空间 T0.5），抽取建议推荐抽，0+1 即可，2 命稳定局内手感，高命提供大量数值。czn.gg 评级 S（#1）。",
+    "ability": "",
+    "imageUrl": "https://static.dotgg.gg/czn/characters/30115.webp",
+    "thumbUrl": "https://static.dotgg.gg/czn/characters/30115.webp",
+    "nameEn": "Arabella",
+    "role": "群攻收割特化主C，兼顾对单多段输出；伤害高、utility 出色，能持续施压并强化团队表现，构筑适配灵活",
+    "tier": "T0",
+    "egoSkill": "无意义的结局（自我意识技能）：造成600%的伤害；持续2回合，对目标造成相当于所有怪物受到伤害量30%的固定伤害（每回合不超过阿拉贝拉攻击力的1000%）"
+  },
+  {
+    "id": 37,
+    "name": "奥尔加",
+    "stars": 5,
+    "element": "本能",
+    "class": "心灵术士",
+    "faction": "流浪者",
+    "cv": "",
+    "race": "",
+    "birthday": "",
+    "baseAtk": 150,
+    "baseDef": 50,
+    "baseHp": 85,
+    "rarity": "SSR",
+    "description": "奥尔加是国际服本能属性心灵术士（Psionic），GameKee 评级 T1（卡厄思 T1 / 超空间 T1），推荐程度可抽。纯赛季角色，围绕龟裂/痛苦/灼热持续伤害计数爆发，灭绝的漩涡依触发数量放大伤害。czn.gg 评级 A。",
+    "ability": "",
+    "imageUrl": "https://static.dotgg.gg/czn/characters/30117.webp",
+    "thumbUrl": "https://static.dotgg.gg/czn/characters/30117.webp",
+    "nameEn": "Olga",
+    "role": "龟裂/痛苦持续伤害流输出，赛季限定角色；单人能力一般，打大龟裂场景可作对策，回血依赖2命",
+    "tier": "T1",
+    "egoSkill": "灭绝的漩涡（自我意识技能）：对所有敌人造成400%的伤害；依本回合触发的龟裂数，基本伤害量+50%，依痛苦数+20%，依灼热数+30%（最多300%）"
+  },
+  {
+    "id": 38,
+    "name": "安妮卡",
+    "stars": 4,
+    "element": "秩序",
+    "class": "决斗家",
+    "faction": "恒星家族",
+    "cv": "",
+    "race": "",
+    "birthday": "",
+    "baseAtk": 148,
+    "baseDef": 42,
+    "baseHp": 83,
+    "rarity": "SR",
+    "description": "安妮卡是国际服秩序属性决斗家（Striker），GameKee 评级 T1（卡厄思 T1 / 超空间 T1），推荐程度可抽。天使卡池的赠品角色，效率机制不错：主导卡牌触发时获得AP，装弹/热身/狂暴触发器构成主导连锁。czn.gg 无评级。",
+    "ability": "",
+    "imageUrl": "https://static.dotgg.gg/czn/characters/1012.webp",
+    "thumbUrl": "https://static.dotgg.gg/czn/characters/1012.webp",
+    "nameEn": "Anika",
+    "role": "主导/效率机制特化主C，依赖AP与主导卡牌联动；仅在特定构筑中可作为主C使用",
+    "tier": "T1",
+    "egoSkill": "水牛冲锋（自我意识技能）：对所有敌人造成250%的伤害，韧性伤害2"
   }
 ]
