@@ -25,8 +25,9 @@ fun EventsScreen() {
 
     LaunchedEffect(Unit) {
         val today = java.time.LocalDate.now().toString()
+        // v3.0.3: 按 status 过滤（active 正常展示，ended 隐藏）；未结束（endDate 空或 >= 今天）展示
         events = db.eventDao().getAllEventsSync()
-            .filter { it.endDate >= today || it.endDate.isEmpty() }
+            .filter { it.status != "ended" && (it.endDate.isEmpty() || it.endDate >= today) }
             .sortedBy { it.endDate }
     }
 

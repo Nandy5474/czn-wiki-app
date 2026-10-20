@@ -111,6 +111,7 @@ data class SelfAwarenessEntity(
 data class UserCollectionEntity(
     @PrimaryKey val characterId: Int,
     val owned: Boolean = false,
+    val favorite: Boolean = false,
     val constellation: Int = 0,
     val potential: Int = 0,
     val partnerId: Int? = null,
@@ -124,7 +125,8 @@ data class EventEntity(
     val description: String = "",
     val endDate: String = "",
     val url: String = "",
-    val server: String = ""
+    val server: String = "",
+    val status: String = ""
 )
 
 @Entity(tableName = "banners")
@@ -139,7 +141,8 @@ data class BannerEntity(
     val startDate: String = "",
     val endDate: String = "",
     val url: String = "",
-    val server: String = ""
+    val server: String = "",
+    @SerializedName("status") val status: String = ""
 )
 
 @Entity(tableName = "teams")

@@ -147,7 +147,23 @@ class CharacterDetailViewModel(application: Application) : AndroidViewModel(appl
             (collectionStatus as MutableStateFlow).value = db.userCollectionDao().getByCharacterId(characterId)
         }
     }
+
+    fun updateFavorite(favorite: Boolean) {
+        viewModelScope.launch {
+            val existing = db.userCollectionDao().getByCharacterId(characterId)
+            val entity = if (existing != null) {
+                existing.copy(favorite = favorite)
+            } else {
+                UserCollectionEntity(characterId = characterId, owned = false, favorite = favorite)
+            }
+            db.userCollectionDao().upsert(entity)
+            localDataMgr.saveUserModification(characterId, "favorite", favorite)
+            (collectionStatus as MutableStateFlow).value = db.userCollectionDao().getByCharacterId(characterId)
+        }
+    }
 }
+
+enum class CollectionMode { FAVORITE, OWNED }
 
 class CollectionViewModel(application: Application) : AndroidViewModel(application) {
     private val db = (application as CznApplication).database
@@ -157,36 +173,61 @@ class CollectionViewModel(application: Application) : AndroidViewModel(applicati
         .getOwnedCharacters()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
+    private val favoriteCharacters: StateFlow<List<UserCollectionEntity>> = db.userCollectionDao()
+        .getFavoriteCharacters()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    private val _mode = MutableStateFlow(CollectionMode.FAVORITE)
+    val mode: StateFlow<CollectionMode> = _mode.asStateFlow()
+
+    // v3.0.3: 区分「收藏」与「已拥有」，可切换视图
     val collectionWithCharacters: StateFlow<List<CollectionCharacterData>> =
-        db.userCollectionDao().getOwnedCharacters()
-            .map { ucList ->
-                ucList.mapNotNull { uc ->
-                    val char = db.characterDao().getCharacterById(uc.characterId) ?: return@mapNotNull null
-                    val sa = db.selfAwarenessDao().getByCharacterSync(uc.characterId)
-                    CollectionCharacterData(
-                        characterId = char.id,
-                        name = char.name,
-                        element = char.element,
-                        job = char.job,
-                        stars = char.stars,
-                        tier = char.tier,
-                        customTier = uc.customTier,
-                        imageUrl = char.imageUrl,
-                        thumbUrl = char.thumbUrl,
-                        owned = uc.owned,
-                        constellation = uc.constellation,
-                        potential = uc.potential,
-                        partnerId = uc.partnerId,
-                        selfAwareness = sa
-                    )
-                }
+        combine(ownedCharacters, favoriteCharacters, _mode) { ownedList, favoriteList, mode ->
+            val ucList = when (mode) {
+                CollectionMode.FAVORITE -> favoriteList
+                CollectionMode.OWNED -> ownedList
             }
-            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+            ucList.mapNotNull { uc ->
+                val char = db.characterDao().getCharacterById(uc.characterId) ?: return@mapNotNull null
+                val sa = db.selfAwarenessDao().getByCharacterSync(uc.characterId)
+                CollectionCharacterData(
+                    characterId = char.id,
+                    name = char.name,
+                    element = char.element,
+                    job = char.job,
+                    stars = char.stars,
+                    tier = char.tier,
+                    customTier = uc.customTier,
+                    imageUrl = char.imageUrl,
+                    thumbUrl = char.thumbUrl,
+                    owned = uc.owned,
+                    favorite = uc.favorite,
+                    constellation = uc.constellation,
+                    potential = uc.potential,
+                    partnerId = uc.partnerId,
+                    selfAwareness = sa
+                )
+            }
+        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    fun setMode(mode: CollectionMode) { _mode.value = mode }
 
     fun updateOwnership(characterId: Int, owned: Boolean) {
         viewModelScope.launch {
             db.userCollectionDao().upsert(UserCollectionEntity(characterId = characterId, owned = owned))
             localDataMgr.saveUserModification(characterId, "owned", owned)
+        }
+    }
+
+    fun updateFavorite(characterId: Int, favorite: Boolean) {
+        viewModelScope.launch {
+            val existing = db.userCollectionDao().getByCharacterId(characterId)
+            if (existing != null) {
+                db.userCollectionDao().updateFavorite(characterId, favorite)
+            } else {
+                db.userCollectionDao().upsert(UserCollectionEntity(characterId = characterId, owned = false, favorite = favorite))
+            }
+            localDataMgr.saveUserModification(characterId, "favorite", favorite)
         }
     }
 
@@ -230,6 +271,7 @@ data class CollectionCharacterData(
     val imageUrl: String,
     val thumbUrl: String,
     val owned: Boolean,
+    val favorite: Boolean,
     val constellation: Int,
     val potential: Int,
     val partnerId: Int?,

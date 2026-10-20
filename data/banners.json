@@ -236,5 +236,84 @@
     "endDate": "2026-09-01",
     "url": "",
     "server": "Global"
+  },
+  {
+    "id": 18,
+    "name": "Amplified Distress Signal（赛雷妮尔&佩可 UP）",
+    "title": "Amplified Distress Signal",
+    "stars": 5,
+    "character": "赛雷妮尔",
+    "characters": [
+      "赛雷妮尔 Sereniel（战斗员）",
+      "佩可 Peko（伙伴）"
+    ],
+    "element": "",
+    "className": "",
+    "content": "复刻救援池：★5 赛雷妮尔（战斗员）& 佩可（伙伴）UP；4★ UP：Anika/Selena/Ritochka/Daisy/Akad/Rachel。GameKee 首页卡池提示 16 小时后可抽赛雷妮尔（10-21 结束）。",
+    "type": "复刻",
+    "startDate": "2026-09-30",
+    "endDate": "2026-10-21",
+    "url": "https://czn.gg/banners/",
+    "server": "Global",
+    "status": "current"
+  },
+  {
+    "id": 19,
+    "name": "常驻救援UP：九（战斗员）",
+    "title": "Normal Combatant Rate-Up Rescue - Amplified Distress Signal: Nine",
+    "stars": 5,
+    "character": "九",
+    "characters": [
+      "九 Nine（★5 战斗员）",
+      "Rei / Amir（4★ UP）"
+    ],
+    "element": "",
+    "className": "",
+    "content": "常驻战斗员救援池概率UP：★5 Nine；★5 基础概率 1%，70 抽保底，140 抽 UP 保底；4★ UP Rei/Amir。",
+    "type": "常驻",
+    "startDate": "2026-10-13",
+    "endDate": "2026-11-03",
+    "url": "https://czn.gg/normal-combatant-rate-up-rescue-amplified-distress-signal-nine/",
+    "server": "Global",
+    "status": "current"
+  },
+  {
+    "id": 20,
+    "name": "常驻救援UP：艾希雅（伙伴）",
+    "title": "Normal Partner Rate-Up Rescue - Amplified Distress Signal: Alcea",
+    "stars": 5,
+    "character": "艾希雅",
+    "characters": [
+      "艾希雅 Alcea（★5 伙伴）"
+    ],
+    "element": "",
+    "className": "",
+    "content": "常驻伙伴救援池概率UP：★5 Alcea（艾希雅）。",
+    "type": "常驻",
+    "startDate": "2026-10-13",
+    "endDate": "2026-11-03",
+    "url": "https://czn.gg/normal-partner-rate-up-rescue-amplified-distress-signal-alcea/",
+    "server": "Global",
+    "status": "current"
+  },
+  {
+    "id": 21,
+    "name": "罗斯薇瑟 & 席格 救援机率提升",
+    "title": "Rossweisse & Siger Rate-Up Rescue（Season 5 限定）",
+    "stars": 5,
+    "character": "罗斯薇瑟",
+    "characters": [
+      "罗斯薇瑟 Rossweisse（★5 赛季限定战斗员）",
+      "席格 Siger（伙伴）"
+    ],
+    "element": "",
+    "className": "",
+    "content": "S5 首池（10-21 维护后开启）：赛季限定战斗员罗斯薇瑟（凯尔肯的使徒/神之使徒，明暗泄牌机制）+ 伙伴席格救援机率提升；结束日期官方未公布。",
+    "type": "新角色",
+    "startDate": "2026-10-21",
+    "endDate": "",
+    "url": "https://www.gamekee.com/czn/724719.html",
+    "server": "Global",
+    "status": "future"
   }
 ]

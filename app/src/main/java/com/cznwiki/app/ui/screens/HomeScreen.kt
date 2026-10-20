@@ -35,9 +35,11 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.cznwiki.app.CznApplication
+import com.cznwiki.app.R
 import com.cznwiki.app.data.entity.BannerEntity
 import com.cznwiki.app.data.entity.EventEntity
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import kotlin.math.sin
 import kotlin.random.Random
@@ -48,8 +50,8 @@ private val DeepPurple = Color(0xFF1A0533)
 private val Cyan = Color(0xFF00E5FF)
 private val Gold = Color(0xFFFFD700)
 
-// Data wrapper for T0 character items
-private data class T0Item(val id: Int, val name: String, val role: String, val imageUrl: String)
+// Data wrapper for favorite character items
+private data class FavoriteItem(val id: Int, val name: String, val role: String, val imageUrl: String, val thumbUrl: String)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -59,6 +61,7 @@ fun HomeScreen(
     onNavigateToEvents: () -> Unit = {},
     onNavigateToBanners: () -> Unit = {},
     onNavigateToTeams: () -> Unit = {},
+    onNavigateToPartners: () -> Unit = {},
     onNavigateToBackup: () -> Unit = {}
 ) {
     val context = LocalContext.current
@@ -69,6 +72,7 @@ fun HomeScreen(
     var historyBanners by remember { mutableStateOf<List<BannerEntity>>(emptyList()) }
     var charCount by remember { mutableIntStateOf(0) }
     var errorMsg by remember { mutableStateOf<String?>(null) }
+    var favoriteChars by remember { mutableStateOf<List<FavoriteItem>>(emptyList()) }
 
     LaunchedEffect(Unit) {
         try {
@@ -78,8 +82,21 @@ fun HomeScreen(
             val today = java.time.LocalDate.now().toString()
             events = runBlocking { db.eventDao().getAllEventsSync() }.filter { it.endDate >= today || it.endDate.isEmpty() }
             val allBanners = runBlocking { db.bannerDao().getAllBannersSync() }
-            currentBanners = allBanners.filter { (it.endDate ?: "") >= today && (it.server ?: "") == "Global" }
-            historyBanners = allBanners.filter { (it.endDate ?: "") < today && (it.server ?: "") == "Global" }.take(2)
+            // v3.0.3: 按 status 过滤（current/future 为当期，history 为往期），修复卡池一览为空
+            currentBanners = allBanners.filter { (it.status == "current" || it.status == "future") && it.server == "Global" }
+            historyBanners = allBanners.filter { it.status == "history" && it.server == "Global" }.take(2)
+            // v3.0.3: 首页收藏角色区块（favorite=true），无收藏时显示引导文案
+            val favList = runBlocking { db.userCollectionDao().getFavoriteCharacters().first() }
+            favoriteChars = favList.mapNotNull { uc ->
+                val char = runBlocking { db.characterDao().getCharacterById(uc.characterId) } ?: return@mapNotNull null
+                FavoriteItem(
+                    id = char.id,
+                    name = char.name,
+                    role = char.role,
+                    imageUrl = char.imageUrl,
+                    thumbUrl = char.thumbUrl
+                )
+            }
             diagState = "渲染成功"
         } catch (e: Exception) {
             Log.e("HomeDiag", "init failed", e)
@@ -190,29 +207,37 @@ fun HomeScreen(
             item { QuickEntryCard("角色图鉴", "浏览全部战斗员", onClick = onNavigateToCharacterList, tint = MaterialTheme.colorScheme.primary) }
             item { QuickEntryCard("当期活动", "活动倒计时详情", onClick = onNavigateToEvents, tint = MaterialTheme.colorScheme.secondary) }
             item { QuickEntryCard("卡池一览", "当期与往期卡池", onClick = onNavigateToBanners, tint = MaterialTheme.colorScheme.tertiary) }
+            item { QuickEntryCard("伙伴一览", "查看全部辅战员", onClick = onNavigateToPartners, tint = Color(0xFFAB47BC)) }
             item { QuickEntryCard("队伍构筑", "创建管理我的队伍", onClick = onNavigateToTeams, tint = Color(0xFFFF7043)) }
             item { QuickEntryCard("数据管理", "检查更新与备份", onClick = onNavigateToBackup, tint = Color(0xFF26A69A)) }
         }
 
         Spacer(Modifier.height(8.dp))
 
-        // === T0 Recommended Characters ===
-        Text("T0 推荐角色", fontWeight = FontWeight.Bold, color = Color.White,
+        // === Favorite Characters (replaces T0 recommendation) ===
+        Text("我的收藏角色", fontWeight = FontWeight.Bold, color = Color.White,
             modifier = Modifier.padding(16.dp, 8.dp, 16.dp, 4.dp))
-        LazyRow(
-            contentPadding = PaddingValues(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.height(170.dp)
-        ) {
-            val t0Chars = listOf(
-                T0Item(17, "奥尔莱亚", "全能辅助", "https://raw.githubusercontent.com/czn-gg/czn-wiki-data/main/images/characters/17_thumb.png"),
-                T0Item(13, "维若妮卡", "副C/辅助", "https://raw.githubusercontent.com/czn-gg/czn-wiki-data/main/images/characters/13_thumb.png"),
-                T0Item(3, "黛安娜", "弃牌主C", "https://raw.githubusercontent.com/czn-gg/czn-wiki-data/main/images/characters/3_thumb.png"),
-                T0Item(5, "蒂菲拉", "辅助", "https://raw.githubusercontent.com/czn-gg/czn-wiki-data/main/images/characters/5_thumb.png"),
-                T0Item(19, "凯西乌斯", "士气发动机", "https://raw.githubusercontent.com/czn-gg/czn-wiki-data/main/images/characters/19_thumb.png"),
-            )
-            items(t0Chars) { item ->
-                T0CharacterCard(name = item.name, role = item.role, imageUrl = item.imageUrl, onClick = { onNavigateToCharacter(item.id) })
+        if (favoriteChars.isEmpty()) {
+            Card(
+                Modifier.fillMaxWidth().padding(horizontal = 16.dp).clickable(onClick = onNavigateToCharacterList),
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.06f))
+            ) {
+                Column(Modifier.fillMaxWidth().padding(20.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text("还没有收藏角色", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    Spacer(Modifier.height(4.dp))
+                    Text("前往角色图鉴，点击“收藏”即可在首页展示", color = Color.White.copy(alpha = 0.5f), fontSize = 12.sp)
+                }
+            }
+        } else {
+            LazyRow(
+                contentPadding = PaddingValues(horizontal = 16.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                modifier = Modifier.height(170.dp)
+            ) {
+                items(favoriteChars) { item ->
+                    T0CharacterCard(name = item.name, role = item.role, imageUrl = item.imageUrl, thumbUrl = item.thumbUrl, tag = "收藏", onClick = { onNavigateToCharacter(item.id) })
+                }
             }
         }
 
@@ -313,9 +338,9 @@ fun QuickEntryCard(title: String, description: String, onClick: () -> Unit, tint
     }
 }
 
-// === T0 Character Card (animated gradient ring + AsyncImage) ===
+// === Favorite Character Card (animated gradient ring + AsyncImage) ===
 @Composable
-fun T0CharacterCard(name: String, role: String, imageUrl: String, onClick: () -> Unit) {
+fun T0CharacterCard(name: String, role: String, imageUrl: String, thumbUrl: String = "", onClick: () -> Unit, tag: String = "T0") {
     val infiniteTransition = rememberInfiniteTransition(label = "t0brd")
     val borderAngle by infiniteTransition.animateFloat(0f, 360f,
         infiniteRepeatable(tween(3000, easing = LinearEasing), RepeatMode.Restart), "ba")
@@ -323,6 +348,8 @@ fun T0CharacterCard(name: String, role: String, imageUrl: String, onClick: () ->
     val isPressed by interactionSource.collectIsPressedAsState()
     val scale by animateFloatAsState(if (isPressed) 0.93f else 1f, spring(0.3f, 20f), label = "t0sc")
     val primaryColor = MaterialTheme.colorScheme.primary
+    // 优先远程插图 imageUrl；无图时用本地 thumbUrl（file:///android_asset/data/char_XX.png）兜底
+    val portraitUrl = imageUrl.ifBlank { thumbUrl }
     Card(Modifier.width(130.dp).scale(scale).clickable(interactionSource, null, onClick = onClick),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.06f))
@@ -338,7 +365,9 @@ fun T0CharacterCard(name: String, role: String, imageUrl: String, onClick: () ->
                     contentAlignment = Alignment.Center) {
                     AsyncImage(
                         model = ImageRequest.Builder(LocalContext.current)
-                            .data(imageUrl)
+                            .data(portraitUrl)
+                            .placeholder(R.drawable.placeholder_portrait)
+                            .error(R.drawable.placeholder_portrait)
                             .crossfade(true)
                             .size(52)
                             .build(),
@@ -351,7 +380,7 @@ fun T0CharacterCard(name: String, role: String, imageUrl: String, onClick: () ->
             Text(name, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 13.sp)
             Text(role, color = MaterialTheme.colorScheme.primary, fontSize = 10.sp)
             Surface(shape = RoundedCornerShape(4.dp), color = MaterialTheme.colorScheme.primary.copy(alpha = 0.2f)) {
-                Text("T0", color = MaterialTheme.colorScheme.primary, fontSize = 10.sp,
+                Text(tag, color = MaterialTheme.colorScheme.primary, fontSize = 10.sp,
                     modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp))
             }
         }

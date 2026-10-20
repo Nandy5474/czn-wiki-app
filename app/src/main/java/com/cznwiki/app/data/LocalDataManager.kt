@@ -77,6 +77,7 @@ class LocalDataManager(private val context: Context) {
     data class UserModEntry(
         val customTier: String? = null,
         val owned: Boolean? = null,
+        val favorite: Boolean? = null,
         val constellation: Int? = null,
         val potential: Int? = null,
         val partnerId: Int? = null
@@ -109,6 +110,7 @@ class LocalDataManager(private val context: Context) {
         val updated = when (field) {
             "customTier" -> existing.copy(customTier = value as? String)
             "owned" -> existing.copy(owned = value as? Boolean)
+            "favorite" -> existing.copy(favorite = value as? Boolean)
             "constellation" -> existing.copy(constellation = value as? Int)
             "potential" -> existing.copy(potential = value as? Int)
             "partnerId" -> existing.copy(partnerId = value as? Int)

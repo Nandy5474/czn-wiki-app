@@ -437,6 +437,15 @@ fun CharacterDetailScreen(
                                     )
                                 }
 
+                                // Favorite switch (v3.0.3: 区分「拥有」与「收藏」)
+                                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                                    Text("收藏", modifier = Modifier.weight(1f))
+                                    Switch(
+                                        checked = collectionStatus?.favorite == true,
+                                        onCheckedChange = { viewModel.updateFavorite(it) }
+                                    )
+                                }
+
                                 if (collectionStatus?.owned == true) {
                                     Spacer(modifier = Modifier.height(12.dp))
                                     Text("强度评级 (自定义)", style = MaterialTheme.typography.bodyMedium)

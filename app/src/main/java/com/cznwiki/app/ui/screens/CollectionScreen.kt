@@ -20,6 +20,7 @@ import coil.request.ImageRequest
 import com.cznwiki.app.R
 import com.cznwiki.app.data.entity.SelfAwarenessEntity
 import com.cznwiki.app.ui.viewmodel.CollectionCharacterData
+import com.cznwiki.app.ui.viewmodel.CollectionMode
 import com.cznwiki.app.ui.viewmodel.CollectionViewModel
 
 @Composable

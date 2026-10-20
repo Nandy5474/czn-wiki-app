@@ -13,6 +13,7 @@ sealed class Screen(val route: String, val title: String = "", val icon: ImageVe
     }
     data object Events : Screen("events", "活动列表")
     data object Banners : Screen("banners", "卡池一览")
+    data object Partners : Screen("partners", "伙伴一览")
     data object Teams : Screen("teams", "队伍构筑")
     data object Backup : Screen("backup", "数据备份")
 }

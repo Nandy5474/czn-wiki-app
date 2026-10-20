@@ -75,6 +75,9 @@ interface UserCollectionDao {
     @Query("SELECT * FROM user_collection WHERE owned = 1")
     fun getOwnedCharacters(): Flow<List<UserCollectionEntity>>
 
+    @Query("SELECT * FROM user_collection WHERE favorite = 1")
+    fun getFavoriteCharacters(): Flow<List<UserCollectionEntity>>
+
     @Query("SELECT * FROM user_collection WHERE characterId = :characterId")
     suspend fun getByCharacterId(characterId: Int): UserCollectionEntity?
 
@@ -98,6 +101,9 @@ interface UserCollectionDao {
 
     @Query("UPDATE user_collection SET customTier = :value WHERE characterId = :characterId")
     suspend fun updateTier(characterId: Int, value: String)
+
+    @Query("UPDATE user_collection SET favorite = :value WHERE characterId = :characterId")
+    suspend fun updateFavorite(characterId: Int, value: Boolean)
 }
 
 @Dao
@@ -117,10 +123,10 @@ interface EventDao {
 
 @Dao
 interface BannerDao {
-    @Query("SELECT * FROM banners WHERE type = 'current' AND server='Global' ORDER BY endDate ASC")
+    @Query("SELECT * FROM banners WHERE status IN ('current','future') AND server='Global' ORDER BY endDate ASC")
     fun getCurrentBanners(): Flow<List<BannerEntity>>
 
-    @Query("SELECT * FROM banners WHERE type = 'history' AND server='Global' ORDER BY endDate DESC")
+    @Query("SELECT * FROM banners WHERE status = 'history' AND server='Global' ORDER BY endDate DESC")
     fun getHistoryBanners(): Flow<List<BannerEntity>>
 
     @Query("SELECT * FROM banners WHERE server='Global' ORDER BY endDate DESC")

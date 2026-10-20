@@ -25,8 +25,9 @@ fun BannersScreen() {
     var historyBanners by remember { mutableStateOf<List<BannerEntity>>(emptyList()) }
 
     LaunchedEffect(Unit) {
-        currentBanners = db.bannerDao().getAllBannersSync().filter { it.type == "current" }
-        historyBanners = db.bannerDao().getAllBannersSync().filter { it.type == "history" }
+        // v3.0.3: 按 status 过滤（current/future 为当期，history 为往期）
+        currentBanners = db.bannerDao().getAllBannersSync().filter { it.status == "current" || it.status == "future" }
+        historyBanners = db.bannerDao().getAllBannersSync().filter { it.status == "history" }
     }
 
     Column(Modifier.fillMaxSize()) {

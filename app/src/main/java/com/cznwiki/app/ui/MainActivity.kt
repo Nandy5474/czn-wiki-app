@@ -119,6 +119,7 @@ fun CznWikiApp() {
                     },
                     onNavigateToEvents = { navController.navigate(Screen.Events.route) },
                     onNavigateToBanners = { navController.navigate(Screen.Banners.route) },
+                    onNavigateToPartners = { navController.navigate(Screen.Partners.route) },
                     onNavigateToTeams = { navController.navigate(Screen.Teams.route) },
                     onNavigateToBackup = { navController.navigate(Screen.Backup.route) }
                 )

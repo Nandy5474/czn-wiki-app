@@ -15,7 +15,7 @@ import com.google.gson.reflect.TypeToken
         UserCollectionEntity::class, EventEntity::class, BannerEntity::class,
         TeamEntity::class, PartnerEntity::class
     ],
-    version = 6,
+    version = 7,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -45,10 +45,18 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        // v6 -> v7：仅新增列，不破坏现有表
+        val MIGRATION_6_7 = object : Migration(6, 7) {
+            override fun migrate(db: androidx.sqlite.db.SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE `user_collection` ADD COLUMN `favorite` INTEGER NOT NULL DEFAULT 0")
+                db.execSQL("ALTER TABLE `banners` ADD COLUMN `status` TEXT NOT NULL DEFAULT ''")
+            }
+        }
+
         fun getInstance(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
                 INSTANCE ?: Room.databaseBuilder(context, AppDatabase::class.java, "czn_wiki.db")
-                    .addMigrations(MIGRATION_5_6)
+                    .addMigrations(MIGRATION_5_6, MIGRATION_6_7)
                     .fallbackToDestructiveMigration()
                     .build()
                     .also { INSTANCE = it }
